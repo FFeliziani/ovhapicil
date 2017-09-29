@@ -44,8 +44,8 @@ namespace OvhApi.Models.Cdnanycast {
 		
 		[JsonProperty("ip")]
 		private System.Net.IPAddress _ip;
-		
-		public System.Net.IPAddress Ip {
+
+	    [JsonIgnore()] public System.Net.IPAddress Ip {
 			get {
 				return this._ip;
 			}
@@ -74,23 +74,23 @@ namespace OvhApi.Models.Cdnanycast {
 		
 		[JsonProperty("cname")]
 		private string _cname;
-		
-		public long CacheRuleUse {
+
+	    [JsonIgnore()] public long CacheRuleUse {
 			get {
 				return this._cacheRuleUse;
 			}
 		}
-		
-		/// <summary>
-		/// Domain of this object
-		/// </summary>
-		public string DomainName {
+
+        /// <summary>
+        /// Domain of this object
+        /// </summary>
+        [JsonIgnore()]public string DomainName {
 			get {
 				return this._domain;
 			}
 		}
-		
-		public OvhApi.Models.Cdnanycast.DomainStatusEnum Status {
+
+	    [JsonIgnore()] public OvhApi.Models.Cdnanycast.DomainStatusEnum Status {
 			get {
 				return this._status;
 			}
@@ -99,13 +99,13 @@ namespace OvhApi.Models.Cdnanycast {
 			}
 		}
 		
-		public OvhApi.Models.Cdnanycast.DomainTypeEnum Type {
+		[JsonIgnore()] public OvhApi.Models.Cdnanycast.DomainTypeEnum Type {
 			get {
 				return this._type;
 			}
 		}
 		
-		public string Cname {
+		[JsonIgnore()] public string Cname {
 			get {
 				return this._cname;
 			}
@@ -141,7 +141,7 @@ namespace OvhApi.Models.Cdnanycast {
 		[JsonProperty("value")]
 		private System.Nullable<long> _value;
 		
-		public System.DateTime Date {
+		[JsonIgnore()] public System.DateTime Date {
 			get {
 				return this._date;
 			}
@@ -150,7 +150,7 @@ namespace OvhApi.Models.Cdnanycast {
 			}
 		}
 		
-		public System.Nullable<long> Value {
+		[JsonIgnore()] public System.Nullable<long> Value {
 			get {
 				return this._value;
 			}
@@ -180,25 +180,25 @@ namespace OvhApi.Models.Cdnanycast {
 		[JsonProperty("status")]
 		private OvhApi.Models.Cdnanycast.TaskStateEnum _status;
 		
-		public long TaskId {
+		[JsonIgnore()] public long TaskId {
 			get {
 				return this._taskId;
 			}
 		}
 		
-		public OvhApi.Models.Cdnanycast.TaskFunctionEnum Function {
+		[JsonIgnore()] public OvhApi.Models.Cdnanycast.TaskFunctionEnum Function {
 			get {
 				return this._function;
 			}
 		}
 		
-		public string Comment {
+		[JsonIgnore()] public string Comment {
 			get {
 				return this._comment;
 			}
 		}
 		
-		public OvhApi.Models.Cdnanycast.TaskStateEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Cdnanycast.TaskStateEnum Status {
 			get {
 				return this._status;
 			}
@@ -324,13 +324,13 @@ namespace OvhApi.Models.Services {
 		[JsonProperty("creation")]
 		private System.DateTime _creation;
 		
-		public OvhApi.Models.Service.StateEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Service.StateEnum Status {
 			get {
 				return this._status;
 			}
 		}
 		
-		public System.Nullable<System.DateTime> EngagedUpTo {
+		[JsonIgnore()] public System.Nullable<System.DateTime> EngagedUpTo {
 			get {
 				return this._engagedUpTo;
 			}
@@ -339,13 +339,13 @@ namespace OvhApi.Models.Services {
 		/// <summary>
 		/// All the possible renew period of your service in month
 		/// </summary>
-		public long[] PossibleRenewPeriod {
+		[JsonIgnore()] public long[] PossibleRenewPeriod {
 			get {
 				return this._possibleRenewPeriod;
 			}
 		}
 		
-		public string ContactBilling {
+		[JsonIgnore()] public string ContactBilling {
 			get {
 				return this._contactBilling;
 			}
@@ -354,7 +354,7 @@ namespace OvhApi.Models.Services {
 		/// <summary>
 		/// Way of handling the renew
 		/// </summary>
-		public OvhApi.Models.Service.RenewType Renew {
+		[JsonIgnore()] public OvhApi.Models.Service.RenewType Renew {
 			get {
 				return this._renew;
 			}
@@ -363,31 +363,31 @@ namespace OvhApi.Models.Services {
 			}
 		}
 		
-		public string Domain {
+		[JsonIgnore()] public string Domain {
 			get {
 				return this._domain;
 			}
 		}
 		
-		public System.DateTime Expiration {
+		[JsonIgnore()] public System.DateTime Expiration {
 			get {
 				return this._expiration;
 			}
 		}
 		
-		public string ContactTech {
+		[JsonIgnore()] public string ContactTech {
 			get {
 				return this._contactTech;
 			}
 		}
 		
-		public string ContactAdmin {
+		[JsonIgnore()] public string ContactAdmin {
 			get {
 				return this._contactAdmin;
 			}
 		}
 		
-		public System.DateTime Creation {
+		[JsonIgnore()] public System.DateTime Creation {
 			get {
 				return this._creation;
 			}
@@ -444,31 +444,31 @@ namespace OvhApi.Models.Cdnanycast {
 		[JsonProperty("certificateValidTo")]
 		private System.Nullable<System.DateTime> _certificateValidTo;
 		
-		public OvhApi.Models.Cdnanycast.SslStateEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Cdnanycast.SslStateEnum Status {
 			get {
 				return this._status;
 			}
 		}
 		
-		public string Cn {
+		[JsonIgnore()] public string Cn {
 			get {
 				return this._cn;
 			}
 		}
 		
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
 		}
 		
-		public System.Nullable<System.DateTime> CertificateValidFrom {
+		[JsonIgnore()] public System.Nullable<System.DateTime> CertificateValidFrom {
 			get {
 				return this._certificateValidFrom;
 			}
 		}
 		
-		public System.Nullable<System.DateTime> CertificateValidTo {
+		[JsonIgnore()] public System.Nullable<System.DateTime> CertificateValidTo {
 			get {
 				return this._certificateValidTo;
 			}
@@ -555,37 +555,37 @@ namespace OvhApi.Models.Cdnanycast {
 		[JsonProperty("cacheRuleLimitPerDomain")]
 		private long _cacheRuleLimitPerDomain;
 		
-		public long Quota {
+		[JsonIgnore()] public long Quota {
 			get {
 				return this._quota;
 			}
 		}
 		
-		public long BackendUse {
+		[JsonIgnore()] public long BackendUse {
 			get {
 				return this._backendUse;
 			}
 		}
 		
-		public System.Nullable<System.DateTime> LastQuotaOrder {
+		[JsonIgnore()] public System.Nullable<System.DateTime> LastQuotaOrder {
 			get {
 				return this._lastQuotaOrder;
 			}
 		}
 		
-		public string Offer {
+		[JsonIgnore()] public string Offer {
 			get {
 				return this._offer;
 			}
 		}
 		
-		public System.Net.IPAddress AnycastName {
+		[JsonIgnore()] public System.Net.IPAddress AnycastName {
 			get {
 				return this._anycast;
 			}
 		}
 		
-		public long BackendLimit {
+		[JsonIgnore()] public long BackendLimit {
 			get {
 				return this._backendLimit;
 			}
@@ -594,7 +594,7 @@ namespace OvhApi.Models.Cdnanycast {
 		/// <summary>
 		/// The internal name of your CDN offer
 		/// </summary>
-		public string Service {
+		[JsonIgnore()] public string Service {
 			get {
 				return this._service;
 			}
@@ -603,13 +603,13 @@ namespace OvhApi.Models.Cdnanycast {
 		/// <summary>
 		/// URL for downloading daily log of your CDN
 		/// </summary>
-		public string LogUrl {
+		[JsonIgnore()] public string LogUrl {
 			get {
 				return this._logUrl;
 			}
 		}
 		
-		public long CacheRuleLimitPerDomain {
+		[JsonIgnore()] public long CacheRuleLimitPerDomain {
 			get {
 				return this._cacheRuleLimitPerDomain;
 			}
@@ -672,13 +672,13 @@ namespace OvhApi.Models.Cdnanycast {
 		[JsonProperty("fileType")]
 		private OvhApi.Models.Cdnanycast.CacheRuleFileTypeEnum _fileType;
 		
-		public string Domain {
+		[JsonIgnore()] public string Domain {
 			get {
 				return this._domain;
 			}
 		}
 		
-		public OvhApi.Models.Cdnanycast.CacheRuleCacheTypeEnum CacheType {
+		[JsonIgnore()] public OvhApi.Models.Cdnanycast.CacheRuleCacheTypeEnum CacheType {
 			get {
 				return this._cacheType;
 			}
@@ -687,19 +687,19 @@ namespace OvhApi.Models.Cdnanycast {
 		/// <summary>
 		/// Id for this cache rule
 		/// </summary>
-		public long CacheRuleId {
+		[JsonIgnore()] public long CacheRuleId {
 			get {
 				return this._cacheRuleId;
 			}
 		}
 		
-		public string FileMatch {
+		[JsonIgnore()] public string FileMatch {
 			get {
 				return this._fileMatch;
 			}
 		}
 		
-		public long Ttl {
+		[JsonIgnore()] public long Ttl {
 			get {
 				return this._ttl;
 			}
@@ -708,7 +708,7 @@ namespace OvhApi.Models.Cdnanycast {
 			}
 		}
 		
-		public OvhApi.Models.Cdnanycast.CacheRuleStatusEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Cdnanycast.CacheRuleStatusEnum Status {
 			get {
 				return this._status;
 			}
@@ -717,7 +717,7 @@ namespace OvhApi.Models.Cdnanycast {
 			}
 		}
 		
-		public OvhApi.Models.Cdnanycast.CacheRuleFileTypeEnum FileType {
+		[JsonIgnore()] public OvhApi.Models.Cdnanycast.CacheRuleFileTypeEnum FileType {
 			get {
 				return this._fileType;
 			}
@@ -762,7 +762,7 @@ namespace OvhApi.Models.Service {
 		/// <summary>
 		/// period of renew in month
 		/// </summary>
-		public System.Nullable<long> Period {
+		[JsonIgnore()] public System.Nullable<long> Period {
 			get {
 				return this._period;
 			}
@@ -774,7 +774,7 @@ namespace OvhApi.Models.Service {
 		/// <summary>
 		/// The service forced to be renewed
 		/// </summary>
-		public bool Forced {
+		[JsonIgnore()] public bool Forced {
 			get {
 				return this._forced;
 			}
@@ -786,7 +786,7 @@ namespace OvhApi.Models.Service {
 		/// <summary>
 		/// The service is automatically renewed
 		/// </summary>
-		public bool Automatic {
+		[JsonIgnore()] public bool Automatic {
 			get {
 				return this._automatic;
 			}
@@ -798,7 +798,7 @@ namespace OvhApi.Models.Service {
 		/// <summary>
 		/// The service will be deleted at expiration
 		/// </summary>
-		public bool DeleteAtExpiration {
+		[JsonIgnore()] public bool DeleteAtExpiration {
 			get {
 				return this._deleteAtExpiration;
 			}
@@ -828,19 +828,19 @@ namespace OvhApi.Models.Cdnanycast {
 		[JsonProperty("name")]
 		private string _name;
 		
-		public string City {
+		[JsonIgnore()] public string City {
 			get {
 				return this._city;
 			}
 		}
 		
-		public string Comment {
+		[JsonIgnore()] public string Comment {
 			get {
 				return this._comment;
 			}
 		}
 		
-		public OvhApi.Models.Cdnanycast.PopStatusEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Cdnanycast.PopStatusEnum Status {
 			get {
 				return this._status;
 			}
@@ -849,7 +849,7 @@ namespace OvhApi.Models.Cdnanycast {
 		/// <summary>
 		/// Name of the pop
 		/// </summary>
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
@@ -942,13 +942,13 @@ namespace OvhApi.Models.Cdn.Website {
 		[JsonProperty("status")]
 		private OvhApi.Models.Cdn.Website.DomainStatusEnum _status;
 		
-		public string DomainName {
+		[JsonIgnore()] public string DomainName {
 			get {
 				return this._domain;
 			}
 		}
 		
-		public OvhApi.Models.Cdn.Website.DomainStatusEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Cdn.Website.DomainStatusEnum Status {
 			get {
 				return this._status;
 			}
@@ -975,25 +975,25 @@ namespace OvhApi.Models.Cdn.Website {
 		[JsonProperty("status")]
 		private OvhApi.Models.Cdn.Website.TaskStateEnum _status;
 		
-		public long TaskId {
+		[JsonIgnore()] public long TaskId {
 			get {
 				return this._taskId;
 			}
 		}
 		
-		public OvhApi.Models.Cdn.Website.TaskFunctionEnum Function {
+		[JsonIgnore()] public OvhApi.Models.Cdn.Website.TaskFunctionEnum Function {
 			get {
 				return this._function;
 			}
 		}
 		
-		public string Comment {
+		[JsonIgnore()] public string Comment {
 			get {
 				return this._comment;
 			}
 		}
 		
-		public OvhApi.Models.Cdn.Website.TaskStateEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Cdn.Website.TaskStateEnum Status {
 			get {
 				return this._status;
 			}
@@ -1056,7 +1056,7 @@ namespace OvhApi.Models.Cdn.Website {
 		[JsonProperty("value")]
 		private long _value;
 		
-		public System.DateTime Date {
+		[JsonIgnore()] public System.DateTime Date {
 			get {
 				return this._date;
 			}
@@ -1065,7 +1065,7 @@ namespace OvhApi.Models.Cdn.Website {
 			}
 		}
 		
-		public long Value {
+		[JsonIgnore()] public long Value {
 			get {
 				return this._value;
 			}
@@ -1107,13 +1107,13 @@ namespace OvhApi.Models.Cdn.Website {
 		[JsonProperty("status")]
 		private OvhApi.Models.Cdn.Website.BackendStatusEnum _status;
 		
-		public System.Net.IPAddress Ipv4 {
+		[JsonIgnore()] public System.Net.IPAddress Ipv4 {
 			get {
 				return this._ipv4;
 			}
 		}
 		
-		public OvhApi.Models.Cdn.Website.BackendStatusEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Cdn.Website.BackendStatusEnum Status {
 			get {
 				return this._status;
 			}
@@ -1149,13 +1149,13 @@ namespace OvhApi.Models.Cdn.Website {
 		[JsonProperty("status")]
 		private OvhApi.Models.Cdn.Website.DomainZoneStatusEnum _status;
 		
-		public string ZoneName {
+		[JsonIgnore()] public string ZoneName {
 			get {
 				return this._zone;
 			}
 		}
 		
-		public OvhApi.Models.Cdn.Website.DomainZoneStatusEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Cdn.Website.DomainZoneStatusEnum Status {
 			get {
 				return this._status;
 			}
@@ -1221,19 +1221,19 @@ namespace OvhApi.Models.Cdn.Website {
 		[JsonProperty("service")]
 		private string _service;
 		
-		public string Offer {
+		[JsonIgnore()] public string Offer {
 			get {
 				return this._offer;
 			}
 		}
 		
-		public System.Net.IPAddress Anycast {
+		[JsonIgnore()] public System.Net.IPAddress Anycast {
 			get {
 				return this._anycast;
 			}
 		}
 		
-		public string Service {
+		[JsonIgnore()] public string Service {
 			get {
 				return this._service;
 			}
@@ -1260,7 +1260,7 @@ namespace OvhApi.Models.Cdn.Webstorage {
 		[JsonProperty("endpoint")]
 		private string _endpoint;
 		
-		public string Password {
+		[JsonIgnore()] public string Password {
 			get {
 				return this._password;
 			}
@@ -1269,7 +1269,7 @@ namespace OvhApi.Models.Cdn.Webstorage {
 			}
 		}
 		
-		public string Tenant {
+		[JsonIgnore()] public string Tenant {
 			get {
 				return this._tenant;
 			}
@@ -1278,7 +1278,7 @@ namespace OvhApi.Models.Cdn.Webstorage {
 			}
 		}
 		
-		public string Login {
+		[JsonIgnore()] public string Login {
 			get {
 				return this._login;
 			}
@@ -1287,7 +1287,7 @@ namespace OvhApi.Models.Cdn.Webstorage {
 			}
 		}
 		
-		public string Endpoint {
+		[JsonIgnore()] public string Endpoint {
 			get {
 				return this._endpoint;
 			}
@@ -1314,7 +1314,7 @@ namespace OvhApi.Models.Cdn.Webstorage {
 		[JsonProperty("server")]
 		private string _server;
 		
-		public string Domain {
+		[JsonIgnore()] public string Domain {
 			get {
 				return this._domain;
 			}
@@ -1323,13 +1323,13 @@ namespace OvhApi.Models.Cdn.Webstorage {
 		/// <summary>
 		/// value in Bytes
 		/// </summary>
-		public long StorageLimit {
+		[JsonIgnore()] public long StorageLimit {
 			get {
 				return this._storageLimit;
 			}
 		}
 		
-		public string Server {
+		[JsonIgnore()] public string Server {
 			get {
 				return this._server;
 			}
@@ -1350,7 +1350,7 @@ namespace OvhApi.Models.Cdn.Webstorage {
 		[JsonProperty("value")]
 		private long _value;
 		
-		public System.DateTime Date {
+		[JsonIgnore()] public System.DateTime Date {
 			get {
 				return this._date;
 			}
@@ -1359,7 +1359,7 @@ namespace OvhApi.Models.Cdn.Webstorage {
 			}
 		}
 		
-		public long Value {
+		[JsonIgnore()] public long Value {
 			get {
 				return this._value;
 			}
@@ -1440,7 +1440,7 @@ namespace OvhApi.Models.Pca {
 		/// <summary>
 		/// Session friendly name
 		/// </summary>
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
@@ -1452,7 +1452,7 @@ namespace OvhApi.Models.Pca {
 		/// <summary>
 		/// This is your login
 		/// </summary>
-		public string Login {
+		[JsonIgnore()] public string Login {
 			get {
 				return this._login;
 			}
@@ -1461,7 +1461,7 @@ namespace OvhApi.Models.Pca {
 		/// <summary>
 		/// Session size, in bytes
 		/// </summary>
-		public long Size {
+		[JsonIgnore()] public long Size {
 			get {
 				return this._size;
 			}
@@ -1470,7 +1470,7 @@ namespace OvhApi.Models.Pca {
 		/// <summary>
 		/// IP session was made from
 		/// </summary>
-		public System.Net.IPAddress SrcIp {
+		[JsonIgnore()] public System.Net.IPAddress SrcIp {
 			get {
 				return this._srcIp;
 			}
@@ -1479,7 +1479,7 @@ namespace OvhApi.Models.Pca {
 		/// <summary>
 		/// Session state
 		/// </summary>
-		public OvhApi.Models.Cloud.Pca.SessionStateEnum State {
+		[JsonIgnore()] public OvhApi.Models.Cloud.Pca.SessionStateEnum State {
 			get {
 				return this._state;
 			}
@@ -1488,7 +1488,7 @@ namespace OvhApi.Models.Pca {
 		/// <summary>
 		/// Session end date
 		/// </summary>
-		public System.Nullable<System.DateTime> EndDate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> EndDate {
 			get {
 				return this._endDate;
 			}
@@ -1497,7 +1497,7 @@ namespace OvhApi.Models.Pca {
 		/// <summary>
 		/// Session ID
 		/// </summary>
-		public string Id {
+		[JsonIgnore()] public string Id {
 			get {
 				return this._id;
 			}
@@ -1506,7 +1506,7 @@ namespace OvhApi.Models.Pca {
 		/// <summary>
 		/// Session start date
 		/// </summary>
-		public System.DateTime StartDate {
+		[JsonIgnore()] public System.DateTime StartDate {
 			get {
 				return this._startDate;
 			}
@@ -1548,7 +1548,7 @@ namespace OvhApi.Models.Pca {
 		/// <summary>
 		/// File SHA1 hash
 		/// </summary>
-		public string SHA1 {
+		[JsonIgnore()] public string SHA1 {
 			get {
 				return this._sHA1;
 			}
@@ -1557,7 +1557,7 @@ namespace OvhApi.Models.Pca {
 		/// <summary>
 		/// File SHA256 hash
 		/// </summary>
-		public string SHA256 {
+		[JsonIgnore()] public string SHA256 {
 			get {
 				return this._sHA256;
 			}
@@ -1566,7 +1566,7 @@ namespace OvhApi.Models.Pca {
 		/// <summary>
 		/// File name
 		/// </summary>
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
@@ -1575,7 +1575,7 @@ namespace OvhApi.Models.Pca {
 		/// <summary>
 		/// File type
 		/// </summary>
-		public string Type {
+		[JsonIgnore()] public string Type {
 			get {
 				return this._type;
 			}
@@ -1584,7 +1584,7 @@ namespace OvhApi.Models.Pca {
 		/// <summary>
 		/// File id
 		/// </summary>
-		public string Id {
+		[JsonIgnore()] public string Id {
 			get {
 				return this._id;
 			}
@@ -1593,7 +1593,7 @@ namespace OvhApi.Models.Pca {
 		/// <summary>
 		/// File MD5 hash
 		/// </summary>
-		public string MD5 {
+		[JsonIgnore()] public string MD5 {
 			get {
 				return this._mD5;
 			}
@@ -1602,7 +1602,7 @@ namespace OvhApi.Models.Pca {
 		/// <summary>
 		/// File state
 		/// </summary>
-		public string State {
+		[JsonIgnore()] public string State {
 			get {
 				return this._state;
 			}
@@ -1611,7 +1611,7 @@ namespace OvhApi.Models.Pca {
 		/// <summary>
 		/// File size, in bytes
 		/// </summary>
-		public long Size {
+		[JsonIgnore()] public long Size {
 			get {
 				return this._size;
 			}
@@ -1707,7 +1707,7 @@ namespace OvhApi.Models.Pca {
 		/// <summary>
 		/// Billing reference name
 		/// </summary>
-		public OvhApi.Models.Cloud.Pca.BillingRefEnum Reference {
+		[JsonIgnore()] public OvhApi.Models.Cloud.Pca.BillingRefEnum Reference {
 			get {
 				return this._reference;
 			}
@@ -1716,7 +1716,7 @@ namespace OvhApi.Models.Pca {
 		/// <summary>
 		/// Date and time the operation took place
 		/// </summary>
-		public System.DateTime Date {
+		[JsonIgnore()] public System.DateTime Date {
 			get {
 				return this._date;
 			}
@@ -1725,7 +1725,7 @@ namespace OvhApi.Models.Pca {
 		/// <summary>
 		/// Quantity of bytes for operation
 		/// </summary>
-		public long Quantity {
+		[JsonIgnore()] public long Quantity {
 			get {
 				return this._quantity;
 			}
@@ -1734,7 +1734,7 @@ namespace OvhApi.Models.Pca {
 		/// <summary>
 		/// Billing id
 		/// </summary>
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
@@ -1743,7 +1743,7 @@ namespace OvhApi.Models.Pca {
 		/// <summary>
 		/// Total usage after operation
 		/// </summary>
-		public long Total {
+		[JsonIgnore()] public long Total {
 			get {
 				return this._total;
 			}
@@ -1752,7 +1752,7 @@ namespace OvhApi.Models.Pca {
 		/// <summary>
 		/// Billing action is billed.
 		/// </summary>
-		public bool Billed {
+		[JsonIgnore()] public bool Billed {
 			get {
 				return this._billed;
 			}
@@ -1774,7 +1774,7 @@ namespace OvhApi.Models.ComplexType {
 		[JsonProperty("value")]
 		private T _value;
 		
-		public string Unit {
+		[JsonIgnore()] public string Unit {
 			get {
 				return this._unit;
 			}
@@ -1783,7 +1783,7 @@ namespace OvhApi.Models.ComplexType {
 			}
 		}
 		
-		public T Value {
+		[JsonIgnore()] public T Value {
 			get {
 				return this._value;
 			}
@@ -1918,19 +1918,19 @@ namespace OvhApi.Models.Pcs {
 		[JsonProperty("userName")]
 		private string _userName;
 		
-		public string Domain {
+		[JsonIgnore()] public string Domain {
 			get {
 				return this._domain;
 			}
 		}
 		
-		public System.DateTime CreationDate {
+		[JsonIgnore()] public System.DateTime CreationDate {
 			get {
 				return this._creationDate;
 			}
 		}
 		
-		public string UserName {
+		[JsonIgnore()] public string UserName {
 			get {
 				return this._userName;
 			}
@@ -1963,7 +1963,7 @@ namespace OvhApi.Models.Pca {
 		/// <summary>
 		/// account domain
 		/// </summary>
-		public string Domain {
+		[JsonIgnore()] public string Domain {
 			get {
 				return this._domain;
 			}
@@ -1972,7 +1972,7 @@ namespace OvhApi.Models.Pca {
 		/// <summary>
 		/// encrypted password
 		/// </summary>
-		public string Password {
+		[JsonIgnore()] public string Password {
 			get {
 				return this._password;
 			}
@@ -1984,7 +1984,7 @@ namespace OvhApi.Models.Pca {
 		/// <summary>
 		/// ssh key to be used for upload and download
 		/// </summary>
-		public string Sshkey {
+		[JsonIgnore()] public string Sshkey {
 			get {
 				return this._sshkey;
 			}
@@ -1996,7 +1996,7 @@ namespace OvhApi.Models.Pca {
 		/// <summary>
 		/// login for cloud archives
 		/// </summary>
-		public string Login {
+		[JsonIgnore()] public string Login {
 			get {
 				return this._login;
 			}
@@ -2005,7 +2005,7 @@ namespace OvhApi.Models.Pca {
 		/// <summary>
 		/// host where to upload files to
 		/// </summary>
-		public string Host {
+		[JsonIgnore()] public string Host {
 			get {
 				return this._host;
 			}
@@ -2032,7 +2032,7 @@ namespace OvhApi.Models.Cloud.Pcs {
 		[JsonProperty("endpoint")]
 		private string _endpoint;
 		
-		public string Password {
+		[JsonIgnore()] public string Password {
 			get {
 				return this._password;
 			}
@@ -2041,7 +2041,7 @@ namespace OvhApi.Models.Cloud.Pcs {
 			}
 		}
 		
-		public string Tenant {
+		[JsonIgnore()] public string Tenant {
 			get {
 				return this._tenant;
 			}
@@ -2050,7 +2050,7 @@ namespace OvhApi.Models.Cloud.Pcs {
 			}
 		}
 		
-		public string Login {
+		[JsonIgnore()] public string Login {
 			get {
 				return this._login;
 			}
@@ -2059,7 +2059,7 @@ namespace OvhApi.Models.Cloud.Pcs {
 			}
 		}
 		
-		public string Endpoint {
+		[JsonIgnore()] public string Endpoint {
 			get {
 				return this._endpoint;
 			}
@@ -2098,7 +2098,7 @@ namespace OvhApi.Models.Pcs {
 		/// <summary>
 		/// Billing reference name
 		/// </summary>
-		public OvhApi.Models.Cloud.Pcs.BillingRefEnum Reference {
+		[JsonIgnore()] public OvhApi.Models.Cloud.Pcs.BillingRefEnum Reference {
 			get {
 				return this._reference;
 			}
@@ -2107,7 +2107,7 @@ namespace OvhApi.Models.Pcs {
 		/// <summary>
 		/// Date and time the operation took place
 		/// </summary>
-		public System.DateTime Date {
+		[JsonIgnore()] public System.DateTime Date {
 			get {
 				return this._date;
 			}
@@ -2116,7 +2116,7 @@ namespace OvhApi.Models.Pcs {
 		/// <summary>
 		/// Quantity of bytes for operation
 		/// </summary>
-		public long Quantity {
+		[JsonIgnore()] public long Quantity {
 			get {
 				return this._quantity;
 			}
@@ -2125,7 +2125,7 @@ namespace OvhApi.Models.Pcs {
 		/// <summary>
 		/// Billing id
 		/// </summary>
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
@@ -2134,7 +2134,7 @@ namespace OvhApi.Models.Pcs {
 		/// <summary>
 		/// Total usage after operation
 		/// </summary>
-		public long Total {
+		[JsonIgnore()] public long Total {
 			get {
 				return this._total;
 			}
@@ -2143,7 +2143,7 @@ namespace OvhApi.Models.Pcs {
 		/// <summary>
 		/// Billing action is billed.
 		/// </summary>
-		public bool Billed {
+		[JsonIgnore()] public bool Billed {
 			get {
 				return this._billed;
 			}
@@ -2202,7 +2202,7 @@ namespace OvhApi.Models.Pcs {
 	
 	
 	/// <summary>
-	/// Operation on a Public Cloud Storage element
+	/// Operation on a [JsonIgnore()] public Cloud Storage element
 	/// </summary>
 	public sealed class Task {
 		
@@ -2218,25 +2218,25 @@ namespace OvhApi.Models.Pcs {
 		[JsonProperty("state")]
 		private OvhApi.Models.Cloud.Pcs.TaskStateEnum _state;
 		
-		public long Progress {
+		[JsonIgnore()] public long Progress {
 			get {
 				return this._progress;
 			}
 		}
 		
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
 		}
 		
-		public string Type {
+		[JsonIgnore()] public string Type {
 			get {
 				return this._type;
 			}
 		}
 		
-		public OvhApi.Models.Cloud.Pcs.TaskStateEnum State {
+		[JsonIgnore()] public OvhApi.Models.Cloud.Pcs.TaskStateEnum State {
 			get {
 				return this._state;
 			}
@@ -2275,7 +2275,7 @@ namespace OvhApi.Models.Pca {
 		/// <summary>
 		/// Task function
 		/// </summary>
-		public OvhApi.Models.Cloud.Pca.FunctionTypeEnum Function {
+		[JsonIgnore()] public OvhApi.Models.Cloud.Pca.FunctionTypeEnum Function {
 			get {
 				return this._function;
 			}
@@ -2284,7 +2284,7 @@ namespace OvhApi.Models.Pca {
 		/// <summary>
 		/// Task comments
 		/// </summary>
-		public string Comment {
+		[JsonIgnore()] public string Comment {
 			get {
 				return this._comment;
 			}
@@ -2293,7 +2293,7 @@ namespace OvhApi.Models.Pca {
 		/// <summary>
 		/// Task status
 		/// </summary>
-		public OvhApi.Models.Cloud.Pca.TaskStateEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Cloud.Pca.TaskStateEnum Status {
 			get {
 				return this._status;
 			}
@@ -2302,7 +2302,7 @@ namespace OvhApi.Models.Pca {
 		/// <summary>
 		/// Task date
 		/// </summary>
-		public System.DateTime TodoDate {
+		[JsonIgnore()] public System.DateTime TodoDate {
 			get {
 				return this._todoDate;
 			}
@@ -2311,7 +2311,7 @@ namespace OvhApi.Models.Pca {
 		/// <summary>
 		/// Host used for task
 		/// </summary>
-		public System.Net.IPAddress IpAddress {
+		[JsonIgnore()] public System.Net.IPAddress IpAddress {
 			get {
 				return this._ipAddress;
 			}
@@ -2320,7 +2320,7 @@ namespace OvhApi.Models.Pca {
 		/// <summary>
 		/// Task ID
 		/// </summary>
-		public string Id {
+		[JsonIgnore()] public string Id {
 			get {
 				return this._id;
 			}
@@ -2329,7 +2329,7 @@ namespace OvhApi.Models.Pca {
 		/// <summary>
 		/// Task login
 		/// </summary>
-		public string Login {
+		[JsonIgnore()] public string Login {
 			get {
 				return this._login;
 			}
@@ -2368,7 +2368,7 @@ namespace OvhApi.Models.Dedicated {
 		/// <summary>
 		/// Use the distribution's native kernel instead of the recommended OVH Kernel
 		/// </summary>
-		public System.Nullable<bool> UseDistributionKernel {
+		[JsonIgnore()] public System.Nullable<bool> UseDistributionKernel {
 			get {
 				return this._useDistributionKernel;
 			}
@@ -2380,7 +2380,7 @@ namespace OvhApi.Models.Dedicated {
 		/// <summary>
 		/// Name of the ssh key that should be installed. Password login will be disabled
 		/// </summary>
-		public string SshKeyName {
+		[JsonIgnore()] public string SshKeyName {
 			get {
 				return this._sshKeyName;
 			}
@@ -2392,7 +2392,7 @@ namespace OvhApi.Models.Dedicated {
 		/// <summary>
 		/// indicate the string returned by your postinstall customisation script on successful execution. Advice: your script should return a unique validation string in case of succes. A good example is &quot;loh1Xee7eo OK OK OK UGh8Ang1Gu
 		/// </summary>
-		public string PostInstallationScriptReturn {
+		[JsonIgnore()] public string PostInstallationScriptReturn {
 			get {
 				return this._postInstallationScriptReturn;
 			}
@@ -2404,7 +2404,7 @@ namespace OvhApi.Models.Dedicated {
 		/// <summary>
 		/// Template change log details
 		/// </summary>
-		public string ChangeLog {
+		[JsonIgnore()] public string ChangeLog {
 			get {
 				return this._changeLog;
 			}
@@ -2416,7 +2416,7 @@ namespace OvhApi.Models.Dedicated {
 		/// <summary>
 		/// Indicate the URL where your postinstall customisation script is located
 		/// </summary>
-		public string PostInstallationScriptLink {
+		[JsonIgnore()] public string PostInstallationScriptLink {
 			get {
 				return this._postInstallationScriptLink;
 			}
@@ -2425,7 +2425,7 @@ namespace OvhApi.Models.Dedicated {
 			}
 		}
 		
-		public System.Nullable<long> Rating {
+		[JsonIgnore()] public System.Nullable<long> Rating {
 			get {
 				return this._rating;
 			}
@@ -2437,7 +2437,7 @@ namespace OvhApi.Models.Dedicated {
 		/// <summary>
 		/// Set up the server using the provided hostname instead of the default hostname
 		/// </summary>
-		public string CustomHostname {
+		[JsonIgnore()] public string CustomHostname {
 			get {
 				return this._customHostname;
 			}
@@ -2557,7 +2557,7 @@ namespace OvhApi.Models.Dedicated.InstallationTemplate {
 		/// <summary>
 		/// list of all language available for this template
 		/// </summary>
-		public OvhApi.Models.Dedicated.TemplateOsLanguageEnum[] AvailableLanguages {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.TemplateOsLanguageEnum[] AvailableLanguages {
 			get {
 				return this._availableLanguages;
 			}
@@ -2566,7 +2566,7 @@ namespace OvhApi.Models.Dedicated.InstallationTemplate {
 		/// <summary>
 		/// This distribution supports installation using the distribution's native kernel instead of the recommended OVH kernel
 		/// </summary>
-		public System.Nullable<bool> SupportsDistributionKernel {
+		[JsonIgnore()] public System.Nullable<bool> SupportsDistributionKernel {
 			get {
 				return this._supportsDistributionKernel;
 			}
@@ -2575,7 +2575,7 @@ namespace OvhApi.Models.Dedicated.InstallationTemplate {
 		/// <summary>
 		/// Date of last modification of the base image
 		/// </summary>
-		public System.Nullable<System.DateTime> LastModification {
+		[JsonIgnore()] public System.Nullable<System.DateTime> LastModification {
 			get {
 				return this._lastModification;
 			}
@@ -2584,7 +2584,7 @@ namespace OvhApi.Models.Dedicated.InstallationTemplate {
 		/// <summary>
 		/// this template  bit format
 		/// </summary>
-		public OvhApi.Models.Dedicated.Server.BitFormatEnum BitFormat {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Server.BitFormatEnum BitFormat {
 			get {
 				return this._bitFormat;
 			}
@@ -2593,7 +2593,7 @@ namespace OvhApi.Models.Dedicated.InstallationTemplate {
 		/// <summary>
 		/// This distribution is new, and although tested and functional, may still display odd behaviour
 		/// </summary>
-		public System.Nullable<bool> Beta {
+		[JsonIgnore()] public System.Nullable<bool> Beta {
 			get {
 				return this._beta;
 			}
@@ -2602,7 +2602,7 @@ namespace OvhApi.Models.Dedicated.InstallationTemplate {
 		/// <summary>
 		/// Customizable template properties 
 		/// </summary>
-		public OvhApi.Models.Dedicated.TemplateOsProperties Customization {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.TemplateOsProperties Customization {
 			get {
 				return this._customization;
 			}
@@ -2614,7 +2614,7 @@ namespace OvhApi.Models.Dedicated.InstallationTemplate {
 		/// <summary>
 		/// information about this template
 		/// </summary>
-		public string Description {
+		[JsonIgnore()] public string Description {
 			get {
 				return this._description;
 			}
@@ -2623,7 +2623,7 @@ namespace OvhApi.Models.Dedicated.InstallationTemplate {
 		/// <summary>
 		/// the distribution this template is based on
 		/// </summary>
-		public string Distribution {
+		[JsonIgnore()] public string Distribution {
 			get {
 				return this._distribution;
 			}
@@ -2632,7 +2632,7 @@ namespace OvhApi.Models.Dedicated.InstallationTemplate {
 		/// <summary>
 		/// This distribution supports the GUID Partition Table (GPT), providing up to 128 partitions that can have more than 2 TB
 		/// </summary>
-		public System.Nullable<bool> SupportsGptLabel {
+		[JsonIgnore()] public System.Nullable<bool> SupportsGptLabel {
 			get {
 				return this._supportsGptLabel;
 			}
@@ -2641,7 +2641,7 @@ namespace OvhApi.Models.Dedicated.InstallationTemplate {
 		/// <summary>
 		/// is this distribution deprecated
 		/// </summary>
-		public System.Nullable<bool> Deprecated {
+		[JsonIgnore()] public System.Nullable<bool> Deprecated {
 			get {
 				return this._deprecated;
 			}
@@ -2650,7 +2650,7 @@ namespace OvhApi.Models.Dedicated.InstallationTemplate {
 		/// <summary>
 		/// This template name
 		/// </summary>
-		public string TemplateName {
+		[JsonIgnore()] public string TemplateName {
 			get {
 				return this._templateName;
 			}
@@ -2662,7 +2662,7 @@ namespace OvhApi.Models.Dedicated.InstallationTemplate {
 		/// <summary>
 		/// This distribution supports the microsoft SQL server
 		/// </summary>
-		public System.Nullable<bool> SupportsSqlServer {
+		[JsonIgnore()] public System.Nullable<bool> SupportsSqlServer {
 			get {
 				return this._supportsSqlServer;
 			}
@@ -2671,7 +2671,7 @@ namespace OvhApi.Models.Dedicated.InstallationTemplate {
 		/// <summary>
 		/// the default language of this template
 		/// </summary>
-		public OvhApi.Models.Dedicated.TemplateOsLanguageEnum DefaultLanguage {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.TemplateOsLanguageEnum DefaultLanguage {
 			get {
 				return this._defaultLanguage;
 			}
@@ -2683,7 +2683,7 @@ namespace OvhApi.Models.Dedicated.InstallationTemplate {
 		/// <summary>
 		/// list of all filesystems  available for this template
 		/// </summary>
-		public OvhApi.Models.Dedicated.TemplateOsFileSystemEnum[] Filesystems {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.TemplateOsFileSystemEnum[] Filesystems {
 			get {
 				return this._filesystems;
 			}
@@ -2692,7 +2692,7 @@ namespace OvhApi.Models.Dedicated.InstallationTemplate {
 		/// <summary>
 		/// category of this template (informative only)
 		/// </summary>
-		public OvhApi.Models.Dedicated.TemplateOsUsageEnum Category {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.TemplateOsUsageEnum Category {
 			get {
 				return this._category;
 			}
@@ -2701,7 +2701,7 @@ namespace OvhApi.Models.Dedicated.InstallationTemplate {
 		/// <summary>
 		/// This distribution supports Logical Volumes (Linux LVM)
 		/// </summary>
-		public System.Nullable<bool> LvmReady {
+		[JsonIgnore()] public System.Nullable<bool> LvmReady {
 			get {
 				return this._lvmReady;
 			}
@@ -2710,7 +2710,7 @@ namespace OvhApi.Models.Dedicated.InstallationTemplate {
 		/// <summary>
 		/// this template family type
 		/// </summary>
-		public OvhApi.Models.Dedicated.TemplateOsTypeEnum Family {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.TemplateOsTypeEnum Family {
 			get {
 				return this._family;
 			}
@@ -2749,7 +2749,7 @@ namespace OvhApi.Models.Dedicated.InstallationTemplate {
 		/// <summary>
 		/// raid partition type
 		/// </summary>
-		public OvhApi.Models.Dedicated.Server.PartitionRaidEnum Raid {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Server.PartitionRaidEnum Raid {
 			get {
 				return this._raid;
 			}
@@ -2761,7 +2761,7 @@ namespace OvhApi.Models.Dedicated.InstallationTemplate {
 		/// <summary>
 		/// The volume name needed for proxmox distribution
 		/// </summary>
-		public string VolumeName {
+		[JsonIgnore()] public string VolumeName {
 			get {
 				return this._volumeName;
 			}
@@ -2773,7 +2773,7 @@ namespace OvhApi.Models.Dedicated.InstallationTemplate {
 		/// <summary>
 		/// specifies the creation order of the partition on the disk
 		/// </summary>
-		public long Order {
+		[JsonIgnore()] public long Order {
 			get {
 				return this._order;
 			}
@@ -2785,7 +2785,7 @@ namespace OvhApi.Models.Dedicated.InstallationTemplate {
 		/// <summary>
 		/// Partition filesytem
 		/// </summary>
-		public OvhApi.Models.Dedicated.TemplateOsFileSystemEnum Filesystem {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.TemplateOsFileSystemEnum Filesystem {
 			get {
 				return this._filesystem;
 			}
@@ -2794,7 +2794,7 @@ namespace OvhApi.Models.Dedicated.InstallationTemplate {
 			}
 		}
 		
-		public OvhApi.Models.Dedicated.TemplatePartitionTypeEnum Type {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.TemplatePartitionTypeEnum Type {
 			get {
 				return this._type;
 			}
@@ -2806,7 +2806,7 @@ namespace OvhApi.Models.Dedicated.InstallationTemplate {
 		/// <summary>
 		/// partition mount point
 		/// </summary>
-		public string Mountpoint {
+		[JsonIgnore()] public string Mountpoint {
 			get {
 				return this._mountpoint;
 			}
@@ -2818,7 +2818,7 @@ namespace OvhApi.Models.Dedicated.InstallationTemplate {
 		/// <summary>
 		/// size of partition in Mb, 0 =&gt; rest of the space
 		/// </summary>
-		public OvhApi.Models.ComplexType.UnitAndValue<long> Size {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<long> Size {
 			get {
 				return this._size;
 			}
@@ -3052,7 +3052,7 @@ namespace OvhApi.Models.Dedicated.InstallationTemplate {
 		/// <summary>
 		/// on a reinstall, if a partitioning scheme is not specified, the one with the higher priority will be used by default, among all the compatible partitioning schemes (given the underlying hardware specifications)
 		/// </summary>
-		public long Priority {
+		[JsonIgnore()] public long Priority {
 			get {
 				return this._priority;
 			}
@@ -3064,7 +3064,7 @@ namespace OvhApi.Models.Dedicated.InstallationTemplate {
 		/// <summary>
 		/// name of this partitioning scheme
 		/// </summary>
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
@@ -3094,7 +3094,7 @@ namespace OvhApi.Models.Dedicated.Nas {
 		/// <summary>
 		/// must be nfs cifs or both
 		/// </summary>
-		public OvhApi.Models.Dedicated.Storage.ProtocolEnum Protocol {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Storage.ProtocolEnum Protocol {
 			get {
 				return this._protocol;
 			}
@@ -3103,7 +3103,7 @@ namespace OvhApi.Models.Dedicated.Nas {
 		/// <summary>
 		/// the given name of partition
 		/// </summary>
-		public string PartitionName {
+		[JsonIgnore()] public string PartitionName {
 			get {
 				return this._partitionName;
 			}
@@ -3112,7 +3112,7 @@ namespace OvhApi.Models.Dedicated.Nas {
 		/// <summary>
 		/// Partition size
 		/// </summary>
-		public long Size {
+		[JsonIgnore()] public long Size {
 			get {
 				return this._size;
 			}
@@ -3157,7 +3157,7 @@ namespace OvhApi.Models.Dedicated.Nas {
 		/// <summary>
 		/// the uid to set quota on
 		/// </summary>
-		public long Uid {
+		[JsonIgnore()] public long Uid {
 			get {
 				return this._uid;
 			}
@@ -3166,7 +3166,7 @@ namespace OvhApi.Models.Dedicated.Nas {
 		/// <summary>
 		/// the size to set in MB
 		/// </summary>
-		public long Size {
+		[JsonIgnore()] public long Size {
 			get {
 				return this._size;
 			}
@@ -3208,7 +3208,7 @@ namespace OvhApi.Models.Dedicated.NasTask {
 		/// <summary>
 		/// id of the task
 		/// </summary>
-		public long TaskId {
+		[JsonIgnore()] public long TaskId {
 			get {
 				return this._taskId;
 			}
@@ -3217,7 +3217,7 @@ namespace OvhApi.Models.Dedicated.NasTask {
 		/// <summary>
 		/// the name of your service
 		/// </summary>
-		public string StorageName {
+		[JsonIgnore()] public string StorageName {
 			get {
 				return this._storageName;
 			}
@@ -3226,7 +3226,7 @@ namespace OvhApi.Models.Dedicated.NasTask {
 		/// <summary>
 		/// The actual state of the task
 		/// </summary>
-		public OvhApi.Models.Dedicated.TaskStatusEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.TaskStatusEnum Status {
 			get {
 				return this._status;
 			}
@@ -3235,7 +3235,7 @@ namespace OvhApi.Models.Dedicated.NasTask {
 		/// <summary>
 		/// information about operation
 		/// </summary>
-		public string Details {
+		[JsonIgnore()] public string Details {
 			get {
 				return this._details;
 			}
@@ -3244,7 +3244,7 @@ namespace OvhApi.Models.Dedicated.NasTask {
 		/// <summary>
 		/// last modification of task
 		/// </summary>
-		public System.Nullable<System.DateTime> LastUpdate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> LastUpdate {
 			get {
 				return this._lastUpdate;
 			}
@@ -3253,7 +3253,7 @@ namespace OvhApi.Models.Dedicated.NasTask {
 		/// <summary>
 		/// Insertion of task in the todo
 		/// </summary>
-		public System.Nullable<System.DateTime> TodoDate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> TodoDate {
 			get {
 				return this._todoDate;
 			}
@@ -3262,7 +3262,7 @@ namespace OvhApi.Models.Dedicated.NasTask {
 		/// <summary>
 		/// Task type of operation
 		/// </summary>
-		public OvhApi.Models.Dedicated.Storage.TaskFunctionEnum Operation {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Storage.TaskFunctionEnum Operation {
 			get {
 				return this._operation;
 			}
@@ -3271,7 +3271,7 @@ namespace OvhApi.Models.Dedicated.NasTask {
 		/// <summary>
 		/// the date when the task finished
 		/// </summary>
-		public System.Nullable<System.DateTime> DoneDate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> DoneDate {
 			get {
 				return this._doneDate;
 			}
@@ -3358,7 +3358,7 @@ namespace OvhApi.Models.Dedicated.Nas {
 		/// <summary>
 		/// the ip in root on storage
 		/// </summary>
-		public OVHApi.IPAddressBlock Ip {
+		[JsonIgnore()] public OVHApi.IPAddressBlock Ip {
 			get {
 				return this._ip;
 			}
@@ -3367,7 +3367,7 @@ namespace OvhApi.Models.Dedicated.Nas {
 		/// <summary>
 		/// the id of the access
 		/// </summary>
-		public long AccessId {
+		[JsonIgnore()] public long AccessId {
 			get {
 				return this._accessId;
 			}
@@ -3406,7 +3406,7 @@ namespace OvhApi.Models.Dedicated.Nas {
 		/// <summary>
 		/// area of nas
 		/// </summary>
-		public string Datacenter {
+		[JsonIgnore()] public string Datacenter {
 			get {
 				return this._datacenter;
 			}
@@ -3415,7 +3415,7 @@ namespace OvhApi.Models.Dedicated.Nas {
 		/// <summary>
 		/// True, if partition creation is allowed on this nas
 		/// </summary>
-		public bool CanCreatePartition {
+		[JsonIgnore()] public bool CanCreatePartition {
 			get {
 				return this._canCreatePartition;
 			}
@@ -3424,7 +3424,7 @@ namespace OvhApi.Models.Dedicated.Nas {
 		/// <summary>
 		/// The storage mount path
 		/// </summary>
-		public string MountPath {
+		[JsonIgnore()] public string MountPath {
 			get {
 				return this._mountPath;
 			}
@@ -3433,7 +3433,7 @@ namespace OvhApi.Models.Dedicated.Nas {
 		/// <summary>
 		/// The name you give to the nas
 		/// </summary>
-		public string CustomName {
+		[JsonIgnore()] public string CustomName {
 			get {
 				return this._customName;
 			}
@@ -3445,7 +3445,7 @@ namespace OvhApi.Models.Dedicated.Nas {
 		/// <summary>
 		/// Access ip of nas
 		/// </summary>
-		public System.Net.IPAddress Ip {
+		[JsonIgnore()] public System.Net.IPAddress Ip {
 			get {
 				return this._ip;
 			}
@@ -3454,7 +3454,7 @@ namespace OvhApi.Models.Dedicated.Nas {
 		/// <summary>
 		/// The storage service name
 		/// </summary>
-		public string ServiceName {
+		[JsonIgnore()] public string ServiceName {
 			get {
 				return this._serviceName;
 			}
@@ -3463,7 +3463,7 @@ namespace OvhApi.Models.Dedicated.Nas {
 		/// <summary>
 		/// the size of the nas
 		/// </summary>
-		public long ZpoolSize {
+		[JsonIgnore()] public long ZpoolSize {
 			get {
 				return this._zpoolSize;
 			}
@@ -3520,7 +3520,7 @@ namespace OvhApi.Models.Dedicated.Nasha {
 		/// <summary>
 		/// must be nfs cifs or both
 		/// </summary>
-		public OvhApi.Models.Dedicated.Storage.ProtocolEnum Protocol {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Storage.ProtocolEnum Protocol {
 			get {
 				return this._protocol;
 			}
@@ -3529,7 +3529,7 @@ namespace OvhApi.Models.Dedicated.Nasha {
 		/// <summary>
 		/// the given name of partition
 		/// </summary>
-		public string PartitionName {
+		[JsonIgnore()] public string PartitionName {
 			get {
 				return this._partitionName;
 			}
@@ -3538,7 +3538,7 @@ namespace OvhApi.Models.Dedicated.Nasha {
 		/// <summary>
 		/// Partition size
 		/// </summary>
-		public long Size {
+		[JsonIgnore()] public long Size {
 			get {
 				return this._size;
 			}
@@ -3565,7 +3565,7 @@ namespace OvhApi.Models.Dedicated.Nasha {
 		/// <summary>
 		/// the ip in root on storage
 		/// </summary>
-		public OVHApi.IPAddressBlock Ip {
+		[JsonIgnore()] public OVHApi.IPAddressBlock Ip {
 			get {
 				return this._ip;
 			}
@@ -3574,7 +3574,7 @@ namespace OvhApi.Models.Dedicated.Nasha {
 		/// <summary>
 		/// the id of the access
 		/// </summary>
-		public long AccessId {
+		[JsonIgnore()] public long AccessId {
 			get {
 				return this._accessId;
 			}
@@ -3637,7 +3637,7 @@ namespace OvhApi.Models.Dedicated.Nasha {
 		/// <summary>
 		/// area of nas
 		/// </summary>
-		public string Datacenter {
+		[JsonIgnore()] public string Datacenter {
 			get {
 				return this._datacenter;
 			}
@@ -3646,7 +3646,7 @@ namespace OvhApi.Models.Dedicated.Nasha {
 		/// <summary>
 		/// True, if partition creation is allowed on this nas HA
 		/// </summary>
-		public bool CanCreatePartition {
+		[JsonIgnore()] public bool CanCreatePartition {
 			get {
 				return this._canCreatePartition;
 			}
@@ -3655,7 +3655,7 @@ namespace OvhApi.Models.Dedicated.Nasha {
 		/// <summary>
 		/// The name you give to the nas
 		/// </summary>
-		public string CustomName {
+		[JsonIgnore()] public string CustomName {
 			get {
 				return this._customName;
 			}
@@ -3667,7 +3667,7 @@ namespace OvhApi.Models.Dedicated.Nasha {
 		/// <summary>
 		/// Access ip of nas
 		/// </summary>
-		public System.Net.IPAddress Ip {
+		[JsonIgnore()] public System.Net.IPAddress Ip {
 			get {
 				return this._ip;
 			}
@@ -3676,7 +3676,7 @@ namespace OvhApi.Models.Dedicated.Nasha {
 		/// <summary>
 		/// The staorage service name
 		/// </summary>
-		public string ServiceName {
+		[JsonIgnore()] public string ServiceName {
 			get {
 				return this._serviceName;
 			}
@@ -3685,7 +3685,7 @@ namespace OvhApi.Models.Dedicated.Nasha {
 		/// <summary>
 		/// the size of the nas
 		/// </summary>
-		public long ZpoolSize {
+		[JsonIgnore()] public long ZpoolSize {
 			get {
 				return this._zpoolSize;
 			}
@@ -3706,7 +3706,7 @@ namespace OvhApi.Models.Dedicated.Nasha {
 		/// <summary>
 		/// the interval of snapshot
 		/// </summary>
-		public OvhApi.Models.Dedicated.Storage.SnapshotEnum SnapshotType {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Storage.SnapshotEnum SnapshotType {
 			get {
 				return this._snapshotType;
 			}
@@ -3736,7 +3736,7 @@ namespace OvhApi.Models.Dedicated.Nasha {
 		/// <summary>
 		/// vrack (1.5) name
 		/// </summary>
-		public string VrackName {
+		[JsonIgnore()] public string VrackName {
 			get {
 				return this._vrackName;
 			}
@@ -3745,7 +3745,7 @@ namespace OvhApi.Models.Dedicated.Nasha {
 		/// <summary>
 		/// ID
 		/// </summary>
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
@@ -3754,7 +3754,7 @@ namespace OvhApi.Models.Dedicated.Nasha {
 		/// <summary>
 		/// service ip
 		/// </summary>
-		public string ServiceIp {
+		[JsonIgnore()] public string ServiceIp {
 			get {
 				return this._serviceIp;
 			}
@@ -3763,7 +3763,7 @@ namespace OvhApi.Models.Dedicated.Nasha {
 		/// <summary>
 		/// type of
 		/// </summary>
-		public string Type {
+		[JsonIgnore()] public string Type {
 			get {
 				return this._type;
 			}
@@ -3787,7 +3787,7 @@ namespace OvhApi.Models.Dedicated.Nasha {
 		/// <summary>
 		/// the uid to set quota on
 		/// </summary>
-		public long Uid {
+		[JsonIgnore()] public long Uid {
 			get {
 				return this._uid;
 			}
@@ -3796,7 +3796,7 @@ namespace OvhApi.Models.Dedicated.Nasha {
 		/// <summary>
 		/// the size to set in MB
 		/// </summary>
-		public long Size {
+		[JsonIgnore()] public long Size {
 			get {
 				return this._size;
 			}
@@ -3829,7 +3829,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Last update timestamp
 		/// </summary>
-		public System.DateTime LastUpdate {
+		[JsonIgnore()] public System.DateTime LastUpdate {
 			get {
 				return this._lastUpdate;
 			}
@@ -3838,7 +3838,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Status of license
 		/// </summary>
-		public OvhApi.Models.Dedicated.Server.SplaStatusEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Server.SplaStatusEnum Status {
 			get {
 				return this._status;
 			}
@@ -3847,7 +3847,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// License id
 		/// </summary>
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
@@ -3856,7 +3856,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// License type
 		/// </summary>
-		public OvhApi.Models.Dedicated.Server.SplaTypeEnum Type {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Server.SplaTypeEnum Type {
 			get {
 				return this._type;
 			}
@@ -3865,7 +3865,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// License serial number
 		/// </summary>
-		public string SerialNumber {
+		[JsonIgnore()] public string SerialNumber {
 			get {
 				return this._serialNumber;
 			}
@@ -3898,7 +3898,7 @@ namespace OvhApi.Models.SecondaryDns {
 		/// <summary>
 		/// domain on slave server
 		/// </summary>
-		public string Domain {
+		[JsonIgnore()] public string Domain {
 			get {
 				return this._domain;
 			}
@@ -3907,13 +3907,13 @@ namespace OvhApi.Models.SecondaryDns {
 		/// <summary>
 		/// secondary dns server
 		/// </summary>
-		public string Dns {
+		[JsonIgnore()] public string Dns {
 			get {
 				return this._dns;
 			}
 		}
 		
-		public System.DateTime CreationDate {
+		[JsonIgnore()] public System.DateTime CreationDate {
 			get {
 				return this._creationDate;
 			}
@@ -3922,7 +3922,7 @@ namespace OvhApi.Models.SecondaryDns {
 		/// <summary>
 		/// master ip
 		/// </summary>
-		public System.Net.IPAddress IpMaster {
+		[JsonIgnore()] public System.Net.IPAddress IpMaster {
 			get {
 				return this._ipMaster;
 			}
@@ -3976,7 +3976,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Partition usage
 		/// </summary>
-		public OvhApi.Models.ComplexType.UnitAndValue<long> Usage {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<long> Usage {
 			get {
 				return this._usage;
 			}
@@ -3985,7 +3985,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Partition mount point
 		/// </summary>
-		public string MountPoint {
+		[JsonIgnore()] public string MountPoint {
 			get {
 				return this._mountPoint;
 			}
@@ -3994,7 +3994,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Partition
 		/// </summary>
-		public string Partition {
+		[JsonIgnore()] public string Partition {
 			get {
 				return this._partition;
 			}
@@ -4003,7 +4003,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Partition inode
 		/// </summary>
-		public OvhApi.Models.ComplexType.UnitAndValue<long> InodeUsage {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<long> InodeUsage {
 			get {
 				return this._inodeUsage;
 			}
@@ -4027,7 +4027,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// indicates wether burstable bandwidth is currently active, allowing it to temporarily exceed the normally included bandwidth.OvhToInternet amount, within the limits indicated by the burst.capacity item. It can also be inactiveLocked when temporarily disabled due to overuse, capping it to the included non-burstable bandwidth capacity of bandwidth.OvhToInternet
 		/// </summary>
-		public OvhApi.Models.Dedicated.Server.BurstStatusEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Server.BurstStatusEnum Status {
 			get {
 				return this._status;
 			}
@@ -4039,7 +4039,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Bandwidth busrt capacity
 		/// </summary>
-		public OvhApi.Models.ComplexType.UnitAndValue<long> Capacity {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<long> Capacity {
 			get {
 				return this._capacity;
 			}
@@ -4066,7 +4066,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// RTM current version
 		/// </summary>
-		public string CurrentVersion {
+		[JsonIgnore()] public string CurrentVersion {
 			get {
 				return this._currentVersion;
 			}
@@ -4075,7 +4075,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// RTM currently installed version
 		/// </summary>
-		public string InstalledVersion {
+		[JsonIgnore()] public string InstalledVersion {
 			get {
 				return this._installedVersion;
 			}
@@ -4084,7 +4084,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// You need to update RTM script on your server
 		/// </summary>
-		public bool NeedsUpdate {
+		[JsonIgnore()] public bool NeedsUpdate {
 			get {
 				return this._needsUpdate;
 			}
@@ -4135,7 +4135,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Monthly input traffic quota allowed
 		/// </summary>
-		public OvhApi.Models.ComplexType.UnitAndValue<long> InputQuotaSize {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<long> InputQuotaSize {
 			get {
 				return this._inputQuotaSize;
 			}
@@ -4147,7 +4147,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Monthly output traffic quota allowed
 		/// </summary>
-		public OvhApi.Models.ComplexType.UnitAndValue<long> OutputQuotaSize {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<long> OutputQuotaSize {
 			get {
 				return this._outputQuotaSize;
 			}
@@ -4159,7 +4159,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Monthly input traffic consumed this month
 		/// </summary>
-		public OvhApi.Models.ComplexType.UnitAndValue<long> InputQuotaUsed {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<long> InputQuotaUsed {
 			get {
 				return this._inputQuotaUsed;
 			}
@@ -4171,7 +4171,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Monthly output traffic consumed this month
 		/// </summary>
-		public OvhApi.Models.ComplexType.UnitAndValue<long> OutputQuotaUsed {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<long> OutputQuotaUsed {
 			get {
 				return this._outputQuotaUsed;
 			}
@@ -4198,7 +4198,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Test result
 		/// </summary>
-		public string Status {
+		[JsonIgnore()] public string Status {
 			get {
 				return this._status;
 			}
@@ -4210,7 +4210,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Test running date
 		/// </summary>
-		public System.Nullable<System.DateTime> Date {
+		[JsonIgnore()] public System.Nullable<System.DateTime> Date {
 			get {
 				return this._date;
 			}
@@ -4237,7 +4237,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Names list of ovh installationtemplates compatibles with this server
 		/// </summary>
-		public string[] Ovh {
+		[JsonIgnore()] public string[] Ovh {
 			get {
 				return this._ovh;
 			}
@@ -4249,7 +4249,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Names list of yours installation templates compatibles with this server
 		/// </summary>
-		public string[] Personal {
+		[JsonIgnore()] public string[] Personal {
 			get {
 				return this._personal;
 			}
@@ -4276,7 +4276,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Virtual MAC address in 00:00:00:00:00:00 format
 		/// </summary>
-		public string MacAddress {
+		[JsonIgnore()] public string MacAddress {
 			get {
 				return this._macAddress;
 			}
@@ -4285,7 +4285,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Virtual MAC address type
 		/// </summary>
-		public OvhApi.Models.Dedicated.Server.VmacTypeEnum Type {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Server.VmacTypeEnum Type {
 			get {
 				return this._type;
 			}
@@ -4315,7 +4315,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Which option is required to order an USB key
 		/// </summary>
-		public OvhApi.Models.Dedicated.Server.OptionRequiredEnum OptionRequired {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Server.OptionRequiredEnum OptionRequired {
 			get {
 				return this._optionRequired;
 			}
@@ -4327,7 +4327,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Number of USB keys that can be ordered for this server
 		/// </summary>
-		public long Number {
+		[JsonIgnore()] public long Number {
 			get {
 				return this._number;
 			}
@@ -4339,7 +4339,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Is USB keys orderable for this server
 		/// </summary>
-		public bool Orderable {
+		[JsonIgnore()] public bool Orderable {
 			get {
 				return this._orderable;
 			}
@@ -4351,7 +4351,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Orderable USB keys capacity in gigabytes
 		/// </summary>
-		public OvhApi.Models.Dedicated.Server.UsbKeyCapacityEnum[] Capacity {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Server.UsbKeyCapacityEnum[] Capacity {
 			get {
 				return this._capacity;
 			}
@@ -4375,7 +4375,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		[JsonProperty("value")]
 		private OvhApi.Models.ComplexType.UnitAndValue<double> _value;
 		
-		public long Timestamp {
+		[JsonIgnore()] public long Timestamp {
 			get {
 				return this._timestamp;
 			}
@@ -4384,7 +4384,7 @@ namespace OvhApi.Models.Dedicated.Server {
 			}
 		}
 		
-		public OvhApi.Models.ComplexType.UnitAndValue<double> Value {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<double> Value {
 			get {
 				return this._value;
 			}
@@ -4408,7 +4408,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// true, if IPMI is ivailable on this server
 		/// </summary>
-		public bool Activated {
+		[JsonIgnore()] public bool Activated {
 			get {
 				return this._activated;
 			}
@@ -4471,7 +4471,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Disk
 		/// </summary>
-		public string Disk {
+		[JsonIgnore()] public string Disk {
 			get {
 				return this._disk;
 			}
@@ -4480,7 +4480,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Disk model
 		/// </summary>
-		public string Model {
+		[JsonIgnore()] public string Model {
 			get {
 				return this._model;
 			}
@@ -4489,7 +4489,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Disk capacity
 		/// </summary>
-		public OvhApi.Models.ComplexType.UnitAndValue<long> Capacity {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<long> Capacity {
 			get {
 				return this._capacity;
 			}
@@ -4498,7 +4498,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Disk temperature
 		/// </summary>
-		public OvhApi.Models.ComplexType.UnitAndValue<long> Temperature {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<long> Temperature {
 			get {
 				return this._temperature;
 			}
@@ -4522,7 +4522,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// PCI bus device
 		/// </summary>
-		public string Bus {
+		[JsonIgnore()] public string Bus {
 			get {
 				return this._bus;
 			}
@@ -4534,7 +4534,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// PCI device information
 		/// </summary>
-		public string Device {
+		[JsonIgnore()] public string Device {
 			get {
 				return this._device;
 			}
@@ -4567,7 +4567,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// bandwidth limitation OVH to Internet
 		/// </summary>
-		public OvhApi.Models.ComplexType.UnitAndValue<long> OvhToInternet {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<long> OvhToInternet {
 			get {
 				return this._ovhToInternet;
 			}
@@ -4579,7 +4579,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// bandwidth limitation OVH to OVH
 		/// </summary>
-		public OvhApi.Models.ComplexType.UnitAndValue<long> OvhToOvh {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<long> OvhToOvh {
 			get {
 				return this._ovhToOvh;
 			}
@@ -4591,7 +4591,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// bandwidth offer type
 		/// </summary>
-		public OvhApi.Models.Dedicated.Server.BandwidthTypeEnum Type {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Server.BandwidthTypeEnum Type {
 			get {
 				return this._type;
 			}
@@ -4603,7 +4603,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// bandwidth limitation Internet to OVH
 		/// </summary>
-		public OvhApi.Models.ComplexType.UnitAndValue<long> InternetToOvh {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<long> InternetToOvh {
 			get {
 				return this._internetToOvh;
 			}
@@ -4657,7 +4657,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// ram capacity
 		/// </summary>
-		public OvhApi.Models.ComplexType.UnitAndValue<long> MemorySize {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<long> MemorySize {
 			get {
 				return this._memorySize;
 			}
@@ -4669,7 +4669,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// processor architecture bit
 		/// </summary>
-		public OvhApi.Models.Dedicated.Server.CpuFamilyEnum ProcessorArchitecture {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Server.CpuFamilyEnum ProcessorArchitecture {
 			get {
 				return this._processorArchitecture;
 			}
@@ -4681,7 +4681,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// details about the groups of disks in the server
 		/// </summary>
-		public OvhApi.Models.Dedicated.Server.HardwareSpecificationsDisk[] DiskGroups {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Server.HardwareSpecificationsDisk[] DiskGroups {
 			get {
 				return this._diskGroups;
 			}
@@ -4693,7 +4693,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Default hardware raid type configured on this server
 		/// </summary>
-		public OvhApi.Models.Dedicated.Server.HardwareSpecificationsRaidHardEnum DefaultHardwareRaidType {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Server.HardwareSpecificationsRaidHardEnum DefaultHardwareRaidType {
 			get {
 				return this._defaultHardwareRaidType;
 			}
@@ -4705,7 +4705,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// processor name
 		/// </summary>
-		public string ProcessorName {
+		[JsonIgnore()] public string ProcessorName {
 			get {
 				return this._processorName;
 			}
@@ -4717,7 +4717,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// commercial name of this server
 		/// </summary>
-		public string Description {
+		[JsonIgnore()] public string Description {
 			get {
 				return this._description;
 			}
@@ -4729,7 +4729,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// number of processors in this dedicated server
 		/// </summary>
-		public System.Nullable<long> NumberOfProcessors {
+		[JsonIgnore()] public System.Nullable<long> NumberOfProcessors {
 			get {
 				return this._numberOfProcessors;
 			}
@@ -4741,7 +4741,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// number of cores per processor
 		/// </summary>
-		public System.Nullable<long> CoresPerProcessor {
+		[JsonIgnore()] public System.Nullable<long> CoresPerProcessor {
 			get {
 				return this._coresPerProcessor;
 			}
@@ -4753,7 +4753,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Capacity of the USB keys installed on your server, if any
 		/// </summary>
-		public OvhApi.Models.ComplexType.UnitAndValue<long>[] UsbKeys {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<long>[] UsbKeys {
 			get {
 				return this._usbKeys;
 			}
@@ -4765,7 +4765,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Default hardware raid size for this server
 		/// </summary>
-		public OvhApi.Models.ComplexType.UnitAndValue<long> DefaultHardwareRaidSize {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<long> DefaultHardwareRaidSize {
 			get {
 				return this._defaultHardwareRaidSize;
 			}
@@ -4777,7 +4777,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// server motherboard
 		/// </summary>
-		public string Motherboard {
+		[JsonIgnore()] public string Motherboard {
 			get {
 				return this._motherboard;
 			}
@@ -4804,7 +4804,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Friendly name of your Virtual Machine behind this IP/MAC
 		/// </summary>
-		public string VirtualMachineName {
+		[JsonIgnore()] public string VirtualMachineName {
 			get {
 				return this._virtualMachineName;
 			}
@@ -4813,7 +4813,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// IP address
 		/// </summary>
-		public System.Net.IPAddress IpAddress {
+		[JsonIgnore()] public System.Net.IPAddress IpAddress {
 			get {
 				return this._ipAddress;
 			}
@@ -4843,7 +4843,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// CPU core number
 		/// </summary>
-		public System.Nullable<long> Core {
+		[JsonIgnore()] public System.Nullable<long> Core {
 			get {
 				return this._core;
 			}
@@ -4855,7 +4855,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// CPU frequency
 		/// </summary>
-		public OvhApi.Models.ComplexType.UnitAndValue<long> Freq {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<long> Freq {
 			get {
 				return this._freq;
 			}
@@ -4867,7 +4867,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// CPU  name
 		/// </summary>
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
@@ -4879,7 +4879,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// CPU cache size
 		/// </summary>
-		public OvhApi.Models.ComplexType.UnitAndValue<long> Cache {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<long> Cache {
 			get {
 				return this._cache;
 			}
@@ -5110,7 +5110,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// The IP Block specific to this ACL
 		/// </summary>
-		public OVHApi.IPAddressBlock IpBlock {
+		[JsonIgnore()] public OVHApi.IPAddressBlock IpBlock {
 			get {
 				return this._ipBlock;
 			}
@@ -5119,7 +5119,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Wether to allow the FTP protocol for this ACL
 		/// </summary>
-		public bool Ftp {
+		[JsonIgnore()] public bool Ftp {
 			get {
 				return this._ftp;
 			}
@@ -5131,7 +5131,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Date of the last object modification
 		/// </summary>
-		public System.DateTime LastUpdate {
+		[JsonIgnore()] public System.DateTime LastUpdate {
 			get {
 				return this._lastUpdate;
 			}
@@ -5140,7 +5140,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Wether to allow the NFS protocol for this ACL
 		/// </summary>
-		public bool Nfs {
+		[JsonIgnore()] public bool Nfs {
 			get {
 				return this._nfs;
 			}
@@ -5152,7 +5152,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Whether the rule has been applied on the Backup Ftp
 		/// </summary>
-		public bool IsApplied {
+		[JsonIgnore()] public bool IsApplied {
 			get {
 				return this._isApplied;
 			}
@@ -5161,7 +5161,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Wether to allow the CIFS (SMB) protocol for this ACL
 		/// </summary>
-		public bool Cifs {
+		[JsonIgnore()] public bool Cifs {
 			get {
 				return this._cifs;
 			}
@@ -5188,7 +5188,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// value
 		/// </summary>
-		public string Value {
+		[JsonIgnore()] public string Value {
 			get {
 				return this._value;
 			}
@@ -5200,7 +5200,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Session expiration date
 		/// </summary>
-		public System.Nullable<System.DateTime> Expiration {
+		[JsonIgnore()] public System.Nullable<System.DateTime> Expiration {
 			get {
 				return this._expiration;
 			}
@@ -5287,7 +5287,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Orderable IP blocks sizes
 		/// </summary>
-		public OvhApi.Models.Dedicated.Server.IpBlockSizeEnum[] BlockSizes {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Server.IpBlockSizeEnum[] BlockSizes {
 			get {
 				return this._blockSizes;
 			}
@@ -5299,7 +5299,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Which option is required to order this type of IP
 		/// </summary>
-		public OvhApi.Models.Dedicated.Server.OptionRequiredEnum OptionRequired {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Server.OptionRequiredEnum OptionRequired {
 			get {
 				return this._optionRequired;
 			}
@@ -5311,7 +5311,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Number of IP that can be ordered in this given block size
 		/// </summary>
-		public long Number {
+		[JsonIgnore()] public long Number {
 			get {
 				return this._number;
 			}
@@ -5323,7 +5323,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Are those IP included with your offer
 		/// </summary>
-		public bool Included {
+		[JsonIgnore()] public bool Included {
 			get {
 				return this._included;
 			}
@@ -5335,7 +5335,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// this IP type
 		/// </summary>
-		public OvhApi.Models.Dedicated.Server.IpTypeOrderableEnum Type {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Server.IpTypeOrderableEnum Type {
 			get {
 				return this._type;
 			}
@@ -5377,7 +5377,7 @@ namespace OvhApi.Models.ComplexType {
 		[JsonProperty("values")]
 		private OvhApi.Models.ComplexType.ChartTimestampValue[] _values;
 		
-		public string Unit {
+		[JsonIgnore()] public string Unit {
 			get {
 				return this._unit;
 			}
@@ -5386,7 +5386,7 @@ namespace OvhApi.Models.ComplexType {
 			}
 		}
 		
-		public OvhApi.Models.ComplexType.ChartTimestampValue[] Values {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.ChartTimestampValue[] Values {
 			get {
 				return this._values;
 			}
@@ -5440,7 +5440,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Informations about this installation step
 		/// </summary>
-		public string Comment {
+		[JsonIgnore()] public string Comment {
 			get {
 				return this._comment;
 			}
@@ -5452,7 +5452,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Status of this installation step
 		/// </summary>
-		public OvhApi.Models.Dedicated.Server.InstallationProgressStatusEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Server.InstallationProgressStatusEnum Status {
 			get {
 				return this._status;
 			}
@@ -5464,7 +5464,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Error details if state is error
 		/// </summary>
-		public string Error {
+		[JsonIgnore()] public string Error {
 			get {
 				return this._error;
 			}
@@ -5512,7 +5512,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Backup storage orderable capacities in gigabytes
 		/// </summary>
-		public OvhApi.Models.Dedicated.Server.BackupStorageCapacityEnum[] Capacities {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Server.BackupStorageCapacityEnum[] Capacities {
 			get {
 				return this._capacities;
 			}
@@ -5524,7 +5524,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Is a backup storage is orderable for this server
 		/// </summary>
-		public bool Orderable {
+		[JsonIgnore()] public bool Orderable {
 			get {
 				return this._orderable;
 			}
@@ -5587,7 +5587,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Raid port synchronization progress
 		/// </summary>
-		public string Syncprogress {
+		[JsonIgnore()] public string Syncprogress {
 			get {
 				return this._syncprogress;
 			}
@@ -5596,7 +5596,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Port disk
 		/// </summary>
-		public string Disk {
+		[JsonIgnore()] public string Disk {
 			get {
 				return this._disk;
 			}
@@ -5605,7 +5605,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Serial of this port
 		/// </summary>
-		public string Serial {
+		[JsonIgnore()] public string Serial {
 			get {
 				return this._serial;
 			}
@@ -5614,7 +5614,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Status of this port
 		/// </summary>
-		public OvhApi.Models.Dedicated.Server.RtmRaidStatusEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Server.RtmRaidStatusEnum Status {
 			get {
 				return this._status;
 			}
@@ -5623,7 +5623,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Port model name
 		/// </summary>
-		public string Model {
+		[JsonIgnore()] public string Model {
 			get {
 				return this._model;
 			}
@@ -5632,7 +5632,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Raid volume port
 		/// </summary>
-		public string Port {
+		[JsonIgnore()] public string Port {
 			get {
 				return this._port;
 			}
@@ -5641,7 +5641,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Port capacity
 		/// </summary>
-		public OvhApi.Models.ComplexType.UnitAndValue<double> Capacity {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<double> Capacity {
 			get {
 				return this._capacity;
 			}
@@ -5665,7 +5665,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Memory capacity 
 		/// </summary>
-		public OvhApi.Models.ComplexType.UnitAndValue<long> Capacity {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<long> Capacity {
 			get {
 				return this._capacity;
 			}
@@ -5677,7 +5677,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Memory slot
 		/// </summary>
-		public string Slot {
+		[JsonIgnore()] public string Slot {
 			get {
 				return this._slot;
 			}
@@ -5737,7 +5737,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Alert destination
 		/// </summary>
-		public string PhoneNumberTo {
+		[JsonIgnore()] public string PhoneNumberTo {
 			get {
 				return this._phoneNumberTo;
 			}
@@ -5749,7 +5749,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Your SMS account
 		/// </summary>
-		public string SmsAccount {
+		[JsonIgnore()] public string SmsAccount {
 			get {
 				return this._smsAccount;
 			}
@@ -5761,7 +5761,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Alert language
 		/// </summary>
-		public OvhApi.Models.Dedicated.Server.AlertLanguageEnum Language {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Server.AlertLanguageEnum Language {
 			get {
 				return this._language;
 			}
@@ -5773,7 +5773,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Daily hour start time for SMS notification
 		/// </summary>
-		public System.Nullable<long> ToHour {
+		[JsonIgnore()] public System.Nullable<long> ToHour {
 			get {
 				return this._toHour;
 			}
@@ -5785,7 +5785,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Id of this alert
 		/// </summary>
-		public long AlertId {
+		[JsonIgnore()] public long AlertId {
 			get {
 				return this._alertId;
 			}
@@ -5794,7 +5794,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Daily hour end time for SMS notification
 		/// </summary>
-		public System.Nullable<long> FromHour {
+		[JsonIgnore()] public System.Nullable<long> FromHour {
 			get {
 				return this._fromHour;
 			}
@@ -5806,7 +5806,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Is this alert enabled
 		/// </summary>
-		public bool Enabled {
+		[JsonIgnore()] public bool Enabled {
 			get {
 				return this._enabled;
 			}
@@ -5887,7 +5887,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// CPU usage
 		/// </summary>
-		public OvhApi.Models.ComplexType.UnitAndValue<double> Cpu {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<double> Cpu {
 			get {
 				return this._cpu;
 			}
@@ -5899,7 +5899,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Load average in the last 1 minute
 		/// </summary>
-		public System.Nullable<double> Loadavg1 {
+		[JsonIgnore()] public System.Nullable<double> Loadavg1 {
 			get {
 				return this._loadavg1;
 			}
@@ -5911,7 +5911,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Load average in the last 5 minutes
 		/// </summary>
-		public System.Nullable<double> Loadavg5 {
+		[JsonIgnore()] public System.Nullable<double> Loadavg5 {
 			get {
 				return this._loadavg5;
 			}
@@ -5923,7 +5923,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Memory usage
 		/// </summary>
-		public OvhApi.Models.ComplexType.UnitAndValue<double> Memory {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<double> Memory {
 			get {
 				return this._memory;
 			}
@@ -5935,7 +5935,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Server uptime
 		/// </summary>
-		public System.Nullable<long> Uptime {
+		[JsonIgnore()] public System.Nullable<long> Uptime {
 			get {
 				return this._uptime;
 			}
@@ -5947,7 +5947,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Load average in the last 15 minutes
 		/// </summary>
-		public System.Nullable<double> Loadavg15 {
+		[JsonIgnore()] public System.Nullable<double> Loadavg15 {
 			get {
 				return this._loadavg15;
 			}
@@ -5959,7 +5959,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Swap usage
 		/// </summary>
-		public OvhApi.Models.ComplexType.UnitAndValue<double> Swap {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<double> Swap {
 			get {
 				return this._swap;
 			}
@@ -5971,7 +5971,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Number of process running
 		/// </summary>
-		public System.Nullable<long> ProcessRunning {
+		[JsonIgnore()] public System.Nullable<long> ProcessRunning {
 			get {
 				return this._processRunning;
 			}
@@ -5983,7 +5983,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Number of processes using or waiting for CPU time
 		/// </summary>
-		public System.Nullable<long> ProcessCount {
+		[JsonIgnore()] public System.Nullable<long> ProcessCount {
 			get {
 				return this._processCount;
 			}
@@ -6070,7 +6070,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// KVM access ip
 		/// </summary>
-		public System.Net.IPAddress Ip {
+		[JsonIgnore()] public System.Net.IPAddress Ip {
 			get {
 				return this._ip;
 			}
@@ -6079,7 +6079,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// KVM hostname
 		/// </summary>
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
@@ -6088,7 +6088,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// KVM expiration date
 		/// </summary>
-		public System.DateTime Expiration {
+		[JsonIgnore()] public System.DateTime Expiration {
 			get {
 				return this._expiration;
 			}
@@ -6109,7 +6109,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Raid unit
 		/// </summary>
-		public string Unit {
+		[JsonIgnore()] public string Unit {
 			get {
 				return this._unit;
 			}
@@ -6139,7 +6139,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// number of disks in this group
 		/// </summary>
-		public System.Nullable<long> NumberOfDisks {
+		[JsonIgnore()] public System.Nullable<long> NumberOfDisks {
 			get {
 				return this._numberOfDisks;
 			}
@@ -6151,7 +6151,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// type of the disk (SSD, SATA, SAS, ...)
 		/// </summary>
-		public string DiskType {
+		[JsonIgnore()] public string DiskType {
 			get {
 				return this._diskType;
 			}
@@ -6163,7 +6163,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// disk capacity
 		/// </summary>
-		public OvhApi.Models.ComplexType.UnitAndValue<long> DiskSize {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<long> DiskSize {
 			get {
 				return this._diskSize;
 			}
@@ -6175,7 +6175,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// raid controller, if any, managing this group of disks
 		/// </summary>
-		public string RaidController {
+		[JsonIgnore()] public string RaidController {
 			get {
 				return this._raidController;
 			}
@@ -6223,7 +6223,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// System user ID
 		/// </summary>
-		public System.Nullable<long> Uid {
+		[JsonIgnore()] public System.Nullable<long> Uid {
 			get {
 				return this._uid;
 			}
@@ -6235,7 +6235,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// The IP address connected
 		/// </summary>
-		public System.Net.IPAddress Ip {
+		[JsonIgnore()] public System.Net.IPAddress Ip {
 			get {
 				return this._ip;
 			}
@@ -6247,7 +6247,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Complete command line used for starting this process
 		/// </summary>
-		public string Cmdline {
+		[JsonIgnore()] public string Cmdline {
 			get {
 				return this._cmdline;
 			}
@@ -6259,7 +6259,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Port opened
 		/// </summary>
-		public System.Nullable<long> Port {
+		[JsonIgnore()] public System.Nullable<long> Port {
 			get {
 				return this._port;
 			}
@@ -6271,7 +6271,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Username used to start the process
 		/// </summary>
-		public string Username {
+		[JsonIgnore()] public string Username {
 			get {
 				return this._username;
 			}
@@ -6283,7 +6283,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Name of the process
 		/// </summary>
-		public string Procname {
+		[JsonIgnore()] public string Procname {
 			get {
 				return this._procname;
 			}
@@ -6295,7 +6295,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Domain used by the process
 		/// </summary>
-		public string Domain {
+		[JsonIgnore()] public string Domain {
 			get {
 				return this._domain;
 			}
@@ -6307,7 +6307,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Process ID
 		/// </summary>
-		public System.Nullable<long> Pid {
+		[JsonIgnore()] public System.Nullable<long> Pid {
 			get {
 				return this._pid;
 			}
@@ -6319,7 +6319,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Path to the program
 		/// </summary>
-		public string Exe {
+		[JsonIgnore()] public string Exe {
 			get {
 				return this._exe;
 			}
@@ -6361,49 +6361,49 @@ namespace OvhApi.Models.Vrack {
 		[JsonProperty("id")]
 		private long _id;
 		
-		public System.Nullable<System.DateTime> LastUpdate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> LastUpdate {
 			get {
 				return this._lastUpdate;
 			}
 		}
 		
-		public System.Nullable<long> OrderId {
+		[JsonIgnore()] public System.Nullable<long> OrderId {
 			get {
 				return this._orderId;
 			}
 		}
 		
-		public string Function {
+		[JsonIgnore()] public string Function {
 			get {
 				return this._function;
 			}
 		}
 		
-		public string TargetDomain {
+		[JsonIgnore()] public string TargetDomain {
 			get {
 				return this._targetDomain;
 			}
 		}
 		
-		public System.Nullable<System.DateTime> TodoDate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> TodoDate {
 			get {
 				return this._todoDate;
 			}
 		}
 		
-		public string Status {
+		[JsonIgnore()] public string Status {
 			get {
 				return this._status;
 			}
 		}
 		
-		public string ServiceName {
+		[JsonIgnore()] public string ServiceName {
 			get {
 				return this._serviceName;
 			}
 		}
 		
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
@@ -6451,7 +6451,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Raid volume name
 		/// </summary>
-		public string Volume {
+		[JsonIgnore()] public string Volume {
 			get {
 				return this._volume;
 			}
@@ -6460,7 +6460,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Raid volume status
 		/// </summary>
-		public OvhApi.Models.Dedicated.Server.RtmRaidStatusEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Server.RtmRaidStatusEnum Status {
 			get {
 				return this._status;
 			}
@@ -6469,7 +6469,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Raid volume stripe
 		/// </summary>
-		public string Stripe {
+		[JsonIgnore()] public string Stripe {
 			get {
 				return this._stripe;
 			}
@@ -6478,7 +6478,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Raid volume letter
 		/// </summary>
-		public string Letter {
+		[JsonIgnore()] public string Letter {
 			get {
 				return this._letter;
 			}
@@ -6487,7 +6487,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Raid volume capacity
 		/// </summary>
-		public OvhApi.Models.ComplexType.UnitAndValue<double> Capacity {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<double> Capacity {
 			get {
 				return this._capacity;
 			}
@@ -6496,7 +6496,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Raid volume synchronization progress
 		/// </summary>
-		public string Syncprogress {
+		[JsonIgnore()] public string Syncprogress {
 			get {
 				return this._syncprogress;
 			}
@@ -6505,7 +6505,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Raid volume chunks
 		/// </summary>
-		public string Chunks {
+		[JsonIgnore()] public string Chunks {
 			get {
 				return this._chunks;
 			}
@@ -6514,7 +6514,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Raid volume type
 		/// </summary>
-		public string Type {
+		[JsonIgnore()] public string Type {
 			get {
 				return this._type;
 			}
@@ -6523,7 +6523,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Raid volume label
 		/// </summary>
-		public string Label {
+		[JsonIgnore()] public string Label {
 			get {
 				return this._label;
 			}
@@ -6532,7 +6532,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Raid volume phys
 		/// </summary>
-		public string Phys {
+		[JsonIgnore()] public string Phys {
 			get {
 				return this._phys;
 			}
@@ -6817,7 +6817,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// the intervention start date
 		/// </summary>
-		public System.Nullable<System.DateTime> Date {
+		[JsonIgnore()] public System.Nullable<System.DateTime> Date {
 			get {
 				return this._date;
 			}
@@ -6826,7 +6826,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// the intervention type
 		/// </summary>
-		public string Type {
+		[JsonIgnore()] public string Type {
 			get {
 				return this._type;
 			}
@@ -6835,7 +6835,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// The intervention id
 		/// </summary>
-		public long InterventionId {
+		[JsonIgnore()] public long InterventionId {
 			get {
 				return this._interventionId;
 			}
@@ -6874,7 +6874,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// the id of the task
 		/// </summary>
-		public long TaskId {
+		[JsonIgnore()] public long TaskId {
 			get {
 				return this._taskId;
 			}
@@ -6883,7 +6883,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Function name
 		/// </summary>
-		public OvhApi.Models.Dedicated.TaskFunctionEnum Function {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.TaskFunctionEnum Function {
 			get {
 				return this._function;
 			}
@@ -6892,7 +6892,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// last update
 		/// </summary>
-		public System.Nullable<System.DateTime> LastUpdate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> LastUpdate {
 			get {
 				return this._lastUpdate;
 			}
@@ -6901,7 +6901,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Details of this task
 		/// </summary>
-		public string Comment {
+		[JsonIgnore()] public string Comment {
 			get {
 				return this._comment;
 			}
@@ -6910,7 +6910,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Task status
 		/// </summary>
-		public OvhApi.Models.Dedicated.TaskStatusEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.TaskStatusEnum Status {
 			get {
 				return this._status;
 			}
@@ -6919,7 +6919,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Task Creation date
 		/// </summary>
-		public System.DateTime StartDate {
+		[JsonIgnore()] public System.DateTime StartDate {
 			get {
 				return this._startDate;
 			}
@@ -6928,7 +6928,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Completion date
 		/// </summary>
-		public System.Nullable<System.DateTime> DoneDate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> DoneDate {
 			get {
 				return this._doneDate;
 			}
@@ -6976,7 +6976,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// the boot system
 		/// </summary>
-		public OvhApi.Models.Dedicated.Server.BootTypeEnum BootType {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Server.BootTypeEnum BootType {
 			get {
 				return this._bootType;
 			}
@@ -6985,7 +6985,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// The boot kernel
 		/// </summary>
-		public string Kernel {
+		[JsonIgnore()] public string Kernel {
 			get {
 				return this._kernel;
 			}
@@ -6994,7 +6994,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// boot id
 		/// </summary>
-		public long BootId {
+		[JsonIgnore()] public long BootId {
 			get {
 				return this._bootId;
 			}
@@ -7003,7 +7003,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// the boot description
 		/// </summary>
-		public string Description {
+		[JsonIgnore()] public string Description {
 			get {
 				return this._description;
 			}
@@ -7027,7 +7027,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// the value of this option
 		/// </summary>
-		public string Value {
+		[JsonIgnore()] public string Value {
 			get {
 				return this._value;
 			}
@@ -7036,7 +7036,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// The option of this boot
 		/// </summary>
-		public OvhApi.Models.Dedicated.Server.BootOptionEnum Option {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Server.BootOptionEnum Option {
 			get {
 				return this._option;
 			}
@@ -7078,7 +7078,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Support level  orderable
 		/// </summary>
-		public OvhApi.Models.Dedicated.Server.SupportLevelOrderableEnum[] Levels {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Server.SupportLevelOrderableEnum[] Levels {
 			get {
 				return this._levels;
 			}
@@ -7090,7 +7090,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Is a support level is orderable for this server
 		/// </summary>
-		public bool Orderable {
+		[JsonIgnore()] public bool Orderable {
 			get {
 				return this._orderable;
 			}
@@ -7162,7 +7162,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Orderable IP v6 details
 		/// </summary>
-		public OvhApi.Models.Dedicated.Server.IpOrderableDetails[] Ipv6 {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Server.IpOrderableDetails[] Ipv6 {
 			get {
 				return this._ipv6;
 			}
@@ -7174,7 +7174,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Orderable IP v4 details
 		/// </summary>
-		public OvhApi.Models.Dedicated.Server.IpOrderableDetails[] Ipv4 {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Server.IpOrderableDetails[] Ipv4 {
 			get {
 				return this._ipv4;
 			}
@@ -7225,7 +7225,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// true if you want to install only on the first disk
 		/// </summary>
-		public System.Nullable<bool> NoRaid {
+		[JsonIgnore()] public System.Nullable<bool> NoRaid {
 			get {
 				return this._noRaid;
 			}
@@ -7237,7 +7237,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// The name of ssh key to install
 		/// </summary>
-		public string SshKeyName {
+		[JsonIgnore()] public string SshKeyName {
 			get {
 				return this._sshKeyName;
 			}
@@ -7249,7 +7249,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// install language for ovh install choice
 		/// </summary>
-		public string Language {
+		[JsonIgnore()] public string Language {
 			get {
 				return this._language;
 			}
@@ -7261,7 +7261,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// true if you want to install windows with your spla license
 		/// </summary>
-		public System.Nullable<bool> UseSpla {
+		[JsonIgnore()] public System.Nullable<bool> UseSpla {
 			get {
 				return this._useSpla;
 			}
@@ -7273,7 +7273,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// the url to your custom install script
 		/// </summary>
-		public string PostInstallationScriptLink {
+		[JsonIgnore()] public string PostInstallationScriptLink {
 			get {
 				return this._postInstallationScriptLink;
 			}
@@ -7285,7 +7285,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Personnal hostname to use in server reinstallation
 		/// </summary>
-		public string CustomHostname {
+		[JsonIgnore()] public string CustomHostname {
 			get {
 				return this._customHostname;
 			}
@@ -7297,7 +7297,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// true if you want to install windows with sql feature
 		/// </summary>
-		public System.Nullable<bool> InstallSqlServer {
+		[JsonIgnore()] public System.Nullable<bool> InstallSqlServer {
 			get {
 				return this._installSqlServer;
 			}
@@ -7309,7 +7309,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		///  the return of your script if everythings ok. Advice: your script should return a unique validation string in case of succes. A good example is &quot;loh1Xee7eo OK OK OK UGh8Ang1Gu
 		/// </summary>
-		public string PostInstallationScriptReturn {
+		[JsonIgnore()] public string PostInstallationScriptReturn {
 			get {
 				return this._postInstallationScriptReturn;
 			}
@@ -7321,7 +7321,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Number of devices to use for system's software RAID
 		/// </summary>
-		public System.Nullable<long> SoftRaidDevices {
+		[JsonIgnore()] public System.Nullable<long> SoftRaidDevices {
 			get {
 				return this._softRaidDevices;
 			}
@@ -7333,7 +7333,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// true if you want to install with distrib kernel
 		/// </summary>
-		public System.Nullable<bool> UseDistribKernel {
+		[JsonIgnore()] public System.Nullable<bool> UseDistribKernel {
 			get {
 				return this._useDistribKernel;
 			}
@@ -7384,7 +7384,7 @@ namespace OvhApi.Models.SecondaryDns {
 		/// <summary>
 		/// The field type to add on your DNS zone for this subDomain
 		/// </summary>
-		public OvhApi.Models.Zone.NamedResolutionFieldTypeEnum FieldType {
+		[JsonIgnore()] public OvhApi.Models.Zone.NamedResolutionFieldTypeEnum FieldType {
 			get {
 				return this._fieldType;
 			}
@@ -7396,7 +7396,7 @@ namespace OvhApi.Models.SecondaryDns {
 		/// <summary>
 		/// The subdomain to add on your DNS zone for the domain
 		/// </summary>
-		public string SubDomain {
+		[JsonIgnore()] public string SubDomain {
 			get {
 				return this._subDomain;
 			}
@@ -7408,7 +7408,7 @@ namespace OvhApi.Models.SecondaryDns {
 		/// <summary>
 		/// The field value to add on your DNS zone for this subDomain
 		/// </summary>
-		public string FieldValue {
+		[JsonIgnore()] public string FieldValue {
 			get {
 				return this._fieldValue;
 			}
@@ -7432,7 +7432,7 @@ namespace OvhApi.Models.ComplexType {
 		[JsonProperty("value")]
 		private System.Nullable<double> _value;
 		
-		public long Timestamp {
+		[JsonIgnore()] public long Timestamp {
 			get {
 				return this._timestamp;
 			}
@@ -7441,7 +7441,7 @@ namespace OvhApi.Models.ComplexType {
 			}
 		}
 		
-		public System.Nullable<double> Value {
+		[JsonIgnore()] public System.Nullable<double> Value {
 			get {
 				return this._value;
 			}
@@ -7486,7 +7486,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// This monitoring id
 		/// </summary>
-		public long MonitoringId {
+		[JsonIgnore()] public long MonitoringId {
 			get {
 				return this._monitoringId;
 			}
@@ -7495,7 +7495,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// The protocol to use
 		/// </summary>
-		public OvhApi.Models.Dedicated.Server.MonitoringProtocolEnum Protocol {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Server.MonitoringProtocolEnum Protocol {
 			get {
 				return this._protocol;
 			}
@@ -7507,7 +7507,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// The ip to monitor
 		/// </summary>
-		public System.Net.IPAddress Ip {
+		[JsonIgnore()] public System.Net.IPAddress Ip {
 			get {
 				return this._ip;
 			}
@@ -7516,7 +7516,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// The expected return
 		/// </summary>
-		public string ChallengeText {
+		[JsonIgnore()] public string ChallengeText {
 			get {
 				return this._challengeText;
 			}
@@ -7528,7 +7528,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// The URL to test
 		/// </summary>
-		public string Url {
+		[JsonIgnore()] public string Url {
 			get {
 				return this._url;
 			}
@@ -7540,7 +7540,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// The service port to monitor
 		/// </summary>
-		public long Port {
+		[JsonIgnore()] public long Port {
 			get {
 				return this._port;
 			}
@@ -7552,7 +7552,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// The test interval in seconds
 		/// </summary>
-		public OvhApi.Models.Dedicated.Server.MonitoringIntervalEnum Interval {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Server.MonitoringIntervalEnum Interval {
 			get {
 				return this._interval;
 			}
@@ -7564,7 +7564,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Is this service monitoring is enabled
 		/// </summary>
-		public bool Enabled {
+		[JsonIgnore()] public bool Enabled {
 			get {
 				return this._enabled;
 			}
@@ -7591,7 +7591,7 @@ namespace OvhApi.Models.SecondaryDns {
 		[JsonProperty("hostname")]
 		private string _hostname;
 		
-		public System.Net.IPAddress Ipv6 {
+		[JsonIgnore()] public System.Net.IPAddress Ipv6 {
 			get {
 				return this._ipv6;
 			}
@@ -7600,7 +7600,7 @@ namespace OvhApi.Models.SecondaryDns {
 			}
 		}
 		
-		public System.Net.IPAddress Ip {
+		[JsonIgnore()] public System.Net.IPAddress Ip {
 			get {
 				return this._ip;
 			}
@@ -7612,7 +7612,7 @@ namespace OvhApi.Models.SecondaryDns {
 		/// <summary>
 		/// the name server
 		/// </summary>
-		public string Hostname {
+		[JsonIgnore()] public string Hostname {
 			get {
 				return this._hostname;
 			}
@@ -7639,7 +7639,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Memory used by this process
 		/// </summary>
-		public OvhApi.Models.ComplexType.UnitAndValue<long> Memory {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<long> Memory {
 			get {
 				return this._memory;
 			}
@@ -7651,7 +7651,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Complete command line used for starting this process
 		/// </summary>
-		public string Command {
+		[JsonIgnore()] public string Command {
 			get {
 				return this._command;
 			}
@@ -7762,7 +7762,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Traffic details
 		/// </summary>
-		public OvhApi.Models.Dedicated.Server.TrafficDetails Traffic {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Server.TrafficDetails Traffic {
 			get {
 				return this._traffic;
 			}
@@ -7774,7 +7774,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Network connection flow rate
 		/// </summary>
-		public OvhApi.Models.ComplexType.UnitAndValue<long> Connection {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<long> Connection {
 			get {
 				return this._connection;
 			}
@@ -7786,7 +7786,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Bandwidth details
 		/// </summary>
-		public OvhApi.Models.Dedicated.Server.BandwidthDetails Bandwidth {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Server.BandwidthDetails Bandwidth {
 			get {
 				return this._bandwidth;
 			}
@@ -7852,7 +7852,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// dedicated datacenter localisation
 		/// </summary>
-		public OvhApi.Models.Dedicated.DatacenterEnum Datacenter {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.DatacenterEnum Datacenter {
 			get {
 				return this._datacenter;
 			}
@@ -7861,7 +7861,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Does this server have professional use option
 		/// </summary>
-		public bool ProfessionalUse {
+		[JsonIgnore()] public bool ProfessionalUse {
 			get {
 				return this._professionalUse;
 			}
@@ -7870,7 +7870,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Dedicated server support level
 		/// </summary>
-		public OvhApi.Models.Dedicated.Server.SupportLevelEnum SupportLevel {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Server.SupportLevelEnum SupportLevel {
 			get {
 				return this._supportLevel;
 			}
@@ -7879,7 +7879,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// dedicated server ip
 		/// </summary>
-		public System.Net.IPAddress Ip {
+		[JsonIgnore()] public System.Net.IPAddress Ip {
 			get {
 				return this._ip;
 			}
@@ -7888,7 +7888,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// dedicated server name
 		/// </summary>
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
@@ -7897,7 +7897,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// dedicater server commercial range
 		/// </summary>
-		public string CommercialRange {
+		[JsonIgnore()] public string CommercialRange {
 			get {
 				return this._commercialRange;
 			}
@@ -7906,13 +7906,13 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Operating system
 		/// </summary>
-		public string Os {
+		[JsonIgnore()] public string Os {
 			get {
 				return this._os;
 			}
 		}
 		
-		public OvhApi.Models.Dedicated.Server.StateEnum State {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Server.StateEnum State {
 			get {
 				return this._state;
 			}
@@ -7924,7 +7924,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// dedicated server reverse
 		/// </summary>
-		public string Reverse {
+		[JsonIgnore()] public string Reverse {
 			get {
 				return this._reverse;
 			}
@@ -7933,7 +7933,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// your server id
 		/// </summary>
-		public long ServerId {
+		[JsonIgnore()] public long ServerId {
 			get {
 				return this._serverId;
 			}
@@ -7942,7 +7942,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Icmp monitoring state
 		/// </summary>
-		public bool Monitoring {
+		[JsonIgnore()] public bool Monitoring {
 			get {
 				return this._monitoring;
 			}
@@ -7951,13 +7951,13 @@ namespace OvhApi.Models.Dedicated.Server {
 			}
 		}
 		
-		public string Rack {
+		[JsonIgnore()] public string Rack {
 			get {
 				return this._rack;
 			}
 		}
 		
-		public string RootDevice {
+		[JsonIgnore()] public string RootDevice {
 			get {
 				return this._rootDevice;
 			}
@@ -7966,13 +7966,13 @@ namespace OvhApi.Models.Dedicated.Server {
 			}
 		}
 		
-		public System.Nullable<long> LinkSpeed {
+		[JsonIgnore()] public System.Nullable<long> LinkSpeed {
 			get {
 				return this._linkSpeed;
 			}
 		}
 		
-		public System.Nullable<long> BootId {
+		[JsonIgnore()] public System.Nullable<long> BootId {
 			get {
 				return this._bootId;
 			}
@@ -8095,7 +8095,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Bandwidth &quot;ultimate&quot; orderable in mbps
 		/// </summary>
-		public OvhApi.Models.Dedicated.Server.BandwidthOrderEnum[] Ultimate {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Server.BandwidthOrderEnum[] Ultimate {
 			get {
 				return this._ultimate;
 			}
@@ -8107,7 +8107,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Bandwidth &quot;premium&quot; orderable in mbps
 		/// </summary>
-		public OvhApi.Models.Dedicated.Server.BandwidthOrderEnum[] Premium {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Server.BandwidthOrderEnum[] Premium {
 			get {
 				return this._premium;
 			}
@@ -8119,7 +8119,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Is bandwidth orderable for this server
 		/// </summary>
-		public bool Orderable {
+		[JsonIgnore()] public bool Orderable {
 			get {
 				return this._orderable;
 			}
@@ -8131,7 +8131,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Bandwidth &quot;platinum&quot; orderable in mbps
 		/// </summary>
-		public OvhApi.Models.Dedicated.Server.BandwidthOrderEnum[] Platinum {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Server.BandwidthOrderEnum[] Platinum {
 			get {
 				return this._platinum;
 			}
@@ -8158,7 +8158,7 @@ namespace OvhApi.Models.Vrack {
 		/// <summary>
 		/// vrack (1.5) name
 		/// </summary>
-		public string Vrack {
+		[JsonIgnore()] public string Vrack {
 			get {
 				return this._vrack;
 			}
@@ -8167,7 +8167,7 @@ namespace OvhApi.Models.Vrack {
 		/// <summary>
 		/// Dedicated Server
 		/// </summary>
-		public string DedicatedServerName {
+		[JsonIgnore()] public string DedicatedServerName {
 			get {
 				return this._dedicatedServer;
 			}
@@ -8221,7 +8221,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// The disk space available in gigabytes
 		/// </summary>
-		public OvhApi.Models.ComplexType.UnitAndValue<long> Quota {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<long> Quota {
 			get {
 				return this._quota;
 			}
@@ -8230,7 +8230,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// The disk space currently used on your backup FTP in percent
 		/// </summary>
-		public OvhApi.Models.ComplexType.UnitAndValue<long> Usage {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<long> Usage {
 			get {
 				return this._usage;
 			}
@@ -8239,7 +8239,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// The backup FTP server name
 		/// </summary>
-		public string FtpBackupName {
+		[JsonIgnore()] public string FtpBackupName {
 			get {
 				return this._ftpBackupName;
 			}
@@ -8248,7 +8248,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// The backup FTP type
 		/// </summary>
-		public OvhApi.Models.Dedicated.Server.BackupStorageTypeEnum Type {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Server.BackupStorageTypeEnum Type {
 			get {
 				return this._type;
 			}
@@ -8257,7 +8257,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// If not-null, gives the date since when your account was set in read-only mode because the quota was exceeded
 		/// </summary>
-		public System.Nullable<System.DateTime> ReadOnlyDate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> ReadOnlyDate {
 			get {
 				return this._readOnlyDate;
 			}
@@ -8281,7 +8281,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Motherboard manufacturer
 		/// </summary>
-		public string Manufacturer {
+		[JsonIgnore()] public string Manufacturer {
 			get {
 				return this._manufacturer;
 			}
@@ -8293,7 +8293,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Motherboard name
 		/// </summary>
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
@@ -8335,7 +8335,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Installation steps
 		/// </summary>
-		public OvhApi.Models.Dedicated.Server.InstallationProgressSteps[] Progress {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Server.InstallationProgressSteps[] Progress {
 			get {
 				return this._progress;
 			}
@@ -8347,7 +8347,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Elapsed time in seconds since installation beggining
 		/// </summary>
-		public long ElapsedTime {
+		[JsonIgnore()] public long ElapsedTime {
 			get {
 				return this._elapsedTime;
 			}
@@ -8422,7 +8422,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// OS release
 		/// </summary>
-		public string Release {
+		[JsonIgnore()] public string Release {
 			get {
 				return this._release;
 			}
@@ -8434,7 +8434,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// OS kernel release
 		/// </summary>
-		public string KernelRelease {
+		[JsonIgnore()] public string KernelRelease {
 			get {
 				return this._kernelRelease;
 			}
@@ -8446,7 +8446,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// OS kernel version
 		/// </summary>
-		public string KernelVersion {
+		[JsonIgnore()] public string KernelVersion {
 			get {
 				return this._kernelVersion;
 			}
@@ -8497,7 +8497,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Current pending sectors
 		/// </summary>
-		public System.Nullable<long> Current_pending_sector {
+		[JsonIgnore()] public System.Nullable<long> Current_pending_sector {
 			get {
 				return this._current_pending_sector;
 			}
@@ -8509,7 +8509,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Multizone error rate
 		/// </summary>
-		public System.Nullable<long> Multizone_error_rate {
+		[JsonIgnore()] public System.Nullable<long> Multizone_error_rate {
 			get {
 				return this._multizone_error_rate;
 			}
@@ -8521,7 +8521,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Offline seek rate
 		/// </summary>
-		public System.Nullable<long> Offline_seek_performance {
+		[JsonIgnore()] public System.Nullable<long> Offline_seek_performance {
 			get {
 				return this._offline_seek_performance;
 			}
@@ -8533,7 +8533,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// temperature
 		/// </summary>
-		public System.Nullable<long> Temperature_celsius {
+		[JsonIgnore()] public System.Nullable<long> Temperature_celsius {
 			get {
 				return this._temperature_celsius;
 			}
@@ -8545,7 +8545,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Uncorrected read errors
 		/// </summary>
-		public System.Nullable<long> Uncorrected_read_errors {
+		[JsonIgnore()] public System.Nullable<long> Uncorrected_read_errors {
 			get {
 				return this._uncorrected_read_errors;
 			}
@@ -8557,7 +8557,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Realocated event count
 		/// </summary>
-		public System.Nullable<long> Realocated_event_count {
+		[JsonIgnore()] public System.Nullable<long> Realocated_event_count {
 			get {
 				return this._realocated_event_count;
 			}
@@ -8569,7 +8569,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Uncorrected write errors
 		/// </summary>
-		public System.Nullable<long> Uncorrected_write_errors {
+		[JsonIgnore()] public System.Nullable<long> Uncorrected_write_errors {
 			get {
 				return this._uncorrected_write_errors;
 			}
@@ -8581,7 +8581,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Offline uncorrectable
 		/// </summary>
-		public System.Nullable<long> Offline_uncorrectable {
+		[JsonIgnore()] public System.Nullable<long> Offline_uncorrectable {
 			get {
 				return this._offline_uncorrectable;
 			}
@@ -8593,7 +8593,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// UDMA crc error
 		/// </summary>
-		public System.Nullable<long> Udma_crc_error {
+		[JsonIgnore()] public System.Nullable<long> Udma_crc_error {
 			get {
 				return this._udma_crc_error;
 			}
@@ -8605,7 +8605,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Other errors
 		/// </summary>
-		public System.Nullable<long> Other_errors {
+		[JsonIgnore()] public System.Nullable<long> Other_errors {
 			get {
 				return this._other_errors;
 			}
@@ -8692,7 +8692,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		[JsonProperty("enabled")]
 		private bool _enabled;
 		
-		public string FirewallName {
+		[JsonIgnore()] public string FirewallName {
 			get {
 				return this._firewall;
 			}
@@ -8701,7 +8701,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// transparent mode : device is invisible on the network; routed mode : the security appliance is considered to be a router hop in the network
 		/// </summary>
-		public OvhApi.Models.Dedicated.Server.FirewallModeEnum Mode {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Server.FirewallModeEnum Mode {
 			get {
 				return this._mode;
 			}
@@ -8710,7 +8710,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Firewall management IP
 		/// </summary>
-		public System.Net.IPAddress Ip {
+		[JsonIgnore()] public System.Net.IPAddress Ip {
 			get {
 				return this._ip;
 			}
@@ -8719,13 +8719,13 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Firewall model
 		/// </summary>
-		public OvhApi.Models.Dedicated.Server.FirewallModelEnum Model {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Server.FirewallModelEnum Model {
 			get {
 				return this._model;
 			}
 		}
 		
-		public bool Enabled {
+		[JsonIgnore()] public bool Enabled {
 			get {
 				return this._enabled;
 			}
@@ -8758,7 +8758,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Alert destination
 		/// </summary>
-		public string Email {
+		[JsonIgnore()] public string Email {
 			get {
 				return this._email;
 			}
@@ -8770,7 +8770,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Alert language
 		/// </summary>
-		public OvhApi.Models.Dedicated.Server.AlertLanguageEnum Language {
+		[JsonIgnore()] public OvhApi.Models.Dedicated.Server.AlertLanguageEnum Language {
 			get {
 				return this._language;
 			}
@@ -8782,7 +8782,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// This monitoring id
 		/// </summary>
-		public long AlertId {
+		[JsonIgnore()] public long AlertId {
 			get {
 				return this._alertId;
 			}
@@ -8791,7 +8791,7 @@ namespace OvhApi.Models.Dedicated.Server {
 		/// <summary>
 		/// Is this monitor enabled
 		/// </summary>
-		public bool Enabled {
+		[JsonIgnore()] public bool Enabled {
 			get {
 				return this._enabled;
 			}
@@ -8833,7 +8833,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// Backup feature order status for this Dedicated Cloud
 		/// </summary>
-		public OvhApi.Models.DedicatedCloud.Capabilities.FeatureStatusEnum BackupStatus {
+		[JsonIgnore()] public OvhApi.Models.DedicatedCloud.Capabilities.FeatureStatusEnum BackupStatus {
 			get {
 				return this._backupStatus;
 			}
@@ -8842,7 +8842,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// Nexus 1000v feature order status in this Dedicated Cloud ?
 		/// </summary>
-		public OvhApi.Models.DedicatedCloud.Capabilities.FeatureStatusEnum Nexus1000vStatus {
+		[JsonIgnore()] public OvhApi.Models.DedicatedCloud.Capabilities.FeatureStatusEnum Nexus1000vStatus {
 			get {
 				return this._nexus1000vStatus;
 			}
@@ -8851,7 +8851,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// if true user can be added in this Dedicated Cloud (with POST /dedicatedCloud/{serviceName}/user
 		/// </summary>
-		public bool CanAddUser {
+		[JsonIgnore()] public bool CanAddUser {
 			get {
 				return this._canAddUser;
 			}
@@ -8860,7 +8860,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// fullAdminRO user right order status in this Dedicated Cloud
 		/// </summary>
-		public OvhApi.Models.DedicatedCloud.Capabilities.FeatureStatusEnum FullAdminRoUserStatus {
+		[JsonIgnore()] public OvhApi.Models.DedicatedCloud.Capabilities.FeatureStatusEnum FullAdminRoUserStatus {
 			get {
 				return this._fullAdminRoUserStatus;
 			}
@@ -8869,7 +8869,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// canAddRessource right order status in this Dedicated Cloud
 		/// </summary>
-		public OvhApi.Models.DedicatedCloud.Capabilities.FeatureStatusEnum AddRessourceRightStatus {
+		[JsonIgnore()] public OvhApi.Models.DedicatedCloud.Capabilities.FeatureStatusEnum AddRessourceRightStatus {
 			get {
 				return this._addRessourceRightStatus;
 			}
@@ -8878,7 +8878,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// userAccessPolicy property edition status in PUT /dedicatedCloud/{serviceName}
 		/// </summary>
-		public OvhApi.Models.DedicatedCloud.Capabilities.FeatureStatusEnum UserAccessPolicyStatus {
+		[JsonIgnore()] public OvhApi.Models.DedicatedCloud.Capabilities.FeatureStatusEnum UserAccessPolicyStatus {
 			get {
 				return this._userAccessPolicyStatus;
 			}
@@ -8887,7 +8887,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// Hypervisor upgrade order status in this Dedicated Cloud (upgrade with POST /dedicatedCloud/{serviceName}/upgradeHypervisor)
 		/// </summary>
-		public bool Upgradable {
+		[JsonIgnore()] public bool Upgradable {
 			get {
 				return this._upgradable;
 			}
@@ -8962,7 +8962,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		[JsonProperty("networkName")]
 		private string _networkName;
 		
-		public string Country {
+		[JsonIgnore()] public string Country {
 			get {
 				return this._country;
 			}
@@ -8971,7 +8971,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// The Regional Internet Registry of this Ip Block
 		/// </summary>
-		public OvhApi.Models.DedicatedCloud.BlockRegisterEnum Register {
+		[JsonIgnore()] public OvhApi.Models.DedicatedCloud.BlockRegisterEnum Register {
 			get {
 				return this._register;
 			}
@@ -8980,7 +8980,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// IP ex: 213.186.33.34/24
 		/// </summary>
-		public OVHApi.IPAddressBlock Network {
+		[JsonIgnore()] public OVHApi.IPAddressBlock Network {
 			get {
 				return this._network;
 			}
@@ -8989,13 +8989,13 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// Vlan where this network is routed
 		/// </summary>
-		public long VlanNumber {
+		[JsonIgnore()] public long VlanNumber {
 			get {
 				return this._vlanNumber;
 			}
 		}
 		
-		public string Description {
+		[JsonIgnore()] public string Description {
 			get {
 				return this._description;
 			}
@@ -9004,7 +9004,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// Network name
 		/// </summary>
-		public string NetworkName {
+		[JsonIgnore()] public string NetworkName {
 			get {
 				return this._networkName;
 			}
@@ -9037,37 +9037,37 @@ namespace OvhApi.Models.DedicatedCloud {
 		[JsonProperty("state")]
 		private OvhApi.Models.DedicatedCloud.Filer.StateEnum _state;
 		
-		public string ProfileName {
+		[JsonIgnore()] public string ProfileName {
 			get {
 				return this._profile;
 			}
 		}
 		
-		public OvhApi.Models.DedicatedCloud.Ressources.BillingTypeEnum BillingType {
+		[JsonIgnore()] public OvhApi.Models.DedicatedCloud.Ressources.BillingTypeEnum BillingType {
 			get {
 				return this._billingType;
 			}
 		}
 		
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
 		}
 		
-		public long FilerId {
+		[JsonIgnore()] public long FilerId {
 			get {
 				return this._filerId;
 			}
 		}
 		
-		public OvhApi.Models.ComplexType.UnitAndValue<long> Size {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<long> Size {
 			get {
 				return this._size;
 			}
 		}
 		
-		public OvhApi.Models.DedicatedCloud.Filer.StateEnum State {
+		[JsonIgnore()] public OvhApi.Models.DedicatedCloud.Filer.StateEnum State {
 			get {
 				return this._state;
 			}
@@ -9105,7 +9105,7 @@ namespace OvhApi.Models.DedicatedCloud {
 			[JsonProperty("size")]
 			private OvhApi.Models.ComplexType.UnitAndValue<long> _size;
 			
-			public string Name {
+			[JsonIgnore()] public string Name {
 				get {
 					return this._name;
 				}
@@ -9114,7 +9114,7 @@ namespace OvhApi.Models.DedicatedCloud {
 				}
 			}
 			
-			public OvhApi.Models.ComplexType.UnitAndValue<long> Size {
+			[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<long> Size {
 				get {
 					return this._size;
 				}
@@ -9205,7 +9205,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		[JsonProperty("state")]
 		private OvhApi.Models.DedicatedCloud.User.StateEnum _state;
 		
-		public string Email {
+		[JsonIgnore()] public string Email {
 			get {
 				return this._email;
 			}
@@ -9214,7 +9214,7 @@ namespace OvhApi.Models.DedicatedCloud {
 			}
 		}
 		
-		public bool FullAdminRo {
+		[JsonIgnore()] public bool FullAdminRo {
 			get {
 				return this._fullAdminRo;
 			}
@@ -9223,19 +9223,19 @@ namespace OvhApi.Models.DedicatedCloud {
 			}
 		}
 		
-		public long UserId {
+		[JsonIgnore()] public long UserId {
 			get {
 				return this._userId;
 			}
 		}
 		
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
 		}
 		
-		public bool CanManageIpFailOvers {
+		[JsonIgnore()] public bool CanManageIpFailOvers {
 			get {
 				return this._canManageIpFailOvers;
 			}
@@ -9244,7 +9244,7 @@ namespace OvhApi.Models.DedicatedCloud {
 			}
 		}
 		
-		public bool CanManageNetwork {
+		[JsonIgnore()] public bool CanManageNetwork {
 			get {
 				return this._canManageNetwork;
 			}
@@ -9253,7 +9253,7 @@ namespace OvhApi.Models.DedicatedCloud {
 			}
 		}
 		
-		public OvhApi.Models.DedicatedCloud.User.StateEnum State {
+		[JsonIgnore()] public OvhApi.Models.DedicatedCloud.User.StateEnum State {
 			get {
 				return this._state;
 			}
@@ -9298,7 +9298,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// The alert level on which we will send an alert on the email address configured
 		/// </summary>
-		public OvhApi.Models.DedicatedCloud.BackupLogLevelEnum MailOnLevel {
+		[JsonIgnore()] public OvhApi.Models.DedicatedCloud.BackupLogLevelEnum MailOnLevel {
 			get {
 				return this._mailOnLevel;
 			}
@@ -9307,7 +9307,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// The email address on which alert will be sent if the level you configured is reached. If not set mail is sent to dedicatedCloud administrator contact
 		/// </summary>
-		public string MailAddress {
+		[JsonIgnore()] public string MailAddress {
 			get {
 				return this._mailAddress;
 			}
@@ -9316,7 +9316,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// This Backup current state
 		/// </summary>
-		public OvhApi.Models.DedicatedCloud.BackupStateEnum State {
+		[JsonIgnore()] public OvhApi.Models.DedicatedCloud.BackupStateEnum State {
 			get {
 				return this._state;
 			}
@@ -9349,19 +9349,19 @@ namespace OvhApi.Models.DedicatedCloud {
 		[JsonProperty("state")]
 		private OvhApi.Models.DedicatedCloud.Vlan.StateEnum _state;
 		
-		public long VlanNumber {
+		[JsonIgnore()] public long VlanNumber {
 			get {
 				return this._vlanNumber;
 			}
 		}
 		
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
 		}
 		
-		public OvhApi.Models.DedicatedCloud.Vlan.TypeEnum Type {
+		[JsonIgnore()] public OvhApi.Models.DedicatedCloud.Vlan.TypeEnum Type {
 			get {
 				return this._type;
 			}
@@ -9370,19 +9370,19 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// Speed in Mbps
 		/// </summary>
-		public string RoutingRateLimit {
+		[JsonIgnore()] public string RoutingRateLimit {
 			get {
 				return this._routingRateLimit;
 			}
 		}
 		
-		public long VlanId {
+		[JsonIgnore()] public long VlanId {
 			get {
 				return this._vlanId;
 			}
 		}
 		
-		public OvhApi.Models.DedicatedCloud.Vlan.StateEnum State {
+		[JsonIgnore()] public OvhApi.Models.DedicatedCloud.Vlan.StateEnum State {
 			get {
 				return this._state;
 			}
@@ -9466,7 +9466,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		[JsonProperty("state")]
 		private OvhApi.Models.DedicatedCloud.TaskStateEnum _state;
 		
-		public long TaskId {
+		[JsonIgnore()] public long TaskId {
 			get {
 				return this._taskId;
 			}
@@ -9475,7 +9475,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// Current progress
 		/// </summary>
-		public long Progress {
+		[JsonIgnore()] public long Progress {
 			get {
 				return this._progress;
 			}
@@ -9484,7 +9484,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// Task name
 		/// </summary>
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
@@ -9493,7 +9493,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// Current Task state
 		/// </summary>
-		public OvhApi.Models.DedicatedCloud.TaskStateEnum State {
+		[JsonIgnore()] public OvhApi.Models.DedicatedCloud.TaskStateEnum State {
 			get {
 				return this._state;
 			}
@@ -9697,7 +9697,7 @@ namespace OvhApi.Models.Vrack {
 		/// <summary>
 		/// vrack (1.5) name
 		/// </summary>
-		public string Vrack {
+		[JsonIgnore()] public string Vrack {
 			get {
 				return this._vrack;
 			}
@@ -9706,7 +9706,7 @@ namespace OvhApi.Models.Vrack {
 		/// <summary>
 		/// your dedicated cloud service
 		/// </summary>
-		public string DedicatedCloudName {
+		[JsonIgnore()] public string DedicatedCloudName {
 			get {
 				return this._dedicatedCloud;
 			}
@@ -9715,7 +9715,7 @@ namespace OvhApi.Models.Vrack {
 		/// <summary>
 		/// Dedicated cloud vlanId used
 		/// </summary>
-		public System.Nullable<long> VlanId {
+		[JsonIgnore()] public System.Nullable<long> VlanId {
 			get {
 				return this._vlanId;
 			}
@@ -9766,7 +9766,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// Determine if the user can add ressources in your Dedicated Cloud
 		/// </summary>
-		public bool CanAddRessource {
+		[JsonIgnore()] public bool CanAddRessource {
 			get {
 				return this._canAddRessource;
 			}
@@ -9778,7 +9778,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// Determine what kind of access the User will have in this Datacenter of your Dedicated Cloud
 		/// </summary>
-		public OvhApi.Models.DedicatedCloud.Right.RightEnum RightName {
+		[JsonIgnore()] public OvhApi.Models.DedicatedCloud.Right.RightEnum RightName {
 			get {
 				return this._right;
 			}
@@ -9787,13 +9787,13 @@ namespace OvhApi.Models.DedicatedCloud {
 			}
 		}
 		
-		public long RightId {
+		[JsonIgnore()] public long RightId {
 			get {
 				return this._rightId;
 			}
 		}
 		
-		public long DatacenterId {
+		[JsonIgnore()] public long DatacenterId {
 			get {
 				return this._datacenterId;
 			}
@@ -9802,7 +9802,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// Determine how this user can interact with the Dedicated Cloud VM Network
 		/// </summary>
-		public OvhApi.Models.DedicatedCloud.Right.VmNetworkRoleEnum VmNetworkRole {
+		[JsonIgnore()] public OvhApi.Models.DedicatedCloud.Right.VmNetworkRoleEnum VmNetworkRole {
 			get {
 				return this._vmNetworkRole;
 			}
@@ -9814,7 +9814,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// Determine how this user can interact with the Dedicated Cloud V(x)Lans
 		/// </summary>
-		public OvhApi.Models.DedicatedCloud.Right.NetworkRoleEnum NetworkRole {
+		[JsonIgnore()] public OvhApi.Models.DedicatedCloud.Right.NetworkRoleEnum NetworkRole {
 			get {
 				return this._networkRole;
 			}
@@ -9925,7 +9925,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// The maximum amount of connected users allowed on the Dedicated Cloud management interface
 		/// </summary>
-		public long UserLimitConcurrentSession {
+		[JsonIgnore()] public long UserLimitConcurrentSession {
 			get {
 				return this._userLimitConcurrentSession;
 			}
@@ -9937,7 +9937,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// The management interface name
 		/// </summary>
-		public OvhApi.Models.DedicatedCloud.ManagementInterfaceEnum ManagementInterface {
+		[JsonIgnore()] public OvhApi.Models.DedicatedCloud.ManagementInterfaceEnum ManagementInterface {
 			get {
 				return this._managementInterface;
 			}
@@ -9946,7 +9946,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// Billing type of your Dedicated Cloud
 		/// </summary>
-		public OvhApi.Models.DedicatedCloud.BillingTypeEnum BillingType {
+		[JsonIgnore()] public OvhApi.Models.DedicatedCloud.BillingTypeEnum BillingType {
 			get {
 				return this._billingType;
 			}
@@ -9955,7 +9955,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// Datacenter where your Dedicated Cloud is physically located
 		/// </summary>
-		public string Location {
+		[JsonIgnore()] public string Location {
 			get {
 				return this._location;
 			}
@@ -9964,7 +9964,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// Enable SSL v3 support. Warning : this option is not recommended as it was recognized as a security breach. If this is enabled, we advise you to enable the filtered User access policy
 		/// </summary>
-		public System.Nullable<bool> SslV3 {
+		[JsonIgnore()] public System.Nullable<bool> SslV3 {
 			get {
 				return this._sslV3;
 			}
@@ -9976,7 +9976,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// Service name of your Dedicated Cloud
 		/// </summary>
-		public string ServiceName {
+		[JsonIgnore()] public string ServiceName {
 			get {
 				return this._serviceName;
 			}
@@ -9985,7 +9985,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// The timeout (in seconds) for the user sessions on the Dedicated Cloud management interface. 0 value disable the timeout
 		/// </summary>
-		public long UserSessionTimeout {
+		[JsonIgnore()] public long UserSessionTimeout {
 			get {
 				return this._userSessionTimeout;
 			}
@@ -9997,7 +9997,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// Description of your Dedicated Cloud
 		/// </summary>
-		public string Description {
+		[JsonIgnore()] public string Description {
 			get {
 				return this._description;
 			}
@@ -10009,7 +10009,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// The current version of your Dedicated Cloud
 		/// </summary>
-		public string CommercialRange {
+		[JsonIgnore()] public string CommercialRange {
 			get {
 				return this._commercialRange;
 			}
@@ -10018,7 +10018,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// Current state of your Dedicated Cloud
 		/// </summary>
-		public OvhApi.Models.DedicatedCloud.StateEnum State {
+		[JsonIgnore()] public OvhApi.Models.DedicatedCloud.StateEnum State {
 			get {
 				return this._state;
 			}
@@ -10027,7 +10027,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// SPLA licensing state
 		/// </summary>
-		public bool Spla {
+		[JsonIgnore()] public bool Spla {
 			get {
 				return this._spla;
 			}
@@ -10036,7 +10036,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// Access policy of your Dedicated Cloud : opened to every IPs or filtered
 		/// </summary>
-		public OvhApi.Models.DedicatedCloud.UserAccessPolicyEnum UserAccessPolicy {
+		[JsonIgnore()] public OvhApi.Models.DedicatedCloud.UserAccessPolicyEnum UserAccessPolicy {
 			get {
 				return this._userAccessPolicy;
 			}
@@ -10045,7 +10045,7 @@ namespace OvhApi.Models.DedicatedCloud {
 			}
 		}
 		
-		public OvhApi.Models.DedicatedCloud.UserLogoutPolicyEnum UserLogoutPolicy {
+		[JsonIgnore()] public OvhApi.Models.DedicatedCloud.UserLogoutPolicyEnum UserLogoutPolicy {
 			get {
 				return this._userLogoutPolicy;
 			}
@@ -10057,7 +10057,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// Url to the vScope associated to this Dedicated Cloud
 		/// </summary>
-		public string VScopeUrl {
+		[JsonIgnore()] public string VScopeUrl {
 			get {
 				return this._vScopeUrl;
 			}
@@ -10096,43 +10096,43 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// Host profile in a commercial range
 		/// </summary>
-		public string ProfileName {
+		[JsonIgnore()] public string ProfileName {
 			get {
 				return this._profile;
 			}
 		}
 		
-		public OvhApi.Models.ComplexType.UnitAndValue<double> Cpu {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<double> Cpu {
 			get {
 				return this._cpu;
 			}
 		}
 		
-		public OvhApi.Models.DedicatedCloud.Ressources.BillingTypeEnum BillingType {
+		[JsonIgnore()] public OvhApi.Models.DedicatedCloud.Ressources.BillingTypeEnum BillingType {
 			get {
 				return this._billingType;
 			}
 		}
 		
-		public long HostId {
+		[JsonIgnore()] public long HostId {
 			get {
 				return this._hostId;
 			}
 		}
 		
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
 		}
 		
-		public OvhApi.Models.ComplexType.UnitAndValue<long> Ram {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<long> Ram {
 			get {
 				return this._ram;
 			}
 		}
 		
-		public OvhApi.Models.DedicatedCloud.Host.StateEnum State {
+		[JsonIgnore()] public OvhApi.Models.DedicatedCloud.Host.StateEnum State {
 			get {
 				return this._state;
 			}
@@ -10176,7 +10176,7 @@ namespace OvhApi.Models.DedicatedCloud {
 			[JsonProperty("ram")]
 			private OvhApi.Models.ComplexType.UnitAndValue<long> _ram;
 			
-			public string Core {
+			[JsonIgnore()] public string Core {
 				get {
 					return this._core;
 				}
@@ -10185,7 +10185,7 @@ namespace OvhApi.Models.DedicatedCloud {
 				}
 			}
 			
-			public OvhApi.Models.ComplexType.UnitAndValue<double> Cpu {
+			[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<double> Cpu {
 				get {
 					return this._cpu;
 				}
@@ -10194,7 +10194,7 @@ namespace OvhApi.Models.DedicatedCloud {
 				}
 			}
 			
-			public string Name {
+			[JsonIgnore()] public string Name {
 				get {
 					return this._name;
 				}
@@ -10203,7 +10203,7 @@ namespace OvhApi.Models.DedicatedCloud {
 				}
 			}
 			
-			public OvhApi.Models.ComplexType.UnitAndValue<long> Ram {
+			[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<long> Ram {
 				get {
 					return this._ram;
 				}
@@ -10231,7 +10231,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		[JsonProperty("state")]
 		private OvhApi.Models.DedicatedCloud.AllowedNetworkStateEnum _state;
 		
-		public long NetworkAccessId {
+		[JsonIgnore()] public long NetworkAccessId {
 			get {
 				return this._networkAccessId;
 			}
@@ -10240,7 +10240,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// Network name, e.g. 123.100.200.0/32
 		/// </summary>
-		public OVHApi.IPAddressBlock Network {
+		[JsonIgnore()] public OVHApi.IPAddressBlock Network {
 			get {
 				return this._network;
 			}
@@ -10249,7 +10249,7 @@ namespace OvhApi.Models.DedicatedCloud {
 			}
 		}
 		
-		public OvhApi.Models.DedicatedCloud.AllowedNetworkStateEnum State {
+		[JsonIgnore()] public OvhApi.Models.DedicatedCloud.AllowedNetworkStateEnum State {
 			get {
 				return this._state;
 			}
@@ -10297,7 +10297,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// The commercial range associated to this Datacenter
 		/// </summary>
-		public string CommercialRangeName {
+		[JsonIgnore()] public string CommercialRangeName {
 			get {
 				return this._commercialRangeName;
 			}
@@ -10306,13 +10306,13 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// Os version installed on your Dedicated Cloud
 		/// </summary>
-		public OvhApi.Models.DedicatedCloud.HypervisorVersionEnum Version {
+		[JsonIgnore()] public OvhApi.Models.DedicatedCloud.HypervisorVersionEnum Version {
 			get {
 				return this._version;
 			}
 		}
 		
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
@@ -10321,13 +10321,13 @@ namespace OvhApi.Models.DedicatedCloud {
 			}
 		}
 		
-		public long DatacenterId {
+		[JsonIgnore()] public long DatacenterId {
 			get {
 				return this._datacenterId;
 			}
 		}
 		
-		public string Description {
+		[JsonIgnore()] public string Description {
 			get {
 				return this._description;
 			}
@@ -10381,7 +10381,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// The name of this commercial range
 		/// </summary>
-		public string CommercialRangeName {
+		[JsonIgnore()] public string CommercialRangeName {
 			get {
 				return this._commercialRangeName;
 			}
@@ -10390,7 +10390,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// The hypervisor versions compliant with this commercial Range
 		/// </summary>
-		public OvhApi.Models.DedicatedCloud.HypervisorVersionEnum[] AllowedHypervisorVersions {
+		[JsonIgnore()] public OvhApi.Models.DedicatedCloud.HypervisorVersionEnum[] AllowedHypervisorVersions {
 			get {
 				return this._allowedHypervisorVersions;
 			}
@@ -10399,7 +10399,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// The range of this Datacenter in this Dedicated Cloud version
 		/// </summary>
-		public string Range {
+		[JsonIgnore()] public string Range {
 			get {
 				return this._range;
 			}
@@ -10408,7 +10408,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// The list of NetworkRoles allowed for one user in this commercial range
 		/// </summary>
-		public OvhApi.Models.DedicatedCloud.Right.NetworkRoleEnum[] AllowedNetworkRoles {
+		[JsonIgnore()] public OvhApi.Models.DedicatedCloud.Right.NetworkRoleEnum[] AllowedNetworkRoles {
 			get {
 				return this._allowedNetworkRoles;
 			}
@@ -10417,7 +10417,7 @@ namespace OvhApi.Models.DedicatedCloud {
 		/// <summary>
 		/// The name of the dedicated Cloud version associated to this commercial range
 		/// </summary>
-		public string DedicatedCloudVersion {
+		[JsonIgnore()] public string DedicatedCloudVersion {
 			get {
 				return this._dedicatedCloudVersion;
 			}
@@ -10441,7 +10441,7 @@ namespace OvhApi.Models.Domain {
 		/// <summary>
 		/// Ip
 		/// </summary>
-		public System.Net.IPAddress Ip {
+		[JsonIgnore()] public System.Net.IPAddress Ip {
 			get {
 				return this._ip;
 			}
@@ -10453,7 +10453,7 @@ namespace OvhApi.Models.Domain {
 		/// <summary>
 		/// Host
 		/// </summary>
-		public string Host {
+		[JsonIgnore()] public string Host {
 			get {
 				return this._host;
 			}
@@ -10510,7 +10510,7 @@ namespace OvhApi.Models.Domain.Zone {
 		/// <summary>
 		/// Resource record target
 		/// </summary>
-		public string Target {
+		[JsonIgnore()]public string Target {
 			get {
 				return this._target;
 			}
@@ -10518,11 +10518,11 @@ namespace OvhApi.Models.Domain.Zone {
 				this._target = value;
 			}
 		}
-		
-		/// <summary>
-		/// Resource record ttl
-		/// </summary>
-		public System.Nullable<long> Ttl {
+
+        /// <summary>
+        /// Resource record ttl
+        /// </summary>
+        [JsonIgnore()]public System.Nullable<long> Ttl {
 			get {
 				return this._ttl;
 			}
@@ -10530,38 +10530,38 @@ namespace OvhApi.Models.Domain.Zone {
 				this._ttl = value;
 			}
 		}
-		
-		/// <summary>
-		/// Resource record zone
-		/// </summary>
-		public string Zone {
+
+        /// <summary>
+        /// Resource record zone
+        /// </summary>
+        [JsonIgnore()]public string Zone {
 			get {
 				return this._zone;
 			}
 		}
-		
-		/// <summary>
-		/// Resource record Name
-		/// </summary>
-		public OvhApi.Models.Zone.NamedResolutionFieldTypeEnum FieldType {
+
+        /// <summary>
+        /// Resource record Name
+        /// </summary>
+        [JsonIgnore()]public OvhApi.Models.Zone.NamedResolutionFieldTypeEnum FieldType {
 			get {
 				return this._fieldType;
 			}
 		}
-		
-		/// <summary>
-		/// Id of the zone resource record
-		/// </summary>
-		public long Id {
+
+        /// <summary>
+        /// Id of the zone resource record
+        /// </summary>
+        [JsonIgnore()]public long Id {
 			get {
 				return this._id;
 			}
 		}
-		
-		/// <summary>
-		/// Resource record subdomain
-		/// </summary>
-		public string SubDomain {
+
+        /// <summary>
+        /// Resource record subdomain
+        /// </summary>
+        [JsonIgnore()]public string SubDomain {
 			get {
 				return this._subDomain;
 			}
@@ -10702,7 +10702,7 @@ namespace OvhApi.Models.Domain {
 		/// <summary>
 		/// Function of the task
 		/// </summary>
-		public string Function {
+		[JsonIgnore()] public string Function {
 			get {
 				return this._function;
 			}
@@ -10711,7 +10711,7 @@ namespace OvhApi.Models.Domain {
 		/// <summary>
 		/// Last update date of the task
 		/// </summary>
-		public System.DateTime LastUpdate {
+		[JsonIgnore()] public System.DateTime LastUpdate {
 			get {
 				return this._lastUpdate;
 			}
@@ -10720,7 +10720,7 @@ namespace OvhApi.Models.Domain {
 		/// <summary>
 		/// Comment about the task
 		/// </summary>
-		public string Comment {
+		[JsonIgnore()] public string Comment {
 			get {
 				return this._comment;
 			}
@@ -10729,7 +10729,7 @@ namespace OvhApi.Models.Domain {
 		/// <summary>
 		/// Status of the task
 		/// </summary>
-		public OvhApi.Models.Domain.OperationStatusEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Domain.OperationStatusEnum Status {
 			get {
 				return this._status;
 			}
@@ -10738,7 +10738,7 @@ namespace OvhApi.Models.Domain {
 		/// <summary>
 		/// Todo date of the task
 		/// </summary>
-		public System.DateTime TodoDate {
+		[JsonIgnore()] public System.DateTime TodoDate {
 			get {
 				return this._todoDate;
 			}
@@ -10747,7 +10747,7 @@ namespace OvhApi.Models.Domain {
 		/// <summary>
 		/// Id of the task
 		/// </summary>
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
@@ -10756,7 +10756,7 @@ namespace OvhApi.Models.Domain {
 		/// <summary>
 		/// Done date of the task
 		/// </summary>
-		public System.Nullable<System.DateTime> DoneDate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> DoneDate {
 			get {
 				return this._doneDate;
 			}
@@ -10777,7 +10777,7 @@ namespace OvhApi.Models.Domain {
 		/// <summary>
 		/// Obfuscated field
 		/// </summary>
-		public OvhApi.Models.Domain.WhoisObfuscatorFieldsEnum Field {
+		[JsonIgnore()] public OvhApi.Models.Domain.WhoisObfuscatorFieldsEnum Field {
 			get {
 				return this._field;
 			}
@@ -10813,7 +10813,7 @@ namespace OvhApi.Models.Domain {
 		/// <summary>
 		/// Is whois obfuscation supported by this domain name's registry
 		/// </summary>
-		public bool OwoSupported {
+		[JsonIgnore()] public bool OwoSupported {
 			get {
 				return this._owoSupported;
 			}
@@ -10822,7 +10822,7 @@ namespace OvhApi.Models.Domain {
 		/// <summary>
 		/// Domain name
 		/// </summary>
-		public string DomainName {
+		[JsonIgnore()] public string DomainName {
 			get {
 				return this._domain;
 			}
@@ -10831,7 +10831,7 @@ namespace OvhApi.Models.Domain {
 		/// <summary>
 		/// Last update date
 		/// </summary>
-		public System.DateTime LastUpdate {
+		[JsonIgnore()] public System.DateTime LastUpdate {
 			get {
 				return this._lastUpdate;
 			}
@@ -10840,7 +10840,7 @@ namespace OvhApi.Models.Domain {
 		/// <summary>
 		/// Transfer lock status
 		/// </summary>
-		public OvhApi.Models.Domain.DomainLockStatusEnum TransferLockStatus {
+		[JsonIgnore()] public OvhApi.Models.Domain.DomainLockStatusEnum TransferLockStatus {
 			get {
 				return this._transferLockStatus;
 			}
@@ -10852,7 +10852,7 @@ namespace OvhApi.Models.Domain {
 		/// <summary>
 		/// Domain's offer
 		/// </summary>
-		public OvhApi.Models.Domain.OfferEnum Offer {
+		[JsonIgnore()] public OvhApi.Models.Domain.OfferEnum Offer {
 			get {
 				return this._offer;
 			}
@@ -10861,7 +10861,7 @@ namespace OvhApi.Models.Domain {
 		/// <summary>
 		/// Name servers type
 		/// </summary>
-		public OvhApi.Models.Domain.DomainNsTypeEnum NameServerType {
+		[JsonIgnore()] public OvhApi.Models.Domain.DomainNsTypeEnum NameServerType {
 			get {
 				return this._nameServerType;
 			}
@@ -10894,7 +10894,7 @@ namespace OvhApi.Models.Domain.Zone {
 		/// <summary>
 		/// Ip address of the DynHost record
 		/// </summary>
-		public System.Net.IPAddress Ip {
+		[JsonIgnore()] public System.Net.IPAddress Ip {
 			get {
 				return this._ip;
 			}
@@ -10906,7 +10906,7 @@ namespace OvhApi.Models.Domain.Zone {
 		/// <summary>
 		/// Zone of the DynHost record
 		/// </summary>
-		public string Zone {
+		[JsonIgnore()] public string Zone {
 			get {
 				return this._zone;
 			}
@@ -10915,7 +10915,7 @@ namespace OvhApi.Models.Domain.Zone {
 		/// <summary>
 		/// Id of the DynHost record
 		/// </summary>
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
@@ -10924,7 +10924,7 @@ namespace OvhApi.Models.Domain.Zone {
 		/// <summary>
 		/// Subdomain of the DynHost record
 		/// </summary>
-		public string SubDomain {
+		[JsonIgnore()] public string SubDomain {
 			get {
 				return this._subDomain;
 			}
@@ -10960,7 +10960,7 @@ namespace OvhApi.Models.Domain {
 		/// <summary>
 		/// toDelete flag of the name server
 		/// </summary>
-		public bool ToDelete {
+		[JsonIgnore()] public bool ToDelete {
 			get {
 				return this._toDelete;
 			}
@@ -10969,7 +10969,7 @@ namespace OvhApi.Models.Domain {
 		/// <summary>
 		/// Ip of the name server
 		/// </summary>
-		public System.Net.IPAddress Ip {
+		[JsonIgnore()] public System.Net.IPAddress Ip {
 			get {
 				return this._ip;
 			}
@@ -10978,7 +10978,7 @@ namespace OvhApi.Models.Domain {
 		/// <summary>
 		/// isUsed flag of the name server
 		/// </summary>
-		public bool IsUsed {
+		[JsonIgnore()] public bool IsUsed {
 			get {
 				return this._isUsed;
 			}
@@ -10987,7 +10987,7 @@ namespace OvhApi.Models.Domain {
 		/// <summary>
 		/// Id of the name server
 		/// </summary>
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
@@ -10996,7 +10996,7 @@ namespace OvhApi.Models.Domain {
 		/// <summary>
 		/// Host of the name server
 		/// </summary>
-		public string Host {
+		[JsonIgnore()] public string Host {
 			get {
 				return this._host;
 			}
@@ -11038,7 +11038,7 @@ namespace OvhApi.Models.Domain.Zone {
 		/// <summary>
 		/// Keywords for invisible redirection
 		/// </summary>
-		public string Keywords {
+		[JsonIgnore()] public string Keywords {
 			get {
 				return this._keywords;
 			}
@@ -11050,7 +11050,7 @@ namespace OvhApi.Models.Domain.Zone {
 		/// <summary>
 		/// Target of the redirection
 		/// </summary>
-		public string Target {
+		[JsonIgnore()] public string Target {
 			get {
 				return this._target;
 			}
@@ -11062,7 +11062,7 @@ namespace OvhApi.Models.Domain.Zone {
 		/// <summary>
 		/// Redirection zone
 		/// </summary>
-		public string Zone {
+		[JsonIgnore()] public string Zone {
 			get {
 				return this._zone;
 			}
@@ -11071,7 +11071,7 @@ namespace OvhApi.Models.Domain.Zone {
 		/// <summary>
 		/// Id of the redirection
 		/// </summary>
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
@@ -11080,7 +11080,7 @@ namespace OvhApi.Models.Domain.Zone {
 		/// <summary>
 		/// subdomain to redirect
 		/// </summary>
-		public string SubDomain {
+		[JsonIgnore()] public string SubDomain {
 			get {
 				return this._subDomain;
 			}
@@ -11089,7 +11089,7 @@ namespace OvhApi.Models.Domain.Zone {
 		/// <summary>
 		/// Redirection type
 		/// </summary>
-		public OvhApi.Models.Zone.RedirectionTypeEnum Type {
+		[JsonIgnore()] public OvhApi.Models.Zone.RedirectionTypeEnum Type {
 			get {
 				return this._type;
 			}
@@ -11101,7 +11101,7 @@ namespace OvhApi.Models.Domain.Zone {
 		/// <summary>
 		/// Title for invisible redirection
 		/// </summary>
-		public string Title {
+		[JsonIgnore()] public string Title {
 			get {
 				return this._title;
 			}
@@ -11113,7 +11113,7 @@ namespace OvhApi.Models.Domain.Zone {
 		/// <summary>
 		/// Desciption for invisible redirection
 		/// </summary>
-		public string Description {
+		[JsonIgnore()] public string Description {
 			get {
 				return this._description;
 			}
@@ -11155,7 +11155,7 @@ namespace OvhApi.Models.Domain.Zone {
 		/// <summary>
 		/// Function of the task
 		/// </summary>
-		public string Function {
+		[JsonIgnore()] public string Function {
 			get {
 				return this._function;
 			}
@@ -11164,7 +11164,7 @@ namespace OvhApi.Models.Domain.Zone {
 		/// <summary>
 		/// Last update date of the task
 		/// </summary>
-		public System.DateTime LastUpdate {
+		[JsonIgnore()] public System.DateTime LastUpdate {
 			get {
 				return this._lastUpdate;
 			}
@@ -11173,7 +11173,7 @@ namespace OvhApi.Models.Domain.Zone {
 		/// <summary>
 		/// Comment about the task
 		/// </summary>
-		public string Comment {
+		[JsonIgnore()] public string Comment {
 			get {
 				return this._comment;
 			}
@@ -11182,7 +11182,7 @@ namespace OvhApi.Models.Domain.Zone {
 		/// <summary>
 		/// Status of the task
 		/// </summary>
-		public OvhApi.Models.Domain.OperationStatusEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Domain.OperationStatusEnum Status {
 			get {
 				return this._status;
 			}
@@ -11191,7 +11191,7 @@ namespace OvhApi.Models.Domain.Zone {
 		/// <summary>
 		/// Todo date of the task
 		/// </summary>
-		public System.DateTime TodoDate {
+		[JsonIgnore()] public System.DateTime TodoDate {
 			get {
 				return this._todoDate;
 			}
@@ -11200,7 +11200,7 @@ namespace OvhApi.Models.Domain.Zone {
 		/// <summary>
 		/// Id of the task
 		/// </summary>
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
@@ -11209,7 +11209,7 @@ namespace OvhApi.Models.Domain.Zone {
 		/// <summary>
 		/// Done date of the task
 		/// </summary>
-		public System.Nullable<System.DateTime> DoneDate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> DoneDate {
 			get {
 				return this._doneDate;
 			}
@@ -11236,7 +11236,7 @@ namespace OvhApi.Models.Domain.Zone {
 		/// <summary>
 		/// Zone
 		/// </summary>
-		public string Zone {
+		[JsonIgnore()] public string Zone {
 			get {
 				return this._zone;
 			}
@@ -11245,7 +11245,7 @@ namespace OvhApi.Models.Domain.Zone {
 		/// <summary>
 		/// Subdomain that the login will be allowed to update (* to allow all)
 		/// </summary>
-		public string SubDomain {
+		[JsonIgnore()] public string SubDomain {
 			get {
 				return this._subDomain;
 			}
@@ -11257,7 +11257,7 @@ namespace OvhApi.Models.Domain.Zone {
 		/// <summary>
 		/// Login
 		/// </summary>
-		public string Login {
+		[JsonIgnore()] public string Login {
 			get {
 				return this._login;
 			}
@@ -11287,7 +11287,7 @@ namespace OvhApi.Models.Domain.Zone {
 		/// <summary>
 		/// Last update date of the DNS zone
 		/// </summary>
-		public System.DateTime LastUpdate {
+		[JsonIgnore()] public System.DateTime LastUpdate {
 			get {
 				return this._lastUpdate;
 			}
@@ -11296,7 +11296,7 @@ namespace OvhApi.Models.Domain.Zone {
 		/// <summary>
 		/// hasDnsAnycast flag of the DNS zone
 		/// </summary>
-		public bool HasDnsAnycast {
+		[JsonIgnore()] public bool HasDnsAnycast {
 			get {
 				return this._hasDnsAnycast;
 			}
@@ -11305,7 +11305,7 @@ namespace OvhApi.Models.Domain.Zone {
 		/// <summary>
 		/// Name servers that host the DNS zone
 		/// </summary>
-		public string[] NameServers {
+		[JsonIgnore()] public string[] NameServers {
 			get {
 				return this._nameServers;
 			}
@@ -11314,7 +11314,7 @@ namespace OvhApi.Models.Domain.Zone {
 		/// <summary>
 		/// Is DNSSEC supported by this zone
 		/// </summary>
-		public bool DnssecSupported {
+		[JsonIgnore()] public bool DnssecSupported {
 			get {
 				return this._dnssecSupported;
 			}
@@ -11353,7 +11353,7 @@ namespace OvhApi.Models.Domain.Zone {
 		/// <summary>
 		/// Email address of the DNS Administrator
 		/// </summary>
-		public string Email {
+		[JsonIgnore()] public string Email {
 			get {
 				return this._email;
 			}
@@ -11365,7 +11365,7 @@ namespace OvhApi.Models.Domain.Zone {
 		/// <summary>
 		/// Non-Existent Domain TTL, if the name server returns a negative response, the remote server should wait the number of seconds set in the nxDomainTtl field before trying again
 		/// </summary>
-		public long NxDomainTtl {
+		[JsonIgnore()] public long NxDomainTtl {
 			get {
 				return this._nxDomainTtl;
 			}
@@ -11377,7 +11377,7 @@ namespace OvhApi.Models.Domain.Zone {
 		/// <summary>
 		/// The refresh value determines the interval in seconds between successful zone transfers of the entire zone file from a nameserver to another.
 		/// </summary>
-		public long Refresh {
+		[JsonIgnore()] public long Refresh {
 			get {
 				return this._refresh;
 			}
@@ -11389,7 +11389,7 @@ namespace OvhApi.Models.Domain.Zone {
 		/// <summary>
 		/// Time To Live in seconds
 		/// </summary>
-		public long Ttl {
+		[JsonIgnore()] public long Ttl {
 			get {
 				return this._ttl;
 			}
@@ -11401,7 +11401,7 @@ namespace OvhApi.Models.Domain.Zone {
 		/// <summary>
 		/// The serial number is used to indicate which copy of the zone file is the most current. When editing zone files, you must increment the serial number
 		/// </summary>
-		public long Serial {
+		[JsonIgnore()] public long Serial {
 			get {
 				return this._serial;
 			}
@@ -11413,7 +11413,7 @@ namespace OvhApi.Models.Domain.Zone {
 		/// <summary>
 		/// Primary authoritative server
 		/// </summary>
-		public string Server {
+		[JsonIgnore()] public string Server {
 			get {
 				return this._server;
 			}
@@ -11425,7 +11425,7 @@ namespace OvhApi.Models.Domain.Zone {
 		/// <summary>
 		/// When a zone transfer fails, a countdown clock begins. When the number of seconds set in the expire field elapses, the nameserver stops answering for that zone file
 		/// </summary>
-		public long Expire {
+		[JsonIgnore()] public long Expire {
 			get {
 				return this._expire;
 			}
@@ -11446,7 +11446,7 @@ namespace OvhApi.Models.Domain.Zone {
 		[JsonProperty("status")]
 		private OvhApi.Models.Dnssec.DnssecStatusEnum _status;
 		
-		public OvhApi.Models.Dnssec.DnssecStatusEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Dnssec.DnssecStatusEnum Status {
 			get {
 				return this._status;
 			}
@@ -11494,7 +11494,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Creation date
 		/// </summary>
-		public System.DateTime CreationDate {
+		[JsonIgnore()] public System.DateTime CreationDate {
 			get {
 				return this._creationDate;
 			}
@@ -11503,7 +11503,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Alias
 		/// </summary>
-		public string Alias {
+		[JsonIgnore()] public string Alias {
 			get {
 				return this._alias;
 			}
@@ -11512,7 +11512,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Pending task id
 		/// </summary>
-		public long TaskPendingId {
+		[JsonIgnore()] public long TaskPendingId {
 			get {
 				return this._taskPendingId;
 			}
@@ -11542,7 +11542,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Creation date
 		/// </summary>
-		public System.Nullable<System.DateTime> CreationDate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> CreationDate {
 			get {
 				return this._creationDate;
 			}
@@ -11551,7 +11551,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// delegate's account id
 		/// </summary>
-		public long AllowedAccountId {
+		[JsonIgnore()] public long AllowedAccountId {
 			get {
 				return this._allowedAccountId;
 			}
@@ -11560,7 +11560,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Delegate account primaryEmailAddress
 		/// </summary>
-		public string DelegateEmailAddress {
+		[JsonIgnore()] public string DelegateEmailAddress {
 			get {
 				return this._delegateEmailAddress;
 			}
@@ -11569,7 +11569,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// task pending id
 		/// </summary>
-		public long TaskPendingId {
+		[JsonIgnore()] public long TaskPendingId {
 			get {
 				return this._taskPendingId;
 			}
@@ -11677,7 +11677,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Account maximum size
 		/// </summary>
-		public long Quota {
+		[JsonIgnore()] public long Quota {
 			get {
 				return this._quota;
 			}
@@ -11689,7 +11689,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Last update
 		/// </summary>
-		public System.Nullable<System.DateTime> LastUpdateDate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> LastUpdateDate {
 			get {
 				return this._lastUpdateDate;
 			}
@@ -11698,7 +11698,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Hide account in Global Address List
 		/// </summary>
-		public bool HiddenFromGAL {
+		[JsonIgnore()] public bool HiddenFromGAL {
 			get {
 				return this._hiddenFromGAL;
 			}
@@ -11710,7 +11710,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Account state
 		/// </summary>
-		public OvhApi.Models.Email.Exchange.ObjectStateEnum State {
+		[JsonIgnore()] public OvhApi.Models.Email.Exchange.ObjectStateEnum State {
 			get {
 				return this._state;
 			}
@@ -11719,7 +11719,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Mailbox usage
 		/// </summary>
-		public System.Nullable<long> CurrentUsage {
+		[JsonIgnore()] public System.Nullable<long> CurrentUsage {
 			get {
 				return this._currentUsage;
 			}
@@ -11728,7 +11728,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// change the renew period
 		/// </summary>
-		public OvhApi.Models.Email.Exchange.RenewPeriodEnum RenewPeriod {
+		[JsonIgnore()] public OvhApi.Models.Email.Exchange.RenewPeriodEnum RenewPeriod {
 			get {
 				return this._renewPeriod;
 			}
@@ -11740,7 +11740,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Email domain
 		/// </summary>
-		public string Domain {
+		[JsonIgnore()] public string Domain {
 			get {
 				return this._domain;
 			}
@@ -11752,7 +11752,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Last logon
 		/// </summary>
-		public System.Nullable<System.DateTime> LastLogonDate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> LastLogonDate {
 			get {
 				return this._lastLogonDate;
 			}
@@ -11761,7 +11761,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// exchangeGuid for manual configuration
 		/// </summary>
-		public string ExchangeGuid {
+		[JsonIgnore()] public string ExchangeGuid {
 			get {
 				return this._exchangeGuid;
 			}
@@ -11770,7 +11770,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// delete outlook at expiration
 		/// </summary>
-		public System.Nullable<bool> DeleteOutlookAtExpiration {
+		[JsonIgnore()] public System.Nullable<bool> DeleteOutlookAtExpiration {
 			get {
 				return this._deleteOutlookAtExpiration;
 			}
@@ -11782,7 +11782,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Account last name
 		/// </summary>
-		public string LastName {
+		[JsonIgnore()] public string LastName {
 			get {
 				return this._lastName;
 			}
@@ -11794,7 +11794,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// GUID for user in active directory
 		/// </summary>
-		public string Guid {
+		[JsonIgnore()] public string Guid {
 			get {
 				return this._guid;
 			}
@@ -11803,7 +11803,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Enable or disable anti-virus and anti-spam
 		/// </summary>
-		public OvhApi.Models.Email.Exchange.MailingFilterEnum[] MailingFilter {
+		[JsonIgnore()] public OvhApi.Models.Email.Exchange.MailingFilterEnum[] MailingFilter {
 			get {
 				return this._mailingFilter;
 			}
@@ -11815,7 +11815,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Account id
 		/// </summary>
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
@@ -11824,7 +11824,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// expiration date
 		/// </summary>
-		public System.Nullable<System.DateTime> ExpirationOutlookDate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> ExpirationOutlookDate {
 			get {
 				return this._expirationOutlookDate;
 			}
@@ -11833,7 +11833,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Outlook licence
 		/// </summary>
-		public bool OutlookLicense {
+		[JsonIgnore()] public bool OutlookLicense {
 			get {
 				return this._outlookLicense;
 			}
@@ -11845,7 +11845,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// change the renew period for outlook
 		/// </summary>
-		public OvhApi.Models.Email.Exchange.RenewPeriodEnum RenewOutlookPeriod {
+		[JsonIgnore()] public OvhApi.Models.Email.Exchange.RenewPeriodEnum RenewOutlookPeriod {
 			get {
 				return this._renewOutlookPeriod;
 			}
@@ -11857,7 +11857,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Account display name
 		/// </summary>
-		public string DisplayName {
+		[JsonIgnore()] public string DisplayName {
 			get {
 				return this._displayName;
 			}
@@ -11869,7 +11869,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Account first name
 		/// </summary>
-		public string FirstName {
+		[JsonIgnore()] public string FirstName {
 			get {
 				return this._firstName;
 			}
@@ -11881,7 +11881,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Default email for this mailbox
 		/// </summary>
-		public string PrimaryEmailAddress {
+		[JsonIgnore()] public string PrimaryEmailAddress {
 			get {
 				return this._primaryEmailAddress;
 			}
@@ -11890,7 +11890,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// expiration date
 		/// </summary>
-		public System.Nullable<System.DateTime> ExpirationDate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> ExpirationDate {
 			get {
 				return this._expirationDate;
 			}
@@ -11899,7 +11899,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Last logoff
 		/// </summary>
-		public System.Nullable<System.DateTime> LastLogoffDate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> LastLogoffDate {
 			get {
 				return this._lastLogoffDate;
 			}
@@ -11908,7 +11908,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Account login
 		/// </summary>
-		public string Login {
+		[JsonIgnore()] public string Login {
 			get {
 				return this._login;
 			}
@@ -11920,7 +11920,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Creation date
 		/// </summary>
-		public System.Nullable<System.DateTime> CreationDate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> CreationDate {
 			get {
 				return this._creationDate;
 			}
@@ -11929,7 +11929,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Time of account's password last update
 		/// </summary>
-		public System.Nullable<System.DateTime> PasswordLastUpdate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> PasswordLastUpdate {
 			get {
 				return this._passwordLastUpdate;
 			}
@@ -11938,7 +11938,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Account initials
 		/// </summary>
-		public string Initial {
+		[JsonIgnore()] public string Initial {
 			get {
 				return this._initial;
 			}
@@ -11950,7 +11950,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Exchange account type
 		/// </summary>
-		public OvhApi.Models.Email.Exchange.OvhLicenceEnum AccountLicense {
+		[JsonIgnore()] public OvhApi.Models.Email.Exchange.OvhLicenceEnum AccountLicense {
 			get {
 				return this._accountLicense;
 			}
@@ -11962,7 +11962,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// SAM account name
 		/// </summary>
-		public string SAMAccountName {
+		[JsonIgnore()] public string SAMAccountName {
 			get {
 				return this._sAMAccountName;
 			}
@@ -11971,7 +11971,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Pending tasks for this account
 		/// </summary>
-		public long TaskPendingId {
+		[JsonIgnore()] public long TaskPendingId {
 			get {
 				return this._taskPendingId;
 			}
@@ -11980,7 +11980,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// delete at expiration
 		/// </summary>
-		public System.Nullable<bool> DeleteAtExpiration {
+		[JsonIgnore()] public System.Nullable<bool> DeleteAtExpiration {
 			get {
 				return this._deleteAtExpiration;
 			}
@@ -12055,7 +12055,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Creation date
 		/// </summary>
-		public System.DateTime CreationDate {
+		[JsonIgnore()] public System.DateTime CreationDate {
 			get {
 				return this._creationDate;
 			}
@@ -12064,7 +12064,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Alias
 		/// </summary>
-		public string Alias {
+		[JsonIgnore()] public string Alias {
 			get {
 				return this._alias;
 			}
@@ -12073,7 +12073,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Pending task id
 		/// </summary>
-		public long TaskPendingId {
+		[JsonIgnore()] public long TaskPendingId {
 			get {
 				return this._taskPendingId;
 			}
@@ -12115,7 +12115,7 @@ namespace OvhApi.Models.Email.Exchange {
 		[JsonProperty("accountLicense")]
 		private OvhApi.Models.Email.Exchange.AccountLicense[] _accountLicense;
 		
-		public System.DateTime Date {
+		[JsonIgnore()] public System.DateTime Date {
 			get {
 				return this._date;
 			}
@@ -12124,7 +12124,7 @@ namespace OvhApi.Models.Email.Exchange {
 			}
 		}
 		
-		public long OutlookQuantity {
+		[JsonIgnore()] public long OutlookQuantity {
 			get {
 				return this._outlookQuantity;
 			}
@@ -12133,7 +12133,7 @@ namespace OvhApi.Models.Email.Exchange {
 			}
 		}
 		
-		public OvhApi.Models.Email.Exchange.AccountLicense[] AccountLicense {
+		[JsonIgnore()] public OvhApi.Models.Email.Exchange.AccountLicense[] AccountLicense {
 			get {
 				return this._accountLicense;
 			}
@@ -12205,25 +12205,25 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Update date
 		/// </summary>
-		public System.Nullable<System.DateTime> LastUpdateDate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> LastUpdateDate {
 			get {
 				return this._lastUpdateDate;
 			}
 		}
 		
-		public OvhApi.Models.Email.Exchange.ServiceOfferEnum Offer {
+		[JsonIgnore()] public OvhApi.Models.Email.Exchange.ServiceOfferEnum Offer {
 			get {
 				return this._offer;
 			}
 		}
 		
-		public string Hostname {
+		[JsonIgnore()] public string Hostname {
 			get {
 				return this._hostname;
 			}
 		}
 		
-		public OvhApi.Models.Email.Exchange.ServiceStateEnum State {
+		[JsonIgnore()] public OvhApi.Models.Email.Exchange.ServiceStateEnum State {
 			get {
 				return this._state;
 			}
@@ -12232,7 +12232,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Maximum message size that You can receive in MB
 		/// </summary>
-		public long MaxReceiveSize {
+		[JsonIgnore()] public long MaxReceiveSize {
 			get {
 				return this._maxReceiveSize;
 			}
@@ -12241,7 +12241,7 @@ namespace OvhApi.Models.Email.Exchange {
 			}
 		}
 		
-		public string Domain {
+		[JsonIgnore()] public string Domain {
 			get {
 				return this._domain;
 			}
@@ -12250,7 +12250,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// minimum number of characters password must contain
 		/// </summary>
-		public System.Nullable<long> MinPasswordLength {
+		[JsonIgnore()] public System.Nullable<long> MinPasswordLength {
 			get {
 				return this._minPasswordLength;
 			}
@@ -12262,7 +12262,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// enable policy for strong and secure passwords
 		/// </summary>
-		public bool ComplexityEnabled {
+		[JsonIgnore()] public bool ComplexityEnabled {
 			get {
 				return this._complexityEnabled;
 			}
@@ -12274,7 +12274,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// number of minutes account will remain locked if it occurs
 		/// </summary>
-		public long LockoutDuration {
+		[JsonIgnore()] public long LockoutDuration {
 			get {
 				return this._lockoutDuration;
 			}
@@ -12286,7 +12286,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// service displayName
 		/// </summary>
-		public string DisplayName {
+		[JsonIgnore()] public string DisplayName {
 			get {
 				return this._displayName;
 			}
@@ -12298,7 +12298,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Maximum message size that You can send in MB
 		/// </summary>
-		public long MaxSendSize {
+		[JsonIgnore()] public long MaxSendSize {
 			get {
 				return this._maxSendSize;
 			}
@@ -12310,7 +12310,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// number of minutes that must elapse after a failed logon to reset lockout trigger
 		/// </summary>
-		public long LockoutObservationWindow {
+		[JsonIgnore()] public long LockoutObservationWindow {
 			get {
 				return this._lockoutObservationWindow;
 			}
@@ -12322,7 +12322,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// number of attempts before account to be locked
 		/// </summary>
-		public System.Nullable<long> LockoutThreshold {
+		[JsonIgnore()] public System.Nullable<long> LockoutThreshold {
 			get {
 				return this._lockoutThreshold;
 			}
@@ -12334,7 +12334,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// minimum number of days before able to change account's password
 		/// </summary>
-		public System.Nullable<long> MinPasswordAge {
+		[JsonIgnore()] public System.Nullable<long> MinPasswordAge {
 			get {
 				return this._minPasswordAge;
 			}
@@ -12346,7 +12346,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// maximum number of days that account's password is valid before expiration
 		/// </summary>
-		public System.Nullable<long> MaxPasswordAge {
+		[JsonIgnore()] public System.Nullable<long> MaxPasswordAge {
 			get {
 				return this._maxPasswordAge;
 			}
@@ -12358,13 +12358,13 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Task pending id
 		/// </summary>
-		public long TaskPendingId {
+		[JsonIgnore()] public long TaskPendingId {
 			get {
 				return this._taskPendingId;
 			}
 		}
 		
-		public System.Nullable<System.DateTime> SslExpirationDate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> SslExpirationDate {
 			get {
 				return this._sslExpirationDate;
 			}
@@ -12391,7 +12391,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Creation date
 		/// </summary>
-		public System.DateTime CreationDate {
+		[JsonIgnore()] public System.DateTime CreationDate {
 			get {
 				return this._creationDate;
 			}
@@ -12400,7 +12400,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Account id to give send as
 		/// </summary>
-		public long AllowedAccountId {
+		[JsonIgnore()] public long AllowedAccountId {
 			get {
 				return this._allowedAccountId;
 			}
@@ -12409,7 +12409,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Pending task id
 		/// </summary>
-		public long TaskPendingId {
+		[JsonIgnore()] public long TaskPendingId {
 			get {
 				return this._taskPendingId;
 			}
@@ -12531,7 +12531,7 @@ namespace OvhApi.Models.Email.Exchange {
 	
 	
 	/// <summary>
-	/// Get public folder quota usage in total available space
+	/// Get [JsonIgnore()] public folder quota usage in total available space
 	/// </summary>
 	public sealed class PublicFolderQuota {
 		
@@ -12545,9 +12545,9 @@ namespace OvhApi.Models.Email.Exchange {
 		private long _quotaLimit;
 		
 		/// <summary>
-		/// currently used space in MB within all public folders
+		/// currently used space in MB within all [JsonIgnore()] public folders
 		/// </summary>
-		public long QuotaUsed {
+		[JsonIgnore()] public long QuotaUsed {
 			get {
 				return this._quotaUsed;
 			}
@@ -12559,7 +12559,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// space in MB already reserved from the quota limit
 		/// </summary>
-		public long QuotaReserved {
+		[JsonIgnore()] public long QuotaReserved {
 			get {
 				return this._quotaReserved;
 			}
@@ -12569,9 +12569,9 @@ namespace OvhApi.Models.Email.Exchange {
 		}
 		
 		/// <summary>
-		/// total amount of space in MB for public folders within organization
+		/// total amount of space in MB for [JsonIgnore()] public folders within organization
 		/// </summary>
-		public long QuotaLimit {
+		[JsonIgnore()] public long QuotaLimit {
 			get {
 				return this._quotaLimit;
 			}
@@ -12601,7 +12601,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Creation date
 		/// </summary>
-		public System.DateTime CreationDate {
+		[JsonIgnore()] public System.DateTime CreationDate {
 			get {
 				return this._creationDate;
 			}
@@ -12610,7 +12610,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Account id to give send on behalf to
 		/// </summary>
-		public long AllowedAccountId {
+		[JsonIgnore()] public long AllowedAccountId {
 			get {
 				return this._allowedAccountId;
 			}
@@ -12619,7 +12619,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Pending task id
 		/// </summary>
-		public long TaskPendingId {
+		[JsonIgnore()] public long TaskPendingId {
 			get {
 				return this._taskPendingId;
 			}
@@ -12658,7 +12658,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Serial number
 		/// </summary>
-		public string Serial {
+		[JsonIgnore()] public string Serial {
 			get {
 				return this._serial;
 			}
@@ -12667,7 +12667,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Outlook url
 		/// </summary>
-		public string Url {
+		[JsonIgnore()] public string Url {
 			get {
 				return this._url;
 			}
@@ -12676,7 +12676,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Url expiration date
 		/// </summary>
-		public System.DateTime Expiration {
+		[JsonIgnore()] public System.DateTime Expiration {
 			get {
 				return this._expiration;
 			}
@@ -12727,7 +12727,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// ipV4
 		/// </summary>
-		public string Ip {
+		[JsonIgnore()] public string Ip {
 			get {
 				return this._ip;
 			}
@@ -12736,7 +12736,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// ipV6
 		/// </summary>
-		public string IpV6 {
+		[JsonIgnore()] public string IpV6 {
 			get {
 				return this._ipV6;
 			}
@@ -12745,7 +12745,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// If true your dns ptr record is valid
 		/// </summary>
-		public bool IsPtrValid {
+		[JsonIgnore()] public bool IsPtrValid {
 			get {
 				return this._isPtrValid;
 			}
@@ -12754,7 +12754,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// If true your dns A record is valid
 		/// </summary>
-		public bool IsAValid {
+		[JsonIgnore()] public bool IsAValid {
 			get {
 				return this._isAValid;
 			}
@@ -12763,7 +12763,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// ExchangeServer version
 		/// </summary>
-		public System.Nullable<long> Version {
+		[JsonIgnore()] public System.Nullable<long> Version {
 			get {
 				return this._version;
 			}
@@ -12772,7 +12772,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Total disk size in MB
 		/// </summary>
-		public System.Nullable<long> DiskSize {
+		[JsonIgnore()] public System.Nullable<long> DiskSize {
 			get {
 				return this._diskSize;
 			}
@@ -12781,7 +12781,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Current disk usage in MB
 		/// </summary>
-		public System.Nullable<long> CurrentDiskUsage {
+		[JsonIgnore()] public System.Nullable<long> CurrentDiskUsage {
 			get {
 				return this._currentDiskUsage;
 			}
@@ -12790,7 +12790,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Server state
 		/// </summary>
-		public OvhApi.Models.Email.Exchange.ServerStateEnum State {
+		[JsonIgnore()] public OvhApi.Models.Email.Exchange.ServerStateEnum State {
 			get {
 				return this._state;
 			}
@@ -12799,7 +12799,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// If true your dns ptrV6 record is valid
 		/// </summary>
-		public bool IsPtrV6Valid {
+		[JsonIgnore()] public bool IsPtrV6Valid {
 			get {
 				return this._isPtrV6Valid;
 			}
@@ -12808,7 +12808,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Task pending id
 		/// </summary>
-		public long TaskPendingId {
+		[JsonIgnore()] public long TaskPendingId {
 			get {
 				return this._taskPendingId;
 			}
@@ -12817,7 +12817,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// If true your dns AAAA record is valid
 		/// </summary>
-		public bool IsAaaaValid {
+		[JsonIgnore()] public bool IsAaaaValid {
 			get {
 				return this._isAaaaValid;
 			}
@@ -12868,7 +12868,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Domain name
 		/// </summary>
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
@@ -12877,13 +12877,13 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// If specified, indicates to which organization this domain belongs (Exchange 2010 only)
 		/// </summary>
-		public string Organization2010 {
+		[JsonIgnore()] public string Organization2010 {
 			get {
 				return this._organization2010;
 			}
 		}
 		
-		public bool MxIsValid {
+		[JsonIgnore()] public bool MxIsValid {
 			get {
 				return this._mxIsValid;
 			}
@@ -12892,7 +12892,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// If true your dns srv record is valid
 		/// </summary>
-		public bool SrvIsValid {
+		[JsonIgnore()] public bool SrvIsValid {
 			get {
 				return this._srvIsValid;
 			}
@@ -12901,7 +12901,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Domain state
 		/// </summary>
-		public OvhApi.Models.Email.Exchange.ObjectStateEnum State {
+		[JsonIgnore()] public OvhApi.Models.Email.Exchange.ObjectStateEnum State {
 			get {
 				return this._state;
 			}
@@ -12910,7 +12910,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// If true this is an organization (Exchange 2010 only)
 		/// </summary>
-		public System.Nullable<bool> Main {
+		[JsonIgnore()] public System.Nullable<bool> Main {
 			get {
 				return this._main;
 			}
@@ -12919,7 +12919,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Cname that will be checked to prove the domain ownership
 		/// </summary>
-		public string CnameToCheck {
+		[JsonIgnore()] public string CnameToCheck {
 			get {
 				return this._cnameToCheck;
 			}
@@ -12928,7 +12928,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// If specified, emails to not existing address will be redirected to that domain
 		/// </summary>
-		public string MxRelay {
+		[JsonIgnore()] public string MxRelay {
 			get {
 				return this._mxRelay;
 			}
@@ -12940,7 +12940,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Domain type
 		/// </summary>
-		public OvhApi.Models.Email.Exchange.DomainTypeEnum Type {
+		[JsonIgnore()] public OvhApi.Models.Email.Exchange.DomainTypeEnum Type {
 			get {
 				return this._type;
 			}
@@ -12952,7 +12952,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Domain validation status
 		/// </summary>
-		public bool DomainValidated {
+		[JsonIgnore()] public bool DomainValidated {
 			get {
 				return this._domainValidated;
 			}
@@ -12961,7 +12961,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Pending taks id
 		/// </summary>
-		public long TaskPendingId {
+		[JsonIgnore()] public long TaskPendingId {
 			get {
 				return this._taskPendingId;
 			}
@@ -12972,7 +12972,7 @@ namespace OvhApi.Models.Email.Exchange {
 	
 	
 	/// <summary>
-	/// Public folder type
+	/// [JsonIgnore()] public folder type
 	/// </summary>
 	public enum PublicFolderTypeEnum {
 		
@@ -13033,7 +13033,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Contact initals
 		/// </summary>
-		public string Initials {
+		[JsonIgnore()] public string Initials {
 			get {
 				return this._initials;
 			}
@@ -13045,7 +13045,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Contact first name
 		/// </summary>
-		public string FirstName {
+		[JsonIgnore()] public string FirstName {
 			get {
 				return this._firstName;
 			}
@@ -13057,7 +13057,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Hide the contact in Global Address List
 		/// </summary>
-		public bool HiddenFromGAL {
+		[JsonIgnore()] public bool HiddenFromGAL {
 			get {
 				return this._hiddenFromGAL;
 			}
@@ -13069,7 +13069,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// If specified, indicates to which organization this external contact belongs (Exchange 2010 only)
 		/// </summary>
-		public string Organization2010 {
+		[JsonIgnore()] public string Organization2010 {
 			get {
 				return this._organization2010;
 			}
@@ -13078,7 +13078,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Contact state
 		/// </summary>
-		public OvhApi.Models.Email.Exchange.ObjectStateEnum State {
+		[JsonIgnore()] public OvhApi.Models.Email.Exchange.ObjectStateEnum State {
 			get {
 				return this._state;
 			}
@@ -13087,7 +13087,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Creation date
 		/// </summary>
-		public System.DateTime CreationDate {
+		[JsonIgnore()] public System.DateTime CreationDate {
 			get {
 				return this._creationDate;
 			}
@@ -13096,7 +13096,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Contact id
 		/// </summary>
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
@@ -13105,7 +13105,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Contact last name
 		/// </summary>
-		public string LastName {
+		[JsonIgnore()] public string LastName {
 			get {
 				return this._lastName;
 			}
@@ -13117,7 +13117,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Task pending id
 		/// </summary>
-		public long TaskPendingId {
+		[JsonIgnore()] public long TaskPendingId {
 			get {
 				return this._taskPendingId;
 			}
@@ -13126,7 +13126,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Contact email
 		/// </summary>
-		public string ExternalEmailAddress {
+		[JsonIgnore()] public string ExternalEmailAddress {
 			get {
 				return this._externalEmailAddress;
 			}
@@ -13138,7 +13138,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Contact display name
 		/// </summary>
-		public string DisplayName {
+		[JsonIgnore()] public string DisplayName {
 			get {
 				return this._displayName;
 			}
@@ -13204,7 +13204,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Shared account first name
 		/// </summary>
-		public string FirstName {
+		[JsonIgnore()] public string FirstName {
 			get {
 				return this._firstName;
 			}
@@ -13216,7 +13216,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Shared account initials
 		/// </summary>
-		public string Initials {
+		[JsonIgnore()] public string Initials {
 			get {
 				return this._initials;
 			}
@@ -13228,7 +13228,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Shared account maximum size
 		/// </summary>
-		public long Quota {
+		[JsonIgnore()] public long Quota {
 			get {
 				return this._quota;
 			}
@@ -13240,7 +13240,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Hide shared account in Global Address List
 		/// </summary>
-		public bool HiddenFromGAL {
+		[JsonIgnore()] public bool HiddenFromGAL {
 			get {
 				return this._hiddenFromGAL;
 			}
@@ -13252,7 +13252,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Last logoff
 		/// </summary>
-		public System.Nullable<System.DateTime> LastLogoffDate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> LastLogoffDate {
 			get {
 				return this._lastLogoffDate;
 			}
@@ -13261,7 +13261,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Shared account state
 		/// </summary>
-		public OvhApi.Models.Email.Exchange.ObjectStateEnum State {
+		[JsonIgnore()] public OvhApi.Models.Email.Exchange.ObjectStateEnum State {
 			get {
 				return this._state;
 			}
@@ -13270,7 +13270,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Shared mailbox usage
 		/// </summary>
-		public System.Nullable<long> CurrentUsage {
+		[JsonIgnore()] public System.Nullable<long> CurrentUsage {
 			get {
 				return this._currentUsage;
 			}
@@ -13279,7 +13279,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Last logon
 		/// </summary>
-		public System.Nullable<System.DateTime> LastLogonDate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> LastLogonDate {
 			get {
 				return this._lastLogonDate;
 			}
@@ -13288,7 +13288,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Creation date
 		/// </summary>
-		public System.Nullable<System.DateTime> CreationDate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> CreationDate {
 			get {
 				return this._creationDate;
 			}
@@ -13297,7 +13297,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Enable or disable anti-virus and anti-spam
 		/// </summary>
-		public OvhApi.Models.Email.Exchange.MailingFilterEnum[] MailingFilter {
+		[JsonIgnore()] public OvhApi.Models.Email.Exchange.MailingFilterEnum[] MailingFilter {
 			get {
 				return this._mailingFilter;
 			}
@@ -13309,7 +13309,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Shared account last name
 		/// </summary>
-		public string LastName {
+		[JsonIgnore()] public string LastName {
 			get {
 				return this._lastName;
 			}
@@ -13321,7 +13321,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Default email for this shared mailbox
 		/// </summary>
-		public string SharedEmailAddress {
+		[JsonIgnore()] public string SharedEmailAddress {
 			get {
 				return this._sharedEmailAddress;
 			}
@@ -13333,7 +13333,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Shared account id
 		/// </summary>
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
@@ -13342,7 +13342,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Pending tasks for this shared account
 		/// </summary>
-		public long TaskPendingId {
+		[JsonIgnore()] public long TaskPendingId {
 			get {
 				return this._taskPendingId;
 			}
@@ -13351,7 +13351,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Shared account display name
 		/// </summary>
-		public string DisplayName {
+		[JsonIgnore()] public string DisplayName {
 			get {
 				return this._displayName;
 			}
@@ -13381,7 +13381,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Creation date
 		/// </summary>
-		public System.DateTime CreationDate {
+		[JsonIgnore()] public System.DateTime CreationDate {
 			get {
 				return this._creationDate;
 			}
@@ -13390,7 +13390,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Account id to give send as
 		/// </summary>
-		public long AllowedAccountId {
+		[JsonIgnore()] public long AllowedAccountId {
 			get {
 				return this._allowedAccountId;
 			}
@@ -13399,7 +13399,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Pending task id
 		/// </summary>
-		public long TaskPendingId {
+		[JsonIgnore()] public long TaskPendingId {
 			get {
 				return this._taskPendingId;
 			}
@@ -13426,7 +13426,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Creation date
 		/// </summary>
-		public System.DateTime CreationDate {
+		[JsonIgnore()] public System.DateTime CreationDate {
 			get {
 				return this._creationDate;
 			}
@@ -13435,7 +13435,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Account id to give full access
 		/// </summary>
-		public long AllowedAccountId {
+		[JsonIgnore()] public long AllowedAccountId {
 			get {
 				return this._allowedAccountId;
 			}
@@ -13444,7 +13444,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Pending task id
 		/// </summary>
-		public long TaskPendingId {
+		[JsonIgnore()] public long TaskPendingId {
 			get {
 				return this._taskPendingId;
 			}
@@ -13479,7 +13479,7 @@ namespace OvhApi.Models.Email.Exchange {
 	
 	
 	/// <summary>
-	/// Public folder right type
+	/// [JsonIgnore()] public folder right type
 	/// </summary>
 	public enum PublicFolderRightTypeEnum {
 		
@@ -13507,7 +13507,7 @@ namespace OvhApi.Models.Email.Exchange {
 		[JsonProperty("license")]
 		private OvhApi.Models.Email.Exchange.OvhLicenceEnum _license;
 		
-		public long LicenseQuantity {
+		[JsonIgnore()] public long LicenseQuantity {
 			get {
 				return this._licenseQuantity;
 			}
@@ -13516,7 +13516,7 @@ namespace OvhApi.Models.Email.Exchange {
 			}
 		}
 		
-		public OvhApi.Models.Email.Exchange.OvhLicenceEnum License {
+		[JsonIgnore()] public OvhApi.Models.Email.Exchange.OvhLicenceEnum License {
 			get {
 				return this._license;
 			}
@@ -13552,7 +13552,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Function name
 		/// </summary>
-		public OvhApi.Models.Email.Exchange.TaskFunctionEnum Function {
+		[JsonIgnore()] public OvhApi.Models.Email.Exchange.TaskFunctionEnum Function {
 			get {
 				return this._function;
 			}
@@ -13561,7 +13561,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Task status
 		/// </summary>
-		public OvhApi.Models.Email.Exchange.TaskStatusEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Email.Exchange.TaskStatusEnum Status {
 			get {
 				return this._status;
 			}
@@ -13570,7 +13570,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Creation date
 		/// </summary>
-		public System.DateTime TodoDate {
+		[JsonIgnore()] public System.DateTime TodoDate {
 			get {
 				return this._todoDate;
 			}
@@ -13579,7 +13579,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Completion date
 		/// </summary>
-		public System.Nullable<System.DateTime> FinishDate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> FinishDate {
 			get {
 				return this._finishDate;
 			}
@@ -13588,7 +13588,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Task id
 		/// </summary>
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
@@ -13720,7 +13720,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Creation date
 		/// </summary>
-		public System.DateTime CreationDate {
+		[JsonIgnore()] public System.DateTime CreationDate {
 			get {
 				return this._creationDate;
 			}
@@ -13729,7 +13729,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Disclaimer name
 		/// </summary>
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
@@ -13738,7 +13738,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Signature, added at the bottom of your organization emails
 		/// </summary>
-		public string Content {
+		[JsonIgnore()] public string Content {
 			get {
 				return this._content;
 			}
@@ -13750,7 +13750,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Activate the disclaimer only for external emails
 		/// </summary>
-		public bool OutsideOnly {
+		[JsonIgnore()] public bool OutsideOnly {
 			get {
 				return this._outsideOnly;
 			}
@@ -13762,7 +13762,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// task pending id
 		/// </summary>
-		public long TaskPendingId {
+		[JsonIgnore()] public long TaskPendingId {
 			get {
 				return this._taskPendingId;
 			}
@@ -13795,7 +13795,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Member account id
 		/// </summary>
-		public System.Nullable<long> MemberContactId {
+		[JsonIgnore()] public System.Nullable<long> MemberContactId {
 			get {
 				return this._memberContactId;
 			}
@@ -13804,7 +13804,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Creation date
 		/// </summary>
-		public System.DateTime CreationDate {
+		[JsonIgnore()] public System.DateTime CreationDate {
 			get {
 				return this._creationDate;
 			}
@@ -13813,7 +13813,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Member account id
 		/// </summary>
-		public System.Nullable<long> MemberAccountId {
+		[JsonIgnore()] public System.Nullable<long> MemberAccountId {
 			get {
 				return this._memberAccountId;
 			}
@@ -13822,7 +13822,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Pending task id
 		/// </summary>
-		public long TaskPendingId {
+		[JsonIgnore()] public long TaskPendingId {
 			get {
 				return this._taskPendingId;
 			}
@@ -13831,7 +13831,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Member account primaryEmailAddress
 		/// </summary>
-		public string MemberEmailAddress {
+		[JsonIgnore()] public string MemberEmailAddress {
 			get {
 				return this._memberEmailAddress;
 			}
@@ -13860,7 +13860,7 @@ namespace OvhApi.Models.Email.Exchange {
 	
 	
 	/// <summary>
-	/// Exchange organization public folder permission
+	/// Exchange organization [JsonIgnore()] public folder permission
 	/// </summary>
 	public sealed class ExchangePublicFolderPermission {
 		
@@ -13882,7 +13882,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Creation date
 		/// </summary>
-		public System.DateTime CreationDate {
+		[JsonIgnore()] public System.DateTime CreationDate {
 			get {
 				return this._creationDate;
 			}
@@ -13891,7 +13891,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Account id
 		/// </summary>
-		public long AllowedAccountId {
+		[JsonIgnore()] public long AllowedAccountId {
 			get {
 				return this._allowedAccountId;
 			}
@@ -13900,7 +13900,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// task pending id
 		/// </summary>
-		public long TaskPendingId {
+		[JsonIgnore()] public long TaskPendingId {
 			get {
 				return this._taskPendingId;
 			}
@@ -13909,7 +13909,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Access right set for the account
 		/// </summary>
-		public OvhApi.Models.Email.Exchange.PublicFolderRightTypeEnum AccessRights {
+		[JsonIgnore()] public OvhApi.Models.Email.Exchange.PublicFolderRightTypeEnum AccessRights {
 			get {
 				return this._accessRights;
 			}
@@ -13918,7 +13918,7 @@ namespace OvhApi.Models.Email.Exchange {
 			}
 		}
 		
-		public OvhApi.Models.Email.Exchange.ObjectStateEnum State {
+		[JsonIgnore()] public OvhApi.Models.Email.Exchange.ObjectStateEnum State {
 			get {
 				return this._state;
 			}
@@ -13945,7 +13945,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Creation date
 		/// </summary>
-		public System.DateTime CreationDate {
+		[JsonIgnore()] public System.DateTime CreationDate {
 			get {
 				return this._creationDate;
 			}
@@ -13954,7 +13954,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Account id to give send on behalf to
 		/// </summary>
-		public long AllowedAccountId {
+		[JsonIgnore()] public long AllowedAccountId {
 			get {
 				return this._allowedAccountId;
 			}
@@ -13963,7 +13963,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Pending task id
 		/// </summary>
-		public long TaskPendingId {
+		[JsonIgnore()] public long TaskPendingId {
 			get {
 				return this._taskPendingId;
 			}
@@ -13990,7 +13990,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Creation date
 		/// </summary>
-		public System.DateTime CreationDate {
+		[JsonIgnore()] public System.DateTime CreationDate {
 			get {
 				return this._creationDate;
 			}
@@ -13999,7 +13999,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Account id to give full access
 		/// </summary>
-		public long AllowedAccountId {
+		[JsonIgnore()] public long AllowedAccountId {
 			get {
 				return this._allowedAccountId;
 			}
@@ -14008,7 +14008,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Pending task id
 		/// </summary>
-		public long TaskPendingId {
+		[JsonIgnore()] public long TaskPendingId {
 			get {
 				return this._taskPendingId;
 			}
@@ -14050,7 +14050,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Creation date
 		/// </summary>
-		public System.DateTime CreationDate {
+		[JsonIgnore()] public System.DateTime CreationDate {
 			get {
 				return this._creationDate;
 			}
@@ -14059,7 +14059,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Account id to give send on behalf to
 		/// </summary>
-		public long AllowedAccountId {
+		[JsonIgnore()] public long AllowedAccountId {
 			get {
 				return this._allowedAccountId;
 			}
@@ -14068,7 +14068,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Pending task id
 		/// </summary>
-		public long TaskPendingId {
+		[JsonIgnore()] public long TaskPendingId {
 			get {
 				return this._taskPendingId;
 			}
@@ -14098,7 +14098,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Creation date
 		/// </summary>
-		public System.DateTime CreationDate {
+		[JsonIgnore()] public System.DateTime CreationDate {
 			get {
 				return this._creationDate;
 			}
@@ -14107,7 +14107,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Manager account id
 		/// </summary>
-		public long ManagerAccountId {
+		[JsonIgnore()] public long ManagerAccountId {
 			get {
 				return this._managerAccountId;
 			}
@@ -14116,7 +14116,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Member account primaryEmailAddress
 		/// </summary>
-		public string ManagerEmailAddress {
+		[JsonIgnore()] public string ManagerEmailAddress {
 			get {
 				return this._managerEmailAddress;
 			}
@@ -14125,7 +14125,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Pending task id
 		/// </summary>
-		public long TaskPendingId {
+		[JsonIgnore()] public long TaskPendingId {
 			get {
 				return this._taskPendingId;
 			}
@@ -14167,7 +14167,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// resource as email
 		/// </summary>
-		public string ResourceEmailAddress {
+		[JsonIgnore()] public string ResourceEmailAddress {
 			get {
 				return this._resourceEmailAddress;
 			}
@@ -14176,7 +14176,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// resource can be scheduled by more than one person during the same time period
 		/// </summary>
-		public bool AllowConflict {
+		[JsonIgnore()] public bool AllowConflict {
 			get {
 				return this._allowConflict;
 			}
@@ -14188,7 +14188,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// number of the same equipment or capacity of a room
 		/// </summary>
-		public long Capacity {
+		[JsonIgnore()] public long Capacity {
 			get {
 				return this._capacity;
 			}
@@ -14200,7 +14200,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// account state
 		/// </summary>
-		public OvhApi.Models.Email.Exchange.ObjectStateEnum State {
+		[JsonIgnore()] public OvhApi.Models.Email.Exchange.ObjectStateEnum State {
 			get {
 				return this._state;
 			}
@@ -14209,7 +14209,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Creation date
 		/// </summary>
-		public System.Nullable<System.DateTime> CreationDate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> CreationDate {
 			get {
 				return this._creationDate;
 			}
@@ -14218,7 +14218,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// resource type
 		/// </summary>
-		public OvhApi.Models.Email.Exchange.ResourceTypeEnum Type {
+		[JsonIgnore()] public OvhApi.Models.Email.Exchange.ResourceTypeEnum Type {
 			get {
 				return this._type;
 			}
@@ -14227,7 +14227,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// task pending id
 		/// </summary>
-		public long TaskPendingId {
+		[JsonIgnore()] public long TaskPendingId {
 			get {
 				return this._taskPendingId;
 			}
@@ -14236,7 +14236,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// name of resource
 		/// </summary>
-		public string DisplayName {
+		[JsonIgnore()] public string DisplayName {
 			get {
 				return this._displayName;
 			}
@@ -14293,7 +14293,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Update date
 		/// </summary>
-		public System.Nullable<System.DateTime> LastUpdateDate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> LastUpdateDate {
 			get {
 				return this._lastUpdateDate;
 			}
@@ -14302,7 +14302,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// If true mailing list is hiddend in Global Address List
 		/// </summary>
-		public bool HiddenFromGAL {
+		[JsonIgnore()] public bool HiddenFromGAL {
 			get {
 				return this._hiddenFromGAL;
 			}
@@ -14314,7 +14314,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Depart restriction policy
 		/// </summary>
-		public OvhApi.Models.Email.Exchange.MailingListDepartRestrictionEnum DepartRestriction {
+		[JsonIgnore()] public OvhApi.Models.Email.Exchange.MailingListDepartRestrictionEnum DepartRestriction {
 			get {
 				return this._departRestriction;
 			}
@@ -14326,7 +14326,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Join restriction policy
 		/// </summary>
-		public OvhApi.Models.Email.Exchange.MailingListJoinRestrictionEnum JoinRestriction {
+		[JsonIgnore()] public OvhApi.Models.Email.Exchange.MailingListJoinRestrictionEnum JoinRestriction {
 			get {
 				return this._joinRestriction;
 			}
@@ -14338,7 +14338,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// The mailing list address
 		/// </summary>
-		public string MailingListAddress {
+		[JsonIgnore()] public string MailingListAddress {
 			get {
 				return this._mailingListAddress;
 			}
@@ -14350,7 +14350,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Maximum send email size in MB
 		/// </summary>
-		public System.Nullable<long> MaxSendSize {
+		[JsonIgnore()] public System.Nullable<long> MaxSendSize {
 			get {
 				return this._maxSendSize;
 			}
@@ -14362,7 +14362,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// If true sender has to authenticate
 		/// </summary>
-		public bool SenderAuthentification {
+		[JsonIgnore()] public bool SenderAuthentification {
 			get {
 				return this._senderAuthentification;
 			}
@@ -14374,7 +14374,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Mailing list state
 		/// </summary>
-		public OvhApi.Models.Email.Exchange.ObjectStateEnum State {
+		[JsonIgnore()] public OvhApi.Models.Email.Exchange.ObjectStateEnum State {
 			get {
 				return this._state;
 			}
@@ -14383,7 +14383,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Maximum receive email size in MB
 		/// </summary>
-		public System.Nullable<long> MaxReceiveSize {
+		[JsonIgnore()] public System.Nullable<long> MaxReceiveSize {
 			get {
 				return this._maxReceiveSize;
 			}
@@ -14395,7 +14395,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Creation date
 		/// </summary>
-		public System.DateTime CreationDate {
+		[JsonIgnore()] public System.DateTime CreationDate {
 			get {
 				return this._creationDate;
 			}
@@ -14404,7 +14404,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Task pending id
 		/// </summary>
-		public System.Nullable<long> TaskPendingId {
+		[JsonIgnore()] public System.Nullable<long> TaskPendingId {
 			get {
 				return this._taskPendingId;
 			}
@@ -14413,7 +14413,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Name displayed in Global Access List
 		/// </summary>
-		public string DisplayName {
+		[JsonIgnore()] public string DisplayName {
 			get {
 				return this._displayName;
 			}
@@ -14752,7 +14752,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Creation date
 		/// </summary>
-		public System.DateTime CreationDate {
+		[JsonIgnore()] public System.DateTime CreationDate {
 			get {
 				return this._creationDate;
 			}
@@ -14761,7 +14761,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Percentage of export PST request completion
 		/// </summary>
-		public long PercentComplete {
+		[JsonIgnore()] public long PercentComplete {
 			get {
 				return this._percentComplete;
 			}
@@ -14770,7 +14770,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Task pending id
 		/// </summary>
-		public long TaskPendingId {
+		[JsonIgnore()] public long TaskPendingId {
 			get {
 				return this._taskPendingId;
 			}
@@ -14781,7 +14781,7 @@ namespace OvhApi.Models.Email.Exchange {
 	
 	
 	/// <summary>
-	/// Exchange organization public folder
+	/// Exchange organization [JsonIgnore()] public folder
 	/// </summary>
 	public sealed class PublicFolder {
 		
@@ -14831,9 +14831,9 @@ namespace OvhApi.Models.Email.Exchange {
 		private System.Nullable<long> _taskPendingId;
 		
 		/// <summary>
-		/// Quota for public folder in MB
+		/// Quota for [JsonIgnore()] public folder in MB
 		/// </summary>
-		public long Quota {
+		[JsonIgnore()] public long Quota {
 			get {
 				return this._quota;
 			}
@@ -14843,18 +14843,18 @@ namespace OvhApi.Models.Email.Exchange {
 		}
 		
 		/// <summary>
-		/// Time for which public folder was accessed for the last time
+		/// Time for which [JsonIgnore()] public folder was accessed for the last time
 		/// </summary>
-		public System.Nullable<System.DateTime> LastAccessTime {
+		[JsonIgnore()] public System.Nullable<System.DateTime> LastAccessTime {
 			get {
 				return this._lastAccessTime;
 			}
 		}
 		
 		/// <summary>
-		/// Time for which public folder was modified for the last time 
+		/// Time for which [JsonIgnore()] public folder was modified for the last time 
 		/// </summary>
-		public System.Nullable<System.DateTime> LastModificationTime {
+		[JsonIgnore()] public System.Nullable<System.DateTime> LastModificationTime {
 			get {
 				return this._lastModificationTime;
 			}
@@ -14863,7 +14863,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Access right for the guest users
 		/// </summary>
-		public OvhApi.Models.Email.Exchange.PublicFolderRightTypeEnum AnonymousPermission {
+		[JsonIgnore()] public OvhApi.Models.Email.Exchange.PublicFolderRightTypeEnum AnonymousPermission {
 			get {
 				return this._anonymousPermission;
 			}
@@ -14873,51 +14873,51 @@ namespace OvhApi.Models.Email.Exchange {
 		}
 		
 		/// <summary>
-		/// Sum of all items in public folder in MB
+		/// Sum of all items in [JsonIgnore()] public folder in MB
 		/// </summary>
-		public System.Nullable<long> TotalItemSize {
+		[JsonIgnore()] public System.Nullable<long> TotalItemSize {
 			get {
 				return this._totalItemSize;
 			}
 		}
 		
 		/// <summary>
-		/// Path for public folder
+		/// Path for [JsonIgnore()] public folder
 		/// </summary>
-		public string Path {
+		[JsonIgnore()] public string Path {
 			get {
 				return this._path;
 			}
 		}
 		
 		/// <summary>
-		/// If true, this public folder has subfolders
+		/// If true, this [JsonIgnore()] public folder has subfolders
 		/// </summary>
-		public System.Nullable<bool> HasSubFolders {
+		[JsonIgnore()] public System.Nullable<bool> HasSubFolders {
 			get {
 				return this._hasSubFolders;
 			}
 		}
 		
 		/// <summary>
-		/// Number of items in public folder
+		/// Number of items in [JsonIgnore()] public folder
 		/// </summary>
-		public System.Nullable<long> ItemCount {
+		[JsonIgnore()] public System.Nullable<long> ItemCount {
 			get {
 				return this._itemCount;
 			}
 		}
 		
-		public OvhApi.Models.Email.Exchange.ObjectStateEnum State {
+		[JsonIgnore()] public OvhApi.Models.Email.Exchange.ObjectStateEnum State {
 			get {
 				return this._state;
 			}
 		}
 		
 		/// <summary>
-		/// Time for which public folder was accessed for the last time by the user
+		/// Time for which [JsonIgnore()] public folder was accessed for the last time by the user
 		/// </summary>
-		public System.Nullable<System.DateTime> LastUserAccessTime {
+		[JsonIgnore()] public System.Nullable<System.DateTime> LastUserAccessTime {
 			get {
 				return this._lastUserAccessTime;
 			}
@@ -14926,25 +14926,25 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Creation date
 		/// </summary>
-		public System.Nullable<System.DateTime> CreationDate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> CreationDate {
 			get {
 				return this._creationDate;
 			}
 		}
 		
 		/// <summary>
-		/// Time for which public folder was modified for the last time by the user
+		/// Time for which [JsonIgnore()] public folder was modified for the last time by the user
 		/// </summary>
-		public System.Nullable<System.DateTime> LastUserModificationTime {
+		[JsonIgnore()] public System.Nullable<System.DateTime> LastUserModificationTime {
 			get {
 				return this._lastUserModificationTime;
 			}
 		}
 		
 		/// <summary>
-		/// Type for public folder
+		/// Type for [JsonIgnore()] public folder
 		/// </summary>
-		public OvhApi.Models.Email.Exchange.PublicFolderTypeEnum Type {
+		[JsonIgnore()] public OvhApi.Models.Email.Exchange.PublicFolderTypeEnum Type {
 			get {
 				return this._type;
 			}
@@ -14953,7 +14953,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Default access right
 		/// </summary>
-		public OvhApi.Models.Email.Exchange.PublicFolderRightTypeEnum DefaultPermission {
+		[JsonIgnore()] public OvhApi.Models.Email.Exchange.PublicFolderRightTypeEnum DefaultPermission {
 			get {
 				return this._defaultPermission;
 			}
@@ -14965,7 +14965,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// task pending id
 		/// </summary>
-		public System.Nullable<long> TaskPendingId {
+		[JsonIgnore()] public System.Nullable<long> TaskPendingId {
 			get {
 				return this._taskPendingId;
 			}
@@ -15004,7 +15004,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Export url
 		/// </summary>
-		public string Url {
+		[JsonIgnore()] public string Url {
 			get {
 				return this._url;
 			}
@@ -15013,7 +15013,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Url expiration date
 		/// </summary>
-		public System.DateTime Expiration {
+		[JsonIgnore()] public System.DateTime Expiration {
 			get {
 				return this._expiration;
 			}
@@ -15040,7 +15040,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// currently used space in MB within all shared accounts
 		/// </summary>
-		public long QuotaUsed {
+		[JsonIgnore()] public long QuotaUsed {
 			get {
 				return this._quotaUsed;
 			}
@@ -15052,7 +15052,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// space in MB already reserved from the quota limit
 		/// </summary>
-		public long QuotaReserved {
+		[JsonIgnore()] public long QuotaReserved {
 			get {
 				return this._quotaReserved;
 			}
@@ -15064,7 +15064,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// total amount of space in MB for shared accounts within organization
 		/// </summary>
-		public long QuotaLimit {
+		[JsonIgnore()] public long QuotaLimit {
 			get {
 				return this._quotaLimit;
 			}
@@ -15094,7 +15094,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Creation date
 		/// </summary>
-		public System.DateTime CreationDate {
+		[JsonIgnore()] public System.DateTime CreationDate {
 			get {
 				return this._creationDate;
 			}
@@ -15103,7 +15103,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Account id to give send on behalf to
 		/// </summary>
-		public long AllowedAccountId {
+		[JsonIgnore()] public long AllowedAccountId {
 			get {
 				return this._allowedAccountId;
 			}
@@ -15112,7 +15112,7 @@ namespace OvhApi.Models.Email.Exchange {
 		/// <summary>
 		/// Pending task id
 		/// </summary>
-		public long TaskPendingId {
+		[JsonIgnore()] public long TaskPendingId {
 			get {
 				return this._taskPendingId;
 			}
@@ -15170,7 +15170,7 @@ namespace OvhApi.Models.ComplexType {
 		[JsonProperty("values")]
 		private string _values;
 		
-		public string SerieName {
+		[JsonIgnore()] public string SerieName {
 			get {
 				return this._serieName;
 			}
@@ -15179,7 +15179,7 @@ namespace OvhApi.Models.ComplexType {
 			}
 		}
 		
-		public string Unit {
+		[JsonIgnore()] public string Unit {
 			get {
 				return this._unit;
 			}
@@ -15188,7 +15188,7 @@ namespace OvhApi.Models.ComplexType {
 			}
 		}
 		
-		public string Values {
+		[JsonIgnore()] public string Values {
 			get {
 				return this._values;
 			}
@@ -15215,7 +15215,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Available boost offer
 		/// </summary>
-		public OvhApi.Models.Hosting.Web.OfferEnum Offer {
+		[JsonIgnore()] public OvhApi.Models.Hosting.Web.OfferEnum Offer {
 			get {
 				return this._offer;
 			}
@@ -15227,7 +15227,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// The price in month for this boost offer
 		/// </summary>
-		public OvhApi.Models.Order.Price Price {
+		[JsonIgnore()] public OvhApi.Models.Order.Price Price {
 			get {
 				return this._price;
 			}
@@ -15254,7 +15254,7 @@ namespace OvhApi.Models.Order {
 		[JsonProperty("text")]
 		private string _text;
 		
-		public OvhApi.Models.Order.CurrencyCodeEnum CurrencyCode {
+		[JsonIgnore()] public OvhApi.Models.Order.CurrencyCodeEnum CurrencyCode {
 			get {
 				return this._currencyCode;
 			}
@@ -15263,7 +15263,7 @@ namespace OvhApi.Models.Order {
 			}
 		}
 		
-		public double Value {
+		[JsonIgnore()] public double Value {
 			get {
 				return this._value;
 			}
@@ -15272,7 +15272,7 @@ namespace OvhApi.Models.Order {
 			}
 		}
 		
-		public string Text {
+		[JsonIgnore()] public string Text {
 			get {
 				return this._text;
 			}
@@ -15482,7 +15482,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Traffic quota size for your hosting ( null for unlimited )
 		/// </summary>
-		public OvhApi.Models.ComplexType.UnitAndValue<double> Traffic {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<double> Traffic {
 			get {
 				return this._traffic;
 			}
@@ -15494,7 +15494,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Tell if you have acces to module on click
 		/// </summary>
-		public bool ModuleOneClick {
+		[JsonIgnore()] public bool ModuleOneClick {
 			get {
 				return this._moduleOneClick;
 			}
@@ -15506,7 +15506,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Number of ftp user you can create
 		/// </summary>
-		public long ExtraUsers {
+		[JsonIgnore()] public long ExtraUsers {
 			get {
 				return this._extraUsers;
 			}
@@ -15518,7 +15518,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Describe all databases type you can have
 		/// </summary>
-		public OvhApi.Models.Hosting.Web.Database.CreationDatabaseCapabilities[] Databases {
+		[JsonIgnore()] public OvhApi.Models.Hosting.Web.Database.CreationDatabaseCapabilities[] Databases {
 			get {
 				return this._databases;
 			}
@@ -15530,7 +15530,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Tell if you have acces to ssh
 		/// </summary>
-		public bool Ssh {
+		[JsonIgnore()] public bool Ssh {
 			get {
 				return this._ssh;
 			}
@@ -15542,7 +15542,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Number of sites recommended for your hosting ( -1 for unlimited )
 		/// </summary>
-		public System.Nullable<long> SitesRecommended {
+		[JsonIgnore()] public System.Nullable<long> SitesRecommended {
 			get {
 				return this._sitesRecommended;
 			}
@@ -15554,7 +15554,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Number of domains you can attach to your hosting
 		/// </summary>
-		public long AttachedDomains {
+		[JsonIgnore()] public long AttachedDomains {
 			get {
 				return this._attachedDomains;
 			}
@@ -15566,7 +15566,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Tell if you have acces to crontab
 		/// </summary>
-		public bool Crontab {
+		[JsonIgnore()] public bool Crontab {
 			get {
 				return this._crontab;
 			}
@@ -15596,7 +15596,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Domain linked (fqdn)
 		/// </summary>
-		public string Domain {
+		[JsonIgnore()] public string Domain {
 			get {
 				return this._domain;
 			}
@@ -15605,7 +15605,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Is linked to the hosting cdn
 		/// </summary>
-		public OvhApi.Models.Hosting.Web.AttachedDomain.CdnEnum Cdn {
+		[JsonIgnore()] public OvhApi.Models.Hosting.Web.AttachedDomain.CdnEnum Cdn {
 			get {
 				return this._cdn;
 			}
@@ -15617,7 +15617,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Domain path, relative to your home directory
 		/// </summary>
-		public string Path {
+		[JsonIgnore()] public string Path {
 			get {
 				return this._path;
 			}
@@ -15731,7 +15731,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Function name
 		/// </summary>
-		public string Function {
+		[JsonIgnore()] public string Function {
 			get {
 				return this._function;
 			}
@@ -15740,7 +15740,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// last update
 		/// </summary>
-		public System.Nullable<System.DateTime> LastUpdate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> LastUpdate {
 			get {
 				return this._lastUpdate;
 			}
@@ -15749,7 +15749,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Task status
 		/// </summary>
-		public OvhApi.Models.Hosting.Web.Task.StatusEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Hosting.Web.Task.StatusEnum Status {
 			get {
 				return this._status;
 			}
@@ -15758,7 +15758,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// the id of the task
 		/// </summary>
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
@@ -15767,7 +15767,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Task Creation date
 		/// </summary>
-		public System.DateTime StartDate {
+		[JsonIgnore()] public System.DateTime StartDate {
 			get {
 				return this._startDate;
 			}
@@ -15776,7 +15776,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Completion date
 		/// </summary>
-		public System.Nullable<System.DateTime> DoneDate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> DoneDate {
 			get {
 				return this._doneDate;
 			}
@@ -15854,7 +15854,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Home directory
 		/// </summary>
-		public string Home {
+		[JsonIgnore()] public string Home {
 			get {
 				return this._home;
 			}
@@ -15866,7 +15866,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// User IIS rights
 		/// </summary>
-		public OvhApi.Models.Hosting.Web.User.IisRightsEnum IisRemoteRights {
+		[JsonIgnore()] public OvhApi.Models.Hosting.Web.User.IisRightsEnum IisRemoteRights {
 			get {
 				return this._iisRemoteRights;
 			}
@@ -15878,7 +15878,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Is this user primary
 		/// </summary>
-		public bool IsPrimaryAccount {
+		[JsonIgnore()] public bool IsPrimaryAccount {
 			get {
 				return this._isPrimaryAccount;
 			}
@@ -15887,7 +15887,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Login used to connect on FTP
 		/// </summary>
-		public string Login {
+		[JsonIgnore()] public string Login {
 			get {
 				return this._login;
 			}
@@ -15896,7 +15896,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// User status
 		/// </summary>
-		public OvhApi.Models.Hosting.Web.User.StateEnum State {
+		[JsonIgnore()] public OvhApi.Models.Hosting.Web.User.StateEnum State {
 			get {
 				return this._state;
 			}
@@ -15908,7 +15908,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// User WebDav rights
 		/// </summary>
-		public OvhApi.Models.Hosting.Web.User.WebDavRightsEnum WebDavRights {
+		[JsonIgnore()] public OvhApi.Models.Hosting.Web.User.WebDavRightsEnum WebDavRights {
 			get {
 				return this._webDavRights;
 			}
@@ -16007,7 +16007,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// All available languages for this module
 		/// </summary>
-		public OvhApi.Models.Hosting.Web.Module.LanguageEnum[] Language {
+		[JsonIgnore()] public OvhApi.Models.Hosting.Web.Module.LanguageEnum[] Language {
 			get {
 				return this._language;
 			}
@@ -16016,7 +16016,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Is this the latest version available?
 		/// </summary>
-		public bool Latest {
+		[JsonIgnore()] public bool Latest {
 			get {
 				return this._latest;
 			}
@@ -16025,7 +16025,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// The version of the module
 		/// </summary>
-		public string Version {
+		[JsonIgnore()] public string Version {
 			get {
 				return this._version;
 			}
@@ -16034,7 +16034,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// The name of the module
 		/// </summary>
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
@@ -16043,7 +16043,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Is the module available?
 		/// </summary>
-		public bool Active {
+		[JsonIgnore()] public bool Active {
 			get {
 				return this._active;
 			}
@@ -16052,7 +16052,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// The type of the admin name
 		/// </summary>
-		public OvhApi.Models.Hosting.Web.Module.AdminNameTypeEnum AdminNameType {
+		[JsonIgnore()] public OvhApi.Models.Hosting.Web.Module.AdminNameTypeEnum AdminNameType {
 			get {
 				return this._adminNameType;
 			}
@@ -16061,7 +16061,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// The packager of this module for OVH
 		/// </summary>
-		public string Author {
+		[JsonIgnore()] public string Author {
 			get {
 				return this._author;
 			}
@@ -16070,7 +16070,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// The branch of the module
 		/// </summary>
-		public string Branch {
+		[JsonIgnore()] public string Branch {
 			get {
 				return this._branch;
 			}
@@ -16079,7 +16079,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// All the IDs of other modules this module can upgrade
 		/// </summary>
-		public long[] UpgradeFrom {
+		[JsonIgnore()] public long[] UpgradeFrom {
 			get {
 				return this._upgradeFrom;
 			}
@@ -16088,7 +16088,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Size of the module
 		/// </summary>
-		public OvhApi.Models.ComplexType.UnitAndValue<double> Size {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<double> Size {
 			get {
 				return this._size;
 			}
@@ -16097,7 +16097,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// The keywords for this module
 		/// </summary>
-		public string[] Keywords {
+		[JsonIgnore()] public string[] Keywords {
 			get {
 				return this._keywords;
 			}
@@ -16106,7 +16106,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// The ID of the module
 		/// </summary>
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
@@ -16166,7 +16166,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Account who requested the change
 		/// </summary>
-		public string AccountId {
+		[JsonIgnore()] public string AccountId {
 			get {
 				return this._accountId;
 			}
@@ -16175,7 +16175,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Offer when the change was made
 		/// </summary>
-		public OvhApi.Models.Hosting.Web.OfferCapabilitiesEnum Offer {
+		[JsonIgnore()] public OvhApi.Models.Hosting.Web.OfferCapabilitiesEnum Offer {
 			get {
 				return this._offer;
 			}
@@ -16184,7 +16184,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// The date when the change has been requested
 		/// </summary>
-		public System.DateTime Date {
+		[JsonIgnore()] public System.DateTime Date {
 			get {
 				return this._date;
 			}
@@ -16193,7 +16193,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Boost offer used
 		/// </summary>
-		public OvhApi.Models.Hosting.Web.OfferCapabilitiesEnum BoostOffer {
+		[JsonIgnore()] public OvhApi.Models.Hosting.Web.OfferCapabilitiesEnum BoostOffer {
 			get {
 				return this._boostOffer;
 			}
@@ -16334,7 +16334,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Hosting offer
 		/// </summary>
-		public OvhApi.Models.Hosting.Web.OfferCapabilitiesEnum Offer {
+		[JsonIgnore()] public OvhApi.Models.Hosting.Web.OfferCapabilitiesEnum Offer {
 			get {
 				return this._offer;
 			}
@@ -16343,7 +16343,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// The recommended ipv6 for your hosting ( depends on hosting's linked services, e.g CDN or hostedSSL )
 		/// </summary>
-		public System.Net.IPAddress HostingIpv6 {
+		[JsonIgnore()] public System.Net.IPAddress HostingIpv6 {
 			get {
 				return this._hostingIpv6;
 			}
@@ -16352,7 +16352,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Hosting's main login
 		/// </summary>
-		public string PrimaryLogin {
+		[JsonIgnore()] public string PrimaryLogin {
 			get {
 				return this._primaryLogin;
 			}
@@ -16361,7 +16361,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Filer name
 		/// </summary>
-		public string Filer {
+		[JsonIgnore()] public string Filer {
 			get {
 				return this._filer;
 			}
@@ -16370,7 +16370,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// State of your hosting
 		/// </summary>
-		public OvhApi.Models.Hosting.Web.StateEnum State {
+		[JsonIgnore()] public OvhApi.Models.Hosting.Web.StateEnum State {
 			get {
 				return this._state;
 			}
@@ -16379,7 +16379,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Has a CDN service linked on the hosting
 		/// </summary>
-		public System.Nullable<bool> HasCdn {
+		[JsonIgnore()] public System.Nullable<bool> HasCdn {
 			get {
 				return this._hasCdn;
 			}
@@ -16388,7 +16388,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Hosting's OS
 		/// </summary>
-		public OvhApi.Models.Hosting.Web.OperatingSystemEnum OperatingSystem {
+		[JsonIgnore()] public OvhApi.Models.Hosting.Web.OperatingSystemEnum OperatingSystem {
 			get {
 				return this._operatingSystem;
 			}
@@ -16397,7 +16397,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Path of your home
 		/// </summary>
-		public string Home {
+		[JsonIgnore()] public string Home {
 			get {
 				return this._home;
 			}
@@ -16406,7 +16406,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Space allowed
 		/// </summary>
-		public OvhApi.Models.ComplexType.UnitAndValue<double> QuotaSize {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<double> QuotaSize {
 			get {
 				return this._quotaSize;
 			}
@@ -16415,7 +16415,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Available offers for boost option
 		/// </summary>
-		public OvhApi.Models.Hosting.Web.AvailableOfferStruct[] AvailableBoostOffer {
+		[JsonIgnore()] public OvhApi.Models.Hosting.Web.AvailableOfferStruct[] AvailableBoostOffer {
 			get {
 				return this._availableBoostOffer;
 			}
@@ -16424,7 +16424,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Cluster name
 		/// </summary>
-		public string Cluster {
+		[JsonIgnore()] public string Cluster {
 			get {
 				return this._cluster;
 			}
@@ -16433,7 +16433,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Hosting resource type
 		/// </summary>
-		public OvhApi.Models.Hosting.Web.ResourceEnum ResourceType {
+		[JsonIgnore()] public OvhApi.Models.Hosting.Web.ResourceEnum ResourceType {
 			get {
 				return this._resourceType;
 			}
@@ -16442,7 +16442,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Space used
 		/// </summary>
-		public OvhApi.Models.ComplexType.UnitAndValue<double> QuotaUsed {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<double> QuotaUsed {
 			get {
 				return this._quotaUsed;
 			}
@@ -16451,7 +16451,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Traffic quota used
 		/// </summary>
-		public OvhApi.Models.ComplexType.UnitAndValue<double> TrafficQuotaUsed {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<double> TrafficQuotaUsed {
 			get {
 				return this._trafficQuotaUsed;
 			}
@@ -16460,7 +16460,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// This direct ipv6 to your cluster ( usefull for application like api )
 		/// </summary>
-		public System.Net.IPAddress ClusterIpv6 {
+		[JsonIgnore()] public System.Net.IPAddress ClusterIpv6 {
 			get {
 				return this._clusterIpv6;
 			}
@@ -16469,7 +16469,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Service name
 		/// </summary>
-		public string ServiceName {
+		[JsonIgnore()] public string ServiceName {
 			get {
 				return this._serviceName;
 			}
@@ -16478,7 +16478,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Traffic quota allowed ( null = unlimited )
 		/// </summary>
-		public OvhApi.Models.ComplexType.UnitAndValue<double> TrafficQuotaSize {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<double> TrafficQuotaSize {
 			get {
 				return this._trafficQuotaSize;
 			}
@@ -16487,7 +16487,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// This direct ip to your cluster ( usefull for application like api )
 		/// </summary>
-		public System.Net.IPAddress ClusterIp {
+		[JsonIgnore()] public System.Net.IPAddress ClusterIp {
 			get {
 				return this._clusterIp;
 			}
@@ -16496,7 +16496,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Current boost offer
 		/// </summary>
-		public OvhApi.Models.Hosting.Web.OfferCapabilitiesEnum BoostOffer {
+		[JsonIgnore()] public OvhApi.Models.Hosting.Web.OfferCapabilitiesEnum BoostOffer {
 			get {
 				return this._boostOffer;
 			}
@@ -16505,7 +16505,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Has a HostedSSL service linked on the hosting
 		/// </summary>
-		public System.Nullable<bool> HasHostedSsl {
+		[JsonIgnore()] public System.Nullable<bool> HasHostedSsl {
 			get {
 				return this._hasHostedSsl;
 			}
@@ -16514,7 +16514,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// The recommended ip for your hosting ( depends on hosting's linked services, e.g CDN or hostedSSL )
 		/// </summary>
-		public System.Net.IPAddress HostingIp {
+		[JsonIgnore()] public System.Net.IPAddress HostingIp {
 			get {
 				return this._hostingIp;
 			}
@@ -16580,7 +16580,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// The language of the module
 		/// </summary>
-		public OvhApi.Models.Hosting.Web.Module.LanguageEnum Language {
+		[JsonIgnore()] public OvhApi.Models.Hosting.Web.Module.LanguageEnum Language {
 			get {
 				return this._language;
 			}
@@ -16589,7 +16589,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// The dependencies to which the module has access. A dependency can be a standard database (like MySQL or PostgreSQL) or a key-value store (like Redis or Memcached) for example
 		/// </summary>
-		public OvhApi.Models.Hosting.Web.Module.DependencyType[] Dependencies {
+		[JsonIgnore()] public OvhApi.Models.Hosting.Web.Module.DependencyType[] Dependencies {
 			get {
 				return this._dependencies;
 			}
@@ -16598,7 +16598,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Where the module is installed, relative to your home directory
 		/// </summary>
-		public string Path {
+		[JsonIgnore()] public string Path {
 			get {
 				return this._path;
 			}
@@ -16607,7 +16607,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// ID of the module associated with this installation
 		/// </summary>
-		public long ModuleId {
+		[JsonIgnore()] public long ModuleId {
 			get {
 				return this._moduleId;
 			}
@@ -16616,7 +16616,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// The URL from where your module can be reached
 		/// </summary>
-		public string TargetUrl {
+		[JsonIgnore()] public string TargetUrl {
 			get {
 				return this._targetUrl;
 			}
@@ -16625,7 +16625,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Date of the last module's upgrade
 		/// </summary>
-		public System.DateTime LastUpdate {
+		[JsonIgnore()] public System.DateTime LastUpdate {
 			get {
 				return this._lastUpdate;
 			}
@@ -16634,7 +16634,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Date of the installation of the module
 		/// </summary>
-		public System.DateTime CreationDate {
+		[JsonIgnore()] public System.DateTime CreationDate {
 			get {
 				return this._creationDate;
 			}
@@ -16643,7 +16643,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Login for the admin account
 		/// </summary>
-		public string AdminName {
+		[JsonIgnore()] public string AdminName {
 			get {
 				return this._adminName;
 			}
@@ -16652,7 +16652,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Installation ID
 		/// </summary>
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
@@ -16661,7 +16661,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// The admin folder, relative to the module's installation path
 		/// </summary>
-		public string AdminFolder {
+		[JsonIgnore()] public string AdminFolder {
 			get {
 				return this._adminFolder;
 			}
@@ -16735,7 +16735,7 @@ namespace OvhApi.Models.Hosting.Web {
 			/// <summary>
 			/// The password associated with the user
 			/// </summary>
-			public string Password {
+			[JsonIgnore()] public string Password {
 				get {
 					return this._password;
 				}
@@ -16747,7 +16747,7 @@ namespace OvhApi.Models.Hosting.Web {
 			/// <summary>
 			/// The name of this dependency
 			/// </summary>
-			public string Name {
+			[JsonIgnore()] public string Name {
 				get {
 					return this._name;
 				}
@@ -16759,7 +16759,7 @@ namespace OvhApi.Models.Hosting.Web {
 			/// <summary>
 			/// The user to use to connect to this dependency
 			/// </summary>
-			public string User {
+			[JsonIgnore()] public string User {
 				get {
 					return this._user;
 				}
@@ -16771,7 +16771,7 @@ namespace OvhApi.Models.Hosting.Web {
 			/// <summary>
 			/// Type
 			/// </summary>
-			public OvhApi.Models.Hosting.Web.Module.DependencyTypeEnum Type {
+			[JsonIgnore()] public OvhApi.Models.Hosting.Web.Module.DependencyTypeEnum Type {
 				get {
 					return this._type;
 				}
@@ -16783,7 +16783,7 @@ namespace OvhApi.Models.Hosting.Web {
 			/// <summary>
 			/// The server on where your dependency is hosted
 			/// </summary>
-			public string Server {
+			[JsonIgnore()] public string Server {
 				get {
 					return this._server;
 				}
@@ -16795,7 +16795,7 @@ namespace OvhApi.Models.Hosting.Web {
 			/// <summary>
 			/// The port on where to contact this dependency
 			/// </summary>
-			public System.Nullable<long> Port {
+			[JsonIgnore()] public System.Nullable<long> Port {
 				get {
 					return this._port;
 				}
@@ -16807,7 +16807,7 @@ namespace OvhApi.Models.Hosting.Web {
 			/// <summary>
 			/// The prefix to set to the data to distinguish between the data from the module and the rest
 			/// </summary>
-			public string Prefix {
+			[JsonIgnore()] public string Prefix {
 				get {
 					return this._prefix;
 				}
@@ -16901,7 +16901,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Space allowed
 		/// </summary>
-		public OvhApi.Models.ComplexType.UnitAndValue<double> QuotaSize {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<double> QuotaSize {
 			get {
 				return this._quotaSize;
 			}
@@ -16910,7 +16910,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Space used
 		/// </summary>
-		public OvhApi.Models.ComplexType.UnitAndValue<double> QuotaUsed {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<double> QuotaUsed {
 			get {
 				return this._quotaUsed;
 			}
@@ -16919,7 +16919,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Mode of your database
 		/// </summary>
-		public OvhApi.Models.Hosting.Web.Database.ModeEnum Mode {
+		[JsonIgnore()] public OvhApi.Models.Hosting.Web.Database.ModeEnum Mode {
 			get {
 				return this._mode;
 			}
@@ -16928,7 +16928,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Database version following the database type
 		/// </summary>
-		public OvhApi.Models.Hosting.Web.Database.VersionEnum Version {
+		[JsonIgnore()] public OvhApi.Models.Hosting.Web.Database.VersionEnum Version {
 			get {
 				return this._version;
 			}
@@ -16937,7 +16937,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Database name
 		/// </summary>
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
@@ -16946,7 +16946,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// The port on where to contact this database
 		/// </summary>
-		public long Port {
+		[JsonIgnore()] public long Port {
 			get {
 				return this._port;
 			}
@@ -16955,7 +16955,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Database state
 		/// </summary>
-		public OvhApi.Models.Hosting.Web.Database.StateEnum State {
+		[JsonIgnore()] public OvhApi.Models.Hosting.Web.Database.StateEnum State {
 			get {
 				return this._state;
 			}
@@ -16964,7 +16964,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Database user name
 		/// </summary>
-		public string User {
+		[JsonIgnore()] public string User {
 			get {
 				return this._user;
 			}
@@ -16973,7 +16973,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Type of your database
 		/// </summary>
-		public OvhApi.Models.Hosting.Web.Database.DatabaseTypeEnum Type {
+		[JsonIgnore()] public OvhApi.Models.Hosting.Web.Database.DatabaseTypeEnum Type {
 			get {
 				return this._type;
 			}
@@ -16982,7 +16982,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Your database server name
 		/// </summary>
-		public string Server {
+		[JsonIgnore()] public string Server {
 			get {
 				return this._server;
 			}
@@ -17098,7 +17098,7 @@ namespace OvhApi.Models.Hosting.Web {
 			[JsonProperty("available")]
 			private long _available;
 			
-			public OvhApi.Models.ComplexType.UnitAndValue<long> Quota {
+			[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<long> Quota {
 				get {
 					return this._quota;
 				}
@@ -17107,7 +17107,7 @@ namespace OvhApi.Models.Hosting.Web {
 				}
 			}
 			
-			public OvhApi.Models.Hosting.Web.Database.DatabaseCapabilitiesTypeEnum Type {
+			[JsonIgnore()] public OvhApi.Models.Hosting.Web.Database.DatabaseCapabilitiesTypeEnum Type {
 				get {
 					return this._type;
 				}
@@ -17119,7 +17119,7 @@ namespace OvhApi.Models.Hosting.Web {
 			/// <summary>
 			/// Number of database left for creation
 			/// </summary>
-			public long Available {
+			[JsonIgnore()] public long Available {
 				get {
 					return this._available;
 				}
@@ -17234,7 +17234,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Email use to receive error log ( stderr )
 		/// </summary>
-		public string Email {
+		[JsonIgnore()] public string Email {
 			get {
 				return this._email;
 			}
@@ -17246,7 +17246,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Frequency ( crontab format ) defined for the script ( minutes are ignored )
 		/// </summary>
-		public string Frequency {
+		[JsonIgnore()] public string Frequency {
 			get {
 				return this._frequency;
 			}
@@ -17258,7 +17258,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Cron language
 		/// </summary>
-		public OvhApi.Models.Hosting.Web.Cron.LanguageEnum Language {
+		[JsonIgnore()] public OvhApi.Models.Hosting.Web.Cron.LanguageEnum Language {
 			get {
 				return this._language;
 			}
@@ -17270,7 +17270,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Cron's id
 		/// </summary>
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
@@ -17279,7 +17279,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Description field for you
 		/// </summary>
-		public string Description {
+		[JsonIgnore()] public string Description {
 			get {
 				return this._description;
 			}
@@ -17291,7 +17291,7 @@ namespace OvhApi.Models.Hosting.Web {
 		/// <summary>
 		/// Command to execute
 		/// </summary>
-		public string Command {
+		[JsonIgnore()] public string Command {
 			get {
 				return this._command;
 			}
@@ -17375,13 +17375,13 @@ namespace OvhApi.Models.Ip {
 		[JsonProperty("reverse")]
 		private string _reverse;
 		
-		public System.Net.IPAddress IpReverse {
+		[JsonIgnore()] public System.Net.IPAddress IpReverse {
 			get {
 				return this._ipReverse;
 			}
 		}
 		
-		public string Reverse {
+		[JsonIgnore()] public string Reverse {
 			get {
 				return this._reverse;
 			}
@@ -17402,7 +17402,7 @@ namespace OvhApi.Models.Ip {
 		[JsonProperty("description")]
 		private string _description;
 		
-		public string Netname {
+		[JsonIgnore()] public string Netname {
 			get {
 				return this._netname;
 			}
@@ -17411,7 +17411,7 @@ namespace OvhApi.Models.Ip {
 			}
 		}
 		
-		public string Description {
+		[JsonIgnore()] public string Description {
 			get {
 				return this._description;
 			}
@@ -17483,13 +17483,13 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// IP block organisation Id
 		/// </summary>
-		public string OrganisationId {
+		[JsonIgnore()] public string OrganisationId {
 			get {
 				return this._organisationId;
 			}
 		}
 		
-		public OvhApi.Models.CoreTypes.CountryEnum Country {
+		[JsonIgnore()] public OvhApi.Models.CoreTypes.CountryEnum Country {
 			get {
 				return this._country;
 			}
@@ -17498,19 +17498,19 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Routage information
 		/// </summary>
-		public OvhApi.Models.Ip.RoutedTo RoutedTo {
+		[JsonIgnore()] public OvhApi.Models.Ip.RoutedTo RoutedTo {
 			get {
 				return this._routedTo;
 			}
 		}
 		
-		public OVHApi.IPAddressBlock IpName {
+		[JsonIgnore()] public OVHApi.IPAddressBlock IpName {
 			get {
 				return this._ip;
 			}
 		}
 		
-		public OvhApi.Models.Ip.IpTypeEnum Type {
+		[JsonIgnore()] public OvhApi.Models.Ip.IpTypeEnum Type {
 			get {
 				return this._type;
 			}
@@ -17519,7 +17519,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Custom description on your ip
 		/// </summary>
-		public string Description {
+		[JsonIgnore()] public string Description {
 			get {
 				return this._description;
 			}
@@ -17561,7 +17561,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// the id of the task
 		/// </summary>
-		public long TaskId {
+		[JsonIgnore()] public long TaskId {
 			get {
 				return this._taskId;
 			}
@@ -17570,7 +17570,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Function name
 		/// </summary>
-		public OvhApi.Models.Ip.TaskFunctionEnum Function {
+		[JsonIgnore()] public OvhApi.Models.Ip.TaskFunctionEnum Function {
 			get {
 				return this._function;
 			}
@@ -17579,7 +17579,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// last update
 		/// </summary>
-		public System.Nullable<System.DateTime> LastUpdate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> LastUpdate {
 			get {
 				return this._lastUpdate;
 			}
@@ -17588,7 +17588,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Details of this task
 		/// </summary>
-		public string Comment {
+		[JsonIgnore()] public string Comment {
 			get {
 				return this._comment;
 			}
@@ -17597,7 +17597,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Task status
 		/// </summary>
-		public OvhApi.Models.Ip.TaskStatusEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Ip.TaskStatusEnum Status {
 			get {
 				return this._status;
 			}
@@ -17606,7 +17606,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Task Creation date
 		/// </summary>
-		public System.DateTime StartDate {
+		[JsonIgnore()] public System.DateTime StartDate {
 			get {
 				return this._startDate;
 			}
@@ -17615,7 +17615,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Completion date
 		/// </summary>
-		public System.Nullable<System.DateTime> DoneDate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> DoneDate {
 			get {
 				return this._doneDate;
 			}
@@ -17642,13 +17642,13 @@ namespace OvhApi.Models.Ip {
 		[JsonProperty("state")]
 		private OvhApi.Models.Ip.GameMitigationRuleStateEnum _state;
 		
-		public OvhApi.Models.Ip.GameMitigationRuleProtocolEnum Protocol {
+		[JsonIgnore()] public OvhApi.Models.Ip.GameMitigationRuleProtocolEnum Protocol {
 			get {
 				return this._protocol;
 			}
 		}
 		
-		public OvhApi.Models.ComplexType.Range<long> Ports {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.Range<long> Ports {
 			get {
 				return this._ports;
 			}
@@ -17657,7 +17657,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// ID of the rule
 		/// </summary>
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
@@ -17666,7 +17666,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Current state of your rule
 		/// </summary>
-		public OvhApi.Models.Ip.GameMitigationRuleStateEnum State {
+		[JsonIgnore()] public OvhApi.Models.Ip.GameMitigationRuleStateEnum State {
 			get {
 				return this._state;
 			}
@@ -17709,7 +17709,7 @@ namespace OvhApi.Models.ComplexType {
 		/// <summary>
 		/// End point of the range
 		/// </summary>
-		public T To {
+		[JsonIgnore()] public T To {
 			get {
 				return this._to;
 			}
@@ -17721,7 +17721,7 @@ namespace OvhApi.Models.ComplexType {
 		/// <summary>
 		/// Start point of the range
 		/// </summary>
-		public T From {
+		[JsonIgnore()] public T From {
 			get {
 				return this._from;
 			}
@@ -17754,7 +17754,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// IP address of the target
 		/// </summary>
-		public System.Net.IPAddress DestinationIp {
+		[JsonIgnore()] public System.Net.IPAddress DestinationIp {
 			get {
 				return this._destinationIp;
 			}
@@ -17766,7 +17766,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// The message-id of the email
 		/// </summary>
-		public string MessageId {
+		[JsonIgnore()] public string MessageId {
 			get {
 				return this._messageId;
 			}
@@ -17778,7 +17778,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Timestamp when the email was sent
 		/// </summary>
-		public long Date {
+		[JsonIgnore()] public long Date {
 			get {
 				return this._date;
 			}
@@ -17790,7 +17790,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Spam score for the email
 		/// </summary>
-		public long Spamscore {
+		[JsonIgnore()] public long Spamscore {
 			get {
 				return this._spamscore;
 			}
@@ -17823,7 +17823,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Creation date of your task
 		/// </summary>
-		public System.DateTime CreationDate {
+		[JsonIgnore()] public System.DateTime CreationDate {
 			get {
 				return this._creationDate;
 			}
@@ -17832,7 +17832,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Current status of your task
 		/// </summary>
-		public string Status {
+		[JsonIgnore()] public string Status {
 			get {
 				return this._status;
 			}
@@ -17841,7 +17841,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// The action made
 		/// </summary>
-		public OvhApi.Models.Ip.LoadBalancingTaskActionEnum Action {
+		[JsonIgnore()] public OvhApi.Models.Ip.LoadBalancingTaskActionEnum Action {
 			get {
 				return this._action;
 			}
@@ -17850,7 +17850,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Identifier of your task
 		/// </summary>
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
@@ -17982,7 +17982,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Firewall mode : in UDP, only allow traffic matching your rules (as well as established traffic). If not enabled, traffic to ports not defined in your rules will be permited. TCP traffic is unaffected by this.
 		/// </summary>
-		public bool FirewallModeEnabled {
+		[JsonIgnore()] public bool FirewallModeEnabled {
 			get {
 				return this._firewallModeEnabled;
 			}
@@ -17991,13 +17991,13 @@ namespace OvhApi.Models.Ip {
 			}
 		}
 		
-		public System.Net.IPAddress IpOnGame {
+		[JsonIgnore()] public System.Net.IPAddress IpOnGame {
 			get {
 				return this._ipOnGame;
 			}
 		}
 		
-		public OvhApi.Models.Ip.GameMitigationStateEnum State {
+		[JsonIgnore()] public OvhApi.Models.Ip.GameMitigationStateEnum State {
 			get {
 				return this._state;
 			}
@@ -18021,13 +18021,13 @@ namespace OvhApi.Models.Ip {
 		[JsonProperty("state")]
 		private OvhApi.Models.Ip.FirewallStateEnum _state;
 		
-		public System.Net.IPAddress IpOnFirewall {
+		[JsonIgnore()] public System.Net.IPAddress IpOnFirewall {
 			get {
 				return this._ipOnFirewall;
 			}
 		}
 		
-		public bool Enabled {
+		[JsonIgnore()] public bool Enabled {
 			get {
 				return this._enabled;
 			}
@@ -18039,7 +18039,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Current state of your ip on firewall
 		/// </summary>
-		public OvhApi.Models.Ip.FirewallStateEnum State {
+		[JsonIgnore()] public OvhApi.Models.Ip.FirewallStateEnum State {
 			get {
 				return this._state;
 			}
@@ -18063,7 +18063,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Bits per second
 		/// </summary>
-		public long Bps {
+		[JsonIgnore()] public long Bps {
 			get {
 				return this._bps;
 			}
@@ -18075,7 +18075,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Paquets per second
 		/// </summary>
-		public long Pps {
+		[JsonIgnore()] public long Pps {
 			get {
 				return this._pps;
 			}
@@ -18111,7 +18111,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// If the backend has been configured as backup, this field contains the ip of the main backend
 		/// </summary>
-		public System.Net.IPAddress MainBackendIp {
+		[JsonIgnore()] public System.Net.IPAddress MainBackendIp {
 			get {
 				return this._mainBackendIp;
 			}
@@ -18120,7 +18120,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Location where your service is
 		/// </summary>
-		public OvhApi.Models.Ip.LoadBalancingZoneEnum Zone {
+		[JsonIgnore()] public OvhApi.Models.Ip.LoadBalancingZoneEnum Zone {
 			get {
 				return this._zone;
 			}
@@ -18129,7 +18129,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// IP of your backend
 		/// </summary>
-		public System.Net.IPAddress Backend {
+		[JsonIgnore()] public System.Net.IPAddress Backend {
 			get {
 				return this._backend;
 			}
@@ -18138,7 +18138,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Weight of the backend on its zone, must be between 1 and 100, default is 8
 		/// </summary>
-		public long Weight {
+		[JsonIgnore()] public long Weight {
 			get {
 				return this._weight;
 			}
@@ -18147,7 +18147,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Probe used for your backend
 		/// </summary>
-		public OvhApi.Models.Ip.LoadBalancingBackendProbeEnum Probe {
+		[JsonIgnore()] public OvhApi.Models.Ip.LoadBalancingBackendProbeEnum Probe {
 			get {
 				return this._probe;
 			}
@@ -18189,7 +18189,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// destination customer ID
 		/// </summary>
-		public string CustomerId {
+		[JsonIgnore()] public string CustomerId {
 			get {
 				return this._customerId;
 			}
@@ -18198,7 +18198,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// migration token
 		/// </summary>
-		public string Token {
+		[JsonIgnore()] public string Token {
 			get {
 				return this._token;
 			}
@@ -18219,7 +18219,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Service where ip is routed to
 		/// </summary>
-		public string ServiceName {
+		[JsonIgnore()] public string ServiceName {
 			get {
 				return this._serviceName;
 			}
@@ -18450,7 +18450,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Network protocol
 		/// </summary>
-		public OvhApi.Models.Ip.FirewallProtocolEnum Protocol {
+		[JsonIgnore()] public OvhApi.Models.Ip.FirewallProtocolEnum Protocol {
 			get {
 				return this._protocol;
 			}
@@ -18459,7 +18459,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Source ip for your rule
 		/// </summary>
-		public string Source {
+		[JsonIgnore()] public string Source {
 			get {
 				return this._source;
 			}
@@ -18468,13 +18468,13 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Destination port range for your rule. Only with TCP/UDP protocol
 		/// </summary>
-		public string DestinationPort {
+		[JsonIgnore()] public string DestinationPort {
 			get {
 				return this._destinationPort;
 			}
 		}
 		
-		public long Sequence {
+		[JsonIgnore()] public long Sequence {
 			get {
 				return this._sequence;
 			}
@@ -18483,13 +18483,13 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Destination ip for your rule
 		/// </summary>
-		public string Destination {
+		[JsonIgnore()] public string Destination {
 			get {
 				return this._destination;
 			}
 		}
 		
-		public string Rule {
+		[JsonIgnore()] public string Rule {
 			get {
 				return this._rule;
 			}
@@ -18498,7 +18498,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Source port range for your rule. Only with TCP/UDP protocol
 		/// </summary>
-		public string SourcePort {
+		[JsonIgnore()] public string SourcePort {
 			get {
 				return this._sourcePort;
 			}
@@ -18507,7 +18507,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Current state of your rule
 		/// </summary>
-		public OvhApi.Models.Ip.FirewallRuleStateEnum State {
+		[JsonIgnore()] public OvhApi.Models.Ip.FirewallRuleStateEnum State {
 			get {
 				return this._state;
 			}
@@ -18516,13 +18516,13 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// TCP option on your rule
 		/// </summary>
-		public string TcpOption {
+		[JsonIgnore()] public string TcpOption {
 			get {
 				return this._tcpOption;
 			}
 		}
 		
-		public System.DateTime CreationDate {
+		[JsonIgnore()] public System.DateTime CreationDate {
 			get {
 				return this._creationDate;
 			}
@@ -18531,7 +18531,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Action on this rule
 		/// </summary>
-		public OvhApi.Models.Ip.FirewallActionEnum Action {
+		[JsonIgnore()] public OvhApi.Models.Ip.FirewallActionEnum Action {
 			get {
 				return this._action;
 			}
@@ -18540,7 +18540,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Fragments option
 		/// </summary>
-		public System.Nullable<bool> Fragments {
+		[JsonIgnore()] public System.Nullable<bool> Fragments {
 			get {
 				return this._fragments;
 			}
@@ -18567,7 +18567,7 @@ namespace OvhApi.Models.Ip {
 		[JsonProperty("state")]
 		private OvhApi.Models.Ip.MitigationStateEnum _state;
 		
-		public System.Net.IPAddress IpOnMitigation {
+		[JsonIgnore()] public System.Net.IPAddress IpOnMitigation {
 			get {
 				return this._ipOnMitigation;
 			}
@@ -18576,7 +18576,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Set on true if your ip is on auto-mitigation
 		/// </summary>
-		public bool Auto {
+		[JsonIgnore()] public bool Auto {
 			get {
 				return this._auto;
 			}
@@ -18585,7 +18585,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Set on true if your ip is on permanent mitigation
 		/// </summary>
-		public bool Permanent {
+		[JsonIgnore()] public bool Permanent {
 			get {
 				return this._permanent;
 			}
@@ -18597,7 +18597,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Current state of your ip on mitigation
 		/// </summary>
-		public OvhApi.Models.Ip.MitigationStateEnum State {
+		[JsonIgnore()] public OvhApi.Models.Ip.MitigationStateEnum State {
 			get {
 				return this._state;
 			}
@@ -18693,7 +18693,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Traffic out
 		/// </summary>
-		public OvhApi.Models.Ip.MitigationTraffic Out {
+		[JsonIgnore()] public OvhApi.Models.Ip.MitigationTraffic Out {
 			get {
 				return this._out;
 			}
@@ -18705,7 +18705,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Traffic timestamp
 		/// </summary>
-		public long Timestamp {
+		[JsonIgnore()] public long Timestamp {
 			get {
 				return this._timestamp;
 			}
@@ -18717,7 +18717,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Traffic in
 		/// </summary>
-		public OvhApi.Models.Ip.MitigationTraffic In {
+		[JsonIgnore()] public OvhApi.Models.Ip.MitigationTraffic In {
 			get {
 				return this._in;
 			}
@@ -19584,7 +19584,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Ssl activation state
 		/// </summary>
-		public OvhApi.Models.Ip.LoadBalancingSslEnum Ssl {
+		[JsonIgnore()] public OvhApi.Models.Ip.LoadBalancingSslEnum Ssl {
 			get {
 				return this._ssl;
 			}
@@ -19593,7 +19593,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Location where your service is
 		/// </summary>
-		public OvhApi.Models.Ip.LoadBalancingZoneEnum[] Zone {
+		[JsonIgnore()] public OvhApi.Models.Ip.LoadBalancingZoneEnum[] Zone {
 			get {
 				return this._zone;
 			}
@@ -19602,7 +19602,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Your IP load balancing
 		/// </summary>
-		public System.Net.IPAddress IpLoadBalancing {
+		[JsonIgnore()] public System.Net.IPAddress IpLoadBalancing {
 			get {
 				return this._ipLoadBalancing;
 			}
@@ -19611,7 +19611,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// The internal name of your IP load balancing
 		/// </summary>
-		public string ServiceName {
+		[JsonIgnore()] public string ServiceName {
 			get {
 				return this._serviceName;
 			}
@@ -19620,7 +19620,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Current state of your IP
 		/// </summary>
-		public OvhApi.Models.Ip.LoadBalancingStateEnum State {
+		[JsonIgnore()] public OvhApi.Models.Ip.LoadBalancingStateEnum State {
 			get {
 				return this._state;
 			}
@@ -19629,7 +19629,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// The type of stickiness currently in place on your Ip LoadBalancing
 		/// </summary>
-		public OvhApi.Models.Ip.LoadBalancingStickinessEnum Stickiness {
+		[JsonIgnore()] public OvhApi.Models.Ip.LoadBalancingStickinessEnum Stickiness {
 			get {
 				return this._stickiness;
 			}
@@ -19646,7 +19646,7 @@ namespace OvhApi.Models.Ip {
 			[JsonProperty("dstPort")]
 			private long _dstPort;
 			
-			public OvhApi.Models.Ip.LoadBalancingAdditionalPortEnum SrcPort {
+			[JsonIgnore()] public OvhApi.Models.Ip.LoadBalancingAdditionalPortEnum SrcPort {
 				get {
 					return this._srcPort;
 				}
@@ -19655,7 +19655,7 @@ namespace OvhApi.Models.Ip {
 				}
 			}
 			
-			public long DstPort {
+			[JsonIgnore()] public long DstPort {
 				get {
 					return this._dstPort;
 				}
@@ -19683,7 +19683,7 @@ namespace OvhApi.Models.Ip {
 		[JsonProperty("state")]
 		private OvhApi.Models.Ip.MitigationProfileStateEnum _state;
 		
-		public System.Net.IPAddress IpMitigationProfile {
+		[JsonIgnore()] public System.Net.IPAddress IpMitigationProfile {
 			get {
 				return this._ipMitigationProfile;
 			}
@@ -19692,7 +19692,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Delay to wait before remove ip from auto mitigation after an attack
 		/// </summary>
-		public OvhApi.Models.Ip.MitigationProfileAutoMitigationTimeOutEnum AutoMitigationTimeOut {
+		[JsonIgnore()] public OvhApi.Models.Ip.MitigationProfileAutoMitigationTimeOutEnum AutoMitigationTimeOut {
 			get {
 				return this._autoMitigationTimeOut;
 			}
@@ -19704,7 +19704,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Current state of your mitigation profile
 		/// </summary>
-		public OvhApi.Models.Ip.MitigationProfileStateEnum State {
+		[JsonIgnore()] public OvhApi.Models.Ip.MitigationProfileStateEnum State {
 			get {
 				return this._state;
 			}
@@ -19818,7 +19818,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// your IP
 		/// </summary>
-		public System.Net.IPAddress IpBlocked {
+		[JsonIgnore()] public System.Net.IPAddress IpBlocked {
 			get {
 				return this._ipBlocked;
 			}
@@ -19827,7 +19827,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// The last blocking date
 		/// </summary>
-		public System.DateTime BlockedSince {
+		[JsonIgnore()] public System.DateTime BlockedSince {
 			get {
 				return this._blockedSince;
 			}
@@ -19836,7 +19836,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Time (in seconds) remaining before you can request your IP to be unblocked
 		/// </summary>
-		public long Time {
+		[JsonIgnore()] public long Time {
 			get {
 				return this._time;
 			}
@@ -19845,7 +19845,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// ARP logs
 		/// </summary>
-		public string Logs {
+		[JsonIgnore()] public string Logs {
 			get {
 				return this._logs;
 			}
@@ -19854,7 +19854,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// this IP address state
 		/// </summary>
-		public OvhApi.Models.Ip.ArpStateEnum State {
+		[JsonIgnore()] public OvhApi.Models.Ip.ArpStateEnum State {
 			get {
 				return this._state;
 			}
@@ -19902,7 +19902,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// End of the attack
 		/// </summary>
-		public System.Nullable<System.DateTime> EndDate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> EndDate {
 			get {
 				return this._endDate;
 			}
@@ -19911,7 +19911,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Internal id of your attack
 		/// </summary>
-		public long IdAttack {
+		[JsonIgnore()] public long IdAttack {
 			get {
 				return this._idAttack;
 			}
@@ -19920,7 +19920,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Your ip
 		/// </summary>
-		public System.Net.IPAddress IpAttack {
+		[JsonIgnore()] public System.Net.IPAddress IpAttack {
 			get {
 				return this._ipAttack;
 			}
@@ -19929,7 +19929,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Start of the attack
 		/// </summary>
-		public System.DateTime StartDate {
+		[JsonIgnore()] public System.DateTime StartDate {
 			get {
 				return this._startDate;
 			}
@@ -19962,7 +19962,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// your IP
 		/// </summary>
-		public System.Net.IPAddress IpBlocked {
+		[JsonIgnore()] public System.Net.IPAddress IpBlocked {
 			get {
 				return this._ipBlocked;
 			}
@@ -19971,7 +19971,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// The last blocking date
 		/// </summary>
-		public System.DateTime BlockedSince {
+		[JsonIgnore()] public System.DateTime BlockedSince {
 			get {
 				return this._blockedSince;
 			}
@@ -19980,7 +19980,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Time (in seconds) remaining before you can request your IP to be unblocked
 		/// </summary>
-		public long Time {
+		[JsonIgnore()] public long Time {
 			get {
 				return this._time;
 			}
@@ -19989,7 +19989,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Logs
 		/// </summary>
-		public string Logs {
+		[JsonIgnore()] public string Logs {
 			get {
 				return this._logs;
 			}
@@ -19998,7 +19998,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// this IP address state
 		/// </summary>
-		public OvhApi.Models.Ip.BlockedIpStateEnum State {
+		[JsonIgnore()] public OvhApi.Models.Ip.BlockedIpStateEnum State {
 			get {
 				return this._state;
 			}
@@ -20028,7 +20028,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Time (in seconds) while the IP will be blocked
 		/// </summary>
-		public long Time {
+		[JsonIgnore()] public long Time {
 			get {
 				return this._time;
 			}
@@ -20037,7 +20037,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Last date the ip was blocked
 		/// </summary>
-		public System.DateTime Date {
+		[JsonIgnore()] public System.DateTime Date {
 			get {
 				return this._date;
 			}
@@ -20046,7 +20046,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// IP address which is sending spam
 		/// </summary>
-		public System.Net.IPAddress IpSpamming {
+		[JsonIgnore()] public System.Net.IPAddress IpSpamming {
 			get {
 				return this._ipSpamming;
 			}
@@ -20055,7 +20055,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Current state of the ip
 		/// </summary>
-		public OvhApi.Models.Ip.SpamStateEnum State {
+		[JsonIgnore()] public OvhApi.Models.Ip.SpamStateEnum State {
 			get {
 				return this._state;
 			}
@@ -20079,7 +20079,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// TCP fragments
 		/// </summary>
-		public System.Nullable<bool> Fragments {
+		[JsonIgnore()] public System.Nullable<bool> Fragments {
 			get {
 				return this._fragments;
 			}
@@ -20091,7 +20091,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// TCP option
 		/// </summary>
-		public OvhApi.Models.Ip.FirewallTCPOptionEnum Option {
+		[JsonIgnore()] public OvhApi.Models.Ip.FirewallTCPOptionEnum Option {
 			get {
 				return this._option;
 			}
@@ -20127,7 +20127,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Time when the IP address was blocked
 		/// </summary>
-		public long Timestamp {
+		[JsonIgnore()] public long Timestamp {
 			get {
 				return this._timestamp;
 			}
@@ -20139,7 +20139,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Average spam score.
 		/// </summary>
-		public System.Nullable<long> AverageSpamscore {
+		[JsonIgnore()] public System.Nullable<long> AverageSpamscore {
 			get {
 				return this._averageSpamscore;
 			}
@@ -20151,7 +20151,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Detailed list of the spams
 		/// </summary>
-		public OvhApi.Models.Ip.SpamTarget[] DetectedSpams {
+		[JsonIgnore()] public OvhApi.Models.Ip.SpamTarget[] DetectedSpams {
 			get {
 				return this._detectedSpams;
 			}
@@ -20163,7 +20163,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Number of emails sent
 		/// </summary>
-		public long Total {
+		[JsonIgnore()] public long Total {
 			get {
 				return this._total;
 			}
@@ -20175,7 +20175,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Number of spams sent
 		/// </summary>
-		public long NumberOfSpams {
+		[JsonIgnore()] public long NumberOfSpams {
 			get {
 				return this._numberOfSpams;
 			}
@@ -20313,7 +20313,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Traffic out
 		/// </summary>
-		public OvhApi.Models.Ip.MitigationTraffic Out {
+		[JsonIgnore()] public OvhApi.Models.Ip.MitigationTraffic Out {
 			get {
 				return this._out;
 			}
@@ -20325,7 +20325,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Used protocol. See RFC5237 for more information
 		/// </summary>
-		public System.Nullable<long> Protocol {
+		[JsonIgnore()] public System.Nullable<long> Protocol {
 			get {
 				return this._protocol;
 			}
@@ -20337,7 +20337,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Traffic source port
 		/// </summary>
-		public System.Nullable<long> SrcPort {
+		[JsonIgnore()] public System.Nullable<long> SrcPort {
 			get {
 				return this._srcPort;
 			}
@@ -20349,7 +20349,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Traffic dest port
 		/// </summary>
-		public System.Nullable<long> DestPort {
+		[JsonIgnore()] public System.Nullable<long> DestPort {
 			get {
 				return this._destPort;
 			}
@@ -20361,7 +20361,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// ICMP protocol type
 		/// </summary>
-		public System.Nullable<long> IcmpType {
+		[JsonIgnore()] public System.Nullable<long> IcmpType {
 			get {
 				return this._icmpType;
 			}
@@ -20373,7 +20373,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// Traffic in
 		/// </summary>
-		public OvhApi.Models.Ip.MitigationTraffic In {
+		[JsonIgnore()] public OvhApi.Models.Ip.MitigationTraffic In {
 			get {
 				return this._in;
 			}
@@ -20385,7 +20385,7 @@ namespace OvhApi.Models.Ip {
 		/// <summary>
 		/// ICMP protocol code
 		/// </summary>
-		public System.Nullable<long> IcmpCode {
+		[JsonIgnore()] public System.Nullable<long> IcmpCode {
 			get {
 				return this._icmpCode;
 			}
@@ -20394,7 +20394,7 @@ namespace OvhApi.Models.Ip {
 			}
 		}
 		
-		public System.Nullable<bool> Fragments {
+		[JsonIgnore()] public System.Nullable<bool> Fragments {
 			get {
 				return this._fragments;
 			}
@@ -20403,7 +20403,7 @@ namespace OvhApi.Models.Ip {
 			}
 		}
 		
-		public System.Nullable<bool> Syn {
+		[JsonIgnore()] public System.Nullable<bool> Syn {
 			get {
 				return this._syn;
 			}
@@ -20457,7 +20457,7 @@ namespace OvhApi.Models.License {
 		[JsonProperty("orderableVersions")]
 		private OvhApi.Models.License.OrderableCpanelCompatibilityInfos[] _orderableVersions;
 		
-		public OvhApi.Models.License.LicenseTypeEnum ServiceType {
+		[JsonIgnore()] public OvhApi.Models.License.LicenseTypeEnum ServiceType {
 			get {
 				return this._serviceType;
 			}
@@ -20466,7 +20466,7 @@ namespace OvhApi.Models.License {
 			}
 		}
 		
-		public OvhApi.Models.License.OrderableCpanelCompatibilityInfos[] OrderableVersions {
+		[JsonIgnore()] public OvhApi.Models.License.OrderableCpanelCompatibilityInfos[] OrderableVersions {
 			get {
 				return this._orderableVersions;
 			}
@@ -20508,7 +20508,7 @@ namespace OvhApi.Models.License.Cpanel {
 		/// <summary>
 		/// The internal name of your license
 		/// </summary>
-		public string Domain {
+		[JsonIgnore()] public string Domain {
 			get {
 				return this._domain;
 			}
@@ -20517,7 +20517,7 @@ namespace OvhApi.Models.License.Cpanel {
 		/// <summary>
 		/// The license id on license provider side
 		/// </summary>
-		public string LicenseId {
+		[JsonIgnore()] public string LicenseId {
 			get {
 				return this._licenseId;
 			}
@@ -20526,7 +20526,7 @@ namespace OvhApi.Models.License.Cpanel {
 		/// <summary>
 		/// The ip on which this license is attached
 		/// </summary>
-		public System.Net.IPAddress Ip {
+		[JsonIgnore()] public System.Net.IPAddress Ip {
 			get {
 				return this._ip;
 			}
@@ -20535,7 +20535,7 @@ namespace OvhApi.Models.License.Cpanel {
 		/// <summary>
 		/// This license version
 		/// </summary>
-		public OvhApi.Models.License.CpanelVersionEnum Version {
+		[JsonIgnore()] public OvhApi.Models.License.CpanelVersionEnum Version {
 			get {
 				return this._version;
 			}
@@ -20544,7 +20544,7 @@ namespace OvhApi.Models.License.Cpanel {
 		/// <summary>
 		/// This license state
 		/// </summary>
-		public OvhApi.Models.License.StateEnum Status {
+		[JsonIgnore()] public OvhApi.Models.License.StateEnum Status {
 			get {
 				return this._status;
 			}
@@ -20553,7 +20553,7 @@ namespace OvhApi.Models.License.Cpanel {
 		/// <summary>
 		/// This license creation date
 		/// </summary>
-		public System.DateTime Creation {
+		[JsonIgnore()] public System.DateTime Creation {
 			get {
 				return this._creation;
 			}
@@ -20562,7 +20562,7 @@ namespace OvhApi.Models.License.Cpanel {
 		/// <summary>
 		/// Shall we delete this on expiration ?
 		/// </summary>
-		public bool DeleteAtExpiration {
+		[JsonIgnore()] public bool DeleteAtExpiration {
 			get {
 				return this._deleteAtExpiration;
 			}
@@ -20604,7 +20604,7 @@ namespace OvhApi.Models.License {
 		[JsonProperty("version")]
 		private OvhApi.Models.License.OrderableCpanelVersionEnum _version;
 		
-		public OvhApi.Models.License.OrderableCpanelVersionEnum Version {
+		[JsonIgnore()] public OvhApi.Models.License.OrderableCpanelVersionEnum Version {
 			get {
 				return this._version;
 			}
@@ -20646,7 +20646,7 @@ namespace OvhApi.Models.License {
 		/// <summary>
 		/// This Task id
 		/// </summary>
-		public long TaskId {
+		[JsonIgnore()] public long TaskId {
 			get {
 				return this._taskId;
 			}
@@ -20655,7 +20655,7 @@ namespace OvhApi.Models.License {
 		/// <summary>
 		/// The last time this Task was updated
 		/// </summary>
-		public System.DateTime LastUpdate {
+		[JsonIgnore()] public System.DateTime LastUpdate {
 			get {
 				return this._lastUpdate;
 			}
@@ -20664,7 +20664,7 @@ namespace OvhApi.Models.License {
 		/// <summary>
 		/// Current Taks status
 		/// </summary>
-		public OvhApi.Models.License.TaskStateEnum Status {
+		[JsonIgnore()] public OvhApi.Models.License.TaskStateEnum Status {
 			get {
 				return this._status;
 			}
@@ -20673,7 +20673,7 @@ namespace OvhApi.Models.License {
 		/// <summary>
 		/// When was this Task created
 		/// </summary>
-		public System.DateTime TodoDate {
+		[JsonIgnore()] public System.DateTime TodoDate {
 			get {
 				return this._todoDate;
 			}
@@ -20682,7 +20682,7 @@ namespace OvhApi.Models.License {
 		/// <summary>
 		/// This Task description
 		/// </summary>
-		public OvhApi.Models.License.ActionType Action {
+		[JsonIgnore()] public OvhApi.Models.License.ActionType Action {
 			get {
 				return this._action;
 			}
@@ -20691,7 +20691,7 @@ namespace OvhApi.Models.License {
 		/// <summary>
 		/// This Task name
 		/// </summary>
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
@@ -20700,7 +20700,7 @@ namespace OvhApi.Models.License {
 		/// <summary>
 		/// When was this Task done
 		/// </summary>
-		public System.Nullable<System.DateTime> DoneDate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> DoneDate {
 			get {
 				return this._doneDate;
 			}
@@ -20754,7 +20754,7 @@ namespace OvhApi.Models.License {
 		[JsonProperty("message")]
 		private OvhApi.Models.License.ChangeIpMessageEnum _message;
 		
-		public bool Success {
+		[JsonIgnore()] public bool Success {
 			get {
 				return this._success;
 			}
@@ -20763,7 +20763,7 @@ namespace OvhApi.Models.License {
 			}
 		}
 		
-		public OvhApi.Models.License.ChangeIpMessageEnum Message {
+		[JsonIgnore()] public OvhApi.Models.License.ChangeIpMessageEnum Message {
 			get {
 				return this._message;
 			}
@@ -20853,7 +20853,7 @@ namespace OvhApi.Models.License {
 		[JsonProperty("version")]
 		private OvhApi.Models.License.OrderableDirectAdminVersionEnum _version;
 		
-		public OvhApi.Models.License.OrderableDirectAdminVersionEnum Version {
+		[JsonIgnore()] public OvhApi.Models.License.OrderableDirectAdminVersionEnum Version {
 			get {
 				return this._version;
 			}
@@ -20901,7 +20901,7 @@ namespace OvhApi.Models.License.Directadmin {
 		/// <summary>
 		/// The client id on license provider side
 		/// </summary>
-		public long ClientId {
+		[JsonIgnore()] public long ClientId {
 			get {
 				return this._clientId;
 			}
@@ -20910,7 +20910,7 @@ namespace OvhApi.Models.License.Directadmin {
 		/// <summary>
 		/// The ip on which this license is attached
 		/// </summary>
-		public System.Net.IPAddress Ip {
+		[JsonIgnore()] public System.Net.IPAddress Ip {
 			get {
 				return this._ip;
 			}
@@ -20919,7 +20919,7 @@ namespace OvhApi.Models.License.Directadmin {
 		/// <summary>
 		/// This license version
 		/// </summary>
-		public OvhApi.Models.License.DirectAdminVersionEnum Version {
+		[JsonIgnore()] public OvhApi.Models.License.DirectAdminVersionEnum Version {
 			get {
 				return this._version;
 			}
@@ -20928,7 +20928,7 @@ namespace OvhApi.Models.License.Directadmin {
 		/// <summary>
 		/// This license state
 		/// </summary>
-		public OvhApi.Models.License.StateEnum Status {
+		[JsonIgnore()] public OvhApi.Models.License.StateEnum Status {
 			get {
 				return this._status;
 			}
@@ -20937,7 +20937,7 @@ namespace OvhApi.Models.License.Directadmin {
 		/// <summary>
 		/// This license operating system
 		/// </summary>
-		public OvhApi.Models.License.DirectAdminOsEnum Os {
+		[JsonIgnore()] public OvhApi.Models.License.DirectAdminOsEnum Os {
 			get {
 				return this._os;
 			}
@@ -20949,7 +20949,7 @@ namespace OvhApi.Models.License.Directadmin {
 		/// <summary>
 		/// The internal name of your license
 		/// </summary>
-		public string Domain {
+		[JsonIgnore()] public string Domain {
 			get {
 				return this._domain;
 			}
@@ -20958,7 +20958,7 @@ namespace OvhApi.Models.License.Directadmin {
 		/// <summary>
 		/// The license id on license provider side
 		/// </summary>
-		public string LicenseId {
+		[JsonIgnore()] public string LicenseId {
 			get {
 				return this._licenseId;
 			}
@@ -20967,7 +20967,7 @@ namespace OvhApi.Models.License.Directadmin {
 		/// <summary>
 		/// This license creation date
 		/// </summary>
-		public System.DateTime Creation {
+		[JsonIgnore()] public System.DateTime Creation {
 			get {
 				return this._creation;
 			}
@@ -20976,7 +20976,7 @@ namespace OvhApi.Models.License.Directadmin {
 		/// <summary>
 		/// Shall we delete this on expiration ?
 		/// </summary>
-		public bool DeleteAtExpiration {
+		[JsonIgnore()] public bool DeleteAtExpiration {
 			get {
 				return this._deleteAtExpiration;
 			}
@@ -21075,7 +21075,7 @@ namespace OvhApi.Models.License {
 		[JsonProperty("orderableVersions")]
 		private OvhApi.Models.License.OrderableDirectAdminCompatibilityInfos[] _orderableVersions;
 		
-		public OvhApi.Models.License.LicenseTypeEnum ServiceType {
+		[JsonIgnore()] public OvhApi.Models.License.LicenseTypeEnum ServiceType {
 			get {
 				return this._serviceType;
 			}
@@ -21084,7 +21084,7 @@ namespace OvhApi.Models.License {
 			}
 		}
 		
-		public OvhApi.Models.License.OrderableDirectAdminCompatibilityInfos[] OrderableVersions {
+		[JsonIgnore()] public OvhApi.Models.License.OrderableDirectAdminCompatibilityInfos[] OrderableVersions {
 			get {
 				return this._orderableVersions;
 			}
@@ -21282,7 +21282,7 @@ namespace OvhApi.Models.License {
 		[JsonProperty("orderableVersions")]
 		private OvhApi.Models.License.OrderablePleskCompatibilityInfos[] _orderableVersions;
 		
-		public OvhApi.Models.License.LicenseTypeEnum ServiceType {
+		[JsonIgnore()] public OvhApi.Models.License.LicenseTypeEnum ServiceType {
 			get {
 				return this._serviceType;
 			}
@@ -21291,7 +21291,7 @@ namespace OvhApi.Models.License {
 			}
 		}
 		
-		public OvhApi.Models.License.OrderablePleskCompatibilityInfos[] OrderableVersions {
+		[JsonIgnore()] public OvhApi.Models.License.OrderablePleskCompatibilityInfos[] OrderableVersions {
 			get {
 				return this._orderableVersions;
 			}
@@ -21372,7 +21372,7 @@ namespace OvhApi.Models.License.Plesk {
 		/// <summary>
 		/// The ip on which this license is attached
 		/// </summary>
-		public System.Net.IPAddress Ip {
+		[JsonIgnore()] public System.Net.IPAddress Ip {
 			get {
 				return this._ip;
 			}
@@ -21381,7 +21381,7 @@ namespace OvhApi.Models.License.Plesk {
 		/// <summary>
 		/// This license version
 		/// </summary>
-		public OvhApi.Models.License.PleskVersionEnum Version {
+		[JsonIgnore()] public OvhApi.Models.License.PleskVersionEnum Version {
 			get {
 				return this._version;
 			}
@@ -21390,7 +21390,7 @@ namespace OvhApi.Models.License.Plesk {
 		/// <summary>
 		/// This license state
 		/// </summary>
-		public OvhApi.Models.License.StateEnum Status {
+		[JsonIgnore()] public OvhApi.Models.License.StateEnum Status {
 			get {
 				return this._status;
 			}
@@ -21399,7 +21399,7 @@ namespace OvhApi.Models.License.Plesk {
 		/// <summary>
 		/// This license key
 		/// </summary>
-		public string Key {
+		[JsonIgnore()] public string Key {
 			get {
 				return this._key;
 			}
@@ -21408,7 +21408,7 @@ namespace OvhApi.Models.License.Plesk {
 		/// <summary>
 		/// The internal name of your license
 		/// </summary>
-		public string Domain {
+		[JsonIgnore()] public string Domain {
 			get {
 				return this._domain;
 			}
@@ -21417,7 +21417,7 @@ namespace OvhApi.Models.License.Plesk {
 		/// <summary>
 		/// This license Information key
 		/// </summary>
-		public string InformationKey {
+		[JsonIgnore()] public string InformationKey {
 			get {
 				return this._informationKey;
 			}
@@ -21426,7 +21426,7 @@ namespace OvhApi.Models.License.Plesk {
 		/// <summary>
 		/// This license product key
 		/// </summary>
-		public string ProductKey {
+		[JsonIgnore()] public string ProductKey {
 			get {
 				return this._productKey;
 			}
@@ -21435,7 +21435,7 @@ namespace OvhApi.Models.License.Plesk {
 		/// <summary>
 		/// The license id on license provider side
 		/// </summary>
-		public string LicenseId {
+		[JsonIgnore()] public string LicenseId {
 			get {
 				return this._licenseId;
 			}
@@ -21444,7 +21444,7 @@ namespace OvhApi.Models.License.Plesk {
 		/// <summary>
 		/// This license creation date
 		/// </summary>
-		public System.DateTime Creation {
+		[JsonIgnore()] public System.DateTime Creation {
 			get {
 				return this._creation;
 			}
@@ -21453,7 +21453,7 @@ namespace OvhApi.Models.License.Plesk {
 		/// <summary>
 		/// Shall we delete this on expiration ?
 		/// </summary>
-		public bool DeleteAtExpiration {
+		[JsonIgnore()] public bool DeleteAtExpiration {
 			get {
 				return this._deleteAtExpiration;
 			}
@@ -21465,7 +21465,7 @@ namespace OvhApi.Models.License.Plesk {
 		/// <summary>
 		/// The amount of domain this license can manage
 		/// </summary>
-		public OvhApi.Models.License.DomainNumberEnum DomainNumber {
+		[JsonIgnore()] public OvhApi.Models.License.DomainNumberEnum DomainNumber {
 			get {
 				return this._domainNumber;
 			}
@@ -21513,7 +21513,7 @@ namespace OvhApi.Models.License {
 		/// <summary>
 		/// Quantity or corresponding label of the designated option enabled on your license
 		/// </summary>
-		public string Amount {
+		[JsonIgnore()] public string Amount {
 			get {
 				return this._amount;
 			}
@@ -21522,7 +21522,7 @@ namespace OvhApi.Models.License {
 		/// <summary>
 		/// This option related version
 		/// </summary>
-		public string Version {
+		[JsonIgnore()] public string Version {
 			get {
 				return this._version;
 			}
@@ -21531,7 +21531,7 @@ namespace OvhApi.Models.License {
 		/// <summary>
 		/// This option designation
 		/// </summary>
-		public OvhApi.Models.License.OptionLabel Label {
+		[JsonIgnore()] public OvhApi.Models.License.OptionLabel Label {
 			get {
 				return this._label;
 			}
@@ -21540,7 +21540,7 @@ namespace OvhApi.Models.License {
 		/// <summary>
 		/// Specifies whether this option can be released or not
 		/// </summary>
-		public bool CanBeDeleted {
+		[JsonIgnore()] public bool CanBeDeleted {
 			get {
 				return this._canBeDeleted;
 			}
@@ -21549,7 +21549,7 @@ namespace OvhApi.Models.License {
 		/// <summary>
 		/// This option expiration date
 		/// </summary>
-		public System.DateTime ExpirationDate {
+		[JsonIgnore()] public System.DateTime ExpirationDate {
 			get {
 				return this._expirationDate;
 			}
@@ -21588,7 +21588,7 @@ namespace OvhApi.Models.License {
 		[JsonProperty("potentialProblems")]
 		private OvhApi.Models.License.PotentialProblemPleskEnum[] _potentialProblems;
 		
-		public bool CanHavePowerPack {
+		[JsonIgnore()] public bool CanHavePowerPack {
 			get {
 				return this._canHavePowerPack;
 			}
@@ -21597,7 +21597,7 @@ namespace OvhApi.Models.License {
 			}
 		}
 		
-		public OvhApi.Models.License.OrderablePleskLanguagePackEnum[] CompliantLanguagePack {
+		[JsonIgnore()] public OvhApi.Models.License.OrderablePleskLanguagePackEnum[] CompliantLanguagePack {
 			get {
 				return this._compliantLanguagePack;
 			}
@@ -21606,7 +21606,7 @@ namespace OvhApi.Models.License {
 			}
 		}
 		
-		public OvhApi.Models.License.OrderableAntivirusEnum[] CompliantAntivirus {
+		[JsonIgnore()] public OvhApi.Models.License.OrderableAntivirusEnum[] CompliantAntivirus {
 			get {
 				return this._compliantAntivirus;
 			}
@@ -21615,7 +21615,7 @@ namespace OvhApi.Models.License {
 			}
 		}
 		
-		public OvhApi.Models.License.PleskVersionEnum Version {
+		[JsonIgnore()] public OvhApi.Models.License.PleskVersionEnum Version {
 			get {
 				return this._version;
 			}
@@ -21624,7 +21624,7 @@ namespace OvhApi.Models.License {
 			}
 		}
 		
-		public OvhApi.Models.License.OrderablePleskDomainNumberEnum[] CompliantDomains {
+		[JsonIgnore()] public OvhApi.Models.License.OrderablePleskDomainNumberEnum[] CompliantDomains {
 			get {
 				return this._compliantDomains;
 			}
@@ -21633,7 +21633,7 @@ namespace OvhApi.Models.License {
 			}
 		}
 		
-		public OvhApi.Models.License.PleskApplicationSetEnum[] CompliantApplicationSets {
+		[JsonIgnore()] public OvhApi.Models.License.PleskApplicationSetEnum[] CompliantApplicationSets {
 			get {
 				return this._compliantApplicationSets;
 			}
@@ -21642,7 +21642,7 @@ namespace OvhApi.Models.License {
 			}
 		}
 		
-		public bool CanHaveWordpressToolkit {
+		[JsonIgnore()] public bool CanHaveWordpressToolkit {
 			get {
 				return this._canHaveWordpressToolkit;
 			}
@@ -21651,7 +21651,7 @@ namespace OvhApi.Models.License {
 			}
 		}
 		
-		public OvhApi.Models.License.PotentialProblemPleskEnum[] PotentialProblems {
+		[JsonIgnore()] public OvhApi.Models.License.PotentialProblemPleskEnum[] PotentialProblems {
 			get {
 				return this._potentialProblems;
 			}
@@ -21762,7 +21762,7 @@ namespace OvhApi.Models.License {
 		[JsonProperty("orderableVersions")]
 		private OvhApi.Models.License.OrderableVirtuozzoCompatibilityInfos[] _orderableVersions;
 		
-		public OvhApi.Models.License.LicenseTypeEnum ServiceType {
+		[JsonIgnore()] public OvhApi.Models.License.LicenseTypeEnum ServiceType {
 			get {
 				return this._serviceType;
 			}
@@ -21771,7 +21771,7 @@ namespace OvhApi.Models.License {
 			}
 		}
 		
-		public OvhApi.Models.License.OrderableVirtuozzoCompatibilityInfos[] OrderableVersions {
+		[JsonIgnore()] public OvhApi.Models.License.OrderableVirtuozzoCompatibilityInfos[] OrderableVersions {
 			get {
 				return this._orderableVersions;
 			}
@@ -21813,7 +21813,7 @@ namespace OvhApi.Models.License {
 		[JsonProperty("potentialProblems")]
 		private OvhApi.Models.License.PotentialProblemVirtuozzoEnum[] _potentialProblems;
 		
-		public OvhApi.Models.License.OrderableVirtuozzoVersionEnum Version {
+		[JsonIgnore()] public OvhApi.Models.License.OrderableVirtuozzoVersionEnum Version {
 			get {
 				return this._version;
 			}
@@ -21822,7 +21822,7 @@ namespace OvhApi.Models.License {
 			}
 		}
 		
-		public OvhApi.Models.License.OrderableVirtuozzoContainerNumberEnum[] CompliantContainers {
+		[JsonIgnore()] public OvhApi.Models.License.OrderableVirtuozzoContainerNumberEnum[] CompliantContainers {
 			get {
 				return this._compliantContainers;
 			}
@@ -21831,7 +21831,7 @@ namespace OvhApi.Models.License {
 			}
 		}
 		
-		public OvhApi.Models.License.PotentialProblemVirtuozzoEnum[] PotentialProblems {
+		[JsonIgnore()] public OvhApi.Models.License.PotentialProblemVirtuozzoEnum[] PotentialProblems {
 			get {
 				return this._potentialProblems;
 			}
@@ -21927,7 +21927,7 @@ namespace OvhApi.Models.License.Virtuozzo {
 		/// <summary>
 		/// The ip on which this license is attached
 		/// </summary>
-		public System.Net.IPAddress Ip {
+		[JsonIgnore()] public System.Net.IPAddress Ip {
 			get {
 				return this._ip;
 			}
@@ -21936,7 +21936,7 @@ namespace OvhApi.Models.License.Virtuozzo {
 		/// <summary>
 		/// This license version
 		/// </summary>
-		public OvhApi.Models.License.VirtuozzoVersionEnum Version {
+		[JsonIgnore()] public OvhApi.Models.License.VirtuozzoVersionEnum Version {
 			get {
 				return this._version;
 			}
@@ -21945,7 +21945,7 @@ namespace OvhApi.Models.License.Virtuozzo {
 		/// <summary>
 		/// This license state
 		/// </summary>
-		public OvhApi.Models.License.StateEnum Status {
+		[JsonIgnore()] public OvhApi.Models.License.StateEnum Status {
 			get {
 				return this._status;
 			}
@@ -21954,7 +21954,7 @@ namespace OvhApi.Models.License.Virtuozzo {
 		/// <summary>
 		/// The internal name of your license
 		/// </summary>
-		public string Domain {
+		[JsonIgnore()] public string Domain {
 			get {
 				return this._domain;
 			}
@@ -21963,7 +21963,7 @@ namespace OvhApi.Models.License.Virtuozzo {
 		/// <summary>
 		/// This license Information key
 		/// </summary>
-		public string InformationKey {
+		[JsonIgnore()] public string InformationKey {
 			get {
 				return this._informationKey;
 			}
@@ -21972,7 +21972,7 @@ namespace OvhApi.Models.License.Virtuozzo {
 		/// <summary>
 		/// This license product key
 		/// </summary>
-		public string ProductKey {
+		[JsonIgnore()] public string ProductKey {
 			get {
 				return this._productKey;
 			}
@@ -21981,7 +21981,7 @@ namespace OvhApi.Models.License.Virtuozzo {
 		/// <summary>
 		/// The amount of containers this license can manage
 		/// </summary>
-		public OvhApi.Models.License.VirtuozzoContainerNumberEnum ContainerNumber {
+		[JsonIgnore()] public OvhApi.Models.License.VirtuozzoContainerNumberEnum ContainerNumber {
 			get {
 				return this._containerNumber;
 			}
@@ -21990,7 +21990,7 @@ namespace OvhApi.Models.License.Virtuozzo {
 		/// <summary>
 		/// The license id on license provider side
 		/// </summary>
-		public string LicenseId {
+		[JsonIgnore()] public string LicenseId {
 			get {
 				return this._licenseId;
 			}
@@ -21999,7 +21999,7 @@ namespace OvhApi.Models.License.Virtuozzo {
 		/// <summary>
 		/// This license creation date
 		/// </summary>
-		public System.DateTime Creation {
+		[JsonIgnore()] public System.DateTime Creation {
 			get {
 				return this._creation;
 			}
@@ -22008,7 +22008,7 @@ namespace OvhApi.Models.License.Virtuozzo {
 		/// <summary>
 		/// Shall we delete this on expiration ?
 		/// </summary>
-		public bool DeleteAtExpiration {
+		[JsonIgnore()] public bool DeleteAtExpiration {
 			get {
 				return this._deleteAtExpiration;
 			}
@@ -22050,7 +22050,7 @@ namespace OvhApi.Models.License.Windows {
 		/// <summary>
 		/// The internal name of your license
 		/// </summary>
-		public string Domain {
+		[JsonIgnore()] public string Domain {
 			get {
 				return this._domain;
 			}
@@ -22059,7 +22059,7 @@ namespace OvhApi.Models.License.Windows {
 		/// <summary>
 		/// The license id on license provider side
 		/// </summary>
-		public string LicenseId {
+		[JsonIgnore()] public string LicenseId {
 			get {
 				return this._licenseId;
 			}
@@ -22068,7 +22068,7 @@ namespace OvhApi.Models.License.Windows {
 		/// <summary>
 		/// The ip on which this license is attached
 		/// </summary>
-		public System.Net.IPAddress Ip {
+		[JsonIgnore()] public System.Net.IPAddress Ip {
 			get {
 				return this._ip;
 			}
@@ -22077,7 +22077,7 @@ namespace OvhApi.Models.License.Windows {
 		/// <summary>
 		/// This license version
 		/// </summary>
-		public OvhApi.Models.License.WindowsOsVersionEnum Version {
+		[JsonIgnore()] public OvhApi.Models.License.WindowsOsVersionEnum Version {
 			get {
 				return this._version;
 			}
@@ -22086,7 +22086,7 @@ namespace OvhApi.Models.License.Windows {
 		/// <summary>
 		/// This license state
 		/// </summary>
-		public OvhApi.Models.License.StateEnum Status {
+		[JsonIgnore()] public OvhApi.Models.License.StateEnum Status {
 			get {
 				return this._status;
 			}
@@ -22095,7 +22095,7 @@ namespace OvhApi.Models.License.Windows {
 		/// <summary>
 		/// This license creation date
 		/// </summary>
-		public System.DateTime Creation {
+		[JsonIgnore()] public System.DateTime Creation {
 			get {
 				return this._creation;
 			}
@@ -22104,7 +22104,7 @@ namespace OvhApi.Models.License.Windows {
 		/// <summary>
 		/// Shall we delete this on expiration ?
 		/// </summary>
-		public bool DeleteAtExpiration {
+		[JsonIgnore()] public bool DeleteAtExpiration {
 			get {
 				return this._deleteAtExpiration;
 			}
@@ -22128,7 +22128,7 @@ namespace OvhApi.Models.License {
 		[JsonProperty("orderableVersions")]
 		private OvhApi.Models.License.OrderableWindowsCompatibilityInfos[] _orderableVersions;
 		
-		public OvhApi.Models.License.LicenseTypeEnum ServiceType {
+		[JsonIgnore()] public OvhApi.Models.License.LicenseTypeEnum ServiceType {
 			get {
 				return this._serviceType;
 			}
@@ -22137,7 +22137,7 @@ namespace OvhApi.Models.License {
 			}
 		}
 		
-		public OvhApi.Models.License.OrderableWindowsCompatibilityInfos[] OrderableVersions {
+		[JsonIgnore()] public OvhApi.Models.License.OrderableWindowsCompatibilityInfos[] OrderableVersions {
 			get {
 				return this._orderableVersions;
 			}
@@ -22161,7 +22161,7 @@ namespace OvhApi.Models.License {
 		[JsonProperty("version")]
 		private OvhApi.Models.License.WindowsOsVersionEnum _version;
 		
-		public OvhApi.Models.License.WindowsSqlVersionEnum[] CompliantSql {
+		[JsonIgnore()] public OvhApi.Models.License.WindowsSqlVersionEnum[] CompliantSql {
 			get {
 				return this._compliantSql;
 			}
@@ -22170,7 +22170,7 @@ namespace OvhApi.Models.License {
 			}
 		}
 		
-		public OvhApi.Models.License.WindowsOsVersionEnum Version {
+		[JsonIgnore()] public OvhApi.Models.License.WindowsOsVersionEnum Version {
 			get {
 				return this._version;
 			}
@@ -22221,7 +22221,7 @@ namespace OvhApi.Models.Agreements {
 		/// <summary>
 		/// State of the agreement
 		/// </summary>
-		public OvhApi.Models.Agreements.AgreementStateEnum Agreed {
+		[JsonIgnore()] public OvhApi.Models.Agreements.AgreementStateEnum Agreed {
 			get {
 				return this._agreed;
 			}
@@ -22230,7 +22230,7 @@ namespace OvhApi.Models.Agreements {
 		/// <summary>
 		/// Date the agreed contract was effective
 		/// </summary>
-		public System.DateTime Date {
+		[JsonIgnore()] public System.DateTime Date {
 			get {
 				return this._date;
 			}
@@ -22239,7 +22239,7 @@ namespace OvhApi.Models.Agreements {
 		/// <summary>
 		/// Id of the contract
 		/// </summary>
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
@@ -22248,7 +22248,7 @@ namespace OvhApi.Models.Agreements {
 		/// <summary>
 		/// Id of the agreed contract
 		/// </summary>
-		public long ContractId {
+		[JsonIgnore()] public long ContractId {
 			get {
 				return this._contractId;
 			}
@@ -22317,7 +22317,7 @@ namespace OvhApi.Models.Nichandle {
 		/// <summary>
 		/// This ticket id
 		/// </summary>
-		public long TicketId {
+		[JsonIgnore()] public long TicketId {
 			get {
 				return this._ticketId;
 			}
@@ -22326,7 +22326,7 @@ namespace OvhApi.Models.Nichandle {
 		/// <summary>
 		/// Ticket domain
 		/// </summary>
-		public string Domain {
+		[JsonIgnore()] public string Domain {
 			get {
 				return this._domain;
 			}
@@ -22335,7 +22335,7 @@ namespace OvhApi.Models.Nichandle {
 		/// <summary>
 		/// Ticket incident subject
 		/// </summary>
-		public string Subject {
+		[JsonIgnore()] public string Subject {
 			get {
 				return this._subject;
 			}
@@ -22344,7 +22344,7 @@ namespace OvhApi.Models.Nichandle {
 		/// <summary>
 		/// Ticket open date
 		/// </summary>
-		public System.Nullable<System.DateTime> OpenDate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> OpenDate {
 			get {
 				return this._openDate;
 			}
@@ -22353,7 +22353,7 @@ namespace OvhApi.Models.Nichandle {
 		/// <summary>
 		/// ticket current status
 		/// </summary>
-		public OvhApi.Models.Nichandle.SupportStatusEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Nichandle.SupportStatusEnum Status {
 			get {
 				return this._status;
 			}
@@ -22365,7 +22365,7 @@ namespace OvhApi.Models.Nichandle {
 		/// <summary>
 		/// Ticket incident category 
 		/// </summary>
-		public OvhApi.Models.Nichandle.SupportCategoryEnum Category {
+		[JsonIgnore()] public OvhApi.Models.Nichandle.SupportCategoryEnum Category {
 			get {
 				return this._category;
 			}
@@ -22374,7 +22374,7 @@ namespace OvhApi.Models.Nichandle {
 		/// <summary>
 		/// Ticket close date
 		/// </summary>
-		public System.Nullable<System.DateTime> CloseDate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> CloseDate {
 			get {
 				return this._closeDate;
 			}
@@ -22434,49 +22434,49 @@ namespace OvhApi.Models.Billing {
 		[JsonProperty("statementOutcomeId")]
 		private string _statementOutcomeId;
 		
-		public string Country {
+		[JsonIgnore()] public string Country {
 			get {
 				return this._country;
 			}
 		}
 		
-		public string Password {
+		[JsonIgnore()] public string Password {
 			get {
 				return this._password;
 			}
 		}
 		
-		public OvhApi.Models.Order.Price Amount {
+		[JsonIgnore()] public OvhApi.Models.Order.Price Amount {
 			get {
 				return this._amount;
 			}
 		}
 		
-		public string PdfUrl {
+		[JsonIgnore()] public string PdfUrl {
 			get {
 				return this._pdfUrl;
 			}
 		}
 		
-		public long OrderId {
+		[JsonIgnore()] public long OrderId {
 			get {
 				return this._orderId;
 			}
 		}
 		
-		public System.DateTime Date {
+		[JsonIgnore()] public System.DateTime Date {
 			get {
 				return this._date;
 			}
 		}
 		
-		public string Url {
+		[JsonIgnore()] public string Url {
 			get {
 				return this._url;
 			}
 		}
 		
-		public string StatementOutcomeId {
+		[JsonIgnore()] public string StatementOutcomeId {
 			get {
 				return this._statementOutcomeId;
 			}
@@ -22521,13 +22521,13 @@ namespace OvhApi.Models.Nichandle {
 		[JsonProperty("address")]
 		private string _address;
 		
-		public string OrganisationId {
+		[JsonIgnore()] public string OrganisationId {
 			get {
 				return this._organisationId;
 			}
 		}
 		
-		public string Firstname {
+		[JsonIgnore()] public string Firstname {
 			get {
 				return this._firstname;
 			}
@@ -22536,7 +22536,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public OvhApi.Models.Nichandle.CountryEnum Country {
+		[JsonIgnore()] public OvhApi.Models.Nichandle.CountryEnum Country {
 			get {
 				return this._country;
 			}
@@ -22545,13 +22545,13 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public OvhApi.Models.Nichandle.IpRegistryEnum Registry {
+		[JsonIgnore()] public OvhApi.Models.Nichandle.IpRegistryEnum Registry {
 			get {
 				return this._registry;
 			}
 		}
 		
-		public string Lastname {
+		[JsonIgnore()] public string Lastname {
 			get {
 				return this._lastname;
 			}
@@ -22560,7 +22560,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public string Phone {
+		[JsonIgnore()] public string Phone {
 			get {
 				return this._phone;
 			}
@@ -22569,7 +22569,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public string Abuse_mailbox {
+		[JsonIgnore()] public string Abuse_mailbox {
 			get {
 				return this._abuse_mailbox;
 			}
@@ -22578,7 +22578,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public string Zip {
+		[JsonIgnore()] public string Zip {
 			get {
 				return this._zip;
 			}
@@ -22587,7 +22587,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public string City {
+		[JsonIgnore()] public string City {
 			get {
 				return this._city;
 			}
@@ -22596,7 +22596,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public string Address {
+		[JsonIgnore()] public string Address {
 			get {
 				return this._address;
 			}
@@ -22629,31 +22629,31 @@ namespace OvhApi.Models.Api {
 		[JsonProperty("applicationKey")]
 		private string _applicationKey;
 		
-		public OvhApi.Models.Api.ApplicationStatusEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Api.ApplicationStatusEnum Status {
 			get {
 				return this._status;
 			}
 		}
 		
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
 		}
 		
-		public long ApplicationId {
+		[JsonIgnore()] public long ApplicationId {
 			get {
 				return this._applicationId;
 			}
 		}
 		
-		public string Description {
+		[JsonIgnore()] public string Description {
 			get {
 				return this._description;
 			}
 		}
 		
-		public string ApplicationKey {
+		[JsonIgnore()] public string ApplicationKey {
 			get {
 				return this._applicationKey;
 			}
@@ -22674,7 +22674,7 @@ namespace OvhApi.Models.Billing {
 		[JsonProperty("url")]
 		private string _url;
 		
-		public OvhApi.Models.Billing.PaymentMeanValidationType ValidationType {
+		[JsonIgnore()] public OvhApi.Models.Billing.PaymentMeanValidationType ValidationType {
 			get {
 				return this._validationType;
 			}
@@ -22683,7 +22683,7 @@ namespace OvhApi.Models.Billing {
 			}
 		}
 		
-		public string Url {
+		[JsonIgnore()] public string Url {
 			get {
 				return this._url;
 			}
@@ -22719,37 +22719,37 @@ namespace OvhApi.Models.Billing {
 		[JsonProperty("description")]
 		private string _description;
 		
-		public string Domain {
+		[JsonIgnore()] public string Domain {
 			get {
 				return this._domain;
 			}
 		}
 		
-		public long OrderDetailId {
+		[JsonIgnore()] public long OrderDetailId {
 			get {
 				return this._orderDetailId;
 			}
 		}
 		
-		public OvhApi.Models.Order.Price TotalPrice {
+		[JsonIgnore()] public OvhApi.Models.Order.Price TotalPrice {
 			get {
 				return this._totalPrice;
 			}
 		}
 		
-		public string Quantity {
+		[JsonIgnore()] public string Quantity {
 			get {
 				return this._quantity;
 			}
 		}
 		
-		public OvhApi.Models.Order.Price UnitPrice {
+		[JsonIgnore()] public OvhApi.Models.Order.Price UnitPrice {
 			get {
 				return this._unitPrice;
 			}
 		}
 		
-		public string Description {
+		[JsonIgnore()] public string Description {
 			get {
 				return this._description;
 			}
@@ -22773,7 +22773,7 @@ namespace OvhApi.Models.Nichandle.AccessRestriction {
 		[JsonProperty("id")]
 		private long _id;
 		
-		public string QrcodeHelper {
+		[JsonIgnore()] public string QrcodeHelper {
 			get {
 				return this._qrcodeHelper;
 			}
@@ -22782,7 +22782,7 @@ namespace OvhApi.Models.Nichandle.AccessRestriction {
 			}
 		}
 		
-		public string Secret {
+		[JsonIgnore()] public string Secret {
 			get {
 				return this._secret;
 			}
@@ -22791,7 +22791,7 @@ namespace OvhApi.Models.Nichandle.AccessRestriction {
 			}
 		}
 		
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
@@ -22815,7 +22815,7 @@ namespace OvhApi.Models.Auth {
 		[JsonProperty("path")]
 		private string _path;
 		
-		public OvhApi.Models.Auth.MethodEnum Method {
+		[JsonIgnore()] public OvhApi.Models.Auth.MethodEnum Method {
 			get {
 				return this._method;
 			}
@@ -22824,7 +22824,7 @@ namespace OvhApi.Models.Auth {
 			}
 		}
 		
-		public string Path {
+		[JsonIgnore()] public string Path {
 			get {
 				return this._path;
 			}
@@ -22854,7 +22854,7 @@ namespace OvhApi.Models.Nichandle {
 		/// <summary>
 		/// Message date
 		/// </summary>
-		public System.Nullable<System.DateTime> Date {
+		[JsonIgnore()] public System.Nullable<System.DateTime> Date {
 			get {
 				return this._date;
 			}
@@ -22866,7 +22866,7 @@ namespace OvhApi.Models.Nichandle {
 		/// <summary>
 		/// Message type
 		/// </summary>
-		public string Type {
+		[JsonIgnore()] public string Type {
 			get {
 				return this._type;
 			}
@@ -22878,7 +22878,7 @@ namespace OvhApi.Models.Nichandle {
 		/// <summary>
 		/// Message content
 		/// </summary>
-		public string Message {
+		[JsonIgnore()] public string Message {
 			get {
 				return this._message;
 			}
@@ -22971,7 +22971,7 @@ namespace OvhApi.Models.Nichandle.AccessRestriction {
 		/// <summary>
 		/// Status of this account
 		/// </summary>
-		public OvhApi.Models.Nichandle.AccessRestriction.TOTPStatusEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Nichandle.AccessRestriction.TOTPStatusEnum Status {
 			get {
 				return this._status;
 			}
@@ -22980,7 +22980,7 @@ namespace OvhApi.Models.Nichandle.AccessRestriction {
 		/// <summary>
 		/// The Id of the restriction
 		/// </summary>
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
@@ -23034,7 +23034,7 @@ namespace OvhApi.Models.Nichandle {
 		/// <summary>
 		/// Last update date
 		/// </summary>
-		public System.Nullable<System.DateTime> UpdateDate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> UpdateDate {
 			get {
 				return this._updateDate;
 			}
@@ -23043,7 +23043,7 @@ namespace OvhApi.Models.Nichandle {
 		/// <summary>
 		/// Creation date
 		/// </summary>
-		public System.DateTime CreationDate {
+		[JsonIgnore()] public System.DateTime CreationDate {
 			get {
 				return this._creationDate;
 			}
@@ -23052,7 +23052,7 @@ namespace OvhApi.Models.Nichandle {
 		/// <summary>
 		/// Status of your notification
 		/// </summary>
-		public OvhApi.Models.Nichandle.NotificationStatusEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Nichandle.NotificationStatusEnum Status {
 			get {
 				return this._status;
 			}
@@ -23061,7 +23061,7 @@ namespace OvhApi.Models.Nichandle {
 		/// <summary>
 		/// Receive notification for abuse reports
 		/// </summary>
-		public bool Abuse {
+		[JsonIgnore()] public bool Abuse {
 			get {
 				return this._abuse;
 			}
@@ -23070,7 +23070,7 @@ namespace OvhApi.Models.Nichandle {
 		/// <summary>
 		/// The phone number you want to receive notification on
 		/// </summary>
-		public string PhoneNumber {
+		[JsonIgnore()] public string PhoneNumber {
 			get {
 				return this._phoneNumber;
 			}
@@ -23103,31 +23103,31 @@ namespace OvhApi.Models.Billing {
 		[JsonProperty("description")]
 		private string _description;
 		
-		public string Email {
+		[JsonIgnore()] public string Email {
 			get {
 				return this._email;
 			}
 		}
 		
-		public string AgreementId {
+		[JsonIgnore()] public string AgreementId {
 			get {
 				return this._agreementId;
 			}
 		}
 		
-		public System.DateTime CreationDate {
+		[JsonIgnore()] public System.DateTime CreationDate {
 			get {
 				return this._creationDate;
 			}
 		}
 		
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
 		}
 		
-		public bool DefaultPaymentMean {
+		[JsonIgnore()] public bool DefaultPaymentMean {
 			get {
 				return this._defaultPaymentMean;
 			}
@@ -23136,7 +23136,7 @@ namespace OvhApi.Models.Billing {
 		/// <summary>
 		/// Custom description of this account
 		/// </summary>
-		public string Description {
+		[JsonIgnore()] public string Description {
 			get {
 				return this._description;
 			}
@@ -23172,7 +23172,7 @@ namespace OvhApi.Models.Agreements {
 		/// <summary>
 		/// Date the contract was created on
 		/// </summary>
-		public System.DateTime Date {
+		[JsonIgnore()] public System.DateTime Date {
 			get {
 				return this._date;
 			}
@@ -23181,7 +23181,7 @@ namespace OvhApi.Models.Agreements {
 		/// <summary>
 		/// Full text of the contract
 		/// </summary>
-		public string Text {
+		[JsonIgnore()] public string Text {
 			get {
 				return this._text;
 			}
@@ -23190,7 +23190,7 @@ namespace OvhApi.Models.Agreements {
 		/// <summary>
 		/// URL you can download the contract at
 		/// </summary>
-		public string Pdf {
+		[JsonIgnore()] public string Pdf {
 			get {
 				return this._pdf;
 			}
@@ -23199,7 +23199,7 @@ namespace OvhApi.Models.Agreements {
 		/// <summary>
 		/// Name of of the contract
 		/// </summary>
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
@@ -23208,7 +23208,7 @@ namespace OvhApi.Models.Agreements {
 		/// <summary>
 		/// Is this contract currently active or not ?
 		/// </summary>
-		public bool Active {
+		[JsonIgnore()] public bool Active {
 			get {
 				return this._active;
 			}
@@ -23241,31 +23241,31 @@ namespace OvhApi.Models.Billing {
 		[JsonProperty("description")]
 		private string _description;
 		
-		public string Number {
+		[JsonIgnore()] public string Number {
 			get {
 				return this._number;
 			}
 		}
 		
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
 		}
 		
-		public string Type {
+		[JsonIgnore()] public string Type {
 			get {
 				return this._type;
 			}
 		}
 		
-		public System.DateTime ExpirationDate {
+		[JsonIgnore()] public System.DateTime ExpirationDate {
 			get {
 				return this._expirationDate;
 			}
 		}
 		
-		public bool DefaultPaymentMean {
+		[JsonIgnore()] public bool DefaultPaymentMean {
 			get {
 				return this._defaultPaymentMean;
 			}
@@ -23274,7 +23274,7 @@ namespace OvhApi.Models.Billing {
 		/// <summary>
 		/// Custom description of this account
 		/// </summary>
-		public string Description {
+		[JsonIgnore()] public string Description {
 			get {
 				return this._description;
 			}
@@ -23367,7 +23367,7 @@ namespace OvhApi.Models.Nichandle {
 		[JsonProperty("legalform")]
 		private OvhApi.Models.Nichandle.LegalFormEnum _legalform;
 		
-		public string Firstname {
+		[JsonIgnore()] public string Firstname {
 			get {
 				return this._firstname;
 			}
@@ -23376,7 +23376,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public string Vat {
+		[JsonIgnore()] public string Vat {
 			get {
 				return this._vat;
 			}
@@ -23385,13 +23385,13 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public OvhApi.Models.Nichandle.OvhSubsidiaryEnum OvhSubsidiary {
+		[JsonIgnore()] public OvhApi.Models.Nichandle.OvhSubsidiaryEnum OvhSubsidiary {
 			get {
 				return this._ovhSubsidiary;
 			}
 		}
 		
-		public string Area {
+		[JsonIgnore()] public string Area {
 			get {
 				return this._area;
 			}
@@ -23400,7 +23400,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public string BirthDay {
+		[JsonIgnore()] public string BirthDay {
 			get {
 				return this._birthDay;
 			}
@@ -23409,7 +23409,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public string NationalIdentificationNumber {
+		[JsonIgnore()] public string NationalIdentificationNumber {
 			get {
 				return this._nationalIdentificationNumber;
 			}
@@ -23418,7 +23418,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public string SpareEmail {
+		[JsonIgnore()] public string SpareEmail {
 			get {
 				return this._spareEmail;
 			}
@@ -23427,25 +23427,25 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public OvhApi.Models.Nichandle.OvhCompanyEnum OvhCompany {
+		[JsonIgnore()] public OvhApi.Models.Nichandle.OvhCompanyEnum OvhCompany {
 			get {
 				return this._ovhCompany;
 			}
 		}
 		
-		public OvhApi.Models.Nichandle.StateEnum State {
+		[JsonIgnore()] public OvhApi.Models.Nichandle.StateEnum State {
 			get {
 				return this._state;
 			}
 		}
 		
-		public string Email {
+		[JsonIgnore()] public string Email {
 			get {
 				return this._email;
 			}
 		}
 		
-		public string City {
+		[JsonIgnore()] public string City {
 			get {
 				return this._city;
 			}
@@ -23454,7 +23454,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public string Fax {
+		[JsonIgnore()] public string Fax {
 			get {
 				return this._fax;
 			}
@@ -23463,13 +23463,13 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public string NichandleName {
+		[JsonIgnore()] public string NichandleName {
 			get {
 				return this._nichandle;
 			}
 		}
 		
-		public string Address {
+		[JsonIgnore()] public string Address {
 			get {
 				return this._address;
 			}
@@ -23478,7 +23478,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public string CompanyNationalIdentificationNumber {
+		[JsonIgnore()] public string CompanyNationalIdentificationNumber {
 			get {
 				return this._companyNationalIdentificationNumber;
 			}
@@ -23487,7 +23487,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public string BirthCity {
+		[JsonIgnore()] public string BirthCity {
 			get {
 				return this._birthCity;
 			}
@@ -23496,13 +23496,13 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public OvhApi.Models.Nichandle.CountryEnum Country {
+		[JsonIgnore()] public OvhApi.Models.Nichandle.CountryEnum Country {
 			get {
 				return this._country;
 			}
 		}
 		
-		public OvhApi.Models.Nichandle.LanguageEnum Language {
+		[JsonIgnore()] public OvhApi.Models.Nichandle.LanguageEnum Language {
 			get {
 				return this._language;
 			}
@@ -23511,7 +23511,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public string Organisation {
+		[JsonIgnore()] public string Organisation {
 			get {
 				return this._organisation;
 			}
@@ -23520,7 +23520,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
@@ -23529,7 +23529,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public string Phone {
+		[JsonIgnore()] public string Phone {
 			get {
 				return this._phone;
 			}
@@ -23538,7 +23538,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public OvhApi.Models.Nichandle.GenderEnum Sex {
+		[JsonIgnore()] public OvhApi.Models.Nichandle.GenderEnum Sex {
 			get {
 				return this._sex;
 			}
@@ -23547,7 +23547,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public string Zip {
+		[JsonIgnore()] public string Zip {
 			get {
 				return this._zip;
 			}
@@ -23556,7 +23556,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public string CorporationType {
+		[JsonIgnore()] public string CorporationType {
 			get {
 				return this._corporationType;
 			}
@@ -23565,7 +23565,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public OvhApi.Models.Nichandle.LegalFormEnum Legalform {
+		[JsonIgnore()] public OvhApi.Models.Nichandle.LegalFormEnum Legalform {
 			get {
 				return this._legalform;
 			}
@@ -23649,7 +23649,7 @@ namespace OvhApi.Models.Nichandle {
 		/// <summary>
 		/// give the last renew
 		/// </summary>
-		public System.DateTime LastRenew {
+		[JsonIgnore()] public System.DateTime LastRenew {
 			get {
 				return this._lastRenew;
 			}
@@ -23658,7 +23658,7 @@ namespace OvhApi.Models.Nichandle {
 		/// <summary>
 		/// Renewal active or not
 		/// </summary>
-		public bool Active {
+		[JsonIgnore()] public bool Active {
 			get {
 				return this._active;
 			}
@@ -23670,7 +23670,7 @@ namespace OvhApi.Models.Nichandle {
 		/// <summary>
 		/// give the renewal day
 		/// </summary>
-		public long RenewDay {
+		[JsonIgnore()] public long RenewDay {
 			get {
 				return this._renewDay;
 			}
@@ -23715,55 +23715,55 @@ namespace OvhApi.Models.Billing {
 		[JsonProperty("priceWithTax")]
 		private OvhApi.Models.Order.Price _priceWithTax;
 		
-		public string PdfUrl {
+		[JsonIgnore()] public string PdfUrl {
 			get {
 				return this._pdfUrl;
 			}
 		}
 		
-		public System.DateTime Date {
+		[JsonIgnore()] public System.DateTime Date {
 			get {
 				return this._date;
 			}
 		}
 		
-		public OvhApi.Models.Order.Price PriceWithoutTax {
+		[JsonIgnore()] public OvhApi.Models.Order.Price PriceWithoutTax {
 			get {
 				return this._priceWithoutTax;
 			}
 		}
 		
-		public OvhApi.Models.Order.Price Tax {
+		[JsonIgnore()] public OvhApi.Models.Order.Price Tax {
 			get {
 				return this._tax;
 			}
 		}
 		
-		public string BillId {
+		[JsonIgnore()] public string BillId {
 			get {
 				return this._billId;
 			}
 		}
 		
-		public string Password {
+		[JsonIgnore()] public string Password {
 			get {
 				return this._password;
 			}
 		}
 		
-		public long OrderId {
+		[JsonIgnore()] public long OrderId {
 			get {
 				return this._orderId;
 			}
 		}
 		
-		public string Url {
+		[JsonIgnore()] public string Url {
 			get {
 				return this._url;
 			}
 		}
 		
-		public OvhApi.Models.Order.Price PriceWithTax {
+		[JsonIgnore()] public OvhApi.Models.Order.Price PriceWithTax {
 			get {
 				return this._priceWithTax;
 			}
@@ -23805,55 +23805,55 @@ namespace OvhApi.Models.Billing {
 		[JsonProperty("priceWithTax")]
 		private OvhApi.Models.Order.Price _priceWithTax;
 		
-		public string PdfUrl {
+		[JsonIgnore()] public string PdfUrl {
 			get {
 				return this._pdfUrl;
 			}
 		}
 		
-		public System.Nullable<System.DateTime> Date {
+		[JsonIgnore()] public System.Nullable<System.DateTime> Date {
 			get {
 				return this._date;
 			}
 		}
 		
-		public OvhApi.Models.Order.Price PriceWithoutTax {
+		[JsonIgnore()] public OvhApi.Models.Order.Price PriceWithoutTax {
 			get {
 				return this._priceWithoutTax;
 			}
 		}
 		
-		public OvhApi.Models.Order.Price Tax {
+		[JsonIgnore()] public OvhApi.Models.Order.Price Tax {
 			get {
 				return this._tax;
 			}
 		}
 		
-		public System.Nullable<System.DateTime> ExpirationDate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> ExpirationDate {
 			get {
 				return this._expirationDate;
 			}
 		}
 		
-		public string Password {
+		[JsonIgnore()] public string Password {
 			get {
 				return this._password;
 			}
 		}
 		
-		public long OrderId {
+		[JsonIgnore()] public long OrderId {
 			get {
 				return this._orderId;
 			}
 		}
 		
-		public string Url {
+		[JsonIgnore()] public string Url {
 			get {
 				return this._url;
 			}
 		}
 		
-		public OvhApi.Models.Order.Price PriceWithTax {
+		[JsonIgnore()] public OvhApi.Models.Order.Price PriceWithTax {
 			get {
 				return this._priceWithTax;
 			}
@@ -23870,7 +23870,7 @@ namespace OvhApi.Models.Billing {
 			[JsonProperty("type")]
 			private OvhApi.Models.Billing.Order.AssociatedObject.TypeEnum _type;
 			
-			public string Id {
+			[JsonIgnore()] public string Id {
 				get {
 					return this._id;
 				}
@@ -23879,7 +23879,7 @@ namespace OvhApi.Models.Billing {
 				}
 			}
 			
-			public OvhApi.Models.Billing.Order.AssociatedObject.TypeEnum Type {
+			[JsonIgnore()] public OvhApi.Models.Billing.Order.AssociatedObject.TypeEnum Type {
 				get {
 					return this._type;
 				}
@@ -23933,7 +23933,7 @@ namespace OvhApi.Models.Billing {
 			[JsonProperty("url")]
 			private string _url;
 			
-			public OvhApi.Models.Billing.Order.PaymentMean.HttpParameter[] Parameters {
+			[JsonIgnore()] public OvhApi.Models.Billing.Order.PaymentMean.HttpParameter[] Parameters {
 				get {
 					return this._parameters;
 				}
@@ -23942,7 +23942,7 @@ namespace OvhApi.Models.Billing {
 				}
 			}
 			
-			public string Logo {
+			[JsonIgnore()] public string Logo {
 				get {
 					return this._logo;
 				}
@@ -23951,7 +23951,7 @@ namespace OvhApi.Models.Billing {
 				}
 			}
 			
-			public string HttpMethod {
+			[JsonIgnore()] public string HttpMethod {
 				get {
 					return this._httpMethod;
 				}
@@ -23960,7 +23960,7 @@ namespace OvhApi.Models.Billing {
 				}
 			}
 			
-			public string HtmlForm {
+			[JsonIgnore()] public string HtmlForm {
 				get {
 					return this._htmlForm;
 				}
@@ -23969,7 +23969,7 @@ namespace OvhApi.Models.Billing {
 				}
 			}
 			
-			public string SubType {
+			[JsonIgnore()] public string SubType {
 				get {
 					return this._subType;
 				}
@@ -23978,7 +23978,7 @@ namespace OvhApi.Models.Billing {
 				}
 			}
 			
-			public double Fee {
+			[JsonIgnore()] public double Fee {
 				get {
 					return this._fee;
 				}
@@ -23987,7 +23987,7 @@ namespace OvhApi.Models.Billing {
 				}
 			}
 			
-			public string Url {
+			[JsonIgnore()] public string Url {
 				get {
 					return this._url;
 				}
@@ -24010,7 +24010,7 @@ namespace OvhApi.Models.Billing {
 				[JsonProperty("choice")]
 				private OvhApi.Models.Billing.Order.PaymentMean.HttpParameterChoice[] _choice;
 				
-				public string Value {
+				[JsonIgnore()] public string Value {
 					get {
 						return this._value;
 					}
@@ -24019,7 +24019,7 @@ namespace OvhApi.Models.Billing {
 					}
 				}
 				
-				public string Name {
+				[JsonIgnore()] public string Name {
 					get {
 						return this._name;
 					}
@@ -24028,7 +24028,7 @@ namespace OvhApi.Models.Billing {
 					}
 				}
 				
-				public OvhApi.Models.Billing.Order.PaymentMean.HttpParameterChoice[] Choice {
+				[JsonIgnore()] public OvhApi.Models.Billing.Order.PaymentMean.HttpParameterChoice[] Choice {
 					get {
 						return this._choice;
 					}
@@ -24049,7 +24049,7 @@ namespace OvhApi.Models.Billing {
 				[JsonProperty("name")]
 				private string _name;
 				
-				public string Value {
+				[JsonIgnore()] public string Value {
 					get {
 						return this._value;
 					}
@@ -24058,7 +24058,7 @@ namespace OvhApi.Models.Billing {
 					}
 				}
 				
-				public string Name {
+				[JsonIgnore()] public string Name {
 					get {
 						return this._name;
 					}
@@ -24098,7 +24098,7 @@ namespace OvhApi.Models.Billing {
 			[JsonProperty("ideal")]
 			private OvhApi.Models.Billing.Order.PaymentMean[] _ideal;
 			
-			public OvhApi.Models.Billing.Order.PaymentMean[] Promotion {
+			[JsonIgnore()] public OvhApi.Models.Billing.Order.PaymentMean[] Promotion {
 				get {
 					return this._promotion;
 				}
@@ -24107,7 +24107,7 @@ namespace OvhApi.Models.Billing {
 				}
 			}
 			
-			public OvhApi.Models.Billing.Order.PaymentMean[] Paypal {
+			[JsonIgnore()] public OvhApi.Models.Billing.Order.PaymentMean[] Paypal {
 				get {
 					return this._paypal;
 				}
@@ -24116,7 +24116,7 @@ namespace OvhApi.Models.Billing {
 				}
 			}
 			
-			public OvhApi.Models.Billing.Order.PaymentMean[] Edinar {
+			[JsonIgnore()] public OvhApi.Models.Billing.Order.PaymentMean[] Edinar {
 				get {
 					return this._edinar;
 				}
@@ -24125,7 +24125,7 @@ namespace OvhApi.Models.Billing {
 				}
 			}
 			
-			public OvhApi.Models.Billing.Order.PaymentMean[] Multibanco {
+			[JsonIgnore()] public OvhApi.Models.Billing.Order.PaymentMean[] Multibanco {
 				get {
 					return this._multibanco;
 				}
@@ -24134,7 +24134,7 @@ namespace OvhApi.Models.Billing {
 				}
 			}
 			
-			public OvhApi.Models.Billing.Order.PaymentMean[] OvhAccount {
+			[JsonIgnore()] public OvhApi.Models.Billing.Order.PaymentMean[] OvhAccount {
 				get {
 					return this._ovhAccount;
 				}
@@ -24143,7 +24143,7 @@ namespace OvhApi.Models.Billing {
 				}
 			}
 			
-			public OvhApi.Models.Billing.Order.PaymentMean[] FidelityPoints {
+			[JsonIgnore()] public OvhApi.Models.Billing.Order.PaymentMean[] FidelityPoints {
 				get {
 					return this._fidelityPoints;
 				}
@@ -24152,7 +24152,7 @@ namespace OvhApi.Models.Billing {
 				}
 			}
 			
-			public OvhApi.Models.Billing.Order.PaymentMean[] CreditCard {
+			[JsonIgnore()] public OvhApi.Models.Billing.Order.PaymentMean[] CreditCard {
 				get {
 					return this._creditCard;
 				}
@@ -24161,7 +24161,7 @@ namespace OvhApi.Models.Billing {
 				}
 			}
 			
-			public OvhApi.Models.Billing.Order.PaymentMean[] Ideal {
+			[JsonIgnore()] public OvhApi.Models.Billing.Order.PaymentMean[] Ideal {
 				get {
 					return this._ideal;
 				}
@@ -24195,7 +24195,7 @@ namespace OvhApi.Models.Nichandle {
 		/// <summary>
 		/// An IP range where we will apply the rule
 		/// </summary>
-		public OVHApi.IPAddressBlock Ip {
+		[JsonIgnore()] public OVHApi.IPAddressBlock Ip {
 			get {
 				return this._ip;
 			}
@@ -24204,7 +24204,7 @@ namespace OvhApi.Models.Nichandle {
 		/// <summary>
 		/// Send an email if someone try to access with this IP address
 		/// </summary>
-		public bool Warning {
+		[JsonIgnore()] public bool Warning {
 			get {
 				return this._warning;
 			}
@@ -24216,7 +24216,7 @@ namespace OvhApi.Models.Nichandle {
 		/// <summary>
 		/// The Id of the restriction
 		/// </summary>
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
@@ -24225,7 +24225,7 @@ namespace OvhApi.Models.Nichandle {
 		/// <summary>
 		/// Accept or deny IP access
 		/// </summary>
-		public OvhApi.Models.Nichandle.AccessRestriction.IpRestrictionRuleEnum Rule {
+		[JsonIgnore()] public OvhApi.Models.Nichandle.AccessRestriction.IpRestrictionRuleEnum Rule {
 			get {
 				return this._rule;
 			}
@@ -24273,19 +24273,19 @@ namespace OvhApi.Models.Billing {
 		[JsonProperty("id")]
 		private long _id;
 		
-		public string ValidationDocumentLink {
+		[JsonIgnore()] public string ValidationDocumentLink {
 			get {
 				return this._validationDocumentLink;
 			}
 		}
 		
-		public string UniqueReference {
+		[JsonIgnore()] public string UniqueReference {
 			get {
 				return this._uniqueReference;
 			}
 		}
 		
-		public bool DefaultPaymentMean {
+		[JsonIgnore()] public bool DefaultPaymentMean {
 			get {
 				return this._defaultPaymentMean;
 			}
@@ -24294,7 +24294,7 @@ namespace OvhApi.Models.Billing {
 		/// <summary>
 		/// Custom description of this account
 		/// </summary>
-		public string Description {
+		[JsonIgnore()] public string Description {
 			get {
 				return this._description;
 			}
@@ -24303,37 +24303,37 @@ namespace OvhApi.Models.Billing {
 			}
 		}
 		
-		public OvhApi.Models.Billing.BankAccountStateEnum State {
+		[JsonIgnore()] public OvhApi.Models.Billing.BankAccountStateEnum State {
 			get {
 				return this._state;
 			}
 		}
 		
-		public System.Nullable<System.DateTime> MandateSignatureDate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> MandateSignatureDate {
 			get {
 				return this._mandateSignatureDate;
 			}
 		}
 		
-		public string Iban {
+		[JsonIgnore()] public string Iban {
 			get {
 				return this._iban;
 			}
 		}
 		
-		public string OwnerName {
+		[JsonIgnore()] public string OwnerName {
 			get {
 				return this._ownerName;
 			}
 		}
 		
-		public string OwnerAddress {
+		[JsonIgnore()] public string OwnerAddress {
 			get {
 				return this._ownerAddress;
 			}
 		}
 		
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
@@ -24359,7 +24359,7 @@ namespace OvhApi.Models.Nichandle {
 	
 	
 	/// <summary>
-	/// Customer public SSH key, can be used for rescue netboot or server access after reinstallation
+	/// Customer [JsonIgnore()] public SSH key, can be used for rescue netboot or server access after reinstallation
 	/// </summary>
 	public sealed class SshKey {
 		
@@ -24373,9 +24373,9 @@ namespace OvhApi.Models.Nichandle {
 		private string _key;
 		
 		/// <summary>
-		/// True when this public SSH key is used for rescue mode and reinstallations
+		/// True when this [JsonIgnore()] public SSH key is used for rescue mode and reinstallations
 		/// </summary>
-		public bool Default {
+		[JsonIgnore()] public bool Default {
 			get {
 				return this._default;
 			}
@@ -24385,18 +24385,18 @@ namespace OvhApi.Models.Nichandle {
 		}
 		
 		/// <summary>
-		/// Name of this public SSH key
+		/// Name of this [JsonIgnore()] public SSH key
 		/// </summary>
-		public string KeyName {
+		[JsonIgnore()] public string KeyName {
 			get {
 				return this._keyName;
 			}
 		}
 		
 		/// <summary>
-		/// ASCII encoded public SSH key
+		/// ASCII encoded [JsonIgnore()] public SSH key
 		/// </summary>
-		public string Key {
+		[JsonIgnore()] public string Key {
 			get {
 				return this._key;
 			}
@@ -24426,31 +24426,31 @@ namespace OvhApi.Models.Billing {
 		[JsonProperty("openDate")]
 		private System.DateTime _openDate;
 		
-		public OvhApi.Models.Order.Price Balance {
+		[JsonIgnore()] public OvhApi.Models.Order.Price Balance {
 			get {
 				return this._balance;
 			}
 		}
 		
-		public System.DateTime LastUpdate {
+		[JsonIgnore()] public System.DateTime LastUpdate {
 			get {
 				return this._lastUpdate;
 			}
 		}
 		
-		public bool CanBeCredited {
+		[JsonIgnore()] public bool CanBeCredited {
 			get {
 				return this._canBeCredited;
 			}
 		}
 		
-		public string OvhAccountId {
+		[JsonIgnore()] public string OvhAccountId {
 			get {
 				return this._ovhAccountId;
 			}
 		}
 		
-		public System.DateTime OpenDate {
+		[JsonIgnore()] public System.DateTime OpenDate {
 			get {
 				return this._openDate;
 			}
@@ -24516,7 +24516,7 @@ namespace OvhApi.Models.Nichandle {
 		/// <summary>
 		/// Determine whether you are registered or not
 		/// </summary>
-		public System.Nullable<bool> Registered {
+		[JsonIgnore()] public System.Nullable<bool> Registered {
 			get {
 				return this._registered;
 			}
@@ -24528,7 +24528,7 @@ namespace OvhApi.Models.Nichandle {
 		/// <summary>
 		/// The type of subscription
 		/// </summary>
-		public string Type {
+		[JsonIgnore()] public string Type {
 			get {
 				return this._type;
 			}
@@ -24552,7 +24552,7 @@ namespace OvhApi.Models.Nichandle {
 		/// <summary>
 		/// Send an email if someone try to access
 		/// </summary>
-		public bool Warning {
+		[JsonIgnore()] public bool Warning {
 			get {
 				return this._warning;
 			}
@@ -24564,7 +24564,7 @@ namespace OvhApi.Models.Nichandle {
 		/// <summary>
 		/// Accept or deny access
 		/// </summary>
-		public OvhApi.Models.Nichandle.AccessRestriction.IpRestrictionRuleEnum Rule {
+		[JsonIgnore()] public OvhApi.Models.Nichandle.AccessRestriction.IpRestrictionRuleEnum Rule {
 			get {
 				return this._rule;
 			}
@@ -24606,49 +24606,49 @@ namespace OvhApi.Models.Billing {
 		[JsonProperty("previousBalance")]
 		private OvhApi.Models.Order.Price _previousBalance;
 		
-		public long MovementId {
+		[JsonIgnore()] public long MovementId {
 			get {
 				return this._movementId;
 			}
 		}
 		
-		public System.DateTime Date {
+		[JsonIgnore()] public System.DateTime Date {
 			get {
 				return this._date;
 			}
 		}
 		
-		public string Description {
+		[JsonIgnore()] public string Description {
 			get {
 				return this._description;
 			}
 		}
 		
-		public OvhApi.Models.Order.Price Amount {
+		[JsonIgnore()] public OvhApi.Models.Order.Price Amount {
 			get {
 				return this._amount;
 			}
 		}
 		
-		public OvhApi.Models.Order.Price Balance {
+		[JsonIgnore()] public OvhApi.Models.Order.Price Balance {
 			get {
 				return this._balance;
 			}
 		}
 		
-		public long Order {
+		[JsonIgnore()] public long Order {
 			get {
 				return this._order;
 			}
 		}
 		
-		public OvhApi.Models.Billing.OvhAccount.OperationEnum Operation {
+		[JsonIgnore()] public OvhApi.Models.Billing.OvhAccount.OperationEnum Operation {
 			get {
 				return this._operation;
 			}
 		}
 		
-		public OvhApi.Models.Order.Price PreviousBalance {
+		[JsonIgnore()] public OvhApi.Models.Order.Price PreviousBalance {
 			get {
 				return this._previousBalance;
 			}
@@ -24672,19 +24672,19 @@ namespace OvhApi.Models.Billing {
 		[JsonProperty("paymentType")]
 		private OvhApi.Models.Billing.PaymentMeanEnum _paymentType;
 		
-		public System.DateTime PaymentDate {
+		[JsonIgnore()] public System.DateTime PaymentDate {
 			get {
 				return this._paymentDate;
 			}
 		}
 		
-		public string PaymentIdentifier {
+		[JsonIgnore()] public string PaymentIdentifier {
 			get {
 				return this._paymentIdentifier;
 			}
 		}
 		
-		public OvhApi.Models.Billing.PaymentMeanEnum PaymentType {
+		[JsonIgnore()] public OvhApi.Models.Billing.PaymentMeanEnum PaymentType {
 			get {
 				return this._paymentType;
 			}
@@ -25494,49 +25494,49 @@ namespace OvhApi.Models.Api {
 		/// <summary>
 		/// States whether this credential has been created by yourself or by the OVH support team
 		/// </summary>
-		public bool OvhSupport {
+		[JsonIgnore()] public bool OvhSupport {
 			get {
 				return this._ovhSupport;
 			}
 		}
 		
-		public OvhApi.Models.Auth.CredentialStateEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Auth.CredentialStateEnum Status {
 			get {
 				return this._status;
 			}
 		}
 		
-		public long ApplicationId {
+		[JsonIgnore()] public long ApplicationId {
 			get {
 				return this._applicationId;
 			}
 		}
 		
-		public long CredentialId {
+		[JsonIgnore()] public long CredentialId {
 			get {
 				return this._credentialId;
 			}
 		}
 		
-		public OvhApi.Models.Auth.AccessRule[] Rules {
+		[JsonIgnore()] public OvhApi.Models.Auth.AccessRule[] Rules {
 			get {
 				return this._rules;
 			}
 		}
 		
-		public System.Nullable<System.DateTime> LastUse {
+		[JsonIgnore()] public System.Nullable<System.DateTime> LastUse {
 			get {
 				return this._lastUse;
 			}
 		}
 		
-		public System.Nullable<System.DateTime> Expiration {
+		[JsonIgnore()] public System.Nullable<System.DateTime> Expiration {
 			get {
 				return this._expiration;
 			}
 		}
 		
-		public System.DateTime Creation {
+		[JsonIgnore()] public System.DateTime Creation {
 			get {
 				return this._creation;
 			}
@@ -25599,49 +25599,49 @@ namespace OvhApi.Models.Billing {
 		[JsonProperty("periodEnd")]
 		private System.Nullable<System.DateTime> _periodEnd;
 		
-		public string BillDetailId {
+		[JsonIgnore()] public string BillDetailId {
 			get {
 				return this._billDetailId;
 			}
 		}
 		
-		public string Domain {
+		[JsonIgnore()] public string Domain {
 			get {
 				return this._domain;
 			}
 		}
 		
-		public OvhApi.Models.Order.Price TotalPrice {
+		[JsonIgnore()] public OvhApi.Models.Order.Price TotalPrice {
 			get {
 				return this._totalPrice;
 			}
 		}
 		
-		public System.Nullable<System.DateTime> PeriodStart {
+		[JsonIgnore()] public System.Nullable<System.DateTime> PeriodStart {
 			get {
 				return this._periodStart;
 			}
 		}
 		
-		public string Quantity {
+		[JsonIgnore()] public string Quantity {
 			get {
 				return this._quantity;
 			}
 		}
 		
-		public OvhApi.Models.Order.Price UnitPrice {
+		[JsonIgnore()] public OvhApi.Models.Order.Price UnitPrice {
 			get {
 				return this._unitPrice;
 			}
 		}
 		
-		public string Description {
+		[JsonIgnore()] public string Description {
 			get {
 				return this._description;
 			}
 		}
 		
-		public System.Nullable<System.DateTime> PeriodEnd {
+		[JsonIgnore()] public System.Nullable<System.DateTime> PeriodEnd {
 			get {
 				return this._periodEnd;
 			}
@@ -25674,8 +25674,8 @@ namespace OvhApi.Models.Nichandle {
 		[EnumMember(Value="PRIVATE_CLOUD")]
 		PRIVATE_CLOUD,
 		
-		[EnumMember(Value="PUBLIC_CLOUD")]
-		PUBLIC_CLOUD,
+		[EnumMember(Value="[JsonIgnore()] public_CLOUD")]
+		[JsonIgnore()] public_CLOUD,
 		
 		[EnumMember(Value="SITE_BUILDER")]
 		SITE_BUILDER,
@@ -25743,7 +25743,7 @@ namespace OvhApi.Models.Nichandle {
 		/// <summary>
 		/// Content of your IPXE script
 		/// </summary>
-		public string Script {
+		[JsonIgnore()] public string Script {
 			get {
 				return this._script;
 			}
@@ -25752,7 +25752,7 @@ namespace OvhApi.Models.Nichandle {
 		/// <summary>
 		/// Name of this script
 		/// </summary>
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
@@ -25887,7 +25887,7 @@ namespace OvhApi.Models.Nichandle {
 		/// <summary>
 		/// this thread domain
 		/// </summary>
-		public string Domain {
+		[JsonIgnore()] public string Domain {
 			get {
 				return this._domain;
 			}
@@ -25896,7 +25896,7 @@ namespace OvhApi.Models.Nichandle {
 		/// <summary>
 		/// this thread Id
 		/// </summary>
-		public long ThreadId {
+		[JsonIgnore()] public long ThreadId {
 			get {
 				return this._threadId;
 			}
@@ -25905,7 +25905,7 @@ namespace OvhApi.Models.Nichandle {
 		/// <summary>
 		/// this thread subject
 		/// </summary>
-		public string Subject {
+		[JsonIgnore()] public string Subject {
 			get {
 				return this._subject;
 			}
@@ -25914,7 +25914,7 @@ namespace OvhApi.Models.Nichandle {
 		/// <summary>
 		/// Support thread current status
 		/// </summary>
-		public OvhApi.Models.Nichandle.SupportStatusEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Nichandle.SupportStatusEnum Status {
 			get {
 				return this._status;
 			}
@@ -25926,7 +25926,7 @@ namespace OvhApi.Models.Nichandle {
 		/// <summary>
 		/// Thread open date
 		/// </summary>
-		public System.Nullable<System.DateTime> OpenDate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> OpenDate {
 			get {
 				return this._openDate;
 			}
@@ -25935,7 +25935,7 @@ namespace OvhApi.Models.Nichandle {
 		/// <summary>
 		/// this thread category
 		/// </summary>
-		public string Category {
+		[JsonIgnore()] public string Category {
 			get {
 				return this._category;
 			}
@@ -25944,7 +25944,7 @@ namespace OvhApi.Models.Nichandle {
 		/// <summary>
 		/// Thread close date
 		/// </summary>
-		public System.Nullable<System.DateTime> CloseDate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> CloseDate {
 			get {
 				return this._closeDate;
 			}
@@ -25983,49 +25983,49 @@ namespace OvhApi.Models.Billing {
 		[JsonProperty("reference")]
 		private string _reference;
 		
-		public string RefundDetailId {
+		[JsonIgnore()] public string RefundDetailId {
 			get {
 				return this._refundDetailId;
 			}
 		}
 		
-		public string RefundId {
+		[JsonIgnore()] public string RefundId {
 			get {
 				return this._refundId;
 			}
 		}
 		
-		public OvhApi.Models.Order.Price TotalPrice {
+		[JsonIgnore()] public OvhApi.Models.Order.Price TotalPrice {
 			get {
 				return this._totalPrice;
 			}
 		}
 		
-		public string Quantity {
+		[JsonIgnore()] public string Quantity {
 			get {
 				return this._quantity;
 			}
 		}
 		
-		public OvhApi.Models.Order.Price UnitPrice {
+		[JsonIgnore()] public OvhApi.Models.Order.Price UnitPrice {
 			get {
 				return this._unitPrice;
 			}
 		}
 		
-		public string Description {
+		[JsonIgnore()] public string Description {
 			get {
 				return this._description;
 			}
 		}
 		
-		public string Domain {
+		[JsonIgnore()] public string Domain {
 			get {
 				return this._domain;
 			}
 		}
 		
-		public string Reference {
+		[JsonIgnore()] public string Reference {
 			get {
 				return this._reference;
 			}
@@ -26139,61 +26139,61 @@ namespace OvhApi.Models.Billing {
 		[JsonProperty("originalBillId")]
 		private string _originalBillId;
 		
-		public string RefundId {
+		[JsonIgnore()] public string RefundId {
 			get {
 				return this._refundId;
 			}
 		}
 		
-		public string PdfUrl {
+		[JsonIgnore()] public string PdfUrl {
 			get {
 				return this._pdfUrl;
 			}
 		}
 		
-		public System.DateTime Date {
+		[JsonIgnore()] public System.DateTime Date {
 			get {
 				return this._date;
 			}
 		}
 		
-		public OvhApi.Models.Order.Price PriceWithoutTax {
+		[JsonIgnore()] public OvhApi.Models.Order.Price PriceWithoutTax {
 			get {
 				return this._priceWithoutTax;
 			}
 		}
 		
-		public OvhApi.Models.Order.Price Tax {
+		[JsonIgnore()] public OvhApi.Models.Order.Price Tax {
 			get {
 				return this._tax;
 			}
 		}
 		
-		public string Password {
+		[JsonIgnore()] public string Password {
 			get {
 				return this._password;
 			}
 		}
 		
-		public long OrderId {
+		[JsonIgnore()] public long OrderId {
 			get {
 				return this._orderId;
 			}
 		}
 		
-		public string Url {
+		[JsonIgnore()] public string Url {
 			get {
 				return this._url;
 			}
 		}
 		
-		public OvhApi.Models.Order.Price PriceWithTax {
+		[JsonIgnore()] public OvhApi.Models.Order.Price PriceWithTax {
 			get {
 				return this._priceWithTax;
 			}
 		}
 		
-		public string OriginalBillId {
+		[JsonIgnore()] public string OriginalBillId {
 			get {
 				return this._originalBillId;
 			}
@@ -26229,43 +26229,43 @@ namespace OvhApi.Models.Billing {
 		[JsonProperty("url")]
 		private string _url;
 		
-		public OvhApi.Models.Order.Price Amount {
+		[JsonIgnore()] public OvhApi.Models.Order.Price Amount {
 			get {
 				return this._amount;
 			}
 		}
 		
-		public string Password {
+		[JsonIgnore()] public string Password {
 			get {
 				return this._password;
 			}
 		}
 		
-		public string PdfUrl {
+		[JsonIgnore()] public string PdfUrl {
 			get {
 				return this._pdfUrl;
 			}
 		}
 		
-		public string StatementIncomeId {
+		[JsonIgnore()] public string StatementIncomeId {
 			get {
 				return this._statementIncomeId;
 			}
 		}
 		
-		public long OrderId {
+		[JsonIgnore()] public long OrderId {
 			get {
 				return this._orderId;
 			}
 		}
 		
-		public System.DateTime Date {
+		[JsonIgnore()] public System.DateTime Date {
 			get {
 				return this._date;
 			}
 		}
 		
-		public string Url {
+		[JsonIgnore()] public string Url {
 			get {
 				return this._url;
 			}
@@ -26286,7 +26286,7 @@ namespace OvhApi.Models.Nichandle {
 		[JsonProperty("consumerKey")]
 		private string _consumerKey;
 		
-		public string OvhIdentifier {
+		[JsonIgnore()] public string OvhIdentifier {
 			get {
 				return this._ovhIdentifier;
 			}
@@ -26295,7 +26295,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public string ConsumerKey {
+		[JsonIgnore()] public string ConsumerKey {
 			get {
 				return this._consumerKey;
 			}
@@ -26382,7 +26382,7 @@ namespace OvhApi.Models.Nichandle {
 		[JsonProperty("legalform")]
 		private OvhApi.Models.Nichandle.CreationRule _legalform;
 		
-		public OvhApi.Models.Nichandle.CreationRule Firstname {
+		[JsonIgnore()] public OvhApi.Models.Nichandle.CreationRule Firstname {
 			get {
 				return this._firstname;
 			}
@@ -26391,7 +26391,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public OvhApi.Models.Nichandle.CreationRule Vat {
+		[JsonIgnore()] public OvhApi.Models.Nichandle.CreationRule Vat {
 			get {
 				return this._vat;
 			}
@@ -26400,7 +26400,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public OvhApi.Models.Nichandle.CreationRule Area {
+		[JsonIgnore()] public OvhApi.Models.Nichandle.CreationRule Area {
 			get {
 				return this._area;
 			}
@@ -26409,7 +26409,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public OvhApi.Models.Nichandle.CreationRule BirthDay {
+		[JsonIgnore()] public OvhApi.Models.Nichandle.CreationRule BirthDay {
 			get {
 				return this._birthDay;
 			}
@@ -26418,7 +26418,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public OvhApi.Models.Nichandle.CreationRule NationalIdentificationNumber {
+		[JsonIgnore()] public OvhApi.Models.Nichandle.CreationRule NationalIdentificationNumber {
 			get {
 				return this._nationalIdentificationNumber;
 			}
@@ -26427,7 +26427,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public OvhApi.Models.Nichandle.CreationRule OvhSubsidiary {
+		[JsonIgnore()] public OvhApi.Models.Nichandle.CreationRule OvhSubsidiary {
 			get {
 				return this._ovhSubsidiary;
 			}
@@ -26436,7 +26436,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public OvhApi.Models.Nichandle.CreationRule SpareEmail {
+		[JsonIgnore()] public OvhApi.Models.Nichandle.CreationRule SpareEmail {
 			get {
 				return this._spareEmail;
 			}
@@ -26445,7 +26445,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public OvhApi.Models.Nichandle.CreationRule OvhCompany {
+		[JsonIgnore()] public OvhApi.Models.Nichandle.CreationRule OvhCompany {
 			get {
 				return this._ovhCompany;
 			}
@@ -26454,7 +26454,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public OvhApi.Models.Nichandle.CreationRule Email {
+		[JsonIgnore()] public OvhApi.Models.Nichandle.CreationRule Email {
 			get {
 				return this._email;
 			}
@@ -26463,7 +26463,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public OvhApi.Models.Nichandle.CreationRule City {
+		[JsonIgnore()] public OvhApi.Models.Nichandle.CreationRule City {
 			get {
 				return this._city;
 			}
@@ -26472,7 +26472,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public OvhApi.Models.Nichandle.CreationRule Fax {
+		[JsonIgnore()] public OvhApi.Models.Nichandle.CreationRule Fax {
 			get {
 				return this._fax;
 			}
@@ -26481,7 +26481,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public OvhApi.Models.Nichandle.CreationRule Address {
+		[JsonIgnore()] public OvhApi.Models.Nichandle.CreationRule Address {
 			get {
 				return this._address;
 			}
@@ -26490,7 +26490,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public OvhApi.Models.Nichandle.CreationRule CompanyNationalIdentificationNumber {
+		[JsonIgnore()] public OvhApi.Models.Nichandle.CreationRule CompanyNationalIdentificationNumber {
 			get {
 				return this._companyNationalIdentificationNumber;
 			}
@@ -26499,7 +26499,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public OvhApi.Models.Nichandle.CreationRule BirthCity {
+		[JsonIgnore()] public OvhApi.Models.Nichandle.CreationRule BirthCity {
 			get {
 				return this._birthCity;
 			}
@@ -26508,7 +26508,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public OvhApi.Models.Nichandle.CreationRule Country {
+		[JsonIgnore()] public OvhApi.Models.Nichandle.CreationRule Country {
 			get {
 				return this._country;
 			}
@@ -26517,7 +26517,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public OvhApi.Models.Nichandle.CreationRule Language {
+		[JsonIgnore()] public OvhApi.Models.Nichandle.CreationRule Language {
 			get {
 				return this._language;
 			}
@@ -26526,7 +26526,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public OvhApi.Models.Nichandle.CreationRule Organisation {
+		[JsonIgnore()] public OvhApi.Models.Nichandle.CreationRule Organisation {
 			get {
 				return this._organisation;
 			}
@@ -26535,7 +26535,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public OvhApi.Models.Nichandle.CreationRule Name {
+		[JsonIgnore()] public OvhApi.Models.Nichandle.CreationRule Name {
 			get {
 				return this._name;
 			}
@@ -26544,7 +26544,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public OvhApi.Models.Nichandle.CreationRule Phone {
+		[JsonIgnore()] public OvhApi.Models.Nichandle.CreationRule Phone {
 			get {
 				return this._phone;
 			}
@@ -26553,7 +26553,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public OvhApi.Models.Nichandle.CreationRule Sex {
+		[JsonIgnore()] public OvhApi.Models.Nichandle.CreationRule Sex {
 			get {
 				return this._sex;
 			}
@@ -26562,7 +26562,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public OvhApi.Models.Nichandle.CreationRule Zip {
+		[JsonIgnore()] public OvhApi.Models.Nichandle.CreationRule Zip {
 			get {
 				return this._zip;
 			}
@@ -26571,7 +26571,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public OvhApi.Models.Nichandle.CreationRule CorporationType {
+		[JsonIgnore()] public OvhApi.Models.Nichandle.CreationRule CorporationType {
 			get {
 				return this._corporationType;
 			}
@@ -26580,7 +26580,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public OvhApi.Models.Nichandle.CreationRule Legalform {
+		[JsonIgnore()] public OvhApi.Models.Nichandle.CreationRule Legalform {
 			get {
 				return this._legalform;
 			}
@@ -26604,7 +26604,7 @@ namespace OvhApi.Models.Nichandle {
 		[JsonProperty("regularExpression")]
 		private string _regularExpression;
 		
-		public bool Mandatory {
+		[JsonIgnore()] public bool Mandatory {
 			get {
 				return this._mandatory;
 			}
@@ -26613,7 +26613,7 @@ namespace OvhApi.Models.Nichandle {
 			}
 		}
 		
-		public string RegularExpression {
+		[JsonIgnore()] public string RegularExpression {
 			get {
 				return this._regularExpression;
 			}
@@ -26781,7 +26781,7 @@ namespace OvhApi.Models.Order {
 		[JsonProperty("content")]
 		private string _content;
 		
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
@@ -26790,7 +26790,7 @@ namespace OvhApi.Models.Order {
 			}
 		}
 		
-		public string Url {
+		[JsonIgnore()] public string Url {
 			get {
 				return this._url;
 			}
@@ -26799,7 +26799,7 @@ namespace OvhApi.Models.Order {
 			}
 		}
 		
-		public string Content {
+		[JsonIgnore()] public string Content {
 			get {
 				return this._content;
 			}
@@ -27030,7 +27030,7 @@ namespace OvhApi.Models.Order {
 		[JsonProperty("withTax")]
 		private OvhApi.Models.Order.Price _withTax;
 		
-		public OvhApi.Models.Order.Price WithoutTax {
+		[JsonIgnore()] public OvhApi.Models.Order.Price WithoutTax {
 			get {
 				return this._withoutTax;
 			}
@@ -27039,7 +27039,7 @@ namespace OvhApi.Models.Order {
 			}
 		}
 		
-		public OvhApi.Models.Order.Price Tax {
+		[JsonIgnore()] public OvhApi.Models.Order.Price Tax {
 			get {
 				return this._tax;
 			}
@@ -27048,7 +27048,7 @@ namespace OvhApi.Models.Order {
 			}
 		}
 		
-		public OvhApi.Models.Order.Price WithTax {
+		[JsonIgnore()] public OvhApi.Models.Order.Price WithTax {
 			get {
 				return this._withTax;
 			}
@@ -27081,7 +27081,7 @@ namespace OvhApi.Models.Order {
 		[JsonProperty("description")]
 		private string _description;
 		
-		public string Domain {
+		[JsonIgnore()] public string Domain {
 			get {
 				return this._domain;
 			}
@@ -27090,7 +27090,7 @@ namespace OvhApi.Models.Order {
 			}
 		}
 		
-		public OvhApi.Models.Order.Price TotalPrice {
+		[JsonIgnore()] public OvhApi.Models.Order.Price TotalPrice {
 			get {
 				return this._totalPrice;
 			}
@@ -27099,7 +27099,7 @@ namespace OvhApi.Models.Order {
 			}
 		}
 		
-		public long Quantity {
+		[JsonIgnore()] public long Quantity {
 			get {
 				return this._quantity;
 			}
@@ -27108,7 +27108,7 @@ namespace OvhApi.Models.Order {
 			}
 		}
 		
-		public OvhApi.Models.Order.Price UnitPrice {
+		[JsonIgnore()] public OvhApi.Models.Order.Price UnitPrice {
 			get {
 				return this._unitPrice;
 			}
@@ -27117,7 +27117,7 @@ namespace OvhApi.Models.Order {
 			}
 		}
 		
-		public string Description {
+		[JsonIgnore()] public string Description {
 			get {
 				return this._description;
 			}
@@ -27162,7 +27162,7 @@ namespace OvhApi.Models.Order {
 		[JsonProperty("prices")]
 		private OvhApi.Models.Order.OrderPrices _prices;
 		
-		public System.Nullable<long> OrderId {
+		[JsonIgnore()] public System.Nullable<long> OrderId {
 			get {
 				return this._orderId;
 			}
@@ -27171,7 +27171,7 @@ namespace OvhApi.Models.Order {
 			}
 		}
 		
-		public string Url {
+		[JsonIgnore()] public string Url {
 			get {
 				return this._url;
 			}
@@ -27180,7 +27180,7 @@ namespace OvhApi.Models.Order {
 			}
 		}
 		
-		public OvhApi.Models.Order.OrderDetail[] Details {
+		[JsonIgnore()] public OvhApi.Models.Order.OrderDetail[] Details {
 			get {
 				return this._details;
 			}
@@ -27189,7 +27189,7 @@ namespace OvhApi.Models.Order {
 			}
 		}
 		
-		public OvhApi.Models.Order.Contract[] Contracts {
+		[JsonIgnore()] public OvhApi.Models.Order.Contract[] Contracts {
 			get {
 				return this._contracts;
 			}
@@ -27198,7 +27198,7 @@ namespace OvhApi.Models.Order {
 			}
 		}
 		
-		public OvhApi.Models.Order.OrderPrices Prices {
+		[JsonIgnore()] public OvhApi.Models.Order.OrderPrices Prices {
 			get {
 				return this._prices;
 			}
@@ -29916,67 +29916,67 @@ namespace OvhApi.Models.Sms {
 		[JsonProperty("id")]
 		private long _id;
 		
-		public string Receiver {
+		[JsonIgnore()] public string Receiver {
 			get {
 				return this._receiver;
 			}
 		}
 		
-		public long DeliveryReceipt {
+		[JsonIgnore()] public long DeliveryReceipt {
 			get {
 				return this._deliveryReceipt;
 			}
 		}
 		
-		public long MessageLength {
+		[JsonIgnore()] public long MessageLength {
 			get {
 				return this._messageLength;
 			}
 		}
 		
-		public long DifferedDelivery {
+		[JsonIgnore()] public long DifferedDelivery {
 			get {
 				return this._differedDelivery;
 			}
 		}
 		
-		public double Credits {
+		[JsonIgnore()] public double Credits {
 			get {
 				return this._credits;
 			}
 		}
 		
-		public string Message {
+		[JsonIgnore()] public string Message {
 			get {
 				return this._message;
 			}
 		}
 		
-		public long Ptt {
+		[JsonIgnore()] public long Ptt {
 			get {
 				return this._ptt;
 			}
 		}
 		
-		public string Sender {
+		[JsonIgnore()] public string Sender {
 			get {
 				return this._sender;
 			}
 		}
 		
-		public System.DateTime CreationDatetime {
+		[JsonIgnore()] public System.DateTime CreationDatetime {
 			get {
 				return this._creationDatetime;
 			}
 		}
 		
-		public long NumberOfSms {
+		[JsonIgnore()] public long NumberOfSms {
 			get {
 				return this._numberOfSms;
 			}
 		}
 		
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
@@ -30015,7 +30015,7 @@ namespace OvhApi.Models.Sms {
 		/// <summary>
 		/// Message sent by the moderator
 		/// </summary>
-		public string Comment {
+		[JsonIgnore()] public string Comment {
 			get {
 				return this._comment;
 			}
@@ -30024,7 +30024,7 @@ namespace OvhApi.Models.Sms {
 		/// <summary>
 		/// The sms sender
 		/// </summary>
-		public string SenderName {
+		[JsonIgnore()] public string SenderName {
 			get {
 				return this._sender;
 			}
@@ -30033,7 +30033,7 @@ namespace OvhApi.Models.Sms {
 		/// <summary>
 		/// Sender status
 		/// </summary>
-		public OvhApi.Models.Sms.StatusSenderEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Sms.StatusSenderEnum Status {
 			get {
 				return this._status;
 			}
@@ -30045,7 +30045,7 @@ namespace OvhApi.Models.Sms {
 		/// <summary>
 		/// Specify the kind of sender
 		/// </summary>
-		public OvhApi.Models.Sms.TypeSenderEnum Type {
+		[JsonIgnore()] public OvhApi.Models.Sms.TypeSenderEnum Type {
 			get {
 				return this._type;
 			}
@@ -30054,7 +30054,7 @@ namespace OvhApi.Models.Sms {
 		/// <summary>
 		/// Sender description
 		/// </summary>
-		public string Description {
+		[JsonIgnore()] public string Description {
 			get {
 				return this._description;
 			}
@@ -30066,7 +30066,7 @@ namespace OvhApi.Models.Sms {
 		/// <summary>
 		/// Specify if the sender is custom or not
 		/// </summary>
-		public OvhApi.Models.Sms.RefererSenderEnum Referer {
+		[JsonIgnore()] public OvhApi.Models.Sms.RefererSenderEnum Referer {
 			get {
 				return this._referer;
 			}
@@ -30075,7 +30075,7 @@ namespace OvhApi.Models.Sms {
 		/// <summary>
 		/// Validation media identifier
 		/// </summary>
-		public string ValidationMedia {
+		[JsonIgnore()] public string ValidationMedia {
 			get {
 				return this._validationMedia;
 			}
@@ -30108,7 +30108,7 @@ namespace OvhApi.Models.Sms {
 		/// <summary>
 		/// The country
 		/// </summary>
-		public string Country {
+		[JsonIgnore()] public string Country {
 			get {
 				return this._country;
 			}
@@ -30117,7 +30117,7 @@ namespace OvhApi.Models.Sms {
 		/// <summary>
 		/// The operator name
 		/// </summary>
-		public string Operator {
+		[JsonIgnore()] public string Operator {
 			get {
 				return this._operator;
 			}
@@ -30126,7 +30126,7 @@ namespace OvhApi.Models.Sms {
 		/// <summary>
 		/// The network name
 		/// </summary>
-		public string Network {
+		[JsonIgnore()] public string Network {
 			get {
 				return this._network;
 			}
@@ -30135,7 +30135,7 @@ namespace OvhApi.Models.Sms {
 		/// <summary>
 		/// The region
 		/// </summary>
-		public string Region {
+		[JsonIgnore()] public string Region {
 			get {
 				return this._region;
 			}
@@ -30144,7 +30144,7 @@ namespace OvhApi.Models.Sms {
 		/// <summary>
 		/// The countryCode prefix number
 		/// </summary>
-		public string CountryCode {
+		[JsonIgnore()] public string CountryCode {
 			get {
 				return this._countryCode;
 			}
@@ -30165,7 +30165,7 @@ namespace OvhApi.Models.Sms {
 		[JsonProperty("media")]
 		private OvhApi.Models.Sms.ResponseTrackingMediaEnum _media;
 		
-		public string Target {
+		[JsonIgnore()] public string Target {
 			get {
 				return this._target;
 			}
@@ -30174,7 +30174,7 @@ namespace OvhApi.Models.Sms {
 			}
 		}
 		
-		public OvhApi.Models.Sms.ResponseTrackingMediaEnum Media {
+		[JsonIgnore()] public OvhApi.Models.Sms.ResponseTrackingMediaEnum Media {
 			get {
 				return this._media;
 			}
@@ -30204,7 +30204,7 @@ namespace OvhApi.Models.Sms {
 		[JsonProperty("validReceivers")]
 		private string[] _validReceivers;
 		
-		public double TotalCreditsRemoved {
+		[JsonIgnore()] public double TotalCreditsRemoved {
 			get {
 				return this._totalCreditsRemoved;
 			}
@@ -30213,7 +30213,7 @@ namespace OvhApi.Models.Sms {
 			}
 		}
 		
-		public string[] InvalidReceivers {
+		[JsonIgnore()] public string[] InvalidReceivers {
 			get {
 				return this._invalidReceivers;
 			}
@@ -30222,7 +30222,7 @@ namespace OvhApi.Models.Sms {
 			}
 		}
 		
-		public long[] Ids {
+		[JsonIgnore()] public long[] Ids {
 			get {
 				return this._ids;
 			}
@@ -30231,7 +30231,7 @@ namespace OvhApi.Models.Sms {
 			}
 		}
 		
-		public string[] ValidReceivers {
+		[JsonIgnore()] public string[] ValidReceivers {
 			get {
 				return this._validReceivers;
 			}
@@ -30342,7 +30342,7 @@ namespace OvhApi.Models.Sms {
 		[JsonProperty("templates")]
 		private OvhApi.Models.Sms.Templates _templates;
 		
-		public OvhApi.Models.Sms.Response SmsResponse {
+		[JsonIgnore()] public OvhApi.Models.Sms.Response SmsResponse {
 			get {
 				return this._smsResponse;
 			}
@@ -30351,31 +30351,31 @@ namespace OvhApi.Models.Sms {
 			}
 		}
 		
-		public OvhApi.Models.Sms.StatusAccountEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Sms.StatusAccountEnum Status {
 			get {
 				return this._status;
 			}
 		}
 		
-		public double CreditsLeft {
+		[JsonIgnore()] public double CreditsLeft {
 			get {
 				return this._creditsLeft;
 			}
 		}
 		
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
 		}
 		
-		public long UserQuantityWithQuota {
+		[JsonIgnore()] public long UserQuantityWithQuota {
 			get {
 				return this._userQuantityWithQuota;
 			}
 		}
 		
-		public string Description {
+		[JsonIgnore()] public string Description {
 			get {
 				return this._description;
 			}
@@ -30384,7 +30384,7 @@ namespace OvhApi.Models.Sms {
 			}
 		}
 		
-		public string CallBack {
+		[JsonIgnore()] public string CallBack {
 			get {
 				return this._callBack;
 			}
@@ -30396,7 +30396,7 @@ namespace OvhApi.Models.Sms {
 		/// <summary>
 		/// Credit threshold after which an automatic recredit is launched
 		/// </summary>
-		public double CreditThresholdForAutomaticRecredit {
+		[JsonIgnore()] public double CreditThresholdForAutomaticRecredit {
 			get {
 				return this._creditThresholdForAutomaticRecredit;
 			}
@@ -30405,13 +30405,13 @@ namespace OvhApi.Models.Sms {
 			}
 		}
 		
-		public double CreditsHoldByQuota {
+		[JsonIgnore()] public double CreditsHoldByQuota {
 			get {
 				return this._creditsHoldByQuota;
 			}
 		}
 		
-		public OvhApi.Models.Sms.PackQuantityAutomaticRecreditEnum AutomaticRecreditAmount {
+		[JsonIgnore()] public OvhApi.Models.Sms.PackQuantityAutomaticRecreditEnum AutomaticRecreditAmount {
 			get {
 				return this._automaticRecreditAmount;
 			}
@@ -30420,7 +30420,7 @@ namespace OvhApi.Models.Sms {
 			}
 		}
 		
-		public OvhApi.Models.Sms.Templates Templates {
+		[JsonIgnore()] public OvhApi.Models.Sms.Templates Templates {
 			get {
 				return this._templates;
 			}
@@ -30450,7 +30450,7 @@ namespace OvhApi.Models.Sms {
 		[JsonProperty("alertNumber")]
 		private string _alertNumber;
 		
-		public OvhApi.Models.Sms.SupportEnum Support {
+		[JsonIgnore()] public OvhApi.Models.Sms.SupportEnum Support {
 			get {
 				return this._support;
 			}
@@ -30459,7 +30459,7 @@ namespace OvhApi.Models.Sms {
 			}
 		}
 		
-		public long AlertThresholdName {
+		[JsonIgnore()] public long AlertThresholdName {
 			get {
 				return this._alertThreshold;
 			}
@@ -30468,7 +30468,7 @@ namespace OvhApi.Models.Sms {
 			}
 		}
 		
-		public string AlertEmail {
+		[JsonIgnore()] public string AlertEmail {
 			get {
 				return this._alertEmail;
 			}
@@ -30477,7 +30477,7 @@ namespace OvhApi.Models.Sms {
 			}
 		}
 		
-		public string AlertNumber {
+		[JsonIgnore()] public string AlertNumber {
 			get {
 				return this._alertNumber;
 			}
@@ -30501,7 +30501,7 @@ namespace OvhApi.Models.Sms {
 		[JsonProperty("number")]
 		private string _number;
 		
-		public System.DateTime DateCreation {
+		[JsonIgnore()] public System.DateTime DateCreation {
 			get {
 				return this._dateCreation;
 			}
@@ -30510,7 +30510,7 @@ namespace OvhApi.Models.Sms {
 		/// <summary>
 		/// The sms number blacklisted
 		/// </summary>
-		public string Number {
+		[JsonIgnore()] public string Number {
 			get {
 				return this._number;
 			}
@@ -30543,7 +30543,7 @@ namespace OvhApi.Models.Sms {
 		/// <summary>
 		/// Automatic notification sent by text in case of customer reply.
 		/// </summary>
-		public string Text {
+		[JsonIgnore()] public string Text {
 			get {
 				return this._text;
 			}
@@ -30555,7 +30555,7 @@ namespace OvhApi.Models.Sms {
 		/// <summary>
 		/// Default url callback used for a given response.
 		/// </summary>
-		public string CgiUrl {
+		[JsonIgnore()] public string CgiUrl {
 			get {
 				return this._cgiUrl;
 			}
@@ -30564,7 +30564,7 @@ namespace OvhApi.Models.Sms {
 			}
 		}
 		
-		public OvhApi.Models.Sms.ResponseTrackingOptions[] TrackingOptions {
+		[JsonIgnore()] public OvhApi.Models.Sms.ResponseTrackingOptions[] TrackingOptions {
 			get {
 				return this._trackingOptions;
 			}
@@ -30573,7 +30573,7 @@ namespace OvhApi.Models.Sms {
 			}
 		}
 		
-		public string TrackingDefaultSmsSender {
+		[JsonIgnore()] public string TrackingDefaultSmsSender {
 			get {
 				return this._trackingDefaultSmsSender;
 			}
@@ -30582,7 +30582,7 @@ namespace OvhApi.Models.Sms {
 			}
 		}
 		
-		public OvhApi.Models.Sms.ResponseTypeEnum ResponseType {
+		[JsonIgnore()] public OvhApi.Models.Sms.ResponseTypeEnum ResponseType {
 			get {
 				return this._responseType;
 			}
@@ -30618,37 +30618,37 @@ namespace OvhApi.Models.Sms {
 		[JsonProperty("message")]
 		private string _message;
 		
-		public double Credits {
+		[JsonIgnore()] public double Credits {
 			get {
 				return this._credits;
 			}
 		}
 		
-		public string Sender {
+		[JsonIgnore()] public string Sender {
 			get {
 				return this._sender;
 			}
 		}
 		
-		public System.DateTime CreationDatetime {
+		[JsonIgnore()] public System.DateTime CreationDatetime {
 			get {
 				return this._creationDatetime;
 			}
 		}
 		
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
 		}
 		
-		public string Tag {
+		[JsonIgnore()] public string Tag {
 			get {
 				return this._tag;
 			}
 		}
 		
-		public string Message {
+		[JsonIgnore()] public string Message {
 			get {
 				return this._message;
 			}
@@ -30669,7 +30669,7 @@ namespace OvhApi.Models.Sms {
 		[JsonProperty("quotaLeft")]
 		private double _quotaLeft;
 		
-		public OvhApi.Models.Sms.QuotaStatusUserEnum QuotaStatus {
+		[JsonIgnore()] public OvhApi.Models.Sms.QuotaStatusUserEnum QuotaStatus {
 			get {
 				return this._quotaStatus;
 			}
@@ -30678,7 +30678,7 @@ namespace OvhApi.Models.Sms {
 			}
 		}
 		
-		public double QuotaLeft {
+		[JsonIgnore()] public double QuotaLeft {
 			get {
 				return this._quotaLeft;
 			}
@@ -30774,7 +30774,7 @@ namespace OvhApi.Models.Sms {
 		/// <summary>
 		/// The abreviated country code.
 		/// </summary>
-		public string CountrySuffixe {
+		[JsonIgnore()] public string CountrySuffixe {
 			get {
 				return this._countrySuffixe;
 			}
@@ -30783,7 +30783,7 @@ namespace OvhApi.Models.Sms {
 		/// <summary>
 		/// The exception message
 		/// </summary>
-		public string[] Messages {
+		[JsonIgnore()] public string[] Messages {
 			get {
 				return this._messages;
 			}
@@ -30792,7 +30792,7 @@ namespace OvhApi.Models.Sms {
 		/// <summary>
 		/// The type of routing restriction imposed by the operator
 		/// </summary>
-		public OvhApi.Models.Sms.RestrictionCodeEnum RestrictionCode {
+		[JsonIgnore()] public OvhApi.Models.Sms.RestrictionCodeEnum RestrictionCode {
 			get {
 				return this._restrictionCode;
 			}
@@ -30801,7 +30801,7 @@ namespace OvhApi.Models.Sms {
 		/// <summary>
 		/// The list of operators impacted.
 		/// </summary>
-		public string Operators {
+		[JsonIgnore()] public string Operators {
 			get {
 				return this._operators;
 			}
@@ -30810,7 +30810,7 @@ namespace OvhApi.Models.Sms {
 		/// <summary>
 		/// The substitution sender used to bypass operator filter
 		/// </summary>
-		public string Substitution {
+		[JsonIgnore()] public string Substitution {
 			get {
 				return this._substitution;
 			}
@@ -30861,73 +30861,73 @@ namespace OvhApi.Models.Sms {
 		[JsonProperty("tag")]
 		private string _tag;
 		
-		public string Receiver {
+		[JsonIgnore()] public string Receiver {
 			get {
 				return this._receiver;
 			}
 		}
 		
-		public long DeliveryReceipt {
+		[JsonIgnore()] public long DeliveryReceipt {
 			get {
 				return this._deliveryReceipt;
 			}
 		}
 		
-		public long MessageLength {
+		[JsonIgnore()] public long MessageLength {
 			get {
 				return this._messageLength;
 			}
 		}
 		
-		public long DifferedDelivery {
+		[JsonIgnore()] public long DifferedDelivery {
 			get {
 				return this._differedDelivery;
 			}
 		}
 		
-		public double Credits {
+		[JsonIgnore()] public double Credits {
 			get {
 				return this._credits;
 			}
 		}
 		
-		public string Message {
+		[JsonIgnore()] public string Message {
 			get {
 				return this._message;
 			}
 		}
 		
-		public long Ptt {
+		[JsonIgnore()] public long Ptt {
 			get {
 				return this._ptt;
 			}
 		}
 		
-		public string Sender {
+		[JsonIgnore()] public string Sender {
 			get {
 				return this._sender;
 			}
 		}
 		
-		public System.DateTime CreationDatetime {
+		[JsonIgnore()] public System.DateTime CreationDatetime {
 			get {
 				return this._creationDatetime;
 			}
 		}
 		
-		public long NumberOfSms {
+		[JsonIgnore()] public long NumberOfSms {
 			get {
 				return this._numberOfSms;
 			}
 		}
 		
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
 		}
 		
-		public string Tag {
+		[JsonIgnore()] public string Tag {
 			get {
 				return this._tag;
 			}
@@ -30975,7 +30975,7 @@ namespace OvhApi.Models.Sms {
 		/// <summary>
 		/// Slot number id
 		/// </summary>
-		public long SlotId {
+		[JsonIgnore()] public long SlotId {
 			get {
 				return this._slotId;
 			}
@@ -30984,7 +30984,7 @@ namespace OvhApi.Models.Sms {
 		/// <summary>
 		/// Number of receiver records in the document
 		/// </summary>
-		public long Records {
+		[JsonIgnore()] public long Records {
 			get {
 				return this._records;
 			}
@@ -30993,7 +30993,7 @@ namespace OvhApi.Models.Sms {
 		/// <summary>
 		/// Description name of the document
 		/// </summary>
-		public string Description {
+		[JsonIgnore()] public string Description {
 			get {
 				return this._description;
 			}
@@ -31002,7 +31002,7 @@ namespace OvhApi.Models.Sms {
 		/// <summary>
 		/// Creation date of the document
 		/// </summary>
-		public System.DateTime Datetime {
+		[JsonIgnore()] public System.DateTime Datetime {
 			get {
 				return this._datetime;
 			}
@@ -31404,7 +31404,7 @@ namespace OvhApi.Models.Sms {
 		[JsonProperty("emailFrom")]
 		private string _emailFrom;
 		
-		public bool CustomizedEmailMode {
+		[JsonIgnore()] public bool CustomizedEmailMode {
 			get {
 				return this._customizedEmailMode;
 			}
@@ -31413,7 +31413,7 @@ namespace OvhApi.Models.Sms {
 			}
 		}
 		
-		public string EmailBody {
+		[JsonIgnore()] public string EmailBody {
 			get {
 				return this._emailBody;
 			}
@@ -31422,7 +31422,7 @@ namespace OvhApi.Models.Sms {
 			}
 		}
 		
-		public bool CustomizedSmsMode {
+		[JsonIgnore()] public bool CustomizedSmsMode {
 			get {
 				return this._customizedSmsMode;
 			}
@@ -31431,7 +31431,7 @@ namespace OvhApi.Models.Sms {
 			}
 		}
 		
-		public string EmailSubject {
+		[JsonIgnore()] public string EmailSubject {
 			get {
 				return this._emailSubject;
 			}
@@ -31440,7 +31440,7 @@ namespace OvhApi.Models.Sms {
 			}
 		}
 		
-		public string SmsBody {
+		[JsonIgnore()] public string SmsBody {
 			get {
 				return this._smsBody;
 			}
@@ -31449,7 +31449,7 @@ namespace OvhApi.Models.Sms {
 			}
 		}
 		
-		public string EmailFrom {
+		[JsonIgnore()] public string EmailFrom {
 			get {
 				return this._emailFrom;
 			}
@@ -31485,7 +31485,7 @@ namespace OvhApi.Models.Sms {
 		[JsonProperty("callBack")]
 		private string _callBack;
 		
-		public OvhApi.Models.Sms.Quota QuotaInformations {
+		[JsonIgnore()] public OvhApi.Models.Sms.Quota QuotaInformations {
 			get {
 				return this._quotaInformations;
 			}
@@ -31494,7 +31494,7 @@ namespace OvhApi.Models.Sms {
 			}
 		}
 		
-		public string Password {
+		[JsonIgnore()] public string Password {
 			get {
 				return this._password;
 			}
@@ -31503,7 +31503,7 @@ namespace OvhApi.Models.Sms {
 			}
 		}
 		
-		public string[] IpRestrictions {
+		[JsonIgnore()] public string[] IpRestrictions {
 			get {
 				return this._ipRestrictions;
 			}
@@ -31512,7 +31512,7 @@ namespace OvhApi.Models.Sms {
 			}
 		}
 		
-		public OvhApi.Models.Sms.AlertThreshold AlertThresholdInformations {
+		[JsonIgnore()] public OvhApi.Models.Sms.AlertThreshold AlertThresholdInformations {
 			get {
 				return this._alertThresholdInformations;
 			}
@@ -31524,13 +31524,13 @@ namespace OvhApi.Models.Sms {
 		/// <summary>
 		/// The sms user login
 		/// </summary>
-		public string Login {
+		[JsonIgnore()] public string Login {
 			get {
 				return this._login;
 			}
 		}
 		
-		public string CallBack {
+		[JsonIgnore()] public string CallBack {
 			get {
 				return this._callBack;
 			}
@@ -31638,7 +31638,7 @@ namespace OvhApi.Models.Sms {
 		[JsonProperty("price")]
 		private double _price;
 		
-		public double SmsQuantity {
+		[JsonIgnore()] public double SmsQuantity {
 			get {
 				return this._smsQuantity;
 			}
@@ -31647,7 +31647,7 @@ namespace OvhApi.Models.Sms {
 			}
 		}
 		
-		public System.Nullable<double> GiftPrice {
+		[JsonIgnore()] public System.Nullable<double> GiftPrice {
 			get {
 				return this._giftPrice;
 			}
@@ -31656,7 +31656,7 @@ namespace OvhApi.Models.Sms {
 			}
 		}
 		
-		public System.Nullable<double> GiftQuantity {
+		[JsonIgnore()] public System.Nullable<double> GiftQuantity {
 			get {
 				return this._giftQuantity;
 			}
@@ -31665,7 +31665,7 @@ namespace OvhApi.Models.Sms {
 			}
 		}
 		
-		public string Language {
+		[JsonIgnore()] public string Language {
 			get {
 				return this._language;
 			}
@@ -31674,7 +31674,7 @@ namespace OvhApi.Models.Sms {
 			}
 		}
 		
-		public System.Nullable<double> TotalPrice {
+		[JsonIgnore()] public System.Nullable<double> TotalPrice {
 			get {
 				return this._totalPrice;
 			}
@@ -31683,7 +31683,7 @@ namespace OvhApi.Models.Sms {
 			}
 		}
 		
-		public string CountryDestination {
+		[JsonIgnore()] public string CountryDestination {
 			get {
 				return this._countryDestination;
 			}
@@ -31692,7 +31692,7 @@ namespace OvhApi.Models.Sms {
 			}
 		}
 		
-		public long Quantity {
+		[JsonIgnore()] public long Quantity {
 			get {
 				return this._quantity;
 			}
@@ -31701,7 +31701,7 @@ namespace OvhApi.Models.Sms {
 			}
 		}
 		
-		public double Price {
+		[JsonIgnore()] public double Price {
 			get {
 				return this._price;
 			}
@@ -31800,7 +31800,7 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("anonymousRejection")]
 		private bool _anonymousRejection;
 		
-		public System.DateTime LastUpdate {
+		[JsonIgnore()] public System.DateTime LastUpdate {
 			get {
 				return this._lastUpdate;
 			}
@@ -31809,7 +31809,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The dialplan name
 		/// </summary>
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
@@ -31821,7 +31821,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The presented number when bridging calls
 		/// </summary>
-		public OvhApi.Models.Telephony.OvhPabxDialplanNumberPresentationEnum ShowCallerNumber {
+		[JsonIgnore()] public OvhApi.Models.Telephony.OvhPabxDialplanNumberPresentationEnum ShowCallerNumber {
 			get {
 				return this._showCallerNumber;
 			}
@@ -31833,7 +31833,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The timeout (in seconds) when bridging calls
 		/// </summary>
-		public long TransferTimeout {
+		[JsonIgnore()] public long TransferTimeout {
 			get {
 				return this._transferTimeout;
 			}
@@ -31842,7 +31842,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public long DialplanId {
+		[JsonIgnore()] public long DialplanId {
 			get {
 				return this._dialplanId;
 			}
@@ -31851,7 +31851,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Reject (hangup) anonymous calls
 		/// </summary>
-		public bool AnonymousRejection {
+		[JsonIgnore()] public bool AnonymousRejection {
 			get {
 				return this._anonymousRejection;
 			}
@@ -31887,7 +31887,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The relevant informations in anormal behaviors
 		/// </summary>
-		public OvhApi.Models.Telephony.CallDiagnosticReporting[] Reporting {
+		[JsonIgnore()] public OvhApi.Models.Telephony.CallDiagnosticReporting[] Reporting {
 			get {
 				return this._reporting;
 			}
@@ -31896,7 +31896,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The MOS call quality report
 		/// </summary>
-		public OvhApi.Models.Telephony.CallDiagnosticCallQuality[] CallQuality {
+		[JsonIgnore()] public OvhApi.Models.Telephony.CallDiagnosticCallQuality[] CallQuality {
 			get {
 				return this._callQuality;
 			}
@@ -31905,7 +31905,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Todo if datas are being to be loaded in cache. done when datas are available
 		/// </summary>
-		public OvhApi.Models.Telephony.CallDiagnosticStatusEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Telephony.CallDiagnosticStatusEnum Status {
 			get {
 				return this._status;
 			}
@@ -31914,7 +31914,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The CDR tickets information
 		/// </summary>
-		public OvhApi.Models.Telephony.CallDiagnosticCdrs[] Cdrs {
+		[JsonIgnore()] public OvhApi.Models.Telephony.CallDiagnosticCdrs[] Cdrs {
 			get {
 				return this._cdrs;
 			}
@@ -31923,7 +31923,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Sip signal packets during the call and last registers
 		/// </summary>
-		public OvhApi.Models.Telephony.CallDiagnosticSip[] Sip {
+		[JsonIgnore()] public OvhApi.Models.Telephony.CallDiagnosticSip[] Sip {
 			get {
 				return this._sip;
 			}
@@ -31965,25 +31965,25 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("enterMuted")]
 		private bool _enterMuted;
 		
-		public string Pin {
+		[JsonIgnore()] public string Pin {
 			get {
 				return this._pin;
 			}
 		}
 		
-		public string Language {
+		[JsonIgnore()] public string Language {
 			get {
 				return this._language;
 			}
 		}
 		
-		public bool RecordStatus {
+		[JsonIgnore()] public bool RecordStatus {
 			get {
 				return this._recordStatus;
 			}
 		}
 		
-		public bool EnterMuted {
+		[JsonIgnore()] public bool EnterMuted {
 			get {
 				return this._enterMuted;
 			}
@@ -32022,7 +32022,7 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("timestamp")]
 		private string _timestamp;
 		
-		public OvhApi.Models.Telephony.CallDiagnosticCdrsBasic Basic {
+		[JsonIgnore()] public OvhApi.Models.Telephony.CallDiagnosticCdrsBasic Basic {
 			get {
 				return this._basic;
 			}
@@ -32031,7 +32031,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string Timestamp {
+		[JsonIgnore()] public string Timestamp {
 			get {
 				return this._timestamp;
 			}
@@ -32064,31 +32064,31 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("description")]
 		private string _description;
 		
-		public OvhApi.Models.Telephony.TypeServiceEnum ServiceType {
+		[JsonIgnore()] public OvhApi.Models.Telephony.TypeServiceEnum ServiceType {
 			get {
 				return this._serviceType;
 			}
 		}
 		
-		public string[] Offers {
+		[JsonIgnore()] public string[] Offers {
 			get {
 				return this._offers;
 			}
 		}
 		
-		public long SimultaneousLines {
+		[JsonIgnore()] public long SimultaneousLines {
 			get {
 				return this._simultaneousLines;
 			}
 		}
 		
-		public string ServiceName {
+		[JsonIgnore()] public string ServiceName {
 			get {
 				return this._serviceName;
 			}
 		}
 		
-		public string Description {
+		[JsonIgnore()] public string Description {
 			get {
 				return this._description;
 			}
@@ -32148,7 +32148,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Allowed outplan
 		/// </summary>
-		public OvhApi.Models.Order.Price AllowedOutplan {
+		[JsonIgnore()] public OvhApi.Models.Order.Price AllowedOutplan {
 			get {
 				return this._allowedOutplan;
 			}
@@ -32157,7 +32157,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Security deposit amount
 		/// </summary>
-		public OvhApi.Models.Order.Price SecurityDeposit {
+		[JsonIgnore()] public OvhApi.Models.Order.Price SecurityDeposit {
 			get {
 				return this._securityDeposit;
 			}
@@ -32166,7 +32166,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Allowed threshold credit
 		/// </summary>
-		public OvhApi.Models.Order.Price CreditThreshold {
+		[JsonIgnore()] public OvhApi.Models.Order.Price CreditThreshold {
 			get {
 				return this._creditThreshold;
 			}
@@ -32178,7 +32178,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Current outplan
 		/// </summary>
-		public OvhApi.Models.Order.Price CurrentOutplan {
+		[JsonIgnore()] public OvhApi.Models.Order.Price CurrentOutplan {
 			get {
 				return this._currentOutplan;
 			}
@@ -32187,7 +32187,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Description of the billing account
 		/// </summary>
-		public string Description {
+		[JsonIgnore()] public string Description {
 			get {
 				return this._description;
 			}
@@ -32253,43 +32253,43 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("callerName")]
 		private string _callerName;
 		
-		public bool Talking {
+		[JsonIgnore()] public bool Talking {
 			get {
 				return this._talking;
 			}
 		}
 		
-		public bool Speak {
+		[JsonIgnore()] public bool Speak {
 			get {
 				return this._speak;
 			}
 		}
 		
-		public string CallerNumber {
+		[JsonIgnore()] public string CallerNumber {
 			get {
 				return this._callerNumber;
 			}
 		}
 		
-		public bool Floor {
+		[JsonIgnore()] public bool Floor {
 			get {
 				return this._floor;
 			}
 		}
 		
-		public bool Hear {
+		[JsonIgnore()] public bool Hear {
 			get {
 				return this._hear;
 			}
 		}
 		
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
 		}
 		
-		public string CallerName {
+		[JsonIgnore()] public string CallerName {
 			get {
 				return this._callerName;
 			}
@@ -32334,7 +32334,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Contact firstname
 		/// </summary>
-		public string Firstname {
+		[JsonIgnore()] public string Firstname {
 			get {
 				return this._firstname;
 			}
@@ -32346,7 +32346,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Contact country
 		/// </summary>
-		public OvhApi.Models.CoreTypes.CountryEnum Country {
+		[JsonIgnore()] public OvhApi.Models.CoreTypes.CountryEnum Country {
 			get {
 				return this._country;
 			}
@@ -32358,7 +32358,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Contact organisation
 		/// </summary>
-		public string Organisation {
+		[JsonIgnore()] public string Organisation {
 			get {
 				return this._organisation;
 			}
@@ -32370,7 +32370,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Contact name
 		/// </summary>
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
@@ -32382,7 +32382,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Contact phone
 		/// </summary>
-		public string Phone {
+		[JsonIgnore()] public string Phone {
 			get {
 				return this._phone;
 			}
@@ -32391,7 +32391,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string Email {
+		[JsonIgnore()] public string Email {
 			get {
 				return this._email;
 			}
@@ -32403,7 +32403,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Contact zip
 		/// </summary>
-		public string Zip {
+		[JsonIgnore()] public string Zip {
 			get {
 				return this._zip;
 			}
@@ -32415,7 +32415,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Contact city
 		/// </summary>
-		public string City {
+		[JsonIgnore()] public string City {
 			get {
 				return this._city;
 			}
@@ -32427,7 +32427,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Contact address
 		/// </summary>
-		public string Address {
+		[JsonIgnore()] public string Address {
 			get {
 				return this._address;
 			}
@@ -32475,7 +32475,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Screenlist based on the presented caller number
 		/// </summary>
-		public string CallerIdNumber {
+		[JsonIgnore()] public string CallerIdNumber {
 			get {
 				return this._callerIdNumber;
 			}
@@ -32484,13 +32484,13 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Type of screenlist
 		/// </summary>
-		public OvhApi.Models.Telephony.OvhPabxDialplanExtensionConditionScreenListTypeEnum ScreenListType {
+		[JsonIgnore()] public OvhApi.Models.Telephony.OvhPabxDialplanExtensionConditionScreenListTypeEnum ScreenListType {
 			get {
 				return this._screenListType;
 			}
 		}
 		
-		public long ConditionId {
+		[JsonIgnore()] public long ConditionId {
 			get {
 				return this._conditionId;
 			}
@@ -32631,7 +32631,7 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("lockOutCall")]
 		private bool _lockOutCall;
 		
-		public bool DoNotDisturb {
+		[JsonIgnore()] public bool DoNotDisturb {
 			get {
 				return this._doNotDisturb;
 			}
@@ -32643,7 +32643,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Nature of the forward when the line is unavailable
 		/// </summary>
-		public OvhApi.Models.Telephony.LineOptionForwardNatureTypeEnum ForwardBackupNature {
+		[JsonIgnore()] public OvhApi.Models.Telephony.LineOptionForwardNatureTypeEnum ForwardBackupNature {
 			get {
 				return this._forwardBackupNature;
 			}
@@ -32655,7 +32655,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Destination of the forward on no-reply
 		/// </summary>
-		public string ForwardNoReplyNumber {
+		[JsonIgnore()] public string ForwardNoReplyNumber {
 			get {
 				return this._forwardNoReplyNumber;
 			}
@@ -32667,7 +32667,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Nature of the forward when the line is busy
 		/// </summary>
-		public OvhApi.Models.Telephony.LineOptionForwardNatureTypeEnum ForwardBusyNature {
+		[JsonIgnore()] public OvhApi.Models.Telephony.LineOptionForwardNatureTypeEnum ForwardBusyNature {
 			get {
 				return this._forwardBusyNature;
 			}
@@ -32676,7 +32676,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public bool AbsentSubscriber {
+		[JsonIgnore()] public bool AbsentSubscriber {
 			get {
 				return this._absentSubscriber;
 			}
@@ -32688,7 +32688,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Destination of the forward when the line is busy
 		/// </summary>
-		public string ForwardBusyNumber {
+		[JsonIgnore()] public string ForwardBusyNumber {
 			get {
 				return this._forwardBusyNumber;
 			}
@@ -32700,7 +32700,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The SIP domain of the line
 		/// </summary>
-		public string Domain {
+		[JsonIgnore()] public string Domain {
 			get {
 				return this._domain;
 			}
@@ -32712,7 +32712,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Codecs preferences
 		/// </summary>
-		public string Codecs {
+		[JsonIgnore()] public string Codecs {
 			get {
 				return this._codecs;
 			}
@@ -32724,7 +32724,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Disallow outgoing calls password
 		/// </summary>
-		public string LockOutCallPassword {
+		[JsonIgnore()] public string LockOutCallPassword {
 			get {
 				return this._lockOutCallPassword;
 			}
@@ -32736,7 +32736,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Do not display your number
 		/// </summary>
-		public bool IdentificationRestriction {
+		[JsonIgnore()] public bool IdentificationRestriction {
 			get {
 				return this._identificationRestriction;
 			}
@@ -32748,7 +32748,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Nature of the forward on no-reply
 		/// </summary>
-		public OvhApi.Models.Telephony.LineOptionForwardNatureTypeEnum ForwardNoReplyNature {
+		[JsonIgnore()] public OvhApi.Models.Telephony.LineOptionForwardNatureTypeEnum ForwardNoReplyNature {
 			get {
 				return this._forwardNoReplyNature;
 			}
@@ -32760,7 +32760,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Intercom mode: takes automatically the call with the loudspeaker
 		/// </summary>
-		public OvhApi.Models.Telephony.LineOptionIntercomEnum Intercom {
+		[JsonIgnore()] public OvhApi.Models.Telephony.LineOptionIntercomEnum Intercom {
 			get {
 				return this._intercom;
 			}
@@ -32772,7 +32772,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Enable calls forward when the line is unavailable
 		/// </summary>
-		public bool ForwardBackup {
+		[JsonIgnore()] public bool ForwardBackup {
 			get {
 				return this._forwardBackup;
 			}
@@ -32784,7 +32784,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Destination of the forward when the line is unavailable
 		/// </summary>
-		public string ForwardBackupNumber {
+		[JsonIgnore()] public string ForwardBackupNumber {
 			get {
 				return this._forwardBackupNumber;
 			}
@@ -32793,7 +32793,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string DisplayNumber {
+		[JsonIgnore()] public string DisplayNumber {
 			get {
 				return this._displayNumber;
 			}
@@ -32805,7 +32805,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Enable calls forward when the line is busy
 		/// </summary>
-		public bool ForwardBusy {
+		[JsonIgnore()] public bool ForwardBusy {
 			get {
 				return this._forwardBusy;
 			}
@@ -32817,7 +32817,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Destination of the unconditional forward
 		/// </summary>
-		public string ForwardUnconditionalNumber {
+		[JsonIgnore()] public string ForwardUnconditionalNumber {
 			get {
 				return this._forwardUnconditionalNumber;
 			}
@@ -32829,7 +32829,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Reject anonymous calls
 		/// </summary>
-		public bool AnonymousCallRejection {
+		[JsonIgnore()] public bool AnonymousCallRejection {
 			get {
 				return this._anonymousCallRejection;
 			}
@@ -32841,7 +32841,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Enable unconditional calls forward
 		/// </summary>
-		public bool ForwardUnconditional {
+		[JsonIgnore()] public bool ForwardUnconditional {
 			get {
 				return this._forwardUnconditional;
 			}
@@ -32853,7 +32853,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Enable calls forward on no-reply
 		/// </summary>
-		public bool ForwardNoReply {
+		[JsonIgnore()] public bool ForwardNoReply {
 			get {
 				return this._forwardNoReply;
 			}
@@ -32865,7 +32865,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// If the line receives a new call and the line is already in communication, this new call is dispatched once the current call is completed
 		/// </summary>
-		public bool CallWaiting {
+		[JsonIgnore()] public bool CallWaiting {
 			get {
 				return this._callWaiting;
 			}
@@ -32877,7 +32877,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Delay before forward on no-reply
 		/// </summary>
-		public long ForwardNoReplyDelay {
+		[JsonIgnore()] public long ForwardNoReplyDelay {
 			get {
 				return this._forwardNoReplyDelay;
 			}
@@ -32889,7 +32889,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Nature of the unconditional forward
 		/// </summary>
-		public OvhApi.Models.Telephony.LineOptionForwardNatureTypeEnum ForwardUnconditionalNature {
+		[JsonIgnore()] public OvhApi.Models.Telephony.LineOptionForwardNatureTypeEnum ForwardUnconditionalNature {
 			get {
 				return this._forwardUnconditionalNature;
 			}
@@ -32901,7 +32901,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Disallow outgoing calls
 		/// </summary>
-		public bool LockOutCall {
+		[JsonIgnore()] public bool LockOutCall {
 			get {
 				return this._lockOutCall;
 			}
@@ -32949,7 +32949,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The destination of the abbreviated number
 		/// </summary>
-		public string DestinationNumber {
+		[JsonIgnore()] public string DestinationNumber {
 			get {
 				return this._destinationNumber;
 			}
@@ -32961,13 +32961,13 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The abbreviated number which must start with &quot;2&quot; and must have a length of 3 or 4 digits
 		/// </summary>
-		public long AbbreviatedNumberName {
+		[JsonIgnore()] public long AbbreviatedNumberName {
 			get {
 				return this._abbreviatedNumber;
 			}
 		}
 		
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
@@ -32976,7 +32976,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string Surname {
+		[JsonIgnore()] public string Surname {
 			get {
 				return this._surname;
 			}
@@ -33009,7 +33009,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The time of the day when the extension will start to be executed
 		/// </summary>
-		public string TimeFrom {
+		[JsonIgnore()] public string TimeFrom {
 			get {
 				return this._timeFrom;
 			}
@@ -33021,7 +33021,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The day of the week when the extension will be executed
 		/// </summary>
-		public OvhApi.Models.Telephony.OvhPabxDialplanExtensionConditionTimeWeekDayEnum WeekDay {
+		[JsonIgnore()] public OvhApi.Models.Telephony.OvhPabxDialplanExtensionConditionTimeWeekDayEnum WeekDay {
 			get {
 				return this._weekDay;
 			}
@@ -33033,7 +33033,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The time of the day when the extension will stop to be executed
 		/// </summary>
-		public string TimeTo {
+		[JsonIgnore()] public string TimeTo {
 			get {
 				return this._timeTo;
 			}
@@ -33042,7 +33042,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public long ConditionId {
+		[JsonIgnore()] public long ConditionId {
 			get {
 				return this._conditionId;
 			}
@@ -33072,7 +33072,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Encoded json headers
 		/// </summary>
-		public string Headers {
+		[JsonIgnore()] public string Headers {
 			get {
 				return this._headers;
 			}
@@ -33081,7 +33081,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string Timestamp {
+		[JsonIgnore()] public string Timestamp {
 			get {
 				return this._timestamp;
 			}
@@ -33090,7 +33090,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string Response {
+		[JsonIgnore()] public string Response {
 			get {
 				return this._response;
 			}
@@ -33099,7 +33099,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string RequestMethod {
+		[JsonIgnore()] public string RequestMethod {
 			get {
 				return this._requestMethod;
 			}
@@ -33141,7 +33141,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Voucher reference identifier of the return merchandise authorisation
 		/// </summary>
-		public string Id {
+		[JsonIgnore()] public string Id {
 			get {
 				return this._id;
 			}
@@ -33174,7 +33174,7 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("dtmf")]
 		private string _dtmf;
 		
-		public long EntryId {
+		[JsonIgnore()] public long EntryId {
 			get {
 				return this._entryId;
 			}
@@ -33183,7 +33183,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The additionnal parameter of the action
 		/// </summary>
-		public string ActionParam {
+		[JsonIgnore()] public string ActionParam {
 			get {
 				return this._actionParam;
 			}
@@ -33195,7 +33195,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The position of the entry in the menu
 		/// </summary>
-		public long Position {
+		[JsonIgnore()] public long Position {
 			get {
 				return this._position;
 			}
@@ -33204,7 +33204,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The action triggered by the DTMF
 		/// </summary>
-		public OvhApi.Models.Telephony.OvhPabxIvrMenuEntryActionEnum Action {
+		[JsonIgnore()] public OvhApi.Models.Telephony.OvhPabxIvrMenuEntryActionEnum Action {
 			get {
 				return this._action;
 			}
@@ -33216,7 +33216,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The DTMF that triggers the action
 		/// </summary>
-		public string Dtmf {
+		[JsonIgnore()] public string Dtmf {
 			get {
 				return this._dtmf;
 			}
@@ -33285,13 +33285,13 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The sound filename
 		/// </summary>
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
 		}
 		
-		public long SoundId {
+		[JsonIgnore()] public long SoundId {
 			get {
 				return this._soundId;
 			}
@@ -33342,7 +33342,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Termination datetime of the return merchandise authorisation ticket
 		/// </summary>
-		public System.Nullable<System.DateTime> TerminationDatetime {
+		[JsonIgnore()] public System.Nullable<System.DateTime> TerminationDatetime {
 			get {
 				return this._terminationDatetime;
 			}
@@ -33351,7 +33351,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Return merchandise authorisation step
 		/// </summary>
-		public OvhApi.Models.Telephony.RmaStatusEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Telephony.RmaStatusEnum Status {
 			get {
 				return this._status;
 			}
@@ -33360,7 +33360,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// New merchandise brand in case of exchange
 		/// </summary>
-		public string NewMerchandise {
+		[JsonIgnore()] public string NewMerchandise {
 			get {
 				return this._newMerchandise;
 			}
@@ -33369,7 +33369,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Contact information related to the delivery shipping in case of exchange
 		/// </summary>
-		public OvhApi.Models.Telephony.Contact ShippingContact {
+		[JsonIgnore()] public OvhApi.Models.Telephony.Contact ShippingContact {
 			get {
 				return this._shippingContact;
 			}
@@ -33381,7 +33381,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Offer type of the new merchandise in case of exchange
 		/// </summary>
-		public OvhApi.Models.Telephony.RmaOfferTypeEnum OfferTypeNew {
+		[JsonIgnore()] public OvhApi.Models.Telephony.RmaOfferTypeEnum OfferTypeNew {
 			get {
 				return this._offerTypeNew;
 			}
@@ -33390,7 +33390,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Merchandise reference
 		/// </summary>
-		public string EquipmentReference {
+		[JsonIgnore()] public string EquipmentReference {
 			get {
 				return this._equipmentReference;
 			}
@@ -33399,7 +33399,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Creation datetime of the return merchandise authorisation ticket
 		/// </summary>
-		public System.DateTime CreationDatetime {
+		[JsonIgnore()] public System.DateTime CreationDatetime {
 			get {
 				return this._creationDatetime;
 			}
@@ -33408,7 +33408,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Return merchandise authorisation identifier
 		/// </summary>
-		public string Id {
+		[JsonIgnore()] public string Id {
 			get {
 				return this._id;
 			}
@@ -33417,7 +33417,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Typology process of merchandise return
 		/// </summary>
-		public OvhApi.Models.Telephony.RmaTypeEnum Type {
+		[JsonIgnore()] public OvhApi.Models.Telephony.RmaTypeEnum Type {
 			get {
 				return this._type;
 			}
@@ -33426,7 +33426,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Offer type of the return merchandise
 		/// </summary>
-		public OvhApi.Models.Telephony.RmaOfferTypeEnum OfferTypeOld {
+		[JsonIgnore()] public OvhApi.Models.Telephony.RmaOfferTypeEnum OfferTypeOld {
 			get {
 				return this._offerTypeOld;
 			}
@@ -33435,7 +33435,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Reception datetime of the return merchandise authorisation ticket
 		/// </summary>
-		public System.Nullable<System.DateTime> ReceptionDatetime {
+		[JsonIgnore()] public System.Nullable<System.DateTime> ReceptionDatetime {
 			get {
 				return this._receptionDatetime;
 			}
@@ -33459,7 +33459,7 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("incomingScreenList")]
 		private OvhApi.Models.Telephony.ScreenListChoosingEnum _incomingScreenList;
 		
-		public OvhApi.Models.Telephony.ScreenListChoosingEnum OutgoingScreenList {
+		[JsonIgnore()] public OvhApi.Models.Telephony.ScreenListChoosingEnum OutgoingScreenList {
 			get {
 				return this._outgoingScreenList;
 			}
@@ -33468,13 +33468,13 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string ServiceName {
+		[JsonIgnore()] public string ServiceName {
 			get {
 				return this._serviceName;
 			}
 		}
 		
-		public OvhApi.Models.Telephony.ScreenListChoosingEnum IncomingScreenList {
+		[JsonIgnore()] public OvhApi.Models.Telephony.ScreenListChoosingEnum IncomingScreenList {
 			get {
 				return this._incomingScreenList;
 			}
@@ -33522,7 +33522,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The phone number of the agent
 		/// </summary>
-		public string AgentNumber {
+		[JsonIgnore()] public string AgentNumber {
 			get {
 				return this._agentNumber;
 			}
@@ -33531,7 +33531,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The maxium ringing time
 		/// </summary>
-		public long NoReplyTimer {
+		[JsonIgnore()] public long NoReplyTimer {
 			get {
 				return this._noReplyTimer;
 			}
@@ -33543,7 +33543,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// True if the agent is logged
 		/// </summary>
-		public bool Logged {
+		[JsonIgnore()] public bool Logged {
 			get {
 				return this._logged;
 			}
@@ -33555,7 +33555,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The position in the hunting
 		/// </summary>
-		public long Position {
+		[JsonIgnore()] public long Position {
 			get {
 				return this._position;
 			}
@@ -33612,13 +33612,13 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Calling number of the call
 		/// </summary>
-		public string Calling {
+		[JsonIgnore()] public string Calling {
 			get {
 				return this._calling;
 			}
 		}
 		
-		public long ConsumptionId {
+		[JsonIgnore()] public long ConsumptionId {
 			get {
 				return this._consumptionId;
 			}
@@ -33627,7 +33627,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// the Datetime of the start of the call
 		/// </summary>
-		public System.Nullable<System.DateTime> CreationDatetime {
+		[JsonIgnore()] public System.Nullable<System.DateTime> CreationDatetime {
 			get {
 				return this._creationDatetime;
 			}
@@ -33636,7 +33636,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Price repayed with the call
 		/// </summary>
-		public System.Nullable<double> Price {
+		[JsonIgnore()] public System.Nullable<double> Price {
 			get {
 				return this._price;
 			}
@@ -33645,7 +33645,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Duration of the call
 		/// </summary>
-		public System.Nullable<long> Duration {
+		[JsonIgnore()] public System.Nullable<long> Duration {
 			get {
 				return this._duration;
 			}
@@ -33654,7 +33654,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Called number of the call
 		/// </summary>
-		public string Called {
+		[JsonIgnore()] public string Called {
 			get {
 				return this._called;
 			}
@@ -33675,7 +33675,7 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("url")]
 		private string _url;
 		
-		public string UrlRecord {
+		[JsonIgnore()] public string UrlRecord {
 			get {
 				return this._urlRecord;
 			}
@@ -33684,7 +33684,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string Url {
+		[JsonIgnore()] public string Url {
 			get {
 				return this._url;
 			}
@@ -33711,13 +33711,13 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("position")]
 		private long _position;
 		
-		public long AgentId {
+		[JsonIgnore()] public long AgentId {
 			get {
 				return this._agentId;
 			}
 		}
 		
-		public long QueueId {
+		[JsonIgnore()] public long QueueId {
 			get {
 				return this._queueId;
 			}
@@ -33726,7 +33726,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The position in the queue
 		/// </summary>
-		public long Position {
+		[JsonIgnore()] public long Position {
 			get {
 				return this._position;
 			}
@@ -33753,7 +33753,7 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("Cause")]
 		private string _cause;
 		
-		public long Account {
+		[JsonIgnore()] public long Account {
 			get {
 				return this._account;
 			}
@@ -33765,7 +33765,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Release location type : forward if the calling hangup, backward if the caller hangup, else local
 		/// </summary>
-		public OvhApi.Models.Telephony.ReleaseLocationEnum ReleaseLocation {
+		[JsonIgnore()] public OvhApi.Models.Telephony.ReleaseLocationEnum ReleaseLocation {
 			get {
 				return this._releaseLocation;
 			}
@@ -33777,7 +33777,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Hexadecimal SIP-to-SS7 ISUP cause codes
 		/// </summary>
-		public string Cause {
+		[JsonIgnore()] public string Cause {
 			get {
 				return this._cause;
 			}
@@ -33831,7 +33831,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The function parameter
 		/// </summary>
-		public string Parameter {
+		[JsonIgnore()] public string Parameter {
 			get {
 				return this._parameter;
 			}
@@ -33843,7 +33843,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The function active on the key
 		/// </summary>
-		public string Function {
+		[JsonIgnore()] public string Function {
 			get {
 				return this._function;
 			}
@@ -33855,7 +33855,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The key label
 		/// </summary>
-		public string Label {
+		[JsonIgnore()] public string Label {
 			get {
 				return this._label;
 			}
@@ -33864,7 +33864,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The default function used by the key
 		/// </summary>
-		public string Default {
+		[JsonIgnore()] public string Default {
 			get {
 				return this._default;
 			}
@@ -33873,7 +33873,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The key type
 		/// </summary>
-		public string Type {
+		[JsonIgnore()] public string Type {
 			get {
 				return this._type;
 			}
@@ -33882,7 +33882,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The number of the function key
 		/// </summary>
-		public long KeyNum {
+		[JsonIgnore()] public long KeyNum {
 			get {
 				return this._keyNum;
 			}
@@ -33942,7 +33942,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// answer date
 		/// </summary>
-		public System.Nullable<System.DateTime> AnswerDatetime {
+		[JsonIgnore()] public System.Nullable<System.DateTime> AnswerDatetime {
 			get {
 				return this._answerDatetime;
 			}
@@ -33951,7 +33951,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// creation date of the call
 		/// </summary>
-		public System.Nullable<System.DateTime> CallCreatedDatetime {
+		[JsonIgnore()] public System.Nullable<System.DateTime> CallCreatedDatetime {
 			get {
 				return this._callCreatedDatetime;
 			}
@@ -33960,7 +33960,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// number called
 		/// </summary>
-		public string Callee {
+		[JsonIgnore()] public string Callee {
 			get {
 				return this._callee;
 			}
@@ -33969,7 +33969,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Application and dialplan running for call
 		/// </summary>
-		public string Application {
+		[JsonIgnore()] public string Application {
 			get {
 				return this._application;
 			}
@@ -33978,7 +33978,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// call duration on seconds
 		/// </summary>
-		public System.Nullable<long> CallDuration {
+		[JsonIgnore()] public System.Nullable<long> CallDuration {
 			get {
 				return this._callDuration;
 			}
@@ -33987,7 +33987,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// DTMF received during the call separate by commas
 		/// </summary>
-		public string Dtmf {
+		[JsonIgnore()] public string Dtmf {
 			get {
 				return this._dtmf;
 			}
@@ -33996,7 +33996,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// unique call id
 		/// </summary>
-		public string Uuid {
+		[JsonIgnore()] public string Uuid {
 			get {
 				return this._uuid;
 			}
@@ -34005,7 +34005,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Generated call identifier
 		/// </summary>
-		public string Identifier {
+		[JsonIgnore()] public string Identifier {
 			get {
 				return this._identifier;
 			}
@@ -34014,7 +34014,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// billingNumber (service used)
 		/// </summary>
-		public string BillingNumber {
+		[JsonIgnore()] public string BillingNumber {
 			get {
 				return this._billingNumber;
 			}
@@ -34023,7 +34023,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// end status of application
 		/// </summary>
-		public string ApplicationResult {
+		[JsonIgnore()] public string ApplicationResult {
 			get {
 				return this._applicationResult;
 			}
@@ -34032,7 +34032,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// original call uuid if it's a transfer
 		/// </summary>
-		public string TransferFrom {
+		[JsonIgnore()] public string TransferFrom {
 			get {
 				return this._transferFrom;
 			}
@@ -34041,7 +34041,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// number where the call come from
 		/// </summary>
-		public string Caller {
+		[JsonIgnore()] public string Caller {
 			get {
 				return this._caller;
 			}
@@ -34050,7 +34050,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// hangup date
 		/// </summary>
-		public System.Nullable<System.DateTime> HangupDatetime {
+		[JsonIgnore()] public System.Nullable<System.DateTime> HangupDatetime {
 			get {
 				return this._hangupDatetime;
 			}
@@ -34059,7 +34059,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// hangup cause
 		/// </summary>
-		public OvhApi.Models.Telephony.CallsGeneratorHangupCauseEnum HangupCause {
+		[JsonIgnore()] public OvhApi.Models.Telephony.CallsGeneratorHangupCauseEnum HangupCause {
 			get {
 				return this._hangupCause;
 			}
@@ -34086,25 +34086,25 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("description")]
 		private string _description;
 		
-		public OvhApi.Models.Telephony.TypeServiceEnum ServiceType {
+		[JsonIgnore()] public OvhApi.Models.Telephony.TypeServiceEnum ServiceType {
 			get {
 				return this._serviceType;
 			}
 		}
 		
-		public OvhApi.Models.Telephony.TypeEnum FeatureType {
+		[JsonIgnore()] public OvhApi.Models.Telephony.TypeEnum FeatureType {
 			get {
 				return this._featureType;
 			}
 		}
 		
-		public string ServiceName {
+		[JsonIgnore()] public string ServiceName {
 			get {
 				return this._serviceName;
 			}
 		}
 		
-		public string Description {
+		[JsonIgnore()] public string Description {
 			get {
 				return this._description;
 			}
@@ -34146,31 +34146,31 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("properties")]
 		private OvhApi.Models.Telephony.PropertyEnum[] _properties;
 		
-		public OvhApi.Models.Telephony.TypeServiceEnum ServiceType {
+		[JsonIgnore()] public OvhApi.Models.Telephony.TypeServiceEnum ServiceType {
 			get {
 				return this._serviceType;
 			}
 		}
 		
-		public OvhApi.Models.Telephony.TypeEnum FeatureType {
+		[JsonIgnore()] public OvhApi.Models.Telephony.TypeEnum FeatureType {
 			get {
 				return this._featureType;
 			}
 		}
 		
-		public string[] Offers {
+		[JsonIgnore()] public string[] Offers {
 			get {
 				return this._offers;
 			}
 		}
 		
-		public long SimultaneousLines {
+		[JsonIgnore()] public long SimultaneousLines {
 			get {
 				return this._simultaneousLines;
 			}
 		}
 		
-		public string ServiceName {
+		[JsonIgnore()] public string ServiceName {
 			get {
 				return this._serviceName;
 			}
@@ -34179,13 +34179,13 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Current outplan
 		/// </summary>
-		public OvhApi.Models.Order.Price CurrentOutplan {
+		[JsonIgnore()] public OvhApi.Models.Order.Price CurrentOutplan {
 			get {
 				return this._currentOutplan;
 			}
 		}
 		
-		public string Description {
+		[JsonIgnore()] public string Description {
 			get {
 				return this._description;
 			}
@@ -34194,7 +34194,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public OvhApi.Models.Telephony.PropertyEnum[] Properties {
+		[JsonIgnore()] public OvhApi.Models.Telephony.PropertyEnum[] Properties {
 			get {
 				return this._properties;
 			}
@@ -34239,7 +34239,7 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("toneRingback")]
 		private bool _toneRingback;
 		
-		public OvhApi.Models.Telephony.EasyMiniPabxHuntingStrategyEnum Strategy {
+		[JsonIgnore()] public OvhApi.Models.Telephony.EasyMiniPabxHuntingStrategyEnum Strategy {
 			get {
 				return this._strategy;
 			}
@@ -34251,13 +34251,13 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// True if the tone on hold is enabled
 		/// </summary>
-		public bool ToneOnHold {
+		[JsonIgnore()] public bool ToneOnHold {
 			get {
 				return this._toneOnHold;
 			}
 		}
 		
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
@@ -34266,7 +34266,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Number of simultaneous calls
 		/// </summary>
-		public long NumberOfCalls {
+		[JsonIgnore()] public long NumberOfCalls {
 			get {
 				return this._numberOfCalls;
 			}
@@ -34278,7 +34278,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Reject anonymous calls
 		/// </summary>
-		public bool AnonymousCallRejection {
+		[JsonIgnore()] public bool AnonymousCallRejection {
 			get {
 				return this._anonymousCallRejection;
 			}
@@ -34287,7 +34287,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public OvhApi.Models.Telephony.EasyMiniPabxHuntingPatternEnum Pattern {
+		[JsonIgnore()] public OvhApi.Models.Telephony.EasyMiniPabxHuntingPatternEnum Pattern {
 			get {
 				return this._pattern;
 			}
@@ -34299,7 +34299,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// True if the tone on closure is enabled
 		/// </summary>
-		public bool ToneOnClosure {
+		[JsonIgnore()] public bool ToneOnClosure {
 			get {
 				return this._toneOnClosure;
 			}
@@ -34308,7 +34308,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The maximum no-reply time before forwarding the call to the voicemail
 		/// </summary>
-		public long NoReplyTimer {
+		[JsonIgnore()] public long NoReplyTimer {
 			get {
 				return this._noReplyTimer;
 			}
@@ -34320,7 +34320,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The voicemail used by the EasyPABX
 		/// </summary>
-		public string Voicemail {
+		[JsonIgnore()] public string Voicemail {
 			get {
 				return this._voicemail;
 			}
@@ -34332,7 +34332,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// True if the ring back tone is enabled
 		/// </summary>
-		public bool ToneRingback {
+		[JsonIgnore()] public bool ToneRingback {
 			get {
 				return this._toneRingback;
 			}
@@ -34359,25 +34359,25 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("action")]
 		private string _action;
 		
-		public string ServiceType {
+		[JsonIgnore()] public string ServiceType {
 			get {
 				return this._serviceType;
 			}
 		}
 		
-		public long TaskId {
+		[JsonIgnore()] public long TaskId {
 			get {
 				return this._taskId;
 			}
 		}
 		
-		public OvhApi.Models.Telephony.TaskStatusEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Telephony.TaskStatusEnum Status {
 			get {
 				return this._status;
 			}
 		}
 		
-		public string Action {
+		[JsonIgnore()] public string Action {
 			get {
 				return this._action;
 			}
@@ -34404,25 +34404,25 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("priceOutplan")]
 		private OvhApi.Models.Order.Price _priceOutplan;
 		
-		public System.DateTime Date {
+		[JsonIgnore()] public System.DateTime Date {
 			get {
 				return this._date;
 			}
 		}
 		
-		public OvhApi.Models.Telephony.BillStatusEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Telephony.BillStatusEnum Status {
 			get {
 				return this._status;
 			}
 		}
 		
-		public OvhApi.Models.Order.Price Price {
+		[JsonIgnore()] public OvhApi.Models.Order.Price Price {
 			get {
 				return this._price;
 			}
 		}
 		
-		public OvhApi.Models.Order.Price PriceOutplan {
+		[JsonIgnore()] public OvhApi.Models.Order.Price PriceOutplan {
 			get {
 				return this._priceOutplan;
 			}
@@ -34449,25 +34449,25 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("description")]
 		private string _description;
 		
-		public OvhApi.Models.Telephony.TypeServiceEnum ServiceType {
+		[JsonIgnore()] public OvhApi.Models.Telephony.TypeServiceEnum ServiceType {
 			get {
 				return this._serviceType;
 			}
 		}
 		
-		public OvhApi.Models.Telephony.TypeEnum FeatureType {
+		[JsonIgnore()] public OvhApi.Models.Telephony.TypeEnum FeatureType {
 			get {
 				return this._featureType;
 			}
 		}
 		
-		public string ServiceName {
+		[JsonIgnore()] public string ServiceName {
 			get {
 				return this._serviceName;
 			}
 		}
 		
-		public string Description {
+		[JsonIgnore()] public string Description {
 			get {
 				return this._description;
 			}
@@ -34548,7 +34548,7 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("mos")]
 		private long _mos;
 		
-		public long Codec {
+		[JsonIgnore()] public long Codec {
 			get {
 				return this._codec;
 			}
@@ -34557,7 +34557,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public long PortDst {
+		[JsonIgnore()] public long PortDst {
 			get {
 				return this._portDst;
 			}
@@ -34566,7 +34566,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string CallId {
+		[JsonIgnore()] public string CallId {
 			get {
 				return this._callId;
 			}
@@ -34575,7 +34575,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public double MaxJitter {
+		[JsonIgnore()] public double MaxJitter {
 			get {
 				return this._maxJitter;
 			}
@@ -34584,7 +34584,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string IpDst {
+		[JsonIgnore()] public string IpDst {
 			get {
 				return this._ipDst;
 			}
@@ -34593,7 +34593,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public long Packets {
+		[JsonIgnore()] public long Packets {
 			get {
 				return this._packets;
 			}
@@ -34602,7 +34602,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public double MaxDelay {
+		[JsonIgnore()] public double MaxDelay {
 			get {
 				return this._maxDelay;
 			}
@@ -34611,7 +34611,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public long PortSrc {
+		[JsonIgnore()] public long PortSrc {
 			get {
 				return this._portSrc;
 			}
@@ -34620,7 +34620,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public long RtpLost {
+		[JsonIgnore()] public long RtpLost {
 			get {
 				return this._rtpLost;
 			}
@@ -34629,7 +34629,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public long FlowId {
+		[JsonIgnore()] public long FlowId {
 			get {
 				return this._flowId;
 			}
@@ -34638,7 +34638,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string Timestamp {
+		[JsonIgnore()] public string Timestamp {
 			get {
 				return this._timestamp;
 			}
@@ -34647,7 +34647,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string IpSrc {
+		[JsonIgnore()] public string IpSrc {
 			get {
 				return this._ipSrc;
 			}
@@ -34656,7 +34656,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public long Mos {
+		[JsonIgnore()] public long Mos {
 			get {
 				return this._mos;
 			}
@@ -34689,7 +34689,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// the number of the bill
 		/// </summary>
-		public string BillingNumber {
+		[JsonIgnore()] public string BillingNumber {
 			get {
 				return this._billingNumber;
 			}
@@ -34698,7 +34698,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// date of the bill
 		/// </summary>
-		public System.DateTime Date {
+		[JsonIgnore()] public System.DateTime Date {
 			get {
 				return this._date;
 			}
@@ -34707,7 +34707,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// status of the bill
 		/// </summary>
-		public OvhApi.Models.Telephony.BillStatusEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Telephony.BillStatusEnum Status {
 			get {
 				return this._status;
 			}
@@ -34716,7 +34716,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// the amout which is repayed
 		/// </summary>
-		public double Price {
+		[JsonIgnore()] public double Price {
 			get {
 				return this._price;
 			}
@@ -34746,31 +34746,31 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("description")]
 		private string _description;
 		
-		public OvhApi.Models.Telephony.TypeServiceEnum ServiceType {
+		[JsonIgnore()] public OvhApi.Models.Telephony.TypeServiceEnum ServiceType {
 			get {
 				return this._serviceType;
 			}
 		}
 		
-		public OvhApi.Models.Telephony.TypeEnum FeatureType {
+		[JsonIgnore()] public OvhApi.Models.Telephony.TypeEnum FeatureType {
 			get {
 				return this._featureType;
 			}
 		}
 		
-		public string Destination {
+		[JsonIgnore()] public string Destination {
 			get {
 				return this._destination;
 			}
 		}
 		
-		public string ServiceName {
+		[JsonIgnore()] public string ServiceName {
 			get {
 				return this._serviceName;
 			}
 		}
 		
-		public string Description {
+		[JsonIgnore()] public string Description {
 			get {
 				return this._description;
 			}
@@ -35058,55 +35058,55 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("called")]
 		private string _called;
 		
-		public string Calling {
+		[JsonIgnore()] public string Calling {
 			get {
 				return this._calling;
 			}
 		}
 		
-		public OvhApi.Models.Telephony.VoiceConsumptionPlanTypeEnum PlanType {
+		[JsonIgnore()] public OvhApi.Models.Telephony.VoiceConsumptionPlanTypeEnum PlanType {
 			get {
 				return this._planType;
 			}
 		}
 		
-		public OvhApi.Models.Telephony.VoiceConsumptionDestinationTypeEnum DestinationType {
+		[JsonIgnore()] public OvhApi.Models.Telephony.VoiceConsumptionDestinationTypeEnum DestinationType {
 			get {
 				return this._destinationType;
 			}
 		}
 		
-		public System.DateTime CreationDatetime {
+		[JsonIgnore()] public System.DateTime CreationDatetime {
 			get {
 				return this._creationDatetime;
 			}
 		}
 		
-		public long ConsumptionId {
+		[JsonIgnore()] public long ConsumptionId {
 			get {
 				return this._consumptionId;
 			}
 		}
 		
-		public OvhApi.Models.Order.Price PriceWithoutTax {
+		[JsonIgnore()] public OvhApi.Models.Order.Price PriceWithoutTax {
 			get {
 				return this._priceWithoutTax;
 			}
 		}
 		
-		public long Duration {
+		[JsonIgnore()] public long Duration {
 			get {
 				return this._duration;
 			}
 		}
 		
-		public OvhApi.Models.Telephony.VoiceConsumptionWayTypeEnum WayType {
+		[JsonIgnore()] public OvhApi.Models.Telephony.VoiceConsumptionWayTypeEnum WayType {
 			get {
 				return this._wayType;
 			}
 		}
 		
-		public string Called {
+		[JsonIgnore()] public string Called {
 			get {
 				return this._called;
 			}
@@ -35127,13 +35127,13 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("wayName")]
 		private string _wayName;
 		
-		public string AbbreviatedName {
+		[JsonIgnore()] public string AbbreviatedName {
 			get {
 				return this._abbreviatedName;
 			}
 		}
 		
-		public string WayName {
+		[JsonIgnore()] public string WayName {
 			get {
 				return this._wayName;
 			}
@@ -35205,7 +35205,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The time of the day when the extension will start to be executed
 		/// </summary>
-		public string TimeFrom {
+		[JsonIgnore()] public string TimeFrom {
 			get {
 				return this._timeFrom;
 			}
@@ -35217,7 +35217,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The day of the week when the extension will be executed
 		/// </summary>
-		public OvhApi.Models.Telephony.OvhPabxDialplanExtensionConditionTimeWeekDayEnum WeekDay {
+		[JsonIgnore()] public OvhApi.Models.Telephony.OvhPabxDialplanExtensionConditionTimeWeekDayEnum WeekDay {
 			get {
 				return this._weekDay;
 			}
@@ -35229,7 +35229,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The time of the day when the extension will stop to be executed
 		/// </summary>
-		public string TimeTo {
+		[JsonIgnore()] public string TimeTo {
 			get {
 				return this._timeTo;
 			}
@@ -35241,7 +35241,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The policy of time condition
 		/// </summary>
-		public OvhApi.Models.Telephony.EasyHuntingTimeConditionsPolicyEnum Policy {
+		[JsonIgnore()] public OvhApi.Models.Telephony.EasyHuntingTimeConditionsPolicyEnum Policy {
 			get {
 				return this._policy;
 			}
@@ -35250,7 +35250,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public long ConditionId {
+		[JsonIgnore()] public long ConditionId {
 			get {
 				return this._conditionId;
 			}
@@ -35310,25 +35310,25 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("url")]
 		private string _url;
 		
-		public System.DateTime UrlExpirationDatetime {
+		[JsonIgnore()] public System.DateTime UrlExpirationDatetime {
 			get {
 				return this._urlExpirationDatetime;
 			}
 		}
 		
-		public string Filename {
+		[JsonIgnore()] public string Filename {
 			get {
 				return this._filename;
 			}
 		}
 		
-		public OvhApi.Models.Telephony.PcsFileStatusEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Telephony.PcsFileStatusEnum Status {
 			get {
 				return this._status;
 			}
 		}
 		
-		public string Url {
+		[JsonIgnore()] public string Url {
 			get {
 				return this._url;
 			}
@@ -35361,37 +35361,37 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("hourBegin")]
 		private string _hourBegin;
 		
-		public string HourEnd {
+		[JsonIgnore()] public string HourEnd {
 			get {
 				return this._hourEnd;
 			}
 		}
 		
-		public string Status {
+		[JsonIgnore()] public string Status {
 			get {
 				return this._status;
 			}
 		}
 		
-		public OvhApi.Models.Telephony.TimeConditionsDayEnum Day {
+		[JsonIgnore()] public OvhApi.Models.Telephony.TimeConditionsDayEnum Day {
 			get {
 				return this._day;
 			}
 		}
 		
-		public OvhApi.Models.Telephony.TimeConditionsPolicyEnum Policy {
+		[JsonIgnore()] public OvhApi.Models.Telephony.TimeConditionsPolicyEnum Policy {
 			get {
 				return this._policy;
 			}
 		}
 		
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
 		}
 		
-		public string HourBegin {
+		[JsonIgnore()] public string HourBegin {
 			get {
 				return this._hourBegin;
 			}
@@ -35409,7 +35409,7 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("serviceName")]
 		private string _serviceName;
 		
-		public string ServiceName {
+		[JsonIgnore()] public string ServiceName {
 			get {
 				return this._serviceName;
 			}
@@ -35436,25 +35436,25 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("description")]
 		private string _description;
 		
-		public OvhApi.Models.Telephony.TypeServiceEnum ServiceType {
+		[JsonIgnore()] public OvhApi.Models.Telephony.TypeServiceEnum ServiceType {
 			get {
 				return this._serviceType;
 			}
 		}
 		
-		public OvhApi.Models.Telephony.TypeEnum FeatureType {
+		[JsonIgnore()] public OvhApi.Models.Telephony.TypeEnum FeatureType {
 			get {
 				return this._featureType;
 			}
 		}
 		
-		public string ServiceName {
+		[JsonIgnore()] public string ServiceName {
 			get {
 				return this._serviceName;
 			}
 		}
 		
-		public string Description {
+		[JsonIgnore()] public string Description {
 			get {
 				return this._description;
 			}
@@ -35487,7 +35487,7 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("unavailableType")]
 		private OvhApi.Models.Telephony.TimeConditionsSettingsForwardTypeEnum _unavailableType;
 		
-		public bool Enable {
+		[JsonIgnore()] public bool Enable {
 			get {
 				return this._enable;
 			}
@@ -35496,7 +35496,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string Slot1Number {
+		[JsonIgnore()] public string Slot1Number {
 			get {
 				return this._slot1Number;
 			}
@@ -35505,7 +35505,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string UnavailableNumber {
+		[JsonIgnore()] public string UnavailableNumber {
 			get {
 				return this._unavailableNumber;
 			}
@@ -35514,7 +35514,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public OvhApi.Models.Telephony.TimeConditionsSettingsForwardTypeEnum Slot1Type {
+		[JsonIgnore()] public OvhApi.Models.Telephony.TimeConditionsSettingsForwardTypeEnum Slot1Type {
 			get {
 				return this._slot1Type;
 			}
@@ -35523,7 +35523,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public OvhApi.Models.Telephony.TimeConditionsSettingsForwardTypeEnum UnavailableType {
+		[JsonIgnore()] public OvhApi.Models.Telephony.TimeConditionsSettingsForwardTypeEnum UnavailableType {
 			get {
 				return this._unavailableType;
 			}
@@ -35565,13 +35565,13 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Screenlist based on the presented caller number
 		/// </summary>
-		public string CallerIdNumber {
+		[JsonIgnore()] public string CallerIdNumber {
 			get {
 				return this._callerIdNumber;
 			}
 		}
 		
-		public long ConditionId {
+		[JsonIgnore()] public long ConditionId {
 			get {
 				return this._conditionId;
 			}
@@ -35601,7 +35601,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The destination of the abbreviated number
 		/// </summary>
-		public string DestinationNumber {
+		[JsonIgnore()] public string DestinationNumber {
 			get {
 				return this._destinationNumber;
 			}
@@ -35613,13 +35613,13 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The abbreviated number which must start with &quot;7&quot; and must have a length of 3 or 4 digits
 		/// </summary>
-		public long AbbreviatedNumber {
+		[JsonIgnore()] public long AbbreviatedNumber {
 			get {
 				return this._abbreviatedNumber;
 			}
 		}
 		
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
@@ -35628,7 +35628,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string Surname {
+		[JsonIgnore()] public string Surname {
 			get {
 				return this._surname;
 			}
@@ -35664,7 +35664,7 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("simultaneousLines")]
 		private long _simultaneousLines;
 		
-		public long AgentId {
+		[JsonIgnore()] public long AgentId {
 			get {
 				return this._agentId;
 			}
@@ -35673,7 +35673,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The wrap up time (in seconds) after the calls
 		/// </summary>
-		public long WrapUpTime {
+		[JsonIgnore()] public long WrapUpTime {
 			get {
 				return this._wrapUpTime;
 			}
@@ -35685,7 +35685,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The number of the agent
 		/// </summary>
-		public string Number {
+		[JsonIgnore()] public string Number {
 			get {
 				return this._number;
 			}
@@ -35697,7 +35697,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The waiting timeout (in seconds) before hangup an assigned called
 		/// </summary>
-		public long Timeout {
+		[JsonIgnore()] public long Timeout {
 			get {
 				return this._timeout;
 			}
@@ -35709,7 +35709,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The current status of the agent
 		/// </summary>
-		public OvhApi.Models.Telephony.OvhPabxHuntingAgentStatusEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Telephony.OvhPabxHuntingAgentStatusEnum Status {
 			get {
 				return this._status;
 			}
@@ -35721,7 +35721,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The maximum of simultaneous calls that the agent will receive from the hunting
 		/// </summary>
-		public long SimultaneousLines {
+		[JsonIgnore()] public long SimultaneousLines {
 			get {
 				return this._simultaneousLines;
 			}
@@ -35784,19 +35784,19 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("brand")]
 		private string _brand;
 		
-		public string Protocol {
+		[JsonIgnore()] public string Protocol {
 			get {
 				return this._protocol;
 			}
 		}
 		
-		public string MacAddress {
+		[JsonIgnore()] public string MacAddress {
 			get {
 				return this._macAddress;
 			}
 		}
 		
-		public string Brand {
+		[JsonIgnore()] public string Brand {
 			get {
 				return this._brand;
 			}
@@ -35982,7 +35982,7 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("toneRingback")]
 		private bool _toneRingback;
 		
-		public OvhApi.Models.Telephony.EasyMiniPabxHuntingStrategyEnum Strategy {
+		[JsonIgnore()] public OvhApi.Models.Telephony.EasyMiniPabxHuntingStrategyEnum Strategy {
 			get {
 				return this._strategy;
 			}
@@ -35994,13 +35994,13 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// True if the tone on hold is enabled
 		/// </summary>
-		public bool ToneOnHold {
+		[JsonIgnore()] public bool ToneOnHold {
 			get {
 				return this._toneOnHold;
 			}
 		}
 		
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
@@ -36009,7 +36009,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Number of simultaneous calls
 		/// </summary>
-		public long NumberOfCalls {
+		[JsonIgnore()] public long NumberOfCalls {
 			get {
 				return this._numberOfCalls;
 			}
@@ -36018,7 +36018,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public OvhApi.Models.Telephony.EasyMiniPabxHuntingPatternEnum Pattern {
+		[JsonIgnore()] public OvhApi.Models.Telephony.EasyMiniPabxHuntingPatternEnum Pattern {
 			get {
 				return this._pattern;
 			}
@@ -36030,7 +36030,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Reject anonymous calls
 		/// </summary>
-		public bool AnonymousCallRejection {
+		[JsonIgnore()] public bool AnonymousCallRejection {
 			get {
 				return this._anonymousCallRejection;
 			}
@@ -36042,7 +36042,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The maximum waiting time in the calls queue
 		/// </summary>
-		public long OnHoldTimer {
+		[JsonIgnore()] public long OnHoldTimer {
 			get {
 				return this._onHoldTimer;
 			}
@@ -36054,7 +36054,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// True if the tone on closure is enabled
 		/// </summary>
-		public bool ToneOnClosure {
+		[JsonIgnore()] public bool ToneOnClosure {
 			get {
 				return this._toneOnClosure;
 			}
@@ -36063,7 +36063,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// True if the ring back tone is enabled
 		/// </summary>
-		public bool ToneRingback {
+		[JsonIgnore()] public bool ToneRingback {
 			get {
 				return this._toneRingback;
 			}
@@ -36081,7 +36081,7 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("name")]
 		private string _name;
 		
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
@@ -36111,31 +36111,31 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("nature")]
 		private OvhApi.Models.Telephony.ScreenListNatureEnum _nature;
 		
-		public string CallNumber {
+		[JsonIgnore()] public string CallNumber {
 			get {
 				return this._callNumber;
 			}
 		}
 		
-		public string Status {
+		[JsonIgnore()] public string Status {
 			get {
 				return this._status;
 			}
 		}
 		
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
 		}
 		
-		public OvhApi.Models.Telephony.ScreenListTypeEnum Type {
+		[JsonIgnore()] public OvhApi.Models.Telephony.ScreenListTypeEnum Type {
 			get {
 				return this._type;
 			}
 		}
 		
-		public OvhApi.Models.Telephony.ScreenListNatureEnum Nature {
+		[JsonIgnore()] public OvhApi.Models.Telephony.ScreenListNatureEnum Nature {
 			get {
 				return this._nature;
 			}
@@ -36153,7 +36153,7 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("token")]
 		private string _token;
 		
-		public string Token {
+		[JsonIgnore()] public string Token {
 			get {
 				return this._token;
 			}
@@ -36183,31 +36183,31 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("apeCode")]
 		private string _apeCode;
 		
-		public string ApeDescription {
+		[JsonIgnore()] public string ApeDescription {
 			get {
 				return this._apeDescription;
 			}
 		}
 		
-		public long DirectoryServiceCode {
+		[JsonIgnore()] public long DirectoryServiceCode {
 			get {
 				return this._directoryServiceCode;
 			}
 		}
 		
-		public string Notification {
+		[JsonIgnore()] public string Notification {
 			get {
 				return this._notification;
 			}
 		}
 		
-		public string DirectoryServiceDescription {
+		[JsonIgnore()] public string DirectoryServiceDescription {
 			get {
 				return this._directoryServiceDescription;
 			}
 		}
 		
-		public string ApeCode {
+		[JsonIgnore()] public string ApeCode {
 			get {
 				return this._apeCode;
 			}
@@ -36234,25 +36234,25 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("description")]
 		private string _description;
 		
-		public OvhApi.Models.Telephony.TypeServiceEnum ServiceType {
+		[JsonIgnore()] public OvhApi.Models.Telephony.TypeServiceEnum ServiceType {
 			get {
 				return this._serviceType;
 			}
 		}
 		
-		public string[] Offers {
+		[JsonIgnore()] public string[] Offers {
 			get {
 				return this._offers;
 			}
 		}
 		
-		public string ServiceName {
+		[JsonIgnore()] public string ServiceName {
 			get {
 				return this._serviceName;
 			}
 		}
 		
-		public string Description {
+		[JsonIgnore()] public string Description {
 			get {
 				return this._description;
 			}
@@ -36312,7 +36312,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The maximum of people waiting in the queue
 		/// </summary>
-		public long MaxMember {
+		[JsonIgnore()] public long MaxMember {
 			get {
 				return this._maxMember;
 			}
@@ -36324,7 +36324,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The maximum waiting time (in seconds) in the queue
 		/// </summary>
-		public long MaxWaitTime {
+		[JsonIgnore()] public long MaxWaitTime {
 			get {
 				return this._maxWaitTime;
 			}
@@ -36333,7 +36333,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public long QueueId {
+		[JsonIgnore()] public long QueueId {
 			get {
 				return this._queueId;
 			}
@@ -36342,7 +36342,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The calls dispatching strategy
 		/// </summary>
-		public OvhApi.Models.Telephony.OvhPabxHuntingQueueStrategyEnum Strategy {
+		[JsonIgnore()] public OvhApi.Models.Telephony.OvhPabxHuntingQueueStrategyEnum Strategy {
 			get {
 				return this._strategy;
 			}
@@ -36366,7 +36366,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Notifications
 		/// </summary>
-		public string Message {
+		[JsonIgnore()] public string Message {
 			get {
 				return this._message;
 			}
@@ -36549,7 +36549,7 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("postCode")]
 		private string _postCode;
 		
-		public string Ape {
+		[JsonIgnore()] public string Ape {
 			get {
 				return this._ape;
 			}
@@ -36558,7 +36558,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string Email {
+		[JsonIgnore()] public string Email {
 			get {
 				return this._email;
 			}
@@ -36567,13 +36567,13 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string DirectoryServiceCode {
+		[JsonIgnore()] public string DirectoryServiceCode {
 			get {
 				return this._directoryServiceCode;
 			}
 		}
 		
-		public string PostBox {
+		[JsonIgnore()] public string PostBox {
 			get {
 				return this._postBox;
 			}
@@ -36582,7 +36582,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string AddressExtra {
+		[JsonIgnore()] public string AddressExtra {
 			get {
 				return this._addressExtra;
 			}
@@ -36591,7 +36591,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string Siret {
+		[JsonIgnore()] public string Siret {
 			get {
 				return this._siret;
 			}
@@ -36600,7 +36600,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string Address {
+		[JsonIgnore()] public string Address {
 			get {
 				return this._address;
 			}
@@ -36609,7 +36609,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public bool DisplayUniversalDirectory {
+		[JsonIgnore()] public bool DisplayUniversalDirectory {
 			get {
 				return this._displayUniversalDirectory;
 			}
@@ -36618,7 +36618,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string FirstName {
+		[JsonIgnore()] public string FirstName {
 			get {
 				return this._firstName;
 			}
@@ -36627,7 +36627,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
@@ -36636,7 +36636,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string Occupation {
+		[JsonIgnore()] public string Occupation {
 			get {
 				return this._occupation;
 			}
@@ -36645,7 +36645,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public bool ReceivePJDirectory {
+		[JsonIgnore()] public bool ReceivePJDirectory {
 			get {
 				return this._receivePJDirectory;
 			}
@@ -36654,13 +36654,13 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public long AreaCode {
+		[JsonIgnore()] public long AreaCode {
 			get {
 				return this._areaCode;
 			}
 		}
 		
-		public bool DisplayMarketingDirectory {
+		[JsonIgnore()] public bool DisplayMarketingDirectory {
 			get {
 				return this._displayMarketingDirectory;
 			}
@@ -36669,7 +36669,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string SocialNominationExtra {
+		[JsonIgnore()] public string SocialNominationExtra {
 			get {
 				return this._socialNominationExtra;
 			}
@@ -36678,7 +36678,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string WayNumber {
+		[JsonIgnore()] public string WayNumber {
 			get {
 				return this._wayNumber;
 			}
@@ -36687,7 +36687,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string WayNumberExtra {
+		[JsonIgnore()] public string WayNumberExtra {
 			get {
 				return this._wayNumberExtra;
 			}
@@ -36696,7 +36696,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string WayName {
+		[JsonIgnore()] public string WayName {
 			get {
 				return this._wayName;
 			}
@@ -36705,25 +36705,25 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public long InseeCode {
+		[JsonIgnore()] public long InseeCode {
 			get {
 				return this._inseeCode;
 			}
 		}
 		
-		public string Number {
+		[JsonIgnore()] public string Number {
 			get {
 				return this._number;
 			}
 		}
 		
-		public string Status {
+		[JsonIgnore()] public string Status {
 			get {
 				return this._status;
 			}
 		}
 		
-		public bool DisplayFirstName {
+		[JsonIgnore()] public bool DisplayFirstName {
 			get {
 				return this._displayFirstName;
 			}
@@ -36732,7 +36732,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string UrbanDistrict {
+		[JsonIgnore()] public string UrbanDistrict {
 			get {
 				return this._urbanDistrict;
 			}
@@ -36741,19 +36741,19 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string ModificationType {
+		[JsonIgnore()] public string ModificationType {
 			get {
 				return this._modificationType;
 			}
 		}
 		
-		public string ModificationDate {
+		[JsonIgnore()] public string ModificationDate {
 			get {
 				return this._modificationDate;
 			}
 		}
 		
-		public bool DisplaySearchReverse {
+		[JsonIgnore()] public bool DisplaySearchReverse {
 			get {
 				return this._displaySearchReverse;
 			}
@@ -36762,7 +36762,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string City {
+		[JsonIgnore()] public string City {
 			get {
 				return this._city;
 			}
@@ -36771,7 +36771,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string WayType {
+		[JsonIgnore()] public string WayType {
 			get {
 				return this._wayType;
 			}
@@ -36780,7 +36780,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string Cedex {
+		[JsonIgnore()] public string Cedex {
 			get {
 				return this._cedex;
 			}
@@ -36789,7 +36789,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string PJSocialNomination {
+		[JsonIgnore()] public string PJSocialNomination {
 			get {
 				return this._pJSocialNomination;
 			}
@@ -36798,7 +36798,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string Country {
+		[JsonIgnore()] public string Country {
 			get {
 				return this._country;
 			}
@@ -36807,7 +36807,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string SocialNomination {
+		[JsonIgnore()] public string SocialNomination {
 			get {
 				return this._socialNomination;
 			}
@@ -36816,7 +36816,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string LegalForm {
+		[JsonIgnore()] public string LegalForm {
 			get {
 				return this._legalForm;
 			}
@@ -36825,7 +36825,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public bool DisplayOnlyCity {
+		[JsonIgnore()] public bool DisplayOnlyCity {
 			get {
 				return this._displayOnlyCity;
 			}
@@ -36834,7 +36834,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string LineDescription {
+		[JsonIgnore()] public string LineDescription {
 			get {
 				return this._lineDescription;
 			}
@@ -36843,7 +36843,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string PostCode {
+		[JsonIgnore()] public string PostCode {
 			get {
 				return this._postCode;
 			}
@@ -36903,7 +36903,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Max wait time when caller is in queue (in seconds)
 		/// </summary>
-		public long MaxWaitTime {
+		[JsonIgnore()] public long MaxWaitTime {
 			get {
 				return this._maxWaitTime;
 			}
@@ -36912,7 +36912,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public OvhApi.Models.Telephony.TypeEnum FeatureType {
+		[JsonIgnore()] public OvhApi.Models.Telephony.TypeEnum FeatureType {
 			get {
 				return this._featureType;
 			}
@@ -36921,7 +36921,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The calls dispatching strategy
 		/// </summary>
-		public OvhApi.Models.Telephony.OvhPabxHuntingQueueStrategyEnum Strategy {
+		[JsonIgnore()] public OvhApi.Models.Telephony.OvhPabxHuntingQueueStrategyEnum Strategy {
 			get {
 				return this._strategy;
 			}
@@ -36933,7 +36933,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Max number of callers in queue
 		/// </summary>
-		public long QueueSize {
+		[JsonIgnore()] public long QueueSize {
 			get {
 				return this._queueSize;
 			}
@@ -36945,7 +36945,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Tone played when caller is put on hold
 		/// </summary>
-		public System.Nullable<long> ToneOnHold {
+		[JsonIgnore()] public System.Nullable<long> ToneOnHold {
 			get {
 				return this._toneOnHold;
 			}
@@ -36954,7 +36954,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string ServiceName {
+		[JsonIgnore()] public string ServiceName {
 			get {
 				return this._serviceName;
 			}
@@ -36963,7 +36963,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The presented number when bridging calls
 		/// </summary>
-		public OvhApi.Models.Telephony.OvhPabxDialplanNumberPresentationEnum ShowCallerNumber {
+		[JsonIgnore()] public OvhApi.Models.Telephony.OvhPabxDialplanNumberPresentationEnum ShowCallerNumber {
 			get {
 				return this._showCallerNumber;
 			}
@@ -36972,7 +36972,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string Description {
+		[JsonIgnore()] public string Description {
 			get {
 				return this._description;
 			}
@@ -36984,7 +36984,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Reject (hangup) anonymous calls
 		/// </summary>
-		public bool AnonymousRejection {
+		[JsonIgnore()] public bool AnonymousRejection {
 			get {
 				return this._anonymousRejection;
 			}
@@ -36996,7 +36996,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Tone played when call is picked up
 		/// </summary>
-		public System.Nullable<long> ToneOnOpening {
+		[JsonIgnore()] public System.Nullable<long> ToneOnOpening {
 			get {
 				return this._toneOnOpening;
 			}
@@ -37005,7 +37005,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public OvhApi.Models.Telephony.TypeServiceEnum ServiceType {
+		[JsonIgnore()] public OvhApi.Models.Telephony.TypeServiceEnum ServiceType {
 			get {
 				return this._serviceType;
 			}
@@ -37014,7 +37014,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The voicemail used by the EasyPABX
 		/// </summary>
-		public string Voicemail {
+		[JsonIgnore()] public string Voicemail {
 			get {
 				return this._voicemail;
 			}
@@ -37026,7 +37026,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Tone played just before call is hang up
 		/// </summary>
-		public System.Nullable<long> ToneOnClosing {
+		[JsonIgnore()] public System.Nullable<long> ToneOnClosing {
 			get {
 				return this._toneOnClosing;
 			}
@@ -37059,7 +37059,7 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("category")]
 		private OvhApi.Models.Telephony.SchedulerCategoryEnum _category;
 		
-		public System.DateTime LastUpdate {
+		[JsonIgnore()] public System.DateTime LastUpdate {
 			get {
 				return this._lastUpdate;
 			}
@@ -37068,7 +37068,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The ICS event identifier
 		/// </summary>
-		public string SchedulerId {
+		[JsonIgnore()] public string SchedulerId {
 			get {
 				return this._schedulerId;
 			}
@@ -37077,7 +37077,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The beginning of the scheduler
 		/// </summary>
-		public System.DateTime DateStart {
+		[JsonIgnore()] public System.DateTime DateStart {
 			get {
 				return this._dateStart;
 			}
@@ -37086,13 +37086,13 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The end of the scheduler
 		/// </summary>
-		public System.DateTime DateEnd {
+		[JsonIgnore()] public System.DateTime DateEnd {
 			get {
 				return this._dateEnd;
 			}
 		}
 		
-		public OvhApi.Models.Telephony.SchedulerCategoryEnum Category {
+		[JsonIgnore()] public OvhApi.Models.Telephony.SchedulerCategoryEnum Category {
 			get {
 				return this._category;
 			}
@@ -37179,43 +37179,43 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("id")]
 		private double _id;
 		
-		public string Step {
+		[JsonIgnore()] public string Step {
 			get {
 				return this._step;
 			}
 		}
 		
-		public double OrderId {
+		[JsonIgnore()] public double OrderId {
 			get {
 				return this._orderId;
 			}
 		}
 		
-		public string Reference {
+		[JsonIgnore()] public string Reference {
 			get {
 				return this._reference;
 			}
 		}
 		
-		public string BillingAccount {
+		[JsonIgnore()] public string BillingAccount {
 			get {
 				return this._billingAccount;
 			}
 		}
 		
-		public OvhApi.Models.Telephony.TaskStatusEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Telephony.TaskStatusEnum Status {
 			get {
 				return this._status;
 			}
 		}
 		
-		public System.DateTime TodoDate {
+		[JsonIgnore()] public System.DateTime TodoDate {
 			get {
 				return this._todoDate;
 			}
 		}
 		
-		public double Id {
+		[JsonIgnore()] public double Id {
 			get {
 				return this._id;
 			}
@@ -37308,25 +37308,25 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("description")]
 		private string _description;
 		
-		public OvhApi.Models.Telephony.TypeServiceEnum ServiceType {
+		[JsonIgnore()] public OvhApi.Models.Telephony.TypeServiceEnum ServiceType {
 			get {
 				return this._serviceType;
 			}
 		}
 		
-		public string[] Offers {
+		[JsonIgnore()] public string[] Offers {
 			get {
 				return this._offers;
 			}
 		}
 		
-		public string ServiceName {
+		[JsonIgnore()] public string ServiceName {
 			get {
 				return this._serviceName;
 			}
 		}
 		
-		public string Description {
+		[JsonIgnore()] public string Description {
 			get {
 				return this._description;
 			}
@@ -37344,7 +37344,7 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("status")]
 		private OvhApi.Models.Telephony.EasyHuntingScreenListsConditionsStatusEnum _status;
 		
-		public OvhApi.Models.Telephony.EasyHuntingScreenListsConditionsStatusEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Telephony.EasyHuntingScreenListsConditionsStatusEnum Status {
 			get {
 				return this._status;
 			}
@@ -37413,7 +37413,7 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("unavailableType")]
 		private string _unavailableType;
 		
-		public string Slot2Number {
+		[JsonIgnore()] public string Slot2Number {
 			get {
 				return this._slot2Number;
 			}
@@ -37422,7 +37422,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public OvhApi.Models.Telephony.TimeConditionsSlotTypeEnum Slot3Type {
+		[JsonIgnore()] public OvhApi.Models.Telephony.TimeConditionsSlotTypeEnum Slot3Type {
 			get {
 				return this._slot3Type;
 			}
@@ -37431,7 +37431,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string UnavailableNumber {
+		[JsonIgnore()] public string UnavailableNumber {
 			get {
 				return this._unavailableNumber;
 			}
@@ -37440,7 +37440,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public OvhApi.Models.Telephony.TimeConditionsGlobalStatusEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Telephony.TimeConditionsGlobalStatusEnum Status {
 			get {
 				return this._status;
 			}
@@ -37449,7 +37449,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string Slot3Number {
+		[JsonIgnore()] public string Slot3Number {
 			get {
 				return this._slot3Number;
 			}
@@ -37458,7 +37458,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public OvhApi.Models.Telephony.TimeConditionsSlotTypeEnum Slot1Type {
+		[JsonIgnore()] public OvhApi.Models.Telephony.TimeConditionsSlotTypeEnum Slot1Type {
 			get {
 				return this._slot1Type;
 			}
@@ -37467,7 +37467,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public OvhApi.Models.Telephony.TimeConditionsSlotTypeEnum Slot2Type {
+		[JsonIgnore()] public OvhApi.Models.Telephony.TimeConditionsSlotTypeEnum Slot2Type {
 			get {
 				return this._slot2Type;
 			}
@@ -37476,7 +37476,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string Slot1Number {
+		[JsonIgnore()] public string Slot1Number {
 			get {
 				return this._slot1Number;
 			}
@@ -37485,7 +37485,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public OvhApi.Models.Telephony.TimeConditionsTimeoutEnum Timeout {
+		[JsonIgnore()] public OvhApi.Models.Telephony.TimeConditionsTimeoutEnum Timeout {
 			get {
 				return this._timeout;
 			}
@@ -37494,7 +37494,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public string UnavailableType {
+		[JsonIgnore()] public string UnavailableType {
 			get {
 				return this._unavailableType;
 			}
@@ -37569,7 +37569,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The position of the extension in the dialplan (the extensions are executed following this order)
 		/// </summary>
-		public long Position {
+		[JsonIgnore()] public long Position {
 			get {
 				return this._position;
 			}
@@ -37581,7 +37581,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The type of the screenlist
 		/// </summary>
-		public OvhApi.Models.Telephony.OvhPabxDialplanExtensionConditionScreenListTypeEnum ScreenListType {
+		[JsonIgnore()] public OvhApi.Models.Telephony.OvhPabxDialplanExtensionConditionScreenListTypeEnum ScreenListType {
 			get {
 				return this._screenListType;
 			}
@@ -37590,7 +37590,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public long ExtensionId {
+		[JsonIgnore()] public long ExtensionId {
 			get {
 				return this._extensionId;
 			}
@@ -37599,7 +37599,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// True if the extension is enabled
 		/// </summary>
-		public bool Enabled {
+		[JsonIgnore()] public bool Enabled {
 			get {
 				return this._enabled;
 			}
@@ -37611,7 +37611,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// Additionnal conditions are used from this chosen scheduler category
 		/// </summary>
-		public OvhApi.Models.Telephony.SchedulerCategoryEnum SchedulerCategory {
+		[JsonIgnore()] public OvhApi.Models.Telephony.SchedulerCategoryEnum SchedulerCategory {
 			get {
 				return this._schedulerCategory;
 			}
@@ -37692,7 +37692,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The parameter of the chosen action
 		/// </summary>
-		public string ActionParam {
+		[JsonIgnore()] public string ActionParam {
 			get {
 				return this._actionParam;
 			}
@@ -37704,7 +37704,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// If true, the rule will be executed only when the result of the conditions is false
 		/// </summary>
-		public bool NegativeAction {
+		[JsonIgnore()] public bool NegativeAction {
 			get {
 				return this._negativeAction;
 			}
@@ -37716,7 +37716,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The position of the rule in the extension (the rules are executed following this order)
 		/// </summary>
-		public long Position {
+		[JsonIgnore()] public long Position {
 			get {
 				return this._position;
 			}
@@ -37728,7 +37728,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The action made by the rule
 		/// </summary>
-		public OvhApi.Models.Telephony.OvhPabxDialplanExtensionRuleActionEnum Action {
+		[JsonIgnore()] public OvhApi.Models.Telephony.OvhPabxDialplanExtensionRuleActionEnum Action {
 			get {
 				return this._action;
 			}
@@ -37737,7 +37737,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public long RuleId {
+		[JsonIgnore()] public long RuleId {
 			get {
 				return this._ruleId;
 			}
@@ -37774,7 +37774,7 @@ namespace OvhApi.Models.ComplexType {
 		[JsonProperty("values")]
 		private string _values;
 		
-		public string Unit {
+		[JsonIgnore()] public string Unit {
 			get {
 				return this._unit;
 			}
@@ -37783,7 +37783,7 @@ namespace OvhApi.Models.ComplexType {
 			}
 		}
 		
-		public string Values {
+		[JsonIgnore()] public string Values {
 			get {
 				return this._values;
 			}
@@ -37816,31 +37816,31 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("description")]
 		private string _description;
 		
-		public OvhApi.Models.Telephony.TypeServiceEnum ServiceType {
+		[JsonIgnore()] public OvhApi.Models.Telephony.TypeServiceEnum ServiceType {
 			get {
 				return this._serviceType;
 			}
 		}
 		
-		public OvhApi.Models.Telephony.TypeEnum FeatureType {
+		[JsonIgnore()] public OvhApi.Models.Telephony.TypeEnum FeatureType {
 			get {
 				return this._featureType;
 			}
 		}
 		
-		public string Destination {
+		[JsonIgnore()] public string Destination {
 			get {
 				return this._destination;
 			}
 		}
 		
-		public string ServiceName {
+		[JsonIgnore()] public string ServiceName {
 			get {
 				return this._serviceName;
 			}
 		}
 		
-		public string Description {
+		[JsonIgnore()] public string Description {
 			get {
 				return this._description;
 			}
@@ -37870,25 +37870,25 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("description")]
 		private string _description;
 		
-		public OvhApi.Models.Telephony.TypeServiceEnum ServiceType {
+		[JsonIgnore()] public OvhApi.Models.Telephony.TypeServiceEnum ServiceType {
 			get {
 				return this._serviceType;
 			}
 		}
 		
-		public OvhApi.Models.Telephony.TypeEnum FeatureType {
+		[JsonIgnore()] public OvhApi.Models.Telephony.TypeEnum FeatureType {
 			get {
 				return this._featureType;
 			}
 		}
 		
-		public string ServiceName {
+		[JsonIgnore()] public string ServiceName {
 			get {
 				return this._serviceName;
 			}
 		}
 		
-		public string Description {
+		[JsonIgnore()] public string Description {
 			get {
 				return this._description;
 			}
@@ -37933,7 +37933,7 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("greetSound")]
 		private long _greetSound;
 		
-		public long MenuId {
+		[JsonIgnore()] public long MenuId {
 			get {
 				return this._menuId;
 			}
@@ -37942,7 +37942,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The name of the menu
 		/// </summary>
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
@@ -37954,7 +37954,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The sound played when the caller uses an invalid DTMF
 		/// </summary>
-		public long InvalidSound {
+		[JsonIgnore()] public long InvalidSound {
 			get {
 				return this._invalidSound;
 			}
@@ -37966,7 +37966,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The sound played to greet
 		/// </summary>
-		public long GreetSound {
+		[JsonIgnore()] public long GreetSound {
 			get {
 				return this._greetSound;
 			}
@@ -37990,7 +37990,7 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("value")]
 		private System.Nullable<double> _value;
 		
-		public long Timestamp {
+		[JsonIgnore()] public long Timestamp {
 			get {
 				return this._timestamp;
 			}
@@ -37999,7 +37999,7 @@ namespace OvhApi.Models.Telephony {
 			}
 		}
 		
-		public System.Nullable<double> Value {
+		[JsonIgnore()] public System.Nullable<double> Value {
 			get {
 				return this._value;
 			}
@@ -38038,43 +38038,43 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("pages")]
 		private long _pages;
 		
-		public string Calling {
+		[JsonIgnore()] public string Calling {
 			get {
 				return this._calling;
 			}
 		}
 		
-		public long ConsumptionId {
+		[JsonIgnore()] public long ConsumptionId {
 			get {
 				return this._consumptionId;
 			}
 		}
 		
-		public System.DateTime CreationDatetime {
+		[JsonIgnore()] public System.DateTime CreationDatetime {
 			get {
 				return this._creationDatetime;
 			}
 		}
 		
-		public OvhApi.Models.Order.Price PriceWithoutTax {
+		[JsonIgnore()] public OvhApi.Models.Order.Price PriceWithoutTax {
 			get {
 				return this._priceWithoutTax;
 			}
 		}
 		
-		public OvhApi.Models.Telephony.FaxConsumptionWayTypeEnum WayType {
+		[JsonIgnore()] public OvhApi.Models.Telephony.FaxConsumptionWayTypeEnum WayType {
 			get {
 				return this._wayType;
 			}
 		}
 		
-		public string Called {
+		[JsonIgnore()] public string Called {
 			get {
 				return this._called;
 			}
 		}
 		
-		public long Pages {
+		[JsonIgnore()] public long Pages {
 			get {
 				return this._pages;
 			}
@@ -38125,7 +38125,7 @@ namespace OvhApi.Models.Telephony {
 		[JsonProperty("category")]
 		private OvhApi.Models.Telephony.EasyHuntingSchedulerCategoryEnum _category;
 		
-		public System.DateTime LastUpdate {
+		[JsonIgnore()] public System.DateTime LastUpdate {
 			get {
 				return this._lastUpdate;
 			}
@@ -38134,7 +38134,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The ICS event identifier
 		/// </summary>
-		public string SchedulerId {
+		[JsonIgnore()] public string SchedulerId {
 			get {
 				return this._schedulerId;
 			}
@@ -38143,7 +38143,7 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The beginning of the scheduler
 		/// </summary>
-		public System.DateTime DateStart {
+		[JsonIgnore()] public System.DateTime DateStart {
 			get {
 				return this._dateStart;
 			}
@@ -38152,13 +38152,13 @@ namespace OvhApi.Models.Telephony {
 		/// <summary>
 		/// The end of the scheduler
 		/// </summary>
-		public System.DateTime DateEnd {
+		[JsonIgnore()] public System.DateTime DateEnd {
 			get {
 				return this._dateEnd;
 			}
 		}
 		
-		public OvhApi.Models.Telephony.EasyHuntingSchedulerCategoryEnum Category {
+		[JsonIgnore()] public OvhApi.Models.Telephony.EasyHuntingSchedulerCategoryEnum Category {
 			get {
 				return this._category;
 			}
@@ -38224,7 +38224,7 @@ namespace OvhApi.Models.Vps {
 		/// <summary>
 		/// The disk space available on your backup FTP
 		/// </summary>
-		public OvhApi.Models.ComplexType.UnitAndValue<long> Quota {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<long> Quota {
 			get {
 				return this._quota;
 			}
@@ -38233,7 +38233,7 @@ namespace OvhApi.Models.Vps {
 		/// <summary>
 		/// The disk space currently used on your backup FTP
 		/// </summary>
-		public OvhApi.Models.ComplexType.UnitAndValue<long> Usage {
+		[JsonIgnore()] public OvhApi.Models.ComplexType.UnitAndValue<long> Usage {
 			get {
 				return this._usage;
 			}
@@ -38242,7 +38242,7 @@ namespace OvhApi.Models.Vps {
 		/// <summary>
 		/// The backup FTP server name
 		/// </summary>
-		public string FtpBackupName {
+		[JsonIgnore()] public string FtpBackupName {
 			get {
 				return this._ftpBackupName;
 			}
@@ -38251,7 +38251,7 @@ namespace OvhApi.Models.Vps {
 		/// <summary>
 		/// The backup FTP type
 		/// </summary>
-		public string Type {
+		[JsonIgnore()] public string Type {
 			get {
 				return this._type;
 			}
@@ -38260,7 +38260,7 @@ namespace OvhApi.Models.Vps {
 		/// <summary>
 		/// If not-null, gives the date since when your account was set in read-only mode because the quota was exceeded
 		/// </summary>
-		public System.Nullable<System.DateTime> ReadOnlyDate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> ReadOnlyDate {
 			get {
 				return this._readOnlyDate;
 			}
@@ -38281,7 +38281,7 @@ namespace OvhApi.Models.Vps {
 		[JsonProperty("value")]
 		private System.Nullable<double> _value;
 		
-		public long Timestamp {
+		[JsonIgnore()] public long Timestamp {
 			get {
 				return this._timestamp;
 			}
@@ -38290,7 +38290,7 @@ namespace OvhApi.Models.Vps {
 			}
 		}
 		
-		public System.Nullable<double> Value {
+		[JsonIgnore()] public System.Nullable<double> Value {
 			get {
 				return this._value;
 			}
@@ -38368,13 +38368,13 @@ namespace OvhApi.Models.Vps {
 		[JsonProperty("geolocalization")]
 		private OvhApi.Models.Vps.Ip.GeolocalizationEnum _geolocalization;
 		
-		public string MacAddress {
+		[JsonIgnore()] public string MacAddress {
 			get {
 				return this._macAddress;
 			}
 		}
 		
-		public OvhApi.Models.CoreTypes.IpVersionEnum Version {
+		[JsonIgnore()] public OvhApi.Models.CoreTypes.IpVersionEnum Version {
 			get {
 				return this._version;
 			}
@@ -38383,25 +38383,25 @@ namespace OvhApi.Models.Vps {
 		/// <summary>
 		/// The effective ip address of the Ip object
 		/// </summary>
-		public System.Net.IPAddress IpAddress {
+		[JsonIgnore()] public System.Net.IPAddress IpAddress {
 			get {
 				return this._ipAddress;
 			}
 		}
 		
-		public OvhApi.Models.Vps.Ip.TypeEnum Type {
+		[JsonIgnore()] public OvhApi.Models.Vps.Ip.TypeEnum Type {
 			get {
 				return this._type;
 			}
 		}
 		
-		public OvhApi.Models.Vps.Ip.GeolocationEnum Geolocation {
+		[JsonIgnore()] public OvhApi.Models.Vps.Ip.GeolocationEnum Geolocation {
 			get {
 				return this._geolocation;
 			}
 		}
 		
-		public string Reverse {
+		[JsonIgnore()] public string Reverse {
 			get {
 				return this._reverse;
 			}
@@ -38413,7 +38413,7 @@ namespace OvhApi.Models.Vps {
 		/// <summary>
 		/// DEPRECATED : replaced by geolocation
 		/// </summary>
-		public OvhApi.Models.Vps.Ip.GeolocalizationEnum Geolocalization {
+		[JsonIgnore()] public OvhApi.Models.Vps.Ip.GeolocalizationEnum Geolocalization {
 			get {
 				return this._geolocalization;
 			}
@@ -38460,7 +38460,7 @@ namespace OvhApi.Models.Vps {
 			[JsonProperty("state")]
 			private OvhApi.Models.Vps.Ip.ServiceStatusStateEnum _state;
 			
-			public long Port {
+			[JsonIgnore()] public long Port {
 				get {
 					return this._port;
 				}
@@ -38469,7 +38469,7 @@ namespace OvhApi.Models.Vps {
 				}
 			}
 			
-			public OvhApi.Models.Vps.Ip.ServiceStatusStateEnum State {
+			[JsonIgnore()] public OvhApi.Models.Vps.Ip.ServiceStatusStateEnum State {
 				get {
 					return this._state;
 				}
@@ -38535,7 +38535,7 @@ namespace OvhApi.Models.Vps {
 			[JsonProperty("ssh")]
 			private OvhApi.Models.Vps.Ip.ServiceStatusService _ssh;
 			
-			public OvhApi.Models.Vps.Ip.ServiceStatusService Dns {
+			[JsonIgnore()] public OvhApi.Models.Vps.Ip.ServiceStatusService Dns {
 				get {
 					return this._dns;
 				}
@@ -38544,7 +38544,7 @@ namespace OvhApi.Models.Vps {
 				}
 			}
 			
-			public OvhApi.Models.Vps.Ip.ServiceStatusStateEnum Ping {
+			[JsonIgnore()] public OvhApi.Models.Vps.Ip.ServiceStatusStateEnum Ping {
 				get {
 					return this._ping;
 				}
@@ -38553,7 +38553,7 @@ namespace OvhApi.Models.Vps {
 				}
 			}
 			
-			public OvhApi.Models.Vps.Ip.ServiceStatusService Http {
+			[JsonIgnore()] public OvhApi.Models.Vps.Ip.ServiceStatusService Http {
 				get {
 					return this._http;
 				}
@@ -38562,7 +38562,7 @@ namespace OvhApi.Models.Vps {
 				}
 			}
 			
-			public OvhApi.Models.Vps.Ip.ServiceStatusService Https {
+			[JsonIgnore()] public OvhApi.Models.Vps.Ip.ServiceStatusService Https {
 				get {
 					return this._https;
 				}
@@ -38571,7 +38571,7 @@ namespace OvhApi.Models.Vps {
 				}
 			}
 			
-			public OvhApi.Models.Vps.Ip.ServiceStatusService Smtp {
+			[JsonIgnore()] public OvhApi.Models.Vps.Ip.ServiceStatusService Smtp {
 				get {
 					return this._smtp;
 				}
@@ -38580,7 +38580,7 @@ namespace OvhApi.Models.Vps {
 				}
 			}
 			
-			public OvhApi.Models.Vps.Ip.ServiceStatusStateEnum Tools {
+			[JsonIgnore()] public OvhApi.Models.Vps.Ip.ServiceStatusStateEnum Tools {
 				get {
 					return this._tools;
 				}
@@ -38589,7 +38589,7 @@ namespace OvhApi.Models.Vps {
 				}
 			}
 			
-			public OvhApi.Models.Vps.Ip.ServiceStatusService Ssh {
+			[JsonIgnore()] public OvhApi.Models.Vps.Ip.ServiceStatusService Ssh {
 				get {
 					return this._ssh;
 				}
@@ -38659,7 +38659,7 @@ namespace OvhApi.Models.Vps {
 		[JsonProperty("vcore")]
 		private long _vcore;
 		
-		public long MaximumAdditionnalIp {
+		[JsonIgnore()] public long MaximumAdditionnalIp {
 			get {
 				return this._maximumAdditionnalIp;
 			}
@@ -38668,7 +38668,7 @@ namespace OvhApi.Models.Vps {
 			}
 		}
 		
-		public string[] Datacenter {
+		[JsonIgnore()] public string[] Datacenter {
 			get {
 				return this._datacenter;
 			}
@@ -38677,7 +38677,7 @@ namespace OvhApi.Models.Vps {
 			}
 		}
 		
-		public long Disk {
+		[JsonIgnore()] public long Disk {
 			get {
 				return this._disk;
 			}
@@ -38686,7 +38686,7 @@ namespace OvhApi.Models.Vps {
 			}
 		}
 		
-		public string Offer {
+		[JsonIgnore()] public string Offer {
 			get {
 				return this._offer;
 			}
@@ -38695,7 +38695,7 @@ namespace OvhApi.Models.Vps {
 			}
 		}
 		
-		public OvhApi.Models.Vps.VpsVersionEnum Version {
+		[JsonIgnore()] public OvhApi.Models.Vps.VpsVersionEnum Version {
 			get {
 				return this._version;
 			}
@@ -38704,7 +38704,7 @@ namespace OvhApi.Models.Vps {
 			}
 		}
 		
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
@@ -38713,7 +38713,7 @@ namespace OvhApi.Models.Vps {
 			}
 		}
 		
-		public OvhApi.Models.Vps.VpsOptionEnum[] AvailableOptions {
+		[JsonIgnore()] public OvhApi.Models.Vps.VpsOptionEnum[] AvailableOptions {
 			get {
 				return this._availableOptions;
 			}
@@ -38722,7 +38722,7 @@ namespace OvhApi.Models.Vps {
 			}
 		}
 		
-		public long Memory {
+		[JsonIgnore()] public long Memory {
 			get {
 				return this._memory;
 			}
@@ -38731,7 +38731,7 @@ namespace OvhApi.Models.Vps {
 			}
 		}
 		
-		public long Vcore {
+		[JsonIgnore()] public long Vcore {
 			get {
 				return this._vcore;
 			}
@@ -38755,7 +38755,7 @@ namespace OvhApi.Models.Vps {
 		/// <summary>
 		/// Backup state
 		/// </summary>
-		public bool Backup {
+		[JsonIgnore()] public bool Backup {
 			get {
 				return this._backup;
 			}
@@ -38775,7 +38775,7 @@ namespace OvhApi.Models.Vps {
 			/// <summary>
 			/// SMB URL of the backup
 			/// </summary>
-			public string Smb {
+			[JsonIgnore()] public string Smb {
 				get {
 					return this._smb;
 				}
@@ -38787,7 +38787,7 @@ namespace OvhApi.Models.Vps {
 			/// <summary>
 			/// NFS URL of the backup
 			/// </summary>
-			public string Nfs {
+			[JsonIgnore()] public string Nfs {
 				get {
 					return this._nfs;
 				}
@@ -38841,7 +38841,7 @@ namespace OvhApi.Models.Vps {
 			/// <summary>
 			/// The restore point's creation time
 			/// </summary>
-			public System.DateTime CreationTime {
+			[JsonIgnore()] public System.DateTime CreationTime {
 				get {
 					return this._creationTime;
 				}
@@ -38850,7 +38850,7 @@ namespace OvhApi.Models.Vps {
 			/// <summary>
 			/// The restore point's id
 			/// </summary>
-			public long Id {
+			[JsonIgnore()] public long Id {
 				get {
 					return this._id;
 				}
@@ -38874,7 +38874,7 @@ namespace OvhApi.Models.Vps {
 			/// <summary>
 			/// Backup access informations
 			/// </summary>
-			public OvhApi.Models.Vps.Veeam.Infos AccessInfos {
+			[JsonIgnore()] public OvhApi.Models.Vps.Veeam.Infos AccessInfos {
 				get {
 					return this._accessInfos;
 				}
@@ -38883,7 +38883,7 @@ namespace OvhApi.Models.Vps {
 			/// <summary>
 			/// The restore point id
 			/// </summary>
-			public long RestorePointId {
+			[JsonIgnore()] public long RestorePointId {
 				get {
 					return this._restorePointId;
 				}
@@ -38892,7 +38892,7 @@ namespace OvhApi.Models.Vps {
 			/// <summary>
 			/// The restored backup state
 			/// </summary>
-			public OvhApi.Models.Vps.Veeam.StateEnum State {
+			[JsonIgnore()] public OvhApi.Models.Vps.Veeam.StateEnum State {
 				get {
 					return this._state;
 				}
@@ -38932,7 +38932,7 @@ namespace OvhApi.Models.Vps {
 		/// <summary>
 		/// The option name
 		/// </summary>
-		public OvhApi.Models.Vps.VpsOptionEnum OptionName {
+		[JsonIgnore()] public OvhApi.Models.Vps.VpsOptionEnum OptionName {
 			get {
 				return this._option;
 			}
@@ -38941,7 +38941,7 @@ namespace OvhApi.Models.Vps {
 		/// <summary>
 		/// The state of the option
 		/// </summary>
-		public OvhApi.Models.Vps.VpsOptionStateEnum State {
+		[JsonIgnore()] public OvhApi.Models.Vps.VpsOptionStateEnum State {
 			get {
 				return this._state;
 			}
@@ -38986,25 +38986,25 @@ namespace OvhApi.Models.Vps {
 		[JsonProperty("state")]
 		private OvhApi.Models.Vps.TaskStateEnum _state;
 		
-		public long Progress {
+		[JsonIgnore()] public long Progress {
 			get {
 				return this._progress;
 			}
 		}
 		
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
 		}
 		
-		public OvhApi.Models.Vps.TaskTypeEnum Type {
+		[JsonIgnore()] public OvhApi.Models.Vps.TaskTypeEnum Type {
 			get {
 				return this._type;
 			}
 		}
 		
-		public OvhApi.Models.Vps.TaskStateEnum State {
+		[JsonIgnore()] public OvhApi.Models.Vps.TaskStateEnum State {
 			get {
 				return this._state;
 			}
@@ -39088,25 +39088,25 @@ namespace OvhApi.Models.Vps {
 		[JsonProperty("type")]
 		private OvhApi.Models.Vps.SoftwareTypeEnum _type;
 		
-		public OvhApi.Models.Vps.SoftwareStatusEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Vps.SoftwareStatusEnum Status {
 			get {
 				return this._status;
 			}
 		}
 		
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
 		}
 		
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
 		}
 		
-		public OvhApi.Models.Vps.SoftwareTypeEnum Type {
+		[JsonIgnore()] public OvhApi.Models.Vps.SoftwareTypeEnum Type {
 			get {
 				return this._type;
 			}
@@ -39151,31 +39151,31 @@ namespace OvhApi.Models.Vps {
 		[JsonProperty("state")]
 		private OvhApi.Models.Vps.Disk.StateEnum _state;
 		
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
 		}
 		
-		public long BandwidthLimit {
+		[JsonIgnore()] public long BandwidthLimit {
 			get {
 				return this._bandwidthLimit;
 			}
 		}
 		
-		public OvhApi.Models.Vps.Disk.TypeEnum Type {
+		[JsonIgnore()] public OvhApi.Models.Vps.Disk.TypeEnum Type {
 			get {
 				return this._type;
 			}
 		}
 		
-		public long Size {
+		[JsonIgnore()] public long Size {
 			get {
 				return this._size;
 			}
 		}
 		
-		public OvhApi.Models.Vps.Disk.StateEnum State {
+		[JsonIgnore()] public OvhApi.Models.Vps.Disk.StateEnum State {
 			get {
 				return this._state;
 			}
@@ -39235,13 +39235,13 @@ namespace OvhApi.Models.Vps {
 		[JsonProperty("name")]
 		private string _name;
 		
-		public string LongName {
+		[JsonIgnore()] public string LongName {
 			get {
 				return this._longName;
 			}
 		}
 		
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
@@ -39388,7 +39388,7 @@ namespace OvhApi.Models.Vps {
 		[JsonProperty("host")]
 		private string _host;
 		
-		public string Password {
+		[JsonIgnore()] public string Password {
 			get {
 				return this._password;
 			}
@@ -39397,7 +39397,7 @@ namespace OvhApi.Models.Vps {
 			}
 		}
 		
-		public long Port {
+		[JsonIgnore()] public long Port {
 			get {
 				return this._port;
 			}
@@ -39406,7 +39406,7 @@ namespace OvhApi.Models.Vps {
 			}
 		}
 		
-		public string Host {
+		[JsonIgnore()] public string Host {
 			get {
 				return this._host;
 			}
@@ -39460,13 +39460,13 @@ namespace OvhApi.Models.Vps {
 		[JsonProperty("displayName")]
 		private string _displayName;
 		
-		public string Cluster {
+		[JsonIgnore()] public string Cluster {
 			get {
 				return this._cluster;
 			}
 		}
 		
-		public long MemoryLimit {
+		[JsonIgnore()] public long MemoryLimit {
 			get {
 				return this._memoryLimit;
 			}
@@ -39475,7 +39475,7 @@ namespace OvhApi.Models.Vps {
 		/// <summary>
 		/// Reboot your VPS 'Cloud' after change, VPS 'Classic/LowLat' will reboot automatically. Credentials for rescue mode will be sent by mail
 		/// </summary>
-		public OvhApi.Models.Vps.VpsNetbootEnum NetbootMode {
+		[JsonIgnore()] public OvhApi.Models.Vps.VpsNetbootEnum NetbootMode {
 			get {
 				return this._netbootMode;
 			}
@@ -39484,19 +39484,19 @@ namespace OvhApi.Models.Vps {
 			}
 		}
 		
-		public string Zone {
+		[JsonIgnore()] public string Zone {
 			get {
 				return this._zone;
 			}
 		}
 		
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
 		}
 		
-		public OvhApi.Models.Vps.Model Model {
+		[JsonIgnore()] public OvhApi.Models.Vps.Model Model {
 			get {
 				return this._model;
 			}
@@ -39505,7 +39505,7 @@ namespace OvhApi.Models.Vps {
 		/// <summary>
 		/// Set KVM keyboard layout on VPS Cloud. Reboot your VPS after change
 		/// </summary>
-		public OvhApi.Models.Vps.VpsKeymapEnum Keymap {
+		[JsonIgnore()] public OvhApi.Models.Vps.VpsKeymapEnum Keymap {
 			get {
 				return this._keymap;
 			}
@@ -39514,25 +39514,25 @@ namespace OvhApi.Models.Vps {
 			}
 		}
 		
-		public OvhApi.Models.Vps.VpsStateEnum State {
+		[JsonIgnore()] public OvhApi.Models.Vps.VpsStateEnum State {
 			get {
 				return this._state;
 			}
 		}
 		
-		public long Vcore {
+		[JsonIgnore()] public long Vcore {
 			get {
 				return this._vcore;
 			}
 		}
 		
-		public OvhApi.Models.Vps.VpsOfferEnum OfferType {
+		[JsonIgnore()] public OvhApi.Models.Vps.VpsOfferEnum OfferType {
 			get {
 				return this._offerType;
 			}
 		}
 		
-		public System.Nullable<bool> SlaMonitoring {
+		[JsonIgnore()] public System.Nullable<bool> SlaMonitoring {
 			get {
 				return this._slaMonitoring;
 			}
@@ -39544,7 +39544,7 @@ namespace OvhApi.Models.Vps {
 		/// <summary>
 		/// Set the name displayed in ManagerV6 for your VPS (max 50 chars)
 		/// </summary>
-		public string DisplayName {
+		[JsonIgnore()] public string DisplayName {
 			get {
 				return this._displayName;
 			}
@@ -39640,37 +39640,37 @@ namespace OvhApi.Models.Vps {
 		[JsonProperty("distribution")]
 		private string _distribution;
 		
-		public OvhApi.Models.Vps.TemplateBitFormatEnum BitFormat {
+		[JsonIgnore()] public OvhApi.Models.Vps.TemplateBitFormatEnum BitFormat {
 			get {
 				return this._bitFormat;
 			}
 		}
 		
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
 		}
 		
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
 		}
 		
-		public string Locale {
+		[JsonIgnore()] public string Locale {
 			get {
 				return this._locale;
 			}
 		}
 		
-		public string[] AvailableLanguage {
+		[JsonIgnore()] public string[] AvailableLanguage {
 			get {
 				return this._availableLanguage;
 			}
 		}
 		
-		public string Distribution {
+		[JsonIgnore()] public string Distribution {
 			get {
 				return this._distribution;
 			}
@@ -39709,13 +39709,13 @@ namespace OvhApi.Models.Vps {
 		[JsonProperty("description")]
 		private string _description;
 		
-		public System.DateTime CreationDate {
+		[JsonIgnore()] public System.DateTime CreationDate {
 			get {
 				return this._creationDate;
 			}
 		}
 		
-		public string Description {
+		[JsonIgnore()] public string Description {
 			get {
 				return this._description;
 			}
@@ -39751,7 +39751,7 @@ namespace OvhApi.Models.Vrack {
 		/// <summary>
 		/// list of dedicated servers allowed to be connected to vrack (1.5)
 		/// </summary>
-		public string[] DedicatedServer {
+		[JsonIgnore()] public string[] DedicatedServer {
 			get {
 				return this._dedicatedServer;
 			}
@@ -39763,7 +39763,7 @@ namespace OvhApi.Models.Vrack {
 		/// <summary>
 		/// list of dedicated cloud allowed to be connected to vrack (1.5)
 		/// </summary>
-		public string[] DedicatedCloud {
+		[JsonIgnore()] public string[] DedicatedCloud {
 			get {
 				return this._dedicatedCloud;
 			}
@@ -39775,7 +39775,7 @@ namespace OvhApi.Models.Vrack {
 		/// <summary>
 		/// list of dedicated connect links allowed to be connected to vrack (1.5)
 		/// </summary>
-		public string[] DedicatedConnect {
+		[JsonIgnore()] public string[] DedicatedConnect {
 			get {
 				return this._dedicatedConnect;
 			}
@@ -39787,7 +39787,7 @@ namespace OvhApi.Models.Vrack {
 		/// <summary>
 		/// list of legacy vrack (1.0) allowed to be connected to vrack (1.5)
 		/// </summary>
-		public string[] LegacyVrack {
+		[JsonIgnore()] public string[] LegacyVrack {
 			get {
 				return this._legacyVrack;
 			}
@@ -39799,7 +39799,7 @@ namespace OvhApi.Models.Vrack {
 		/// <summary>
 		/// list of blocks allowed to be connected to vrack (1.5)
 		/// </summary>
-		public OVHApi.IPAddressBlock[] Ip {
+		[JsonIgnore()] public OVHApi.IPAddressBlock[] Ip {
 			get {
 				return this._ip;
 			}
@@ -39829,7 +39829,7 @@ namespace OvhApi.Models.Vrack {
 		/// <summary>
 		/// Your IP block
 		/// </summary>
-		public OVHApi.IPAddressBlock IpName {
+		[JsonIgnore()] public OVHApi.IPAddressBlock IpName {
 			get {
 				return this._ip;
 			}
@@ -39838,7 +39838,7 @@ namespace OvhApi.Models.Vrack {
 		/// <summary>
 		/// Where you want your block announced on the network
 		/// </summary>
-		public OvhApi.Models.Vrack.VrackZoneEnum Zone {
+		[JsonIgnore()] public OvhApi.Models.Vrack.VrackZoneEnum Zone {
 			get {
 				return this._zone;
 			}
@@ -39847,7 +39847,7 @@ namespace OvhApi.Models.Vrack {
 		/// <summary>
 		/// Your gateway
 		/// </summary>
-		public OVHApi.IPAddressBlock Gateway {
+		[JsonIgnore()] public OVHApi.IPAddressBlock Gateway {
 			get {
 				return this._gateway;
 			}
@@ -39892,7 +39892,7 @@ namespace OvhApi.Models.Vrack {
 		/// <summary>
 		/// your legacy vrack (1.0) service
 		/// </summary>
-		public string LegacyVrackName {
+		[JsonIgnore()] public string LegacyVrackName {
 			get {
 				return this._legacyVrack;
 			}
@@ -39901,7 +39901,7 @@ namespace OvhApi.Models.Vrack {
 		/// <summary>
 		/// vlan to set on legacy vrack (1.0) equipments
 		/// </summary>
-		public long VlanId {
+		[JsonIgnore()] public long VlanId {
 			get {
 				return this._vlanId;
 			}
@@ -39922,7 +39922,7 @@ namespace OvhApi.Models.Vrack {
 		/// <summary>
 		/// A name for your dedicatedConnect link
 		/// </summary>
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
@@ -39949,7 +39949,7 @@ namespace OvhApi.Models.Vrack {
 		/// <summary>
 		/// yourvrackname
 		/// </summary>
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
@@ -39961,7 +39961,7 @@ namespace OvhApi.Models.Vrack {
 		/// <summary>
 		/// yourvrackdescription
 		/// </summary>
-		public string Description {
+		[JsonIgnore()] public string Description {
 			get {
 				return this._description;
 			}
@@ -39975,7 +39975,7 @@ namespace OvhApi.Models.Vrack {
 	
 	
 	/// <summary>
-	/// A structure describing the public routing option
+	/// A structure describing the [JsonIgnore()] public routing option
 	/// </summary>
 	public sealed class PublicRoutingOption {
 		
@@ -39985,7 +39985,7 @@ namespace OvhApi.Models.Vrack {
 		/// <summary>
 		/// Global bandwidth for blocks in your vrack (in Mbps)
 		/// </summary>
-		public System.Nullable<long> Bandwidth {
+		[JsonIgnore()] public System.Nullable<long> Bandwidth {
 			get {
 				return this._bandwidth;
 			}
@@ -40009,7 +40009,7 @@ namespace OvhApi.Models.Xdsl {
 		[JsonProperty("canChangeMtu")]
 		private bool _canChangeMtu;
 		
-		public bool CanBeManagedByOvh {
+		[JsonIgnore()] public bool CanBeManagedByOvh {
 			get {
 				return this._canBeManagedByOvh;
 			}
@@ -40018,7 +40018,7 @@ namespace OvhApi.Models.Xdsl {
 			}
 		}
 		
-		public bool CanChangeMtu {
+		[JsonIgnore()] public bool CanChangeMtu {
 			get {
 				return this._canChangeMtu;
 			}
@@ -40057,7 +40057,7 @@ namespace OvhApi.Models.Xdsl {
 		[JsonProperty("lineTest")]
 		private bool _lineTest;
 		
-		public bool IsActiveOnLns {
+		[JsonIgnore()] public bool IsActiveOnLns {
 			get {
 				return this._isActiveOnLns;
 			}
@@ -40066,7 +40066,7 @@ namespace OvhApi.Models.Xdsl {
 			}
 		}
 		
-		public bool Incident {
+		[JsonIgnore()] public bool Incident {
 			get {
 				return this._incident;
 			}
@@ -40075,7 +40075,7 @@ namespace OvhApi.Models.Xdsl {
 			}
 		}
 		
-		public bool Ping {
+		[JsonIgnore()] public bool Ping {
 			get {
 				return this._ping;
 			}
@@ -40084,7 +40084,7 @@ namespace OvhApi.Models.Xdsl {
 			}
 		}
 		
-		public bool Sync {
+		[JsonIgnore()] public bool Sync {
 			get {
 				return this._sync;
 			}
@@ -40093,7 +40093,7 @@ namespace OvhApi.Models.Xdsl {
 			}
 		}
 		
-		public bool IsModemConnected {
+		[JsonIgnore()] public bool IsModemConnected {
 			get {
 				return this._isModemConnected;
 			}
@@ -40102,7 +40102,7 @@ namespace OvhApi.Models.Xdsl {
 			}
 		}
 		
-		public bool ProposedProfileId {
+		[JsonIgnore()] public bool ProposedProfileId {
 			get {
 				return this._proposedProfileId;
 			}
@@ -40111,7 +40111,7 @@ namespace OvhApi.Models.Xdsl {
 			}
 		}
 		
-		public bool LineTest {
+		[JsonIgnore()] public bool LineTest {
 			get {
 				return this._lineTest;
 			}
@@ -40168,25 +40168,25 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// The IP address
 		/// </summary>
-		public System.Net.IPAddress Ip {
+		[JsonIgnore()] public System.Net.IPAddress Ip {
 			get {
 				return this._ip;
 			}
 		}
 		
-		public OvhApi.Models.CoreTypes.IpVersionEnum Version {
+		[JsonIgnore()] public OvhApi.Models.CoreTypes.IpVersionEnum Version {
 			get {
 				return this._version;
 			}
 		}
 		
-		public long Range {
+		[JsonIgnore()] public long Range {
 			get {
 				return this._range;
 			}
 		}
 		
-		public System.Net.IPAddress[] DnsList {
+		[JsonIgnore()] public System.Net.IPAddress[] DnsList {
 			get {
 				return this._dnsList;
 			}
@@ -40213,7 +40213,7 @@ namespace OvhApi.Models.Xdsl {
 		[JsonProperty("message")]
 		private string _message;
 		
-		public System.DateTime Date {
+		[JsonIgnore()] public System.DateTime Date {
 			get {
 				return this._date;
 			}
@@ -40222,7 +40222,7 @@ namespace OvhApi.Models.Xdsl {
 			}
 		}
 		
-		public string Login {
+		[JsonIgnore()] public string Login {
 			get {
 				return this._login;
 			}
@@ -40231,7 +40231,7 @@ namespace OvhApi.Models.Xdsl {
 			}
 		}
 		
-		public string State {
+		[JsonIgnore()] public string State {
 			get {
 				return this._state;
 			}
@@ -40240,7 +40240,7 @@ namespace OvhApi.Models.Xdsl {
 			}
 		}
 		
-		public string Message {
+		[JsonIgnore()] public string Message {
 			get {
 				return this._message;
 			}
@@ -40297,7 +40297,7 @@ namespace OvhApi.Models.Xdsl {
 		[JsonProperty("rivoliCode")]
 		private string _rivoliCode;
 		
-		public string FirstName {
+		[JsonIgnore()] public string FirstName {
 			get {
 				return this._firstName;
 			}
@@ -40306,7 +40306,7 @@ namespace OvhApi.Models.Xdsl {
 			}
 		}
 		
-		public string ZipCode {
+		[JsonIgnore()] public string ZipCode {
 			get {
 				return this._zipCode;
 			}
@@ -40315,7 +40315,7 @@ namespace OvhApi.Models.Xdsl {
 			}
 		}
 		
-		public string Street {
+		[JsonIgnore()] public string Street {
 			get {
 				return this._street;
 			}
@@ -40324,7 +40324,7 @@ namespace OvhApi.Models.Xdsl {
 			}
 		}
 		
-		public string Floor {
+		[JsonIgnore()] public string Floor {
 			get {
 				return this._floor;
 			}
@@ -40333,7 +40333,7 @@ namespace OvhApi.Models.Xdsl {
 			}
 		}
 		
-		public string Residence {
+		[JsonIgnore()] public string Residence {
 			get {
 				return this._residence;
 			}
@@ -40342,7 +40342,7 @@ namespace OvhApi.Models.Xdsl {
 			}
 		}
 		
-		public string NumberStreet {
+		[JsonIgnore()] public string NumberStreet {
 			get {
 				return this._numberStreet;
 			}
@@ -40351,7 +40351,7 @@ namespace OvhApi.Models.Xdsl {
 			}
 		}
 		
-		public string City {
+		[JsonIgnore()] public string City {
 			get {
 				return this._city;
 			}
@@ -40360,7 +40360,7 @@ namespace OvhApi.Models.Xdsl {
 			}
 		}
 		
-		public string Door {
+		[JsonIgnore()] public string Door {
 			get {
 				return this._door;
 			}
@@ -40369,7 +40369,7 @@ namespace OvhApi.Models.Xdsl {
 			}
 		}
 		
-		public string Building {
+		[JsonIgnore()] public string Building {
 			get {
 				return this._building;
 			}
@@ -40381,7 +40381,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Identifier of the city
 		/// </summary>
-		public string InseeCode {
+		[JsonIgnore()] public string InseeCode {
 			get {
 				return this._inseeCode;
 			}
@@ -40390,7 +40390,7 @@ namespace OvhApi.Models.Xdsl {
 			}
 		}
 		
-		public string LastName {
+		[JsonIgnore()] public string LastName {
 			get {
 				return this._lastName;
 			}
@@ -40399,7 +40399,7 @@ namespace OvhApi.Models.Xdsl {
 			}
 		}
 		
-		public string Stairs {
+		[JsonIgnore()] public string Stairs {
 			get {
 				return this._stairs;
 			}
@@ -40411,7 +40411,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Identifier of the street
 		/// </summary>
-		public string RivoliCode {
+		[JsonIgnore()] public string RivoliCode {
 			get {
 				return this._rivoliCode;
 			}
@@ -40465,7 +40465,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Size of the Maximum Transmission Unit on the modem's interfaces
 		/// </summary>
-		public OvhApi.Models.Xdsl.XdslModemConfig.MTUSizeEnum MtuSize {
+		[JsonIgnore()] public OvhApi.Models.Xdsl.XdslModemConfig.MTUSizeEnum MtuSize {
 			get {
 				return this._mtuSize;
 			}
@@ -40474,7 +40474,7 @@ namespace OvhApi.Models.Xdsl {
 			}
 		}
 		
-		public string MacAddress {
+		[JsonIgnore()] public string MacAddress {
 			get {
 				return this._macAddress;
 			}
@@ -40483,13 +40483,13 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Last time the modem made a CWMP request to the Auto Configuration Server
 		/// </summary>
-		public System.Nullable<System.DateTime> LastCwmpRequestDate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> LastCwmpRequestDate {
 			get {
 				return this._lastCwmpRequestDate;
 			}
 		}
 		
-		public string Model {
+		[JsonIgnore()] public string Model {
 			get {
 				return this._model;
 			}
@@ -40498,7 +40498,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Whether or not the modem supports IPv6
 		/// </summary>
-		public bool Ipv6Support {
+		[JsonIgnore()] public bool Ipv6Support {
 			get {
 				return this._ipv6Support;
 			}
@@ -40507,7 +40507,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Whether or not the user can configure his modem via OVH Interface (will lock telnet and local HTTP configuration page)
 		/// </summary>
-		public bool ManagedByOvh {
+		[JsonIgnore()] public bool ManagedByOvh {
 			get {
 				return this._managedByOvh;
 			}
@@ -40519,7 +40519,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// IP Address of the DMZ (To modify or delete the DMZ IP on the modem, a re-configuration of your modem has to be made, your configuration will be maintained, but you will lose your connection a few minutes)
 		/// </summary>
-		public System.Net.IPAddress DmzIP {
+		[JsonIgnore()] public System.Net.IPAddress DmzIP {
 			get {
 				return this._dmzIP;
 			}
@@ -40531,7 +40531,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Level of the FireWall on the modem
 		/// </summary>
-		public OvhApi.Models.Xdsl.XdslModemConfig.EasyFirewallLevelEnum EasyFirewallLevel {
+		[JsonIgnore()] public OvhApi.Models.Xdsl.XdslModemConfig.EasyFirewallLevelEnum EasyFirewallLevel {
 			get {
 				return this._easyFirewallLevel;
 			}
@@ -40543,7 +40543,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Whether or not the modem is in bridge mode. To pass from bridge mode to routed mode, a reset is necessary. If the modem is managedByOvh, the bridge state will be kept after a reset
 		/// </summary>
-		public bool IsBridged {
+		[JsonIgnore()] public bool IsBridged {
 			get {
 				return this._isBridged;
 			}
@@ -40552,13 +40552,13 @@ namespace OvhApi.Models.Xdsl {
 			}
 		}
 		
-		public OvhApi.Models.Xdsl.ModemCapabilities Capabilities {
+		[JsonIgnore()] public OvhApi.Models.Xdsl.ModemCapabilities Capabilities {
 			get {
 				return this._capabilities;
 			}
 		}
 		
-		public string BrandName {
+		[JsonIgnore()] public string BrandName {
 			get {
 				return this._brandName;
 			}
@@ -40651,7 +40651,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// The IP address of the destination of the packets
 		/// </summary>
-		public System.Net.IPAddress InternalClient {
+		[JsonIgnore()] public System.Net.IPAddress InternalClient {
 			get {
 				return this._internalClient;
 			}
@@ -40663,7 +40663,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Protocol of the port mapping (TCP / UDP)
 		/// </summary>
-		public OvhApi.Models.Xdsl.XdslModemConfig.ProtocolTypeEnum Protocol {
+		[JsonIgnore()] public OvhApi.Models.Xdsl.XdslModemConfig.ProtocolTypeEnum Protocol {
 			get {
 				return this._protocol;
 			}
@@ -40675,7 +40675,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// The port on the Internal Client that will get the connections
 		/// </summary>
-		public long InternalPort {
+		[JsonIgnore()] public long InternalPort {
 			get {
 				return this._internalPort;
 			}
@@ -40687,7 +40687,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// ID of the ongoing todo (NULL if none)
 		/// </summary>
-		public System.Nullable<long> TaskId {
+		[JsonIgnore()] public System.Nullable<long> TaskId {
 			get {
 				return this._taskId;
 			}
@@ -40696,7 +40696,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Name of the port mapping entry
 		/// </summary>
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
@@ -40705,7 +40705,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// ID of the port mapping entry
 		/// </summary>
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
@@ -40714,7 +40714,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// External Port that the modem will listen on. List of externalPorts not available for now in the API : 8, 21, 68, 5060, 21800-21805, 51005
 		/// </summary>
-		public long ExternalPortStart {
+		[JsonIgnore()] public long ExternalPortStart {
 			get {
 				return this._externalPortStart;
 			}
@@ -40726,7 +40726,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// The last port of the interval on the External Client that will get the connections
 		/// </summary>
-		public System.Nullable<long> ExternalPortEnd {
+		[JsonIgnore()] public System.Nullable<long> ExternalPortEnd {
 			get {
 				return this._externalPortEnd;
 			}
@@ -40738,7 +40738,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Description of the Port Mapping
 		/// </summary>
-		public string Description {
+		[JsonIgnore()] public string Description {
 			get {
 				return this._description;
 			}
@@ -40804,7 +40804,7 @@ namespace OvhApi.Models.Xdsl {
 		[JsonProperty("name")]
 		private string _name;
 		
-		public string City {
+		[JsonIgnore()] public string City {
 			get {
 				return this._city;
 			}
@@ -40813,7 +40813,7 @@ namespace OvhApi.Models.Xdsl {
 			}
 		}
 		
-		public bool IsCurrent {
+		[JsonIgnore()] public bool IsCurrent {
 			get {
 				return this._isCurrent;
 			}
@@ -40822,7 +40822,7 @@ namespace OvhApi.Models.Xdsl {
 			}
 		}
 		
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
@@ -40870,7 +40870,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// How the channel is chosen (Auto / Manual)
 		/// </summary>
-		public OvhApi.Models.Xdsl.XdslModemConfig.ChannelModeEnum ChannelMode {
+		[JsonIgnore()] public OvhApi.Models.Xdsl.XdslModemConfig.ChannelModeEnum ChannelMode {
 			get {
 				return this._channelMode;
 			}
@@ -40882,7 +40882,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// ID of the ongoing todo (NULL if none)
 		/// </summary>
-		public System.Nullable<long> TaskId {
+		[JsonIgnore()] public System.Nullable<long> TaskId {
 			get {
 				return this._taskId;
 			}
@@ -40891,7 +40891,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Hide or show the Wifi
 		/// </summary>
-		public bool SSIDAdvertisementEnabled {
+		[JsonIgnore()] public bool SSIDAdvertisementEnabled {
 			get {
 				return this._sSIDAdvertisementEnabled;
 			}
@@ -40903,7 +40903,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Service Set Identifier of the WLAN interface
 		/// </summary>
-		public string SSID {
+		[JsonIgnore()] public string SSID {
 			get {
 				return this._sSID;
 			}
@@ -40915,7 +40915,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Choice of a channel (When chosen, channelMode is set to Manual)
 		/// </summary>
-		public long Channel {
+		[JsonIgnore()] public long Channel {
 			get {
 				return this._channel;
 			}
@@ -40927,7 +40927,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Security (None | WEP | WPA | WPA2 | WPAandWPA2)
 		/// </summary>
-		public OvhApi.Models.Xdsl.XdslModemConfig.SecurityTypeEnum SecurityType {
+		[JsonIgnore()] public OvhApi.Models.Xdsl.XdslModemConfig.SecurityTypeEnum SecurityType {
 			get {
 				return this._securityType;
 			}
@@ -40939,7 +40939,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// WPA or WEP key
 		/// </summary>
-		public string SecurityKey {
+		[JsonIgnore()] public string SecurityKey {
 			get {
 				return this._securityKey;
 			}
@@ -40951,7 +40951,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Name of the Wifi
 		/// </summary>
-		public string WifiName {
+		[JsonIgnore()] public string WifiName {
 			get {
 				return this._wifiName;
 			}
@@ -40960,7 +40960,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Wifi state
 		/// </summary>
-		public bool Enabled {
+		[JsonIgnore()] public bool Enabled {
 			get {
 				return this._enabled;
 			}
@@ -41014,7 +41014,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// The length of this section in meters
 		/// </summary>
-		public long Length {
+		[JsonIgnore()] public long Length {
 			get {
 				return this._length;
 			}
@@ -41026,7 +41026,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// The diameter of this section in millimeters
 		/// </summary>
-		public long Diameter {
+		[JsonIgnore()] public long Diameter {
 			get {
 				return this._diameter;
 			}
@@ -41071,7 +41071,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Is the access active on its primary or secondary LNS
 		/// </summary>
-		public System.Nullable<bool> IsActiveOnLns {
+		[JsonIgnore()] public System.Nullable<bool> IsActiveOnLns {
 			get {
 				return this._isActiveOnLns;
 			}
@@ -41080,7 +41080,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Remaining number of diagnostic for this access
 		/// </summary>
-		public long Remaining {
+		[JsonIgnore()] public long Remaining {
 			get {
 				return this._remaining;
 			}
@@ -41089,7 +41089,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Does the access ping ?
 		/// </summary>
-		public System.Nullable<bool> Ping {
+		[JsonIgnore()] public System.Nullable<bool> Ping {
 			get {
 				return this._ping;
 			}
@@ -41098,7 +41098,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Is there an ongoing genericIncident on the access ?
 		/// </summary>
-		public System.Nullable<bool> Incident {
+		[JsonIgnore()] public System.Nullable<bool> Incident {
 			get {
 				return this._incident;
 			}
@@ -41107,7 +41107,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Available tests for this access
 		/// </summary>
-		public OvhApi.Models.Xdsl.AccessDiagnosticCapabilities Capabilities {
+		[JsonIgnore()] public OvhApi.Models.Xdsl.AccessDiagnosticCapabilities Capabilities {
 			get {
 				return this._capabilities;
 			}
@@ -41116,7 +41116,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Is the modem connected ?
 		/// </summary>
-		public System.Nullable<bool> IsModemConnected {
+		[JsonIgnore()] public System.Nullable<bool> IsModemConnected {
 			get {
 				return this._isModemConnected;
 			}
@@ -41125,7 +41125,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Datime of the diagnostic
 		/// </summary>
-		public System.DateTime DiagnosticTime {
+		[JsonIgnore()] public System.DateTime DiagnosticTime {
 			get {
 				return this._diagnosticTime;
 			}
@@ -41134,7 +41134,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Test details by line
 		/// </summary>
-		public OvhApi.Models.Xdsl.LineDiagnostic[] LineDetails {
+		[JsonIgnore()] public OvhApi.Models.Xdsl.LineDiagnostic[] LineDetails {
 			get {
 				return this._lineDetails;
 			}
@@ -41254,7 +41254,7 @@ namespace OvhApi.Models.Xdsl {
 		[JsonProperty("originalNumber")]
 		private string _originalNumber;
 		
-		public OvhApi.Models.Xdsl.DeconsolidationEnum Deconsolidation {
+		[JsonIgnore()] public OvhApi.Models.Xdsl.DeconsolidationEnum Deconsolidation {
 			get {
 				return this._deconsolidation;
 			}
@@ -41263,7 +41263,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Data to identify the line at the concentration point
 		/// </summary>
-		public OvhApi.Models.Xdsl.LandlineConcentrationPoint ConcentrationPoint {
+		[JsonIgnore()] public OvhApi.Models.Xdsl.LandlineConcentrationPoint ConcentrationPoint {
 			get {
 				return this._concentrationPoint;
 			}
@@ -41272,7 +41272,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// The number of the line
 		/// </summary>
-		public string Number {
+		[JsonIgnore()] public string Number {
 			get {
 				return this._number;
 			}
@@ -41281,13 +41281,13 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Distance in meters from the DSLAM
 		/// </summary>
-		public long Distance {
+		[JsonIgnore()] public long Distance {
 			get {
 				return this._distance;
 			}
 		}
 		
-		public OvhApi.Models.Xdsl.FaultRepairTimeEnum FaultRepairTime {
+		[JsonIgnore()] public OvhApi.Models.Xdsl.FaultRepairTimeEnum FaultRepairTime {
 			get {
 				return this._faultRepairTime;
 			}
@@ -41296,7 +41296,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// True if the line is directly wired on the DSLAM
 		/// </summary>
-		public System.Nullable<bool> DirectDistribution {
+		[JsonIgnore()] public System.Nullable<bool> DirectDistribution {
 			get {
 				return this._directDistribution;
 			}
@@ -41305,7 +41305,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Whether the line number has been ported to OVH, to be used with VoIP service
 		/// </summary>
-		public bool Portability {
+		[JsonIgnore()] public bool Portability {
 			get {
 				return this._portability;
 			}
@@ -41314,7 +41314,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Mitigation of the line in dB
 		/// </summary>
-		public double Mitigation {
+		[JsonIgnore()] public double Mitigation {
 			get {
 				return this._mitigation;
 			}
@@ -41323,7 +41323,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Detailed information about the sections between the DSLAM and the telephone jack
 		/// </summary>
-		public OvhApi.Models.Xdsl.LineSectionLength[] LineSectionsLength {
+		[JsonIgnore()] public OvhApi.Models.Xdsl.LineSectionLength[] LineSectionsLength {
 			get {
 				return this._lineSectionsLength;
 			}
@@ -41332,7 +41332,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// The upload synchronisation on the DSLAM in Kbps
 		/// </summary>
-		public System.Nullable<double> SyncUp {
+		[JsonIgnore()] public System.Nullable<double> SyncUp {
 			get {
 				return this._syncUp;
 			}
@@ -41341,7 +41341,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// The download synchronisation on the DSLAM in Kbps
 		/// </summary>
-		public System.Nullable<double> SyncDown {
+		[JsonIgnore()] public System.Nullable<double> SyncDown {
 			get {
 				return this._syncDown;
 			}
@@ -41350,7 +41350,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// The number used to place the order. Null if the same as the current number.
 		/// </summary>
-		public string OriginalNumber {
+		[JsonIgnore()] public string OriginalNumber {
 			get {
 				return this._originalNumber;
 			}
@@ -41374,19 +41374,19 @@ namespace OvhApi.Models.Xdsl {
 		[JsonProperty("id")]
 		private long _id;
 		
-		public string Function {
+		[JsonIgnore()] public string Function {
 			get {
 				return this._function;
 			}
 		}
 		
-		public OvhApi.Models.Xdsl.TaskStatusEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Xdsl.TaskStatusEnum Status {
 			get {
 				return this._status;
 			}
 		}
 		
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
@@ -41410,7 +41410,7 @@ namespace OvhApi.Models.Xdsl {
 		[JsonProperty("id")]
 		private long _id;
 		
-		public bool IsCurrent {
+		[JsonIgnore()] public bool IsCurrent {
 			get {
 				return this._isCurrent;
 			}
@@ -41419,7 +41419,7 @@ namespace OvhApi.Models.Xdsl {
 			}
 		}
 		
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
@@ -41428,7 +41428,7 @@ namespace OvhApi.Models.Xdsl {
 			}
 		}
 		
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
@@ -41503,19 +41503,19 @@ namespace OvhApi.Models.Xdsl {
 		[JsonProperty("nra")]
 		private string _nra;
 		
-		public bool Ipv6Enabled {
+		[JsonIgnore()] public bool Ipv6Enabled {
 			get {
 				return this._ipv6Enabled;
 			}
 		}
 		
-		public OvhApi.Models.Xdsl.AccessStatusEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Xdsl.AccessStatusEnum Status {
 			get {
 				return this._status;
 			}
 		}
 		
-		public long PairsNumber {
+		[JsonIgnore()] public long PairsNumber {
 			get {
 				return this._pairsNumber;
 			}
@@ -41524,7 +41524,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Rate limit on the LNS in kbps - Only available if canApplyLnsRateLimit capability is set to true - Must be a multiple of 64 - Min value 64 / Max value 100032
 		/// </summary>
-		public System.Nullable<long> LnsRateLimit {
+		[JsonIgnore()] public System.Nullable<long> LnsRateLimit {
 			get {
 				return this._lnsRateLimit;
 			}
@@ -41533,13 +41533,13 @@ namespace OvhApi.Models.Xdsl {
 			}
 		}
 		
-		public string AccessName {
+		[JsonIgnore()] public string AccessName {
 			get {
 				return this._accessName;
 			}
 		}
 		
-		public string Description {
+		[JsonIgnore()] public string Description {
 			get {
 				return this._description;
 			}
@@ -41548,7 +41548,7 @@ namespace OvhApi.Models.Xdsl {
 			}
 		}
 		
-		public OvhApi.Models.Xdsl.DslTypeEnum AccessType {
+		[JsonIgnore()] public OvhApi.Models.Xdsl.DslTypeEnum AccessType {
 			get {
 				return this._accessType;
 			}
@@ -41557,7 +41557,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Whether or not this access is monitored
 		/// </summary>
-		public bool Monitoring {
+		[JsonIgnore()] public bool Monitoring {
 			get {
 				return this._monitoring;
 			}
@@ -41566,19 +41566,19 @@ namespace OvhApi.Models.Xdsl {
 			}
 		}
 		
-		public OvhApi.Models.Xdsl.AccessCapabilities Capabilities {
+		[JsonIgnore()] public OvhApi.Models.Xdsl.AccessCapabilities Capabilities {
 			get {
 				return this._capabilities;
 			}
 		}
 		
-		public OvhApi.Models.Xdsl.AddressDetail Address {
+		[JsonIgnore()] public OvhApi.Models.Xdsl.AddressDetail Address {
 			get {
 				return this._address;
 			}
 		}
 		
-		public string Nra {
+		[JsonIgnore()] public string Nra {
 			get {
 				return this._nra;
 			}
@@ -41632,7 +41632,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// The subnet mask of the LAN interface of the modem
 		/// </summary>
-		public System.Net.IPAddress SubnetMask {
+		[JsonIgnore()] public System.Net.IPAddress SubnetMask {
 			get {
 				return this._subnetMask;
 			}
@@ -41644,7 +41644,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// ID of the ongoing todo (NULL if none)
 		/// </summary>
-		public System.Nullable<long> TaskId {
+		[JsonIgnore()] public System.Nullable<long> TaskId {
 			get {
 				return this._taskId;
 			}
@@ -41653,7 +41653,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// The IP address of the LAN interface of the modem
 		/// </summary>
-		public System.Net.IPAddress IPAddress {
+		[JsonIgnore()] public System.Net.IPAddress IPAddress {
 			get {
 				return this._iPAddress;
 			}
@@ -41665,7 +41665,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Name of the LAN
 		/// </summary>
-		public string LanName {
+		[JsonIgnore()] public string LanName {
 			get {
 				return this._lanName;
 			}
@@ -41674,7 +41674,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// How the LAN interface of the modem is gettig its address
 		/// </summary>
-		public OvhApi.Models.Xdsl.XdslModemConfig.AddressingTypeEnum AddressingType {
+		[JsonIgnore()] public OvhApi.Models.Xdsl.XdslModemConfig.AddressingTypeEnum AddressingType {
 			get {
 				return this._addressingType;
 			}
@@ -41716,13 +41716,13 @@ namespace OvhApi.Models.Xdsl {
 		[JsonProperty("action")]
 		private string _action;
 		
-		public System.DateTime DateTodo {
+		[JsonIgnore()] public System.DateTime DateTodo {
 			get {
 				return this._dateTodo;
 			}
 		}
 		
-		public string Action {
+		[JsonIgnore()] public string Action {
 			get {
 				return this._action;
 			}
@@ -41827,7 +41827,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// How did the device got its IP address
 		/// </summary>
-		public OvhApi.Models.Xdsl.XdslModemConfig.ConnectedDeviceAddressSourceEnum AddressSource {
+		[JsonIgnore()] public OvhApi.Models.Xdsl.XdslModemConfig.ConnectedDeviceAddressSourceEnum AddressSource {
 			get {
 				return this._addressSource;
 			}
@@ -41836,7 +41836,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// The date time of the last update of thoses informations
 		/// </summary>
-		public System.DateTime InformationDate {
+		[JsonIgnore()] public System.DateTime InformationDate {
 			get {
 				return this._informationDate;
 			}
@@ -41845,7 +41845,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// MAC address of the device
 		/// </summary>
-		public string MacAddress {
+		[JsonIgnore()] public string MacAddress {
 			get {
 				return this._macAddress;
 			}
@@ -41854,7 +41854,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// The IP address of the device
 		/// </summary>
-		public System.Net.IPAddress IpAddress {
+		[JsonIgnore()] public System.Net.IPAddress IpAddress {
 			get {
 				return this._ipAddress;
 			}
@@ -41863,7 +41863,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// The state of this device on the modem
 		/// </summary>
-		public bool Active {
+		[JsonIgnore()] public bool Active {
 			get {
 				return this._active;
 			}
@@ -41872,7 +41872,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Host name given by the device to the modem
 		/// </summary>
-		public string HostName {
+		[JsonIgnore()] public string HostName {
 			get {
 				return this._hostName;
 			}
@@ -41881,7 +41881,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// The remaining time in seconds of the DHCP lease of this device (-1 means infinite)
 		/// </summary>
-		public long LeaseTimeRemaining {
+		[JsonIgnore()] public long LeaseTimeRemaining {
 			get {
 				return this._leaseTimeRemaining;
 			}
@@ -41890,7 +41890,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// On which interface is connected the device
 		/// </summary>
-		public string InterfaceType {
+		[JsonIgnore()] public string InterfaceType {
 			get {
 				return this._interfaceType;
 			}
@@ -41929,7 +41929,7 @@ namespace OvhApi.Models.Xdsl {
 		[JsonProperty("value")]
 		private System.Nullable<double> _value;
 		
-		public long Timestamp {
+		[JsonIgnore()] public long Timestamp {
 			get {
 				return this._timestamp;
 			}
@@ -41938,7 +41938,7 @@ namespace OvhApi.Models.Xdsl {
 			}
 		}
 		
-		public System.Nullable<double> Value {
+		[JsonIgnore()] public System.Nullable<double> Value {
 			get {
 				return this._value;
 			}
@@ -41971,7 +41971,7 @@ namespace OvhApi.Models.Xdsl {
 		[JsonProperty("lineTest")]
 		private OvhApi.Models.Xdsl.LineTestEnum _lineTest;
 		
-		public string Number {
+		[JsonIgnore()] public string Number {
 			get {
 				return this._number;
 			}
@@ -41980,7 +41980,7 @@ namespace OvhApi.Models.Xdsl {
 			}
 		}
 		
-		public System.Nullable<System.DateTime> LineTestTime {
+		[JsonIgnore()] public System.Nullable<System.DateTime> LineTestTime {
 			get {
 				return this._lineTestTime;
 			}
@@ -41989,7 +41989,7 @@ namespace OvhApi.Models.Xdsl {
 			}
 		}
 		
-		public bool Sync {
+		[JsonIgnore()] public bool Sync {
 			get {
 				return this._sync;
 			}
@@ -41998,7 +41998,7 @@ namespace OvhApi.Models.Xdsl {
 			}
 		}
 		
-		public System.Nullable<long> ProposedProfileId {
+		[JsonIgnore()] public System.Nullable<long> ProposedProfileId {
 			get {
 				return this._proposedProfileId;
 			}
@@ -42007,7 +42007,7 @@ namespace OvhApi.Models.Xdsl {
 			}
 		}
 		
-		public OvhApi.Models.Xdsl.LineTestEnum LineTest {
+		[JsonIgnore()] public OvhApi.Models.Xdsl.LineTestEnum LineTest {
 			get {
 				return this._lineTest;
 			}
@@ -42058,7 +42058,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// The number of times this message occured between date and lastOccurrenceDate
 		/// </summary>
-		public long NumberOfOccurrences {
+		[JsonIgnore()] public long NumberOfOccurrences {
 			get {
 				return this._numberOfOccurrences;
 			}
@@ -42067,19 +42067,19 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// The last time this message occured
 		/// </summary>
-		public System.DateTime LastOccurrenceDate {
+		[JsonIgnore()] public System.DateTime LastOccurrenceDate {
 			get {
 				return this._lastOccurrenceDate;
 			}
 		}
 		
-		public System.DateTime Date {
+		[JsonIgnore()] public System.DateTime Date {
 			get {
 				return this._date;
 			}
 		}
 		
-		public string Message {
+		[JsonIgnore()] public string Message {
 			get {
 				return this._message;
 			}
@@ -42121,7 +42121,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Task ID on travaux.ovh.com
 		/// </summary>
-		public System.Nullable<long> TaskId {
+		[JsonIgnore()] public System.Nullable<long> TaskId {
 			get {
 				return this._taskId;
 			}
@@ -42130,7 +42130,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Department list
 		/// </summary>
-		public string[] Departments {
+		[JsonIgnore()] public string[] Departments {
 			get {
 				return this._departments;
 			}
@@ -42139,13 +42139,13 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Estimated start date
 		/// </summary>
-		public System.DateTime CreationDate {
+		[JsonIgnore()] public System.DateTime CreationDate {
 			get {
 				return this._creationDate;
 			}
 		}
 		
-		public string Comment {
+		[JsonIgnore()] public string Comment {
 			get {
 				return this._comment;
 			}
@@ -42154,7 +42154,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Estimated end date
 		/// </summary>
-		public System.Nullable<System.DateTime> EndDate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> EndDate {
 			get {
 				return this._endDate;
 			}
@@ -42163,7 +42163,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// ID of the incident
 		/// </summary>
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
@@ -42172,7 +42172,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// NRA list
 		/// </summary>
-		public string[] Nra {
+		[JsonIgnore()] public string[] Nra {
 			get {
 				return this._nra;
 			}
@@ -42181,7 +42181,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Operator
 		/// </summary>
-		public OvhApi.Models.Xdsl.OperatorTypeEnum[] Operators {
+		[JsonIgnore()] public OvhApi.Models.Xdsl.OperatorTypeEnum[] Operators {
 			get {
 				return this._operators;
 			}
@@ -42223,7 +42223,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Identifier of the head of the cable from the MDF
 		/// </summary>
-		public string LineHead {
+		[JsonIgnore()] public string LineHead {
 			get {
 				return this._lineHead;
 			}
@@ -42235,7 +42235,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Identifier of the pair at the lineHead's lineInitialSection
 		/// </summary>
-		public long LineInitialSectionPair {
+		[JsonIgnore()] public long LineInitialSectionPair {
 			get {
 				return this._lineInitialSectionPair;
 			}
@@ -42247,7 +42247,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Identifier of the section at the lineHead
 		/// </summary>
-		public long LineInitialSection {
+		[JsonIgnore()] public long LineInitialSection {
 			get {
 				return this._lineInitialSection;
 			}
@@ -42286,7 +42286,7 @@ namespace OvhApi.Models.Xdsl {
 		[JsonProperty("enabled")]
 		private bool _enabled;
 		
-		public OvhApi.Models.Xdsl.MonitoringNotifications.FrequencyEnum Frequency {
+		[JsonIgnore()] public OvhApi.Models.Xdsl.MonitoringNotifications.FrequencyEnum Frequency {
 			get {
 				return this._frequency;
 			}
@@ -42298,7 +42298,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// The e-mail address, if type is mail
 		/// </summary>
-		public string Email {
+		[JsonIgnore()] public string Email {
 			get {
 				return this._email;
 			}
@@ -42310,19 +42310,19 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// The SMS account which will be debited for each sent SMS, if the type is sms
 		/// </summary>
-		public string SmsAccount {
+		[JsonIgnore()] public string SmsAccount {
 			get {
 				return this._smsAccount;
 			}
 		}
 		
-		public long Id {
+		[JsonIgnore()] public long Id {
 			get {
 				return this._id;
 			}
 		}
 		
-		public OvhApi.Models.Xdsl.MonitoringNotifications.TypeEnum Type {
+		[JsonIgnore()] public OvhApi.Models.Xdsl.MonitoringNotifications.TypeEnum Type {
 			get {
 				return this._type;
 			}
@@ -42331,7 +42331,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// The phone number, if type is sms
 		/// </summary>
-		public string Phone {
+		[JsonIgnore()] public string Phone {
 			get {
 				return this._phone;
 			}
@@ -42340,7 +42340,7 @@ namespace OvhApi.Models.Xdsl {
 			}
 		}
 		
-		public bool Enabled {
+		[JsonIgnore()] public bool Enabled {
 			get {
 				return this._enabled;
 			}
@@ -42391,7 +42391,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// ID of the ongoing todo (NULL if none)
 		/// </summary>
-		public System.Nullable<long> TaskId {
+		[JsonIgnore()] public System.Nullable<long> TaskId {
 			get {
 				return this._taskId;
 			}
@@ -42400,7 +42400,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// The IP address of the device
 		/// </summary>
-		public System.Net.IPAddress IPAddress {
+		[JsonIgnore()] public System.Net.IPAddress IPAddress {
 			get {
 				return this._iPAddress;
 			}
@@ -42412,7 +42412,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// The MAC address of the device
 		/// </summary>
-		public string MACAddress {
+		[JsonIgnore()] public string MACAddress {
 			get {
 				return this._mACAddress;
 			}
@@ -42421,7 +42421,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Name of the DHCP Static lease
 		/// </summary>
-		public string Name {
+		[JsonIgnore()] public string Name {
 			get {
 				return this._name;
 			}
@@ -42493,7 +42493,7 @@ namespace OvhApi.Models.Xdsl {
 		[JsonProperty("lastDesyncDate")]
 		private System.Nullable<System.DateTime> _lastDesyncDate;
 		
-		public OvhApi.Models.Xdsl.DslamLineProfile ProfileName {
+		[JsonIgnore()] public OvhApi.Models.Xdsl.DslamLineProfile ProfileName {
 			get {
 				return this._profile;
 			}
@@ -42502,13 +42502,13 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Last time the port synchronized
 		/// </summary>
-		public System.Nullable<System.DateTime> LastSyncDate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> LastSyncDate {
 			get {
 				return this._lastSyncDate;
 			}
 		}
 		
-		public OvhApi.Models.Xdsl.DslamPortStatusEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Xdsl.DslamPortStatusEnum Status {
 			get {
 				return this._status;
 			}
@@ -42517,7 +42517,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Last time the port lost the synchronization
 		/// </summary>
-		public System.Nullable<System.DateTime> LastDesyncDate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> LastDesyncDate {
 			get {
 				return this._lastDesyncDate;
 			}
@@ -42601,7 +42601,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// The subnet mask given to the clients
 		/// </summary>
-		public System.Net.IPAddress SubnetMask {
+		[JsonIgnore()] public System.Net.IPAddress SubnetMask {
 			get {
 				return this._subnetMask;
 			}
@@ -42613,7 +42613,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// State of the DHCP server of the modem
 		/// </summary>
-		public bool ServerEnabled {
+		[JsonIgnore()] public bool ServerEnabled {
 			get {
 				return this._serverEnabled;
 			}
@@ -42625,7 +42625,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// ID of the ongoing todo (NULL if none)
 		/// </summary>
-		public System.Nullable<long> TaskId {
+		[JsonIgnore()] public System.Nullable<long> TaskId {
 			get {
 				return this._taskId;
 			}
@@ -42634,7 +42634,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Lease time in seconds of client assigned address (-1 means infinite)
 		/// </summary>
-		public long LeaseTime {
+		[JsonIgnore()] public long LeaseTime {
 			get {
 				return this._leaseTime;
 			}
@@ -42646,7 +42646,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Secondary DNS servers to be given to the clients
 		/// </summary>
-		public System.Net.IPAddress SecondaryDNS {
+		[JsonIgnore()] public System.Net.IPAddress SecondaryDNS {
 			get {
 				return this._secondaryDNS;
 			}
@@ -42658,7 +42658,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Last address of the pool assigned by the DHCP
 		/// </summary>
-		public System.Net.IPAddress EndAddress {
+		[JsonIgnore()] public System.Net.IPAddress EndAddress {
 			get {
 				return this._endAddress;
 			}
@@ -42670,7 +42670,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Name of the DHCP
 		/// </summary>
-		public string DhcpName {
+		[JsonIgnore()] public string DhcpName {
 			get {
 				return this._dhcpName;
 			}
@@ -42679,7 +42679,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Primary DNS servers to be given to the clients
 		/// </summary>
-		public System.Net.IPAddress PrimaryDNS {
+		[JsonIgnore()] public System.Net.IPAddress PrimaryDNS {
 			get {
 				return this._primaryDNS;
 			}
@@ -42691,7 +42691,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// First address of the pool assigned by the DHCP
 		/// </summary>
-		public System.Net.IPAddress StartAddress {
+		[JsonIgnore()] public System.Net.IPAddress StartAddress {
 			get {
 				return this._startAddress;
 			}
@@ -42703,7 +42703,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// The default gateway to be given to the clients
 		/// </summary>
-		public System.Net.IPAddress DefaultGateway {
+		[JsonIgnore()] public System.Net.IPAddress DefaultGateway {
 			get {
 				return this._defaultGateway;
 			}
@@ -42715,7 +42715,7 @@ namespace OvhApi.Models.Xdsl {
 		/// <summary>
 		/// Domain name provided to the clients
 		/// </summary>
-		public string DomainName {
+		[JsonIgnore()] public string DomainName {
 			get {
 				return this._domainName;
 			}
@@ -42751,7 +42751,7 @@ namespace OvhApi.Models.Xdsl {
 		[JsonProperty("canApplyLnsRateLimit")]
 		private bool _canApplyLnsRateLimit;
 		
-		public bool CanChangeDslamProfile {
+		[JsonIgnore()] public bool CanChangeDslamProfile {
 			get {
 				return this._canChangeDslamProfile;
 			}
@@ -42760,7 +42760,7 @@ namespace OvhApi.Models.Xdsl {
 			}
 		}
 		
-		public bool CanGetRadiusConnectionLogs {
+		[JsonIgnore()] public bool CanGetRadiusConnectionLogs {
 			get {
 				return this._canGetRadiusConnectionLogs;
 			}
@@ -42769,7 +42769,7 @@ namespace OvhApi.Models.Xdsl {
 			}
 		}
 		
-		public bool CanResetDslamPort {
+		[JsonIgnore()] public bool CanResetDslamPort {
 			get {
 				return this._canResetDslamPort;
 			}
@@ -42778,7 +42778,7 @@ namespace OvhApi.Models.Xdsl {
 			}
 		}
 		
-		public bool HasDslamPort {
+		[JsonIgnore()] public bool HasDslamPort {
 			get {
 				return this._hasDslamPort;
 			}
@@ -42787,7 +42787,7 @@ namespace OvhApi.Models.Xdsl {
 			}
 		}
 		
-		public bool CanChangeLns {
+		[JsonIgnore()] public bool CanChangeLns {
 			get {
 				return this._canChangeLns;
 			}
@@ -42796,7 +42796,7 @@ namespace OvhApi.Models.Xdsl {
 			}
 		}
 		
-		public bool CanApplyLnsRateLimit {
+		[JsonIgnore()] public bool CanApplyLnsRateLimit {
 			get {
 				return this._canApplyLnsRateLimit;
 			}
@@ -42832,7 +42832,7 @@ namespace OvhApi.Models.Xdsl.OrderFollowup {
 		[JsonProperty("doneDate")]
 		private System.Nullable<System.DateTime> _doneDate;
 		
-		public long ExpectedDuration {
+		[JsonIgnore()] public long ExpectedDuration {
 			get {
 				return this._expectedDuration;
 			}
@@ -42841,7 +42841,7 @@ namespace OvhApi.Models.Xdsl.OrderFollowup {
 			}
 		}
 		
-		public OvhApi.Models.Xdsl.OrderFollowup.StepStatusEnum Status {
+		[JsonIgnore()] public OvhApi.Models.Xdsl.OrderFollowup.StepStatusEnum Status {
 			get {
 				return this._status;
 			}
@@ -42850,7 +42850,7 @@ namespace OvhApi.Models.Xdsl.OrderFollowup {
 			}
 		}
 		
-		public OvhApi.Models.Xdsl.OrderFollowup.DurationUnitEnum DurationUnit {
+		[JsonIgnore()] public OvhApi.Models.Xdsl.OrderFollowup.DurationUnitEnum DurationUnit {
 			get {
 				return this._durationUnit;
 			}
@@ -42859,7 +42859,7 @@ namespace OvhApi.Models.Xdsl.OrderFollowup {
 			}
 		}
 		
-		public OvhApi.Models.Xdsl.OrderFollowup.StepNameEnum Name {
+		[JsonIgnore()] public OvhApi.Models.Xdsl.OrderFollowup.StepNameEnum Name {
 			get {
 				return this._name;
 			}
@@ -42868,7 +42868,7 @@ namespace OvhApi.Models.Xdsl.OrderFollowup {
 			}
 		}
 		
-		public string[] Comments {
+		[JsonIgnore()] public string[] Comments {
 			get {
 				return this._comments;
 			}
@@ -42877,7 +42877,7 @@ namespace OvhApi.Models.Xdsl.OrderFollowup {
 			}
 		}
 		
-		public System.Nullable<System.DateTime> DoneDate {
+		[JsonIgnore()] public System.Nullable<System.DateTime> DoneDate {
 			get {
 				return this._doneDate;
 			}
